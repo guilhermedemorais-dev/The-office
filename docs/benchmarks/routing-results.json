@@ -1,0 +1,92 @@
+{
+  "type": "routing-microbenchmark",
+  "measurement_source": "Python perf_counter and filesystem byte counts",
+  "input_tokens": "NOT_AVAILABLE",
+  "output_tokens": "NOT_AVAILABLE",
+  "cached_tokens": "NOT_AVAILABLE",
+  "llm_latency": "NOT_MEASURED",
+  "end_to_end_quality": "NOT_VALIDATED",
+  "results": [
+    {
+      "scenario": "A-trivial-ui",
+      "selected_skills": [
+        "global-core",
+        "ux-core",
+        "ux-visual-validation"
+      ],
+      "v1_canonical_skill_bytes": 30131,
+      "v2_selected_skill_bytes": 24018,
+      "planner_elapsed_ms": 1.213,
+      "result": "PASS",
+      "scope": "source bodies and generated wrappers only; excludes mandatory references, Task, tool outputs and actual LLM execution"
+    },
+    {
+      "scenario": "B-backend",
+      "selected_skills": [
+        "global-core",
+        "implementation-core",
+        "implementation-delivery"
+      ],
+      "v1_canonical_skill_bytes": 31254,
+      "v2_selected_skill_bytes": 29452,
+      "planner_elapsed_ms": 0.773,
+      "result": "PASS",
+      "scope": "source bodies and generated wrappers only; excludes mandatory references, Task, tool outputs and actual LLM execution"
+    },
+    {
+      "scenario": "C-new-module",
+      "selected_skills": [
+        "architecture-core",
+        "documentation-core",
+        "global-core",
+        "implementation-core",
+        "implementation-delivery",
+        "orchestrator-core",
+        "orchestrator-delegation",
+        "orchestrator-review",
+        "orchestrator-task-governance",
+        "product-core",
+        "product-discovery",
+        "product-planning",
+        "qa-core",
+        "qa-validation",
+        "sdd-core",
+        "sdd-specifications",
+        "sdd-task-contracts",
+        "security-core",
+        "security-review",
+        "security-tools-reporting",
+        "ux-components",
+        "ux-core",
+        "ux-design-system",
+        "ux-visual-validation"
+      ],
+      "v1_canonical_skill_bytes": 151624,
+      "v2_selected_skill_bytes": 177060,
+      "planner_elapsed_ms": 7.516,
+      "result": "PASS",
+      "scope": "source bodies and generated wrappers only; excludes mandatory references, Task, tool outputs and actual LLM execution"
+    },
+    {
+      "scenario": "D-library-reuse",
+      "result": "PASS",
+      "same_results": true,
+      "external_calls": 0,
+      "elapsed_ms": 4.007
+    },
+    {
+      "scenario": "E-missing-tool",
+      "result": "PASS",
+      "fixture": "runtime lookup returns None",
+      "operational_verified": null,
+      "preparation_executed": false
+    },
+    {
+      "scenario": "F-contract-change",
+      "result": "PASS",
+      "stale_revision_blocked": true,
+      "scope": "revision mismatch only; Issue edit/equivalence and scope approval remain canonical workflow gates"
+    }
+  ],
+  "interpretation": "Do not translate bytes into tokens or claim full workflow parity/savings. References and wrappers can dominate. Repeated metadata query is deterministic reuse, not a remote-cache benchmark."
+}

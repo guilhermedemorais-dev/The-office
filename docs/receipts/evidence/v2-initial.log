@@ -1,0 +1,993 @@
+test_agents_file_is_a_short_map_to_canonical_sources (test_agent_skill_contract.TestAgentSkillContract.test_agents_file_is_a_short_map_to_canonical_sources) ... FAIL
+test_capability_registry_has_fallback_contract (test_agent_skill_contract.TestAgentSkillContract.test_capability_registry_has_fallback_contract) ... ok
+test_change_complexity_preserves_validation (test_agent_skill_contract.TestAgentSkillContract.test_change_complexity_preserves_validation) ... ok
+test_execution_receipt_follows_result_and_precedes_validation (test_agent_skill_contract.TestAgentSkillContract.test_execution_receipt_follows_result_and_precedes_validation) ... ok
+test_executor_requires_all_three_receipts (test_agent_skill_contract.TestAgentSkillContract.test_executor_requires_all_three_receipts) ... ok
+test_harness_bootstrap_is_lean_and_receipt_is_output (test_agent_skill_contract.TestAgentSkillContract.test_harness_bootstrap_is_lean_and_receipt_is_output) ... ok
+test_harness_requires_execution_receipt (test_agent_skill_contract.TestAgentSkillContract.test_harness_requires_execution_receipt) ... ok
+test_human_report_does_not_replace_receipt (test_agent_skill_contract.TestAgentSkillContract.test_human_report_does_not_replace_receipt) ... ok
+test_llm_handoff_continues_without_restart (test_agent_skill_contract.TestAgentSkillContract.test_llm_handoff_continues_without_restart) ... ok
+test_minimal_code_gate_blocks_duplicate_work (test_agent_skill_contract.TestAgentSkillContract.test_minimal_code_gate_blocks_duplicate_work) ... ok
+test_practice_provenance_labels_local_extensions (test_agent_skill_contract.TestAgentSkillContract.test_practice_provenance_labels_local_extensions) ... ok
+test_skill_receipt_is_mandatory (test_agent_skill_contract.TestAgentSkillContract.test_skill_receipt_is_mandatory) ... ok
+test_api_mcp_and_mock_are_distinguished_without_bulk_actions (test_api_research_library.ApiResearchLibraryContract.test_api_mcp_and_mock_are_distinguished_without_bulk_actions) ... ok
+test_discovery_sources_have_exact_canonical_urls (test_api_research_library.ApiResearchLibraryContract.test_discovery_sources_have_exact_canonical_urls) ... ok
+test_evidence_contract_requires_provider_verification_and_test_status (test_api_research_library.ApiResearchLibraryContract.test_evidence_contract_requires_provider_verification_and_test_status) ... ok
+test_harness_routes_to_canonical_sdd_reference (test_api_research_library.ApiResearchLibraryContract.test_harness_routes_to_canonical_sdd_reference) ... ok
+test_sdd_routes_conditional_planning_and_spec_research (test_api_research_library.ApiResearchLibraryContract.test_sdd_routes_conditional_planning_and_spec_research) ... ok
+test_definition_of_done_section_exists (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_definition_of_done_section_exists)
+Definition of done section must exist. ... ok
+test_fully_filled_final_report (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_fully_filled_final_report)
+Done: task execution result fully filled with the mandatory final report. ... ok
+test_not_self_approved (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_not_self_approved)
+Done: not merged, deployed, or self-approved. ... ok
+test_nothing_out_of_scope (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_nothing_out_of_scope)
+Done: nothing out of scope (no 'unjustified' qualifier). ... ok
+test_pr_review_package (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_pr_review_package)
+Done: PR/review package prepared (not just PR). ... ok
+test_tdd_when_applicable (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_tdd_when_applicable)
+Done: TDD used when applicable; otherwise manual validation is evidenced. ... ok
+test_tests_pass_or_blockers_recorded (test_dev_implementation_skill.TestDevImplementationDefinitionOfDone.test_tests_pass_or_blockers_recorded)
+Done: tests/validation pass OR blockers are recorded. ... ok
+test_escalation_architecture_change (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_architecture_change)
+Existing trigger: task cannot be completed without architecture change. ... ok
+test_escalation_keeps_kanban_column (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_keeps_kanban_column)
+NEW: Escalation must keep the card in its current Kanban column. ... ok
+test_escalation_missing_precondition (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_missing_precondition)
+Existing trigger: missing precondition (no approved task / specs). ... ok
+test_escalation_records_blocked_label (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_records_blocked_label)
+NEW: Escalation must mention adding blocked label when a project board exists. ... ok
+test_escalation_section_exists (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_section_exists)
+Escalation section must exist. ... ok
+test_escalation_trigger_leaving_scope (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_trigger_leaving_scope)
+NEW escalation trigger: leaving the approved scope requires escalation. ... ok
+test_escalation_updates_visual_status_to_bloqueada (test_dev_implementation_skill.TestDevImplementationEscalation.test_escalation_updates_visual_status_to_bloqueada)
+NEW: Escalation must mention updating visual status to Bloqueada. ... ok
+test_do_not_assume_github_projects_available (test_dev_implementation_skill.TestDevImplementationGitHubProjectsReadiness.test_do_not_assume_github_projects_available)
+Must not assume GitHub Projects is available. ... ok
+test_github_projects_readiness_section_exists (test_dev_implementation_skill.TestDevImplementationGitHubProjectsReadiness.test_github_projects_readiness_section_exists)
+NEW section: GitHub Projects Readiness must exist. ... ok
+test_required_fields_in_task_content (test_dev_implementation_skill.TestDevImplementationGitHubProjectsReadiness.test_required_fields_in_task_content)
+GitHub Projects readiness fields must all be present. ... ok
+test_stop_if_fields_missing (test_dev_implementation_skill.TestDevImplementationGitHubProjectsReadiness.test_stop_if_fields_missing)
+Must stop before implementation and ask orchestrator if fields are missing. ... ok
+test_never_change_out_of_scope (test_dev_implementation_skill.TestDevImplementationHardLimits.test_never_change_out_of_scope)
+Hard limit: Never change anything out of scope (no 'justification' escape). ... ok
+test_no_architecture_change_without_approval (test_dev_implementation_skill.TestDevImplementationHardLimits.test_no_architecture_change_without_approval)
+Must not change architecture without approval. ... ok
+test_no_mark_complete_without_evidence (test_dev_implementation_skill.TestDevImplementationHardLimits.test_no_mark_complete_without_evidence)
+Hard limit: Do not mark work complete without validation evidence. ... ok
+test_no_merge_or_deploy (test_dev_implementation_skill.TestDevImplementationHardLimits.test_no_merge_or_deploy)
+Hard limit: Do not merge or deploy. ... ok
+test_no_secrets_in_repo (test_dev_implementation_skill.TestDevImplementationHardLimits.test_no_secrets_in_repo)
+Hard limit: No secrets, tokens, cookies, client data or temporary URLs in repo. ... ok
+test_out_of_scope_no_longer_justifiable (test_dev_implementation_skill.TestDevImplementationHardLimits.test_out_of_scope_no_longer_justifiable)
+Old language allowing justified out-of-scope changes was removed. ... ok
+test_out_of_scope_requires_stopping (test_dev_implementation_skill.TestDevImplementationHardLimits.test_out_of_scope_requires_stopping)
+When leaving scope is required, must stop and record in Bloqueios. ... ok
+test_prompt_base_is_not_the_operational_contract (test_dev_implementation_skill.TestDevImplementationMission.test_prompt_base_is_not_the_operational_contract) ... ok
+test_return_work_for_review_with_links (test_dev_implementation_skill.TestDevImplementationMission.test_return_work_for_review_with_links)
+Mission must say return work for review with task, issue, branch and specs linked. ... ok
+test_tdd_in_mission (test_dev_implementation_skill.TestDevImplementationMission.test_tdd_in_mission)
+Mission must include using TDD when applicable. ... ok
+test_update_execution_result_and_final_report (test_dev_implementation_skill.TestDevImplementationMission.test_update_execution_result_and_final_report)
+Mission must include updating the execution result AND final report. ... ok
+test_validate_contract_before_loading_references (test_dev_implementation_skill.TestDevImplementationMission.test_validate_contract_before_loading_references)
+Mission starts from and validates the lean contract. ... ok
+test_approved_task_precondition (test_dev_implementation_skill.TestDevImplementationPreconditions.test_approved_task_precondition)
+Preconditions must require an approved task to exist. ... ok
+test_github_ready_fields_precondition (test_dev_implementation_skill.TestDevImplementationPreconditions.test_github_ready_fields_precondition)
+NEW: Precondition requiring GitHub-ready fields in the task. ... ok
+test_sdd_spec_work_already_complete (test_dev_implementation_skill.TestDevImplementationPreconditions.test_sdd_spec_work_already_complete)
+NEW: Precondition that SDD/spec work is already complete and executor doesn't do SDD. ... ok
+test_stop_and_return_if_precondition_missing (test_dev_implementation_skill.TestDevImplementationPreconditions.test_stop_and_return_if_precondition_missing)
+Must stop and return to orchestrator if any precondition is missing. ... ok
+test_recommended_task_template_section_exists (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_recommended_task_template_section_exists)
+NEW section: Recommended Task Template must exist. ... ok
+test_template_contains_checklist_de_execucao (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_checklist_de_execucao)
+Template must include Checklist de execução with correct steps. ... ok
+test_template_contains_prioridade (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_prioridade)
+Template must include Prioridade with P0-P3. ... ok
+test_template_contains_prompt_para_executor (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_prompt_para_executor)
+Template must include Prompt para o executor section. ... ok
+test_template_contains_resultado_da_execucao (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_resultado_da_execucao)
+Template must include Resultado da execução section. ... ok
+test_template_contains_status_visual (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_status_visual)
+Template must include Status visual section. ... ok
+test_template_contains_tipo (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_tipo)
+Template must include Tipo section. ... ok
+test_template_contains_titulo (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_contains_titulo)
+Template must include a Título field. ... ok
+test_template_kanban_status_options (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_kanban_status_options)
+Template must include all Kanban status options. ... ok
+test_template_pronto_para_github_projects (test_dev_implementation_skill.TestDevImplementationRecommendedTaskTemplate.test_template_pronto_para_github_projects)
+Template must include Pronto para GitHub Projects field. ... ok
+test_frontmatter_name (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_frontmatter_name)
+SKILL.md must have frontmatter with name: dev-implementation-standard. ... ok
+test_interfaces_section_exists (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_interfaces_section_exists)
+Interfaces with other skills section must exist. ... ok
+test_interfaces_with_dev_workflow (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_interfaces_with_dev_workflow)
+Must receive task and approval from dev-workflow-standard. ... ok
+test_main_heading (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_main_heading)
+SKILL.md must have the main heading. ... ok
+test_skill_does_not_do_sdd (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_skill_does_not_do_sdd)
+SKILL.md must state that the executor does not do SDD. ... ok
+test_skill_does_not_plan_product_scope (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_skill_does_not_plan_product_scope)
+SKILL.md must state that the executor does not plan product scope. ... ok
+test_skill_does_not_write_specs (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_skill_does_not_write_specs)
+SKILL.md must state that the executor does not write specs. ... ok
+test_skill_file_exists (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_skill_file_exists)
+SKILL.md must exist at the expected path. ... ok
+test_skill_file_not_empty (test_dev_implementation_skill.TestDevImplementationSkillFileIntegrity.test_skill_file_not_empty)
+SKILL.md must not be empty. ... ok
+test_bloqueada_status (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_bloqueada_status)
+Bloqueada status defined for blocked tasks. ... ok
+test_concluida_status (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_concluida_status)
+Concluída status defined for completed tasks. ... ok
+test_em_andamento_status (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_em_andamento_status)
+Em andamento status defined for when starting execution. ... ok
+test_filename_remains_stable (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_filename_remains_stable)
+Task filename must remain stable. ... ok
+test_no_emoji_in_filename (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_no_emoji_in_filename)
+No emojis or status prefixes in the filename. ... ok
+test_status_in_content_not_filename (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_status_in_content_not_filename)
+Status is updated in task content, never in physical filename. ... ok
+test_task_status_rules_section_exists (test_dev_implementation_skill.TestDevImplementationTaskStatusRules.test_task_status_rules_section_exists)
+NEW section: Task Status Rules must exist. ... ok
+test_workflow_does_not_reexpand_prompt_base (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_does_not_reexpand_prompt_base) ... ok
+test_workflow_section_exists (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_section_exists)
+Workflow section must exist. ... ok
+test_workflow_starts_from_contract (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_starts_from_contract) ... ok
+test_workflow_step_2_set_status_em_andamento (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_2_set_status_em_andamento)
+Step 2: Set status to Em andamento when starting. ... ok
+test_workflow_step_4_implementation_by_layer (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_4_implementation_by_layer)
+Step 4: Implement only approved scope, by layer. ... ok
+test_workflow_step_5_tdd (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_5_tdd)
+Step 5: TDD when applicable, manual validation with evidence otherwise. ... ok
+test_workflow_step_6_validation (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_6_validation)
+Step 6: Run required commands and capture evidence. ... ok
+test_workflow_step_7_update_report (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_7_update_report)
+Step 7: Fill mandatory final report. ... ok
+test_workflow_step_8_set_final_status (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_8_set_final_status)
+Step 8: Set final status (Bloqueada or Concluída). ... ok
+test_workflow_step_9_handoff_for_review (test_dev_implementation_skill.TestDevImplementationWorkflow.test_workflow_step_9_handoff_for_review)
+Step 9: Handoff for review, do not self-approve, merge, or deploy. ... ok
+test_backlog_entry_exit (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_backlog_entry_exit)
+Backlog column must have entry and exit criteria. ... ok
+test_definition_of_entry_exit_section_exists (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_definition_of_entry_exit_section_exists)
+NEW section: Definition of Entry / Exit must exist. ... ok
+test_discovery_sdd_entry_exit (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_discovery_sdd_entry_exit)
+Discovery / SDD column must have entry and exit criteria. ... ok
+test_done_entry_exit (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_done_entry_exit)
+Done column must have entry and exit criteria. ... ok
+test_entry_exit_table_exists (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_entry_exit_table_exists)
+Entry/Exit table must exist with Column, Definition of Entry, Definition of Exit headers. ... ok
+test_in_progress_entry_exit (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_in_progress_entry_exit)
+In Progress column must have entry and exit criteria. ... ok
+test_in_review_entry_exit (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_in_review_entry_exit)
+In Review column must have entry and exit criteria. ... ok
+test_orchestrator_uses_definitions_as_gate_checks (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_orchestrator_uses_definitions_as_gate_checks)
+Orchestrator must use entry/exit definitions as gate checks. ... ok
+test_ready_for_dev_entry_exit (test_dev_workflow_skill.TestDevWorkflowDefinitionOfEntryExit.test_ready_for_dev_entry_exit)
+Ready for Dev column must have entry and exit criteria. ... ok
+test_branch_sugerida_recorded (test_dev_workflow_skill.TestDevWorkflowGitHubReadyTaskStructure.test_branch_sugerida_recorded)
+Branch sugerida recorded in the task. ... ok
+test_do_not_assume_github_available (test_dev_workflow_skill.TestDevWorkflowGitHubReadyTaskStructure.test_do_not_assume_github_available)
+Must not assume GitHub Projects, Issues, or boards are available. ... ok
+test_explicit_fields_list (test_dev_workflow_skill.TestDevWorkflowGitHubReadyTaskStructure.test_explicit_fields_list)
+Explicit required fields for GitHub readiness. ... ok
+test_github_ready_task_structure_section_exists (test_dev_workflow_skill.TestDevWorkflowGitHubReadyTaskStructure.test_github_ready_task_structure_section_exists)
+NEW section: GitHub-Ready Task Structure must exist. ... ok
+test_one_issue_per_task (test_dev_workflow_skill.TestDevWorkflowGitHubReadyTaskStructure.test_one_issue_per_task)
+One issue per task when the project uses GitHub Issues. ... ok
+test_status_consistent_with_kanban (test_dev_workflow_skill.TestDevWorkflowGitHubReadyTaskStructure.test_status_consistent_with_kanban)
+Status field consistent with official Kanban columns. ... ok
+test_docs_conflict_stop_and_ask (test_dev_workflow_skill.TestDevWorkflowHardLimits.test_docs_conflict_stop_and_ask)
+Hard limit: If docs conflict with code, stop and ask for a decision. ... ok
+test_never_skip_intent_contract (test_dev_workflow_skill.TestDevWorkflowHardLimits.test_never_skip_intent_contract)
+Every change retains scope, acceptance, validation, and evidence. ... ok
+test_never_write_product_code (test_dev_workflow_skill.TestDevWorkflowHardLimits.test_never_write_product_code)
+Hard limit: Never write product code directly. ... ok
+test_no_deploy_without_approved_pr (test_dev_workflow_skill.TestDevWorkflowHardLimits.test_no_deploy_without_approved_pr)
+Hard limit: No deploy approved without an approved PR. ... ok
+test_reject_task_without_mandatory_structure (test_dev_workflow_skill.TestDevWorkflowHardLimits.test_reject_task_without_mandatory_structure)
+NEW Hard limit: Reject any executable task that does not follow the mandatory task structure. ... ok
+test_task_requires_sufficient_intent (test_dev_workflow_skill.TestDevWorkflowHardLimits.test_task_requires_sufficient_intent)
+Tasks require sufficient intent and tier-appropriate specs. ... ok
+test_intent_first_task_second_implementation_third (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_intent_first_task_second_implementation_third)
+Official order preserves intent/spec before task and implementation. ... ok
+test_mandatory_field_api_backend (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_api_backend)
+Mandatory field: API/Backend. ... ok
+test_mandatory_field_arquivos_e_modulos_permitidos (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_arquivos_e_modulos_permitidos)
+Mandatory field: Arquivos e módulos permitidos. ... ok
+test_mandatory_field_banco (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_banco)
+Mandatory field: Banco. ... ok
+test_mandatory_field_checklist_execucao (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_checklist_execucao)
+Mandatory field: Checklist de execução. ... ok
+test_mandatory_field_condicoes_de_parada (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_condicoes_de_parada)
+Mandatory field: Condições de parada. ... ok
+test_mandatory_field_criterios_de_aceite (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_criterios_de_aceite)
+Mandatory field: Critérios de aceite. ... ok
+test_mandatory_field_docs_obrigatorios (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_docs_obrigatorios)
+Mandatory field: Docs obrigatórios. ... ok
+test_mandatory_field_estado_atual_encontrado (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_estado_atual_encontrado)
+Mandatory field: Estado atual encontrado. ... ok
+test_mandatory_field_evidencias_esperadas_no_pr (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_evidencias_esperadas_no_pr)
+Mandatory field: Evidências esperadas no PR. ... ok
+test_mandatory_field_fora_do_escopo (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_fora_do_escopo)
+Mandatory field: Fora do escopo. ... ok
+test_mandatory_field_frontend_ui (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_frontend_ui)
+Mandatory field: Frontend/UI. ... ok
+test_mandatory_field_objetivo (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_objetivo)
+Mandatory field: Objetivo. ... ok
+test_mandatory_field_prioridade (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_prioridade)
+Mandatory field: Prioridade. ... ok
+test_mandatory_field_prompt_para_executor (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_prompt_para_executor)
+Mandatory field: Prompt para o executor. ... ok
+test_mandatory_field_regras_obrigatorias (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_regras_obrigatorias)
+Mandatory field: Regras obrigatórias da implementação. ... ok
+test_mandatory_field_resultado_da_execucao (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_resultado_da_execucao)
+Mandatory field: Resultado da execução. ... ok
+test_mandatory_field_resultado_esperado (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_resultado_esperado)
+Mandatory field: Resultado esperado. ... ok
+test_mandatory_field_riscos_lacunas (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_riscos_lacunas)
+Mandatory field: Riscos/Lacunas. ... ok
+test_mandatory_field_specs_obrigatorias (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_specs_obrigatorias)
+Mandatory field: Specs obrigatórias. ... ok
+test_mandatory_field_status_visual (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_status_visual)
+Mandatory field: Status visual. ... ok
+test_mandatory_field_testes_obrigatorios (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_testes_obrigatorios)
+Mandatory field: Testes obrigatórios. ... ok
+test_mandatory_field_tipo (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_tipo)
+Mandatory field: Tipo. ... ok
+test_mandatory_field_titulo (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_titulo)
+Mandatory field: Título. ... ok
+test_mandatory_field_validacao (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_field_validacao)
+Mandatory field: Validação. ... ok
+test_mandatory_task_governance_section_exists (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_mandatory_task_governance_section_exists)
+NEW section: Mandatory Task Governance must exist. ... ok
+test_no_status_in_filename (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_no_status_in_filename)
+No visual status, emojis, Kanban status, or transient state in physical filename. ... ok
+test_rejects_task_lacking_mandatory_fields (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_rejects_task_lacking_mandatory_fields)
+Orchestrator rejects task that lacks mandatory fields. ... ok
+test_rejects_task_without_tier_artifacts (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_rejects_task_without_tier_artifacts)
+Orchestrator rejects a task missing artifacts required by its tier. ... ok
+test_status_belongs_in_content_only (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_status_belongs_in_content_only)
+Status belongs in the task content only. ... ok
+test_task_filename_remains_stable (test_dev_workflow_skill.TestDevWorkflowMandatoryTaskGovernance.test_task_filename_remains_stable)
+Task filename must remain stable for traceability. ... ok
+test_delegate_review_approve_in_mission (test_dev_workflow_skill.TestDevWorkflowMission.test_delegate_review_approve_in_mission)
+Mission must include delegate, review and approve. ... ok
+test_enforce_task_contract_in_mission (test_dev_workflow_skill.TestDevWorkflowMission.test_enforce_task_contract_in_mission)
+NEW Mission item: Enforce the mandatory task contract before delegation. ... ok
+test_require_complexity_scaled_intent_before_implementation (test_dev_workflow_skill.TestDevWorkflowMission.test_require_complexity_scaled_intent_before_implementation)
+Mission must require a tier-appropriate intent contract. ... ok
+test_does_not_absorb_specialist_responsibilities (test_dev_workflow_skill.TestDevWorkflowNegativeCases.test_does_not_absorb_specialist_responsibilities)
+Orchestrator does not absorb specialist skill responsibilities. ... ok
+test_final_acceptance_belongs_to_user (test_dev_workflow_skill.TestDevWorkflowNegativeCases.test_final_acceptance_belongs_to_user)
+Final acceptance belongs to the user. ... ok
+test_security_standard_mandatory_when_triggered (test_dev_workflow_skill.TestDevWorkflowNegativeCases.test_security_standard_mandatory_when_triggered)
+security-standard is mandatory when the change touches auth, authz, etc. ... ok
+test_spec_factory_trigger_is_complexity_aware (test_dev_workflow_skill.TestDevWorkflowNegativeCases.test_spec_factory_trigger_is_complexity_aware)
+Full SDD is mandatory for complex or unspecified behavior, not trivial work. ... ok
+test_ui_ux_mandatory_when_ui_present (test_dev_workflow_skill.TestDevWorkflowNegativeCases.test_ui_ux_mandatory_when_ui_present)
+ui-ux-standard is mandatory whenever there is UI. ... ok
+test_blocked_card_stays_in_current_column (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_blocked_card_stays_in_current_column)
+A blocked card stays in its current column with the blocked label. ... ok
+test_column_means_process_step (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_column_means_process_step)
+Column means process step; label means condition or classification. ... ok
+test_eight_kanban_columns (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_eight_kanban_columns)
+TASK-010 explicitly adds validation and final human approval. ... ok
+test_no_blocked_column (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_no_blocked_column)
+Must state: do not create a blocked column. ... ok
+test_official_kanban_method_section_exists (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_official_kanban_method_section_exists)
+NEW section: Official Kanban Method must exist. ... ok
+test_recommended_blocked_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_blocked_label)
+Recommended labels must include blocked. ... ok
+test_recommended_bug_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_bug_label)
+Recommended labels must include bug. ... ok
+test_recommended_feature_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_feature_label)
+Recommended labels must include feature. ... ok
+test_recommended_high_priority_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_high_priority_label)
+Recommended labels must include high-priority. ... ok
+test_recommended_needs_info_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_needs_info_label)
+Recommended labels must include needs-info. ... ok
+test_recommended_rework_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_rework_label)
+Recommended labels must include rework. ... ok
+test_recommended_tech_debt_label (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_recommended_tech_debt_label)
+Recommended labels must include tech-debt. ... ok
+test_rework_label_on_review_failure (test_dev_workflow_skill.TestDevWorkflowOfficialKanbanMethod.test_rework_label_on_review_failure)
+If review fails, move card back to In Progress and add rework label. ... ok
+test_recommended_task_template_section_exists (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_recommended_task_template_section_exists)
+NEW section: Recommended Task Template must exist. ... ok
+test_template_checklist_de_execucao (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_checklist_de_execucao)
+Execution steps must be individually trackable and initially unchecked. ... ok
+test_template_has_all_layer_sections (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_has_all_layer_sections)
+Template must have Banco, API/Backend, Frontend/UI, Validação sections. ... ok
+test_template_has_prompt_para_executor (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_has_prompt_para_executor)
+Template must include a short contract bootstrap. ... ok
+test_template_has_resultado_da_execucao (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_has_resultado_da_execucao)
+Template must include Resultado da execução. ... ok
+test_template_has_riscos_lacunas (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_has_riscos_lacunas)
+Template must include Riscos/Lacunas. ... ok
+test_template_has_status_visual (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_has_status_visual)
+Template must include Status visual section. ... ok
+test_template_kanban_all_columns (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_kanban_all_columns)
+Template status Kanban includes all 6 columns. ... ok
+test_template_pronto_para_github_projects (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_pronto_para_github_projects)
+Template must include Pronto para GitHub Projects: sim/não. ... ok
+test_template_starts_with_titulo (test_dev_workflow_skill.TestDevWorkflowRecommendedTaskTemplate.test_template_starts_with_titulo)
+Template must start with # Título. ... ok
+test_approve_or_request_rework (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_approve_or_request_rework)
+Review must result in approve or request rework. ... ok
+test_rejected_review_moves_to_in_progress (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_rejected_review_moves_to_in_progress)
+NEW: Rejected review moves the card back to In Progress. ... ok
+test_review_checks_pr_links (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_review_checks_pr_links)
+Review must check PR points to task, issue, branch and specs. ... ok
+test_review_checks_scope (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_review_checks_scope)
+Review must check nothing was built outside the task scope. ... ok
+test_review_checks_tests_with_evidence (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_review_checks_tests_with_evidence)
+Review must check tests pass with evidence. ... ok
+test_review_rules_section_exists (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_review_rules_section_exists)
+Review Rules section must exist. ... ok
+test_rework_label_on_rejected_review (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_rework_label_on_rejected_review)
+NEW: Rejected review adds the rework label until corrected. ... ok
+test_unvalidated_areas_marked_nao_validado (test_dev_workflow_skill.TestDevWorkflowReviewRules.test_unvalidated_areas_marked_nao_validado)
+Unvalidated areas must be marked NAO VALIDADO. ... ok
+test_context_budget_rules_section (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_context_budget_rules_section)
+Context Budget Rules section must exist. ... ok
+test_delegation_rules_section (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_delegation_rules_section)
+Delegation Rules section must exist. ... ok
+test_frontmatter_name (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_frontmatter_name)
+SKILL.md must have frontmatter with name: dev-workflow-standard. ... ok
+test_main_heading (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_main_heading)
+SKILL.md must identify the Engineering Harness role. ... ok
+test_mandatory_flow_section (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_mandatory_flow_section)
+Mandatory Flow section must exist. ... ok
+test_section_order_entry_exit_before_github_ready (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_section_order_entry_exit_before_github_ready)
+Definition of Entry / Exit must appear before GitHub-Ready Task Structure. ... ok
+test_section_order_governance_before_kanban (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_section_order_governance_before_kanban)
+Mandatory Task Governance section must appear before Official Kanban Method. ... ok
+test_section_order_kanban_before_entry_exit (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_section_order_kanban_before_entry_exit)
+Official Kanban Method must appear before Definition of Entry / Exit. ... ok
+test_skill_file_exists (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_skill_file_exists)
+SKILL.md must exist at the expected path. ... ok
+test_skill_file_not_empty (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_skill_file_not_empty)
+SKILL.md must not be empty. ... ok
+test_skill_roles_table (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_skill_roles_table)
+Skill Roles table must exist. ... ok
+test_two_executors_not_same_files (test_dev_workflow_skill.TestDevWorkflowSkillFileIntegrity.test_two_executors_not_same_files)
+Must state two executors must not edit the same files simultaneously. ... ok
+test_environment_not_duplicated_on_absent_base (test_devops_standard.DevOpsIntegrationTests.test_environment_not_duplicated_on_absent_base) ... ok
+test_execution_contract_is_lean_and_references_existing_sources (test_devops_standard.DevOpsIntegrationTests.test_execution_contract_is_lean_and_references_existing_sources) ... ok
+test_existing_receipt_and_execution_states_are_reused (test_devops_standard.DevOpsIntegrationTests.test_existing_receipt_and_execution_states_are_reused) ... ok
+test_readme_and_agent_map_expose_real_skill (test_devops_standard.DevOpsIntegrationTests.test_readme_and_agent_map_expose_real_skill) ... FAIL
+test_sdd_conditional_reference_is_resolvable (test_devops_standard.DevOpsIntegrationTests.test_sdd_conditional_reference_is_resolvable) ... ok
+test_sdd_example_validation_pairs_exist_in_owner_catalog (test_devops_standard.DevOpsIntegrationTests.test_sdd_example_validation_pairs_exist_in_owner_catalog) ... ok
+test_security_owner_and_no_parallel_review_gate (test_devops_standard.DevOpsIntegrationTests.test_security_owner_and_no_parallel_review_gate) ... ok
+test_agent_metadata_invokes_exact_skill (test_devops_standard.DevOpsPackageTests.test_agent_metadata_invokes_exact_skill) ... ok
+test_frontmatter_and_compact_canonical_skill (test_devops_standard.DevOpsPackageTests.test_frontmatter_and_compact_canonical_skill) ... ok
+test_full_mit_notices_preserved (test_devops_standard.DevOpsPackageTests.test_full_mit_notices_preserved) ... ok
+test_local_markdown_resource_links_resolve (test_devops_standard.DevOpsPackageTests.test_local_markdown_resource_links_resolve) ... ok
+test_marketplaces_have_unique_resolving_entry (test_devops_standard.DevOpsPackageTests.test_marketplaces_have_unique_resolving_entry) ... ok
+test_no_automatic_execution_surface_or_duplicate_installer (test_devops_standard.DevOpsPackageTests.test_no_automatic_execution_surface_or_duplicate_installer) ... ok
+test_pinned_provenance_and_restricted_exclusion (test_devops_standard.DevOpsPackageTests.test_pinned_provenance_and_restricted_exclusion) ... ok
+test_required_domains_are_discoverable (test_devops_standard.DevOpsPackageTests.test_required_domains_are_discoverable) ... ok
+test_runtime_state_is_ignored_not_tracked (test_devops_standard.DevOpsPackageTests.test_runtime_state_is_ignored_not_tracked) ... ok
+test_selected_templates_are_real_and_traced (test_devops_standard.DevOpsPackageTests.test_selected_templates_are_real_and_traced) ... ok
+test_three_manifests_resolve_same_skill (test_devops_standard.DevOpsPackageTests.test_three_manifests_resolve_same_skill) ... ok
+test_arguments_are_not_evaluated_by_shell (test_devops_tools.DevOpsHelperProcessTests.test_arguments_are_not_evaluated_by_shell) ... ok
+test_cached_execution_does_not_repeat_version_probe (test_devops_tools.DevOpsHelperProcessTests.test_cached_execution_does_not_repeat_version_probe) ... ok
+test_cli_propagates_validator_failure (test_devops_tools.DevOpsHelperProcessTests.test_cli_propagates_validator_failure) ... ok
+test_compose_detection_and_execution_use_explicit_subcommand (test_devops_tools.DevOpsHelperProcessTests.test_compose_detection_and_execution_use_explicit_subcommand) ... ok
+test_deleted_cached_executable_becomes_missing (test_devops_tools.DevOpsHelperProcessTests.test_deleted_cached_executable_becomes_missing) ... ok
+test_devops_owner_supported_with_installed_bundle_overrides (test_devops_tools.DevOpsHelperProcessTests.test_devops_owner_supported_with_installed_bundle_overrides) ... ok
+test_fail_fix_revalidate_retains_real_initial_and_final_results (test_devops_tools.DevOpsHelperProcessTests.test_fail_fix_revalidate_retains_real_initial_and_final_results) ... ok
+test_file_workspace_does_not_invalidate_cached_executable (test_devops_tools.DevOpsHelperProcessTests.test_file_workspace_does_not_invalidate_cached_executable) ... ok
+test_missing_tool_never_installs (test_devops_tools.DevOpsHelperProcessTests.test_missing_tool_never_installs) ... ok
+test_missing_workspace_returns_structured_error_without_state_writes (test_devops_tools.DevOpsHelperProcessTests.test_missing_workspace_returns_structured_error_without_state_writes) ... ok
+test_run_uses_requested_workspace (test_devops_tools.DevOpsHelperProcessTests.test_run_uses_requested_workspace) ... ok
+test_workspace_change_does_not_reuse_other_project_state (test_devops_tools.DevOpsHelperProcessTests.test_workspace_change_does_not_reuse_other_project_state) ... ok
+test_act_is_optional (test_devops_tools.DevOpsRegistryTests.test_act_is_optional) ... ok
+test_cluster_detection_is_client_only (test_devops_tools.DevOpsRegistryTests.test_cluster_detection_is_client_only) ... ok
+test_compose_is_a_docker_subcommand (test_devops_tools.DevOpsRegistryTests.test_compose_is_a_docker_subcommand) ... ok
+test_each_tool_has_capability_executable_verification_and_install_policy (test_devops_tools.DevOpsRegistryTests.test_each_tool_has_capability_executable_verification_and_install_policy) ... ok
+test_exact_catalog_has_twenty_official_sources (test_devops_tools.DevOpsRegistryTests.test_exact_catalog_has_twenty_official_sources) ... ok
+test_nonstandard_version_flags_match_cli_interfaces (test_devops_tools.DevOpsRegistryTests.test_nonstandard_version_flags_match_cli_interfaces) ... ok
+test_security_tools_have_single_owner (test_devops_tools.DevOpsRegistryTests.test_security_tools_have_single_owner) ... ok
+test_terraform_and_tofu_are_declared_alternatives (test_devops_tools.DevOpsRegistryTests.test_terraform_and_tofu_are_declared_alternatives) ... ok
+test_01_new_skill_has_valid_structure (test_environment_bootstrap.EnvironmentBootstrap.test_01_new_skill_has_valid_structure) ... ok
+test_02_manifest_names_are_checked (test_environment_bootstrap.EnvironmentBootstrap.test_02_manifest_names_are_checked) ... ok
+test_03_marketplace_paths_and_completeness (test_environment_bootstrap.EnvironmentBootstrap.test_03_marketplace_paths_and_completeness) ... ok
+test_04_doctor_and_dry_run_never_write (test_environment_bootstrap.EnvironmentBootstrap.test_04_doctor_and_dry_run_never_write) ... ok
+test_05_prepare_configures_only_selected_and_approved (test_environment_bootstrap.EnvironmentBootstrap.test_05_prepare_configures_only_selected_and_approved) ... ok
+test_06_repair_limits_to_observed_broken_component (test_environment_bootstrap.EnvironmentBootstrap.test_06_repair_limits_to_observed_broken_component) ... ok
+test_07_status_does_not_discover_or_install (test_environment_bootstrap.EnvironmentBootstrap.test_07_status_does_not_discover_or_install) ... ok
+test_08_new_skill_discovered_without_hardcoding (test_environment_bootstrap.EnvironmentBootstrap.test_08_new_skill_discovered_without_hardcoding) ... ok
+test_09_new_registry_discovered (test_environment_bootstrap.EnvironmentBootstrap.test_09_new_registry_discovered) ... ok
+test_10_environment_has_no_copy_of_owner_registry (test_environment_bootstrap.EnvironmentBootstrap.test_10_environment_has_no_copy_of_owner_registry) ... ok
+test_11_install_reuses_helper_and_lock_command (test_environment_bootstrap.EnvironmentBootstrap.test_11_install_reuses_helper_and_lock_command) ... ok
+test_12_library_schema_and_provenance_required (test_environment_bootstrap.EnvironmentBootstrap.test_12_library_schema_and_provenance_required) ... ok
+test_13_tiers_and_required_capabilities_route (test_environment_bootstrap.EnvironmentBootstrap.test_13_tiers_and_required_capabilities_route) ... ok
+test_14_optional_never_implicitly_configured (test_environment_bootstrap.EnvironmentBootstrap.test_14_optional_never_implicitly_configured) ... ok
+test_15_declined_optional_not_prompted_again (test_environment_bootstrap.EnvironmentBootstrap.test_15_declined_optional_not_prompted_again) ... ok
+test_16_preferences_persist_across_instances (test_environment_bootstrap.EnvironmentBootstrap.test_16_preferences_persist_across_instances) ... ok
+test_17_custom_stays_private (test_environment_bootstrap.EnvironmentBootstrap.test_17_custom_stays_private) ... ok
+test_18_unknown_never_configures_even_approved (test_environment_bootstrap.EnvironmentBootstrap.test_18_unknown_never_configures_even_approved) ... ok
+test_19_community_needs_specific_confirmation (test_environment_bootstrap.EnvironmentBootstrap.test_19_community_needs_specific_confirmation) ... ok
+test_20_installed_does_not_imply_connected (test_environment_bootstrap.EnvironmentBootstrap.test_20_installed_does_not_imply_connected) ... ok
+test_21_connected_does_not_imply_authenticated (test_environment_bootstrap.EnvironmentBootstrap.test_21_connected_does_not_imply_authenticated) ... ok
+test_22_auth_handoff_is_observed_not_invented (test_environment_bootstrap.EnvironmentBootstrap.test_22_auth_handoff_is_observed_not_invented) ... ok
+test_23_runtime_only_never_installs (test_environment_bootstrap.EnvironmentBootstrap.test_23_runtime_only_never_installs) ... ok
+test_24_secrets_rejected_and_no_config_disclosure (test_environment_bootstrap.EnvironmentBootstrap.test_24_secrets_rejected_and_no_config_disclosure) ... ok
+test_25_state_ignored_by_real_repository (test_environment_bootstrap.EnvironmentBootstrap.test_25_state_ignored_by_real_repository) ... ok
+test_26_fingerprint_invalidates_changed_host_config (test_environment_bootstrap.EnvironmentBootstrap.test_26_fingerprint_invalidates_changed_host_config) ... ok
+test_27_broken_manifest_blocks_health (test_environment_bootstrap.EnvironmentBootstrap.test_27_broken_manifest_blocks_health) ... ok
+test_28_invalid_registry_blocks_health (test_environment_bootstrap.EnvironmentBootstrap.test_28_invalid_registry_blocks_health) ... ok
+test_29_missing_reference_blocks_health (test_environment_bootstrap.EnvironmentBootstrap.test_29_missing_reference_blocks_health) ... ok
+test_30_readme_gate_remains_enforced (test_environment_bootstrap.EnvironmentBootstrap.test_30_readme_gate_remains_enforced) ... ok
+test_absent_test_evidence_never_healthy (test_environment_bootstrap.EnvironmentBootstrap.test_absent_test_evidence_never_healthy) ... ok
+test_approval_scope_and_command_are_exact (test_environment_bootstrap.EnvironmentBootstrap.test_approval_scope_and_command_are_exact) ... ok
+test_browser_preparation_selects_exactly_one (test_environment_bootstrap.EnvironmentBootstrap.test_browser_preparation_selects_exactly_one) ... ok
+test_catalog_is_not_a_connected_server (test_environment_bootstrap.EnvironmentBootstrap.test_catalog_is_not_a_connected_server) ... ok
+test_chrome_system_install_requires_human_action (test_environment_bootstrap.EnvironmentBootstrap.test_chrome_system_install_requires_human_action) ... ok
+test_cli_credentials_and_basic_auth_are_rejected (test_environment_bootstrap.EnvironmentBootstrap.test_cli_credentials_and_basic_auth_are_rejected) ... ok
+test_cli_error_does_not_echo_secret (test_environment_bootstrap.EnvironmentBootstrap.test_cli_error_does_not_echo_secret) ... ok
+test_codex_append_preserves_existing_configuration (test_environment_bootstrap.EnvironmentBootstrap.test_codex_append_preserves_existing_configuration) ... ok
+test_community_consent_requires_boolean_true (test_environment_bootstrap.EnvironmentBootstrap.test_community_consent_requires_boolean_true) ... ok
+test_community_tier_requires_confirmation_independent_of_origin (test_environment_bootstrap.EnvironmentBootstrap.test_community_tier_requires_confirmation_independent_of_origin) ... ok
+test_connected_without_authentication_has_handoff (test_environment_bootstrap.EnvironmentBootstrap.test_connected_without_authentication_has_handoff) ... ok
+test_dependency_install_is_real_scoped_and_exit_retained (test_environment_bootstrap.EnvironmentBootstrap.test_dependency_install_is_real_scoped_and_exit_retained) ... ok
+test_expired_snapshot_cannot_be_ready_or_rejuvenated (test_environment_bootstrap.EnvironmentBootstrap.test_expired_snapshot_cannot_be_ready_or_rejuvenated) ... ok
+test_expired_validation_evidence_invalidates_status (test_environment_bootstrap.EnvironmentBootstrap.test_expired_validation_evidence_invalidates_status) ... ok
+test_failed_generic_install_is_blocked_and_not_retried (test_environment_bootstrap.EnvironmentBootstrap.test_failed_generic_install_is_blocked_and_not_retried) ... ok
+test_healthy_core_does_not_require_every_optional_mcp (test_environment_bootstrap.EnvironmentBootstrap.test_healthy_core_does_not_require_every_optional_mcp) ... ok
+test_hostinger_aws_wordpress_have_official_project_specific_provenance (test_environment_bootstrap.EnvironmentBootstrap.test_hostinger_aws_wordpress_have_official_project_specific_provenance) ... ok
+test_hostinger_aws_wordpress_not_offered_or_prepared_by_default (test_environment_bootstrap.EnvironmentBootstrap.test_hostinger_aws_wordpress_not_offered_or_prepared_by_default) ... ok
+test_hostinger_aws_wordpress_selection_and_requirement_remain_manual (test_environment_bootstrap.EnvironmentBootstrap.test_hostinger_aws_wordpress_selection_and_requirement_remain_manual) ... ok
+test_ignored_optional_offer_is_not_repeated (test_environment_bootstrap.EnvironmentBootstrap.test_ignored_optional_offer_is_not_repeated) ... ok
+test_invalid_state_recovers_conservatively (test_environment_bootstrap.EnvironmentBootstrap.test_invalid_state_recovers_conservatively) ... ok
+test_lockfile_commands_and_conflicts (test_environment_bootstrap.EnvironmentBootstrap.test_lockfile_commands_and_conflicts) ... ok
+test_manager_detection_does_not_select_every_manager (test_environment_bootstrap.EnvironmentBootstrap.test_manager_detection_does_not_select_every_manager) ... ok
+test_manual_component_recovery_requires_new_explicit_validation (test_environment_bootstrap.EnvironmentBootstrap.test_manual_component_recovery_requires_new_explicit_validation) ... ok
+test_missing_optional_runtime_does_not_force_rediscovery (test_environment_bootstrap.EnvironmentBootstrap.test_missing_optional_runtime_does_not_force_rediscovery) ... ok
+test_not_validated_environment_is_never_ready (test_environment_bootstrap.EnvironmentBootstrap.test_not_validated_environment_is_never_ready) ... ok
+test_owner_policy_cannot_be_replaced_by_project_policy (test_environment_bootstrap.EnvironmentBootstrap.test_owner_policy_cannot_be_replaced_by_project_policy) ... ok
+test_registered_is_not_installed (test_environment_bootstrap.EnvironmentBootstrap.test_registered_is_not_installed) ... ok
+test_source_changes_invalidate_validation_evidence (test_environment_bootstrap.EnvironmentBootstrap.test_source_changes_invalidate_validation_evidence) ... ok
+test_stale_runtime_evidence_is_not_reused (test_environment_bootstrap.EnvironmentBootstrap.test_stale_runtime_evidence_is_not_reused) ... ok
+test_status_current_auth_failure_blocks_required_capability (test_environment_bootstrap.EnvironmentBootstrap.test_status_current_auth_failure_blocks_required_capability) ... ok
+test_structurally_broken_plugin_blocks_installation (test_environment_bootstrap.EnvironmentBootstrap.test_structurally_broken_plugin_blocks_installation) ... ok
+test_successful_generic_install_is_not_repeated_before_verification (test_environment_bootstrap.EnvironmentBootstrap.test_successful_generic_install_is_not_repeated_before_verification) ... ok
+test_symlink_state_cannot_overwrite_external_file (test_environment_bootstrap.EnvironmentBootstrap.test_symlink_state_cannot_overwrite_external_file) ... ok
+test_tool_must_be_declared_before_locked_dependency_restore (test_environment_bootstrap.EnvironmentBootstrap.test_tool_must_be_declared_before_locked_dependency_restore) ... ok
+test_all_selected_missing_devops_tools_remain_owner_gated_even_with_approval (test_environment_devops_integration.EnvironmentDevOpsIntegration.test_all_selected_missing_devops_tools_remain_owner_gated_even_with_approval) ... ok
+test_real_twenty_tool_registry_is_discovered_read_only (test_environment_devops_integration.EnvironmentDevOpsIntegration.test_real_twenty_tool_registry_is_discovered_read_only) ... ok
+test_registry_source_drift_rejects_cache_without_mutating_read_only_state (test_environment_devops_integration.EnvironmentDevOpsIntegration.test_registry_source_drift_rejects_cache_without_mutating_read_only_state) ... ok
+test_required_devops_capability_uses_project_local_tool_then_reports_removal (test_environment_devops_integration.EnvironmentDevOpsIntegration.test_required_devops_capability_uses_project_local_tool_then_reports_removal) ... ok
+test_current_contract_references_existing_mandatory_paths (test_execution_contract.TestExecutionContract.test_current_contract_references_existing_mandatory_paths) ... ok
+test_executor_uses_progressive_disclosure (test_execution_contract.TestExecutionContract.test_executor_uses_progressive_disclosure) ... ok
+test_human_task_template_uses_copy_ready_ignition_prompt (test_execution_contract.TestExecutionContract.test_human_task_template_uses_copy_ready_ignition_prompt) ... ok
+test_sdd_produces_both_human_and_machine_artifacts (test_execution_contract.TestExecutionContract.test_sdd_produces_both_human_and_machine_artifacts) ... ok
+test_sector_router_supports_v2_and_legacy_v1 (test_execution_contract.TestExecutionContract.test_sector_router_supports_v2_and_legacy_v1) ... ok
+test_template_v2_and_legacy_contract_are_valid (test_execution_contract.TestExecutionContract.test_template_v2_and_legacy_contract_are_valid) ... ok
+test_completed_still_requires_validation_and_receipt (test_execution_report_comments.TestExecutionReportComments.test_completed_still_requires_validation_and_receipt) ... ok
+test_harness_recognizes_separate_human_report (test_execution_report_comments.TestExecutionReportComments.test_harness_recognizes_separate_human_report) ... ok
+test_material_checkpoints_and_spam_control_are_defined (test_execution_report_comments.TestExecutionReportComments.test_material_checkpoints_and_spam_control_are_defined) ... ok
+test_pipeline_orders_receipt_before_human_comment (test_execution_report_comments.TestExecutionReportComments.test_pipeline_orders_receipt_before_human_comment) ... ok
+test_publication_requires_remote_success_evidence (test_execution_report_comments.TestExecutionReportComments.test_publication_requires_remote_success_evidence) ... ok
+test_report_uses_verifiable_rationale_without_chain_of_thought (test_execution_report_comments.TestExecutionReportComments.test_report_uses_verifiable_rationale_without_chain_of_thought) ... ok
+test_rework_and_blocked_reports_are_actionable (test_execution_report_comments.TestExecutionReportComments.test_rework_and_blocked_reports_are_actionable) ... ok
+test_task_project_issue_and_pr_traceability_remains (test_execution_report_comments.TestExecutionReportComments.test_task_project_issue_and_pr_traceability_remains) ... ok
+test_alteracoes_fora_do_escopo_section_exists (test_execution_report_template.TestExecutionReportAlteracoesForaDoEscopo.test_alteracoes_fora_do_escopo_section_exists)
+Alterações fora do escopo section must exist. ... ok
+test_must_be_na (test_execution_report_template.TestExecutionReportAlteracoesForaDoEscopo.test_must_be_na)
+Alterações fora do escopo must state it should be N/A. ... ok
+test_not_na_means_execution_should_have_stopped (test_execution_report_template.TestExecutionReportAlteracoesForaDoEscopo.test_not_na_means_execution_should_have_stopped)
+If not N/A, execution should have stopped and recorded a blocker. ... ok
+test_bloqueios_mentions_escalation (test_execution_report_template.TestExecutionReportBloqueios.test_bloqueios_mentions_escalation)
+Bloqueios must mention to whom it was escalated. ... ok
+test_bloqueios_mentions_status_visual (test_execution_report_template.TestExecutionReportBloqueios.test_bloqueios_mentions_status_visual)
+NEW: Bloqueios must mention status visual applied. ... ok
+test_bloqueios_section_exists (test_execution_report_template.TestExecutionReportBloqueios.test_bloqueios_section_exists)
+Bloqueios section must exist. ... ok
+test_checklist_executado_section_exists (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_executado_section_exists)
+NEW section: Checklist executado must exist. ... ok
+test_checklist_has_ten_items (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_has_ten_items)
+Checklist must include execution plus skill and reuse gates. ... ok
+test_checklist_item_atualizacao_relatorio (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_item_atualizacao_relatorio)
+Checklist must include Atualização do relatório. ... ok
+test_checklist_item_handoff (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_item_handoff)
+Checklist must include Handoff para review. ... ok
+test_checklist_item_implementacao (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_item_implementacao)
+Checklist must include Implementação. ... ok
+test_checklist_item_leitura (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_item_leitura)
+Checklist must include Leitura da task e specs. ... ok
+test_checklist_item_testes (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_item_testes)
+Checklist must include Testes. ... ok
+test_checklist_item_validacao (test_execution_report_template.TestExecutionReportChecklistExecutado.test_checklist_item_validacao)
+Checklist must include Validação. ... ok
+test_comandos_executados_section_exists (test_execution_report_template.TestExecutionReportComandosResultadoTestes.test_comandos_executados_section_exists)
+Comandos executados section must exist. ... ok
+test_comandos_executados_updated_description (test_execution_report_template.TestExecutionReportComandosResultadoTestes.test_comandos_executados_updated_description)
+Updated: includes 'validações executadas'. ... ok
+test_resultado_dos_testes_section_exists (test_execution_report_template.TestExecutionReportComandosResultadoTestes.test_resultado_dos_testes_section_exists)
+Resultado dos testes section must exist. ... ok
+test_resultado_testes_mentions_manual_validation (test_execution_report_template.TestExecutionReportComandosResultadoTestes.test_resultado_testes_mentions_manual_validation)
+Resultado dos testes must mention manual validation when no automated tests. ... ok
+test_apenas_escopo_task_implementado (test_execution_report_template.TestExecutionReportEscopoRespeitado.test_apenas_escopo_task_implementado)
+Must state only task scope was implemented. ... ok
+test_escopo_respeitado_section_exists (test_execution_report_template.TestExecutionReportEscopoRespeitado.test_escopo_respeitado_section_exists)
+Escopo respeitado section must exist. ... ok
+test_nada_fora_do_escopo_sem_justificativa_removed (test_execution_report_template.TestExecutionReportEscopoRespeitado.test_nada_fora_do_escopo_sem_justificativa_removed)
+OLD: 'sem justificativa' was removed from out-of-scope statement. ... ok
+test_nada_fora_do_escopo_updated (test_execution_report_template.TestExecutionReportEscopoRespeitado.test_nada_fora_do_escopo_updated)
+Updated statement: nothing out of scope was changed (no justification escape). ... ok
+test_nenhuma_mudanca_arquitetura (test_execution_report_template.TestExecutionReportEscopoRespeitado.test_nenhuma_mudanca_arquitetura)
+Must state no architecture change without approval. ... ok
+test_evidencias_content_description (test_execution_report_template.TestExecutionReportEvidenciasSection.test_evidencias_content_description)
+Evidências section must describe what to include. ... ok
+test_evidencias_section_exists (test_execution_report_template.TestExecutionReportEvidenciasSection.test_evidencias_section_exists)
+NEW section: Evidências must exist. ... ok
+test_old_pr_section_renamed (test_execution_report_template.TestExecutionReportPRSection.test_old_pr_section_renamed)
+OLD section name '## PR' (standalone) must not appear as a heading. ... ok
+test_pr_review_includes_link_description (test_execution_report_template.TestExecutionReportPRSection.test_pr_review_includes_link_description)
+PR / Review section must mention task, issue, branch and specs linked. ... ok
+test_pr_review_includes_pacote_de_review (test_execution_report_template.TestExecutionReportPRSection.test_pr_review_includes_pacote_de_review)
+PR / Review must mention 'pacote de review'. ... ok
+test_pr_review_section_exists (test_execution_report_template.TestExecutionReportPRSection.test_pr_review_section_exists)
+NEW section name: PR / Review must exist. ... ok
+test_prompt_utilizado_instructions (test_execution_report_template.TestExecutionReportPromptUtilizadoSection.test_prompt_utilizado_instructions)
+Prompt utilizado records the lean bootstrap without copying sources. ... ok
+test_prompt_utilizado_section_exists (test_execution_report_template.TestExecutionReportPromptUtilizadoSection.test_prompt_utilizado_section_exists)
+NEW section: Prompt utilizado must exist. ... ok
+test_arquivos_modulos_permitidos_new (test_execution_report_template.TestExecutionReportReferenciasSection.test_arquivos_modulos_permitidos_new)
+NEW field: Arquivos/módulos permitidos must be present. ... ok
+test_docs_obrigatorios_seguidos_new (test_execution_report_template.TestExecutionReportReferenciasSection.test_docs_obrigatorios_seguidos_new)
+NEW field: Docs obrigatórios seguidos must be present. ... ok
+test_referencias_section_exists (test_execution_report_template.TestExecutionReportReferenciasSection.test_referencias_section_exists)
+Referências section must exist. ... ok
+test_specs_obrigatorias_seguidas (test_execution_report_template.TestExecutionReportReferenciasSection.test_specs_obrigatorias_seguidas)
+Specs obrigatórias seguidas field must be present. ... ok
+test_api_backend_subsection (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_api_backend_subsection)
+API/Backend subsection must exist with expanded description. ... ok
+test_banco_subsection (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_banco_subsection)
+Banco subsection must exist with expanded description. ... ok
+test_frontend_ui_subsection (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_frontend_ui_subsection)
+Frontend/UI subsection must exist with expanded description. ... ok
+test_old_mudancas_por_camada_removed (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_old_mudancas_por_camada_removed)
+OLD section name 'Mudanças por camada' must not exist. ... ok
+test_resultado_detalhado_por_camada_section_exists (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_resultado_detalhado_por_camada_section_exists)
+NEW section: Resultado detalhado por camada must exist. ... ok
+test_riscos_lacunas_subsection (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_riscos_lacunas_subsection)
+NEW subsection: Riscos/Lacunas must exist. ... ok
+test_validacao_subsection (test_execution_report_template.TestExecutionReportResultadoDetalhadoPorCamada.test_validacao_subsection)
+NEW subsection: Validação must exist with TDD and manual validation language. ... ok
+test_branch_field (test_execution_report_template.TestExecutionReportStatusSection.test_branch_field)
+Branch field must be present. ... ok
+test_data_hora_conclusao_field (test_execution_report_template.TestExecutionReportStatusSection.test_data_hora_conclusao_field)
+Data/hora de conclusão field must be present. ... ok
+test_data_hora_inicio_field (test_execution_report_template.TestExecutionReportStatusSection.test_data_hora_inicio_field)
+Data/hora de início field must be present. ... ok
+test_executor_field (test_execution_report_template.TestExecutionReportStatusSection.test_executor_field)
+Executor field must be present. ... ok
+test_issue_criada_vinculada_field (test_execution_report_template.TestExecutionReportStatusSection.test_issue_criada_vinculada_field)
+Issue criada / vinculada field must be present. ... ok
+test_pronto_para_github_projects_field (test_execution_report_template.TestExecutionReportStatusSection.test_pronto_para_github_projects_field)
+Pronto para GitHub Projects: sim/não field must be present. ... ok
+test_responsavel_field (test_execution_report_template.TestExecutionReportStatusSection.test_responsavel_field)
+Responsável field must be present. ... ok
+test_status_e_rastreabilidade_section_exists (test_execution_report_template.TestExecutionReportStatusSection.test_status_e_rastreabilidade_section_exists)
+NEW section: Status e rastreabilidade must exist. ... ok
+test_status_kanban_atual_field (test_execution_report_template.TestExecutionReportStatusSection.test_status_kanban_atual_field)
+Status Kanban atual field must include all 6 columns. ... ok
+test_status_visual_atual_field (test_execution_report_template.TestExecutionReportStatusSection.test_status_visual_atual_field)
+Status visual atual field must be present with valid options. ... ok
+test_task_field (test_execution_report_template.TestExecutionReportStatusSection.test_task_field)
+Task field must be present. ... ok
+test_section_order_prompt_before_checklist (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_section_order_prompt_before_checklist)
+Prompt utilizado must appear before Checklist executado. ... ok
+test_section_order_status_before_referencias (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_section_order_status_before_referencias)
+Status e rastreabilidade must appear before Referências. ... ok
+test_template_arquivos_alterados_section (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_arquivos_alterados_section)
+Template must include Arquivos alterados section. ... ok
+test_template_criterios_de_aceite_section (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_criterios_de_aceite_section)
+Template must include Critérios de aceite section. ... ok
+test_template_executor_note (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_executor_note)
+Template must note it's filled by dev-implementation-standard. ... ok
+test_template_file_exists (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_file_exists)
+execution-report-template.md must exist at the expected path. ... ok
+test_template_main_heading (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_main_heading)
+Template must have the main heading. ... ok
+test_template_mandatory_note (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_mandatory_note)
+Template must include the mandatory note about evidence. ... ok
+test_template_not_empty (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_not_empty)
+Template must not be empty. ... ok
+test_template_observacoes_section (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_observacoes_section)
+Template must include Observações section. ... ok
+test_template_resumo_section (test_execution_report_template.TestExecutionReportTemplateIntegrity.test_template_resumo_section)
+Template must include Resumo section. ... ok
+test_03_validate_schema_and_forbid_auto_merge (test_github_governance.GovernanceBehaviorTests.test_03_validate_schema_and_forbid_auto_merge) ... ok
+test_04_runtime_ids_and_unknown_keys_rejected (test_github_governance.GovernanceBehaviorTests.test_04_runtime_ids_and_unknown_keys_rejected) ... ok
+test_05_status_preserves_ids_and_custom_options (test_github_governance.GovernanceBehaviorTests.test_05_status_preserves_ids_and_custom_options) ... ok
+test_06_duplicate_status_is_conflict (test_github_governance.GovernanceBehaviorTests.test_06_duplicate_status_is_conflict) ... ok
+test_07_safe_path_rejects_traversal (test_github_governance.GovernanceBehaviorTests.test_07_safe_path_rejects_traversal) ... ok
+test_08_safe_path_rejects_symlinks (test_github_governance.GovernanceBehaviorTests.test_08_safe_path_rejects_symlinks) ... ok
+test_09_ci_only_uses_existing_node_scripts (test_github_governance.GovernanceBehaviorTests.test_09_ci_only_uses_existing_node_scripts) ... ok
+test_10_unknown_stack_no_invented_workflow (test_github_governance.GovernanceBehaviorTests.test_10_unknown_stack_no_invented_workflow) ... ok
+test_11_gh_absent_is_classified (test_github_governance.GovernanceBehaviorTests.test_11_gh_absent_is_classified) ... ok
+test_12_readonly_guard_rejects_mutations (test_github_governance.GovernanceBehaviorTests.test_12_readonly_guard_rejects_mutations) ... ok
+test_13_unknown_403_not_plan_limitation (test_github_governance.GovernanceBehaviorTests.test_13_unknown_403_not_plan_limitation) ... ok
+test_14_explicit_plan_failure_classified (test_github_governance.GovernanceBehaviorTests.test_14_explicit_plan_failure_classified) ... ok
+test_15_rest_pagination_exceeds_first_page (test_github_governance.GovernanceBehaviorTests.test_15_rest_pagination_exceeds_first_page) ... ok
+test_16_apply_requires_confirmation_before_any_observation (test_github_governance.GovernanceBehaviorTests.test_16_apply_requires_confirmation_before_any_observation) ... ok
+test_17_disabled_project_requires_reason (test_github_governance.GovernanceBehaviorTests.test_17_disabled_project_requires_reason) ... ok
+test_18_branch_injection_rejected (test_github_governance.GovernanceBehaviorTests.test_18_branch_injection_rejected) ... ok
+test_19_proposal_missing_labels_only_and_no_writes (test_github_governance.GovernanceBehaviorTests.test_19_proposal_missing_labels_only_and_no_writes) ... ok
+test_20_proposal_target_binding (test_github_governance.GovernanceBehaviorTests.test_20_proposal_target_binding) ... ok
+test_21_tampered_actions_never_execute (test_github_governance.GovernanceBehaviorTests.test_21_tampered_actions_never_execute) ... ok
+test_22_remote_drift_never_executes (test_github_governance.GovernanceBehaviorTests.test_22_remote_drift_never_executes) ... ok
+test_23_stack_input_changes_invalidate_proposal (test_github_governance.GovernanceBehaviorTests.test_23_stack_input_changes_invalidate_proposal) ... ok
+test_24_no_admin_blocks_settings (test_github_governance.GovernanceBehaviorTests.test_24_no_admin_blocks_settings) ... ok
+test_25_existing_project_uses_dynamic_id_and_preserves_status (test_github_governance.GovernanceBehaviorTests.test_25_existing_project_uses_dynamic_id_and_preserves_status) ... ok
+test_26_verify_missing_checks_never_ready (test_github_governance.GovernanceBehaviorTests.test_26_verify_missing_checks_never_ready) ... ok
+test_27_graphql_cursor_pagination_dedupes (test_github_governance.GovernanceBehaviorTests.test_27_graphql_cursor_pagination_dedupes) ... ok
+test_28_node_missing_runtime_version_requires_manual_decision (test_github_governance.GovernanceBehaviorTests.test_28_node_missing_runtime_version_requires_manual_decision) ... ok
+test_29_generated_actions_are_full_sha_pinned (test_github_governance.GovernanceBehaviorTests.test_29_generated_actions_are_full_sha_pinned) ... ok
+test_30_auth_error_does_not_echo_raw_credentials (test_github_governance.GovernanceBehaviorTests.test_30_auth_error_does_not_echo_raw_credentials) ... ok
+test_31_ready_only_fresh_complete_observations (test_github_governance.GovernanceBehaviorTests.test_31_ready_only_fresh_complete_observations) ... ok
+test_32_unpublished_local_changes_deny_ready (test_github_governance.GovernanceBehaviorTests.test_32_unpublished_local_changes_deny_ready) ... ok
+test_33_unknown_rules_cannot_be_waived (test_github_governance.GovernanceBehaviorTests.test_33_unknown_rules_cannot_be_waived) ... ok
+test_34_diff_never_emits_secret_from_existing_files (test_github_governance.GovernanceBehaviorTests.test_34_diff_never_emits_secret_from_existing_files) ... ok
+test_35_existing_workflow_preserved_and_no_unknown_stack_blocker (test_github_governance.GovernanceBehaviorTests.test_35_existing_workflow_preserved_and_no_unknown_stack_blocker) ... ok
+test_36_apply_failure_stops_and_reports_completed_actions (test_github_governance.GovernanceBehaviorTests.test_36_apply_failure_stops_and_reports_completed_actions) ... ok
+test_37_noop_apply_is_idempotent_and_not_ready (test_github_governance.GovernanceBehaviorTests.test_37_noop_apply_is_idempotent_and_not_ready) ... ok
+test_38_malformed_api_row_fails_safely (test_github_governance.GovernanceBehaviorTests.test_38_malformed_api_row_fails_safely) ... ok
+test_39_wrong_config_type_is_governance_error (test_github_governance.GovernanceBehaviorTests.test_39_wrong_config_type_is_governance_error) ... ok
+test_40_removed_file_lines_not_reflected_even_unknown_secret_format (test_github_governance.GovernanceBehaviorTests.test_40_removed_file_lines_not_reflected_even_unknown_secret_format) ... ok
+test_41_weak_rules_not_mistaken_for_enforcement (test_github_governance.GovernanceBehaviorTests.test_41_weak_rules_not_mistaken_for_enforcement) ... ok
+test_42_write_time_precondition_preserves_concurrent_local_edit (test_github_governance.GovernanceBehaviorTests.test_42_write_time_precondition_preserves_concurrent_local_edit) ... ok
+test_43_real_cli_fake_gh_readonly_apply_and_idempotency (test_github_governance.GovernanceBehaviorTests.test_43_real_cli_fake_gh_readonly_apply_and_idempotency) ... ok
+test_44_invalid_cli_never_echoes_input (test_github_governance.GovernanceBehaviorTests.test_44_invalid_cli_never_echoes_input) ... ok
+test_45_disabling_generation_does_not_waive_required_files (test_github_governance.GovernanceBehaviorTests.test_45_disabling_generation_does_not_waive_required_files) ... ok
+test_46_disabled_generation_still_hashes_and_checks_ignored_governance (test_github_governance.GovernanceBehaviorTests.test_46_disabled_generation_still_hashes_and_checks_ignored_governance) ... ok
+test_47_unsupported_local_write_platform_blocks_before_remote_mutations (test_github_governance.GovernanceBehaviorTests.test_47_unsupported_local_write_platform_blocks_before_remote_mutations) ... ok
+test_01_helper_exists (test_github_governance.GovernanceBootstrapTests.test_01_helper_exists) ... ok
+test_02_template_has_no_runtime_identifiers (test_github_governance.GovernanceBootstrapTests.test_02_template_has_no_runtime_identifiers) ... ok
+test_component_identity_and_local_navigation_resolve (test_live_design_guide.LiveDesignGuideTests.test_component_identity_and_local_navigation_resolve) ... ok
+test_control_is_labelled_and_updates_a_status_region (test_live_design_guide.LiveDesignGuideTests.test_control_is_labelled_and_updates_a_status_region) ... ok
+test_fixture_script_transitions_without_network_capability (test_live_design_guide.LiveDesignGuideTests.test_fixture_script_transitions_without_network_capability) ... ok
+test_instruction_reference_and_starter_are_shipped_together (test_live_design_guide.LiveDesignGuideTests.test_instruction_reference_and_starter_are_shipped_together) ... ok
+test_starter_is_self_contained_and_has_no_external_submissions (test_live_design_guide.LiveDesignGuideTests.test_starter_is_self_contained_and_has_no_external_submissions) ... ok
+test_capability_registry_keeps_skill_before_provider (test_multi_provider_context.ArchitecturalContractTests.test_capability_registry_keeps_skill_before_provider) ... ok
+test_retrieval_cannot_replace_required_sources (test_multi_provider_context.ArchitecturalContractTests.test_retrieval_cannot_replace_required_sources) ... ok
+test_local_search_respects_allowed_paths_and_required_sources (test_multi_provider_context.ContextRetrieverTests.test_local_search_respects_allowed_paths_and_required_sources) ... ok
+test_secret_files_are_excluded (test_multi_provider_context.ContextRetrieverTests.test_secret_files_are_excluded) ... ok
+test_model_capabilities_are_hints_not_authority (test_multi_provider_context.ProviderResolverTests.test_model_capabilities_are_hints_not_authority) ... ok
+test_owner_skill_maps_before_provider_selection (test_multi_provider_context.ProviderResolverTests.test_owner_skill_maps_before_provider_selection) ... ok
+test_registry_is_secret_free_and_has_nvidia (test_multi_provider_context.ProviderResolverTests.test_registry_is_secret_free_and_has_nvidia) ... ok
+test_unconfigured_provider_is_not_selected (test_multi_provider_context.ProviderResolverTests.test_unconfigured_provider_is_not_selected) ... ok
+test_absent_catalog_does_not_invalidate_external_health_but_loss_does (test_platform_tool_routing.PlatformRouting.test_absent_catalog_does_not_invalidate_external_health_but_loss_does) ... ok
+test_binding_reused_but_runtime_catalog_and_source_drift_invalidate (test_platform_tool_routing.PlatformRouting.test_binding_reused_but_runtime_catalog_and_source_drift_invalidate) ... ok
+test_catalog_inventory_covers_only_authored_entrypoints (test_platform_tool_routing.PlatformRouting.test_catalog_inventory_covers_only_authored_entrypoints) ... ok
+test_each_platform_selects_its_folder_and_windows_mac_fail_closed (test_platform_tool_routing.PlatformRouting.test_each_platform_selects_its_folder_and_windows_mac_fail_closed) ... ok
+test_generated_dependencies_do_not_change_normative_fingerprint (test_platform_tool_routing.PlatformRouting.test_generated_dependencies_do_not_change_normative_fingerprint) ... ok
+test_insufficient_python_blocks_only_affected_tools (test_platform_tool_routing.PlatformRouting.test_insufficient_python_blocks_only_affected_tools) ... ok
+test_interpreter_stat_drift_invalidates_without_subprocess_probe (test_platform_tool_routing.PlatformRouting.test_interpreter_stat_drift_invalidates_without_subprocess_probe) ... ok
+test_malformed_traversal_duplicate_and_false_platform_never_eligible (test_platform_tool_routing.PlatformRouting.test_malformed_traversal_duplicate_and_false_platform_never_eligible) ... ok
+test_owner_symlink_escape_is_rejected (test_platform_tool_routing.PlatformRouting.test_owner_symlink_escape_is_rejected) ... ok
+test_prepare_persists_selection_once_and_status_reuses_it (test_platform_tool_routing.PlatformRouting.test_prepare_persists_selection_once_and_status_reuses_it) ... ok
+test_status_returns_persisted_selection_without_doctor_or_writes (test_platform_tool_routing.PlatformRouting.test_status_returns_persisted_selection_without_doctor_or_writes) ... ok
+test_verified_windows_route_requires_matching_platform_evidence (test_platform_tool_routing.PlatformRouting.test_verified_windows_route_requires_matching_platform_evidence) ... ok
+test_23_bundle_and_platforms (test_qa_testing_standard.QATestingStandardTests.test_23_bundle_and_platforms) ... ok
+test_24_capability_registry (test_qa_testing_standard.QATestingStandardTests.test_24_capability_registry) ... ok
+test_25_no_product_edits (test_qa_testing_standard.QATestingStandardTests.test_25_no_product_edits) ... ok
+test_26_rework_returns_to_owner (test_qa_testing_standard.QATestingStandardTests.test_26_rework_returns_to_owner) ... ok
+test_27_security_boundary (test_qa_testing_standard.QATestingStandardTests.test_27_security_boundary) ... ok
+test_28_ui_boundary (test_qa_testing_standard.QATestingStandardTests.test_28_ui_boundary) ... ok
+test_29_devops_boundary (test_qa_testing_standard.QATestingStandardTests.test_29_devops_boundary) ... ok
+test_30_failure_classification (test_qa_testing_standard.QATestingStandardTests.test_30_failure_classification) ... ok
+test_31_bug_reproduction (test_qa_testing_standard.QATestingStandardTests.test_31_bug_reproduction) ... ok
+test_32_fix_verification (test_qa_testing_standard.QATestingStandardTests.test_32_fix_verification) ... ok
+test_33_regression (test_qa_testing_standard.QATestingStandardTests.test_33_regression) ... ok
+test_34_statuses_and_existing_receipts (test_qa_testing_standard.QATestingStandardTests.test_34_statuses_and_existing_receipts) ... ok
+test_35_pass_requires_execution (test_qa_testing_standard.QATestingStandardTests.test_35_pass_requires_execution) ... ok
+test_36_confirmation_evidence_template (test_qa_testing_standard.QATestingStandardTests.test_36_confirmation_evidence_template) ... ok
+test_37_retest_required (test_qa_testing_standard.QATestingStandardTests.test_37_retest_required) ... ok
+test_38_planning_before_implementation (test_qa_testing_standard.QATestingStandardTests.test_38_planning_before_implementation) ... ok
+test_conditional_references_exist_and_are_bounded (test_qa_testing_standard.QATestingStandardTests.test_conditional_references_exist_and_are_bounded) ... ok
+test_environment_agent_metadata (test_qa_testing_standard.QATestingStandardTests.test_environment_agent_metadata) ... ok
+test_marketplaces_append_discoverable_qa_once (test_qa_testing_standard.QATestingStandardTests.test_marketplaces_append_discoverable_qa_once) ... ok
+test_sector_context_is_purpose_based (test_qa_testing_standard.QATestingStandardTests.test_sector_context_is_purpose_based) ... ok
+test_tool_ownership_not_duplicated (test_qa_testing_standard.QATestingStandardTests.test_tool_ownership_not_duplicated) ... ok
+test_auxiliary_tools_do_not_replace_specs (test_readme.TestReadmeAgentsCLIsSection.test_auxiliary_tools_do_not_replace_specs)
+Auxiliary tools do not replace PRD, specs, docs, tests, or review. ... ok
+test_dev_implementation_standard_role_defined (test_readme.TestReadmeAgentsCLIsSection.test_dev_implementation_standard_role_defined)
+`dev-implementation-standard` is described as executor. ... ok
+test_dev_workflow_standard_role_defined (test_readme.TestReadmeAgentsCLIsSection.test_dev_workflow_standard_role_defined)
+`dev-workflow-standard` is described as the Engineering Harness. ... ok
+test_orchestrator_and_executor_not_simultaneously_editing (test_readme.TestReadmeAgentsCLIsSection.test_orchestrator_and_executor_not_simultaneously_editing)
+Orchestrator and executor must not edit the same files simultaneously. ... ok
+test_sdd_spec_factory_role_defined (test_readme.TestReadmeAgentsCLIsSection.test_sdd_spec_factory_role_defined)
+`sdd-spec-factory` generates specs and executable task. ... ok
+test_transport_is_execution_medium_not_division_of_labor (test_readme.TestReadmeAgentsCLIsSection.test_transport_is_execution_medium_not_division_of_labor)
+Transport (Claude Code) is only the execution medium; division of labor stays with orchestrator. ... ok
+test_claude_auth_status_check (test_readme.TestReadmeClaudeCodeTransport.test_claude_auth_status_check)
+Codex checks claude auth status before first delegation. ... ok
+test_claude_delegation_md_reference (test_readme.TestReadmeClaudeCodeTransport.test_claude_delegation_md_reference)
+README references claude-delegation.md for the transport protocol. ... ok
+test_claude_is_only_an_adapter (test_readme.TestReadmeClaudeCodeTransport.test_claude_is_only_an_adapter)
+Claude Code is described only as a selected transport. ... ok
+test_claude_status_registration (test_readme.TestReadmeClaudeCodeTransport.test_claude_status_registration)
+CLAUDE_STATUS is registered after the health check. ... ok
+test_claude_version_check_before_first_delegation (test_readme.TestReadmeClaudeCodeTransport.test_claude_version_check_before_first_delegation)
+Codex checks claude --version before first delegation when running via Claude Code. ... ok
+test_execution_handoff_is_documented (test_readme.TestReadmeClaudeCodeTransport.test_execution_handoff_is_documented)
+Provider changes persist an execution checkpoint. ... ok
+test_orchestrator_replaces_unavailable_llm (test_readme.TestReadmeClaudeCodeTransport.test_orchestrator_replaces_unavailable_llm)
+The orchestrator can replace an unavailable LLM. ... ok
+test_provider_failure_does_not_restart_task (test_readme.TestReadmeClaudeCodeTransport.test_provider_failure_does_not_restart_task)
+A replacement LLM continues instead of restarting. ... ok
+test_dev_workflow_standard_is_provider_neutral (test_readme.TestReadmeNegativeAndBoundary.test_dev_workflow_standard_is_provider_neutral)
+`dev-workflow-standard` is assigned to an agent role, not a provider. ... ok
+test_readme_documents_human_execution_reporting (test_readme.TestReadmeNegativeAndBoundary.test_readme_documents_human_execution_reporting) ... ok
+test_readme_file_exists (test_readme.TestReadmeNegativeAndBoundary.test_readme_file_exists)
+README.md file must exist. ... ok
+test_readme_has_agentes_e_clis_section (test_readme.TestReadmeNegativeAndBoundary.test_readme_has_agentes_e_clis_section)
+README.md must contain the Agentes e CLIs section. ... ok
+test_readme_has_dev_workflow_standard_section (test_readme.TestReadmeNegativeAndBoundary.test_readme_has_dev_workflow_standard_section)
+README.md must retain the Dev Workflow Standard section. ... ok
+test_readme_has_invariant_rules (test_readme.TestReadmeNegativeAndBoundary.test_readme_has_invariant_rules)
+README.md must retain the invariant rules section. ... ok
+test_readme_has_plugins_section (test_readme.TestReadmeNegativeAndBoundary.test_readme_has_plugins_section)
+README.md must retain the Plugins section. ... ok
+test_readme_has_skill_table (test_readme.TestReadmeNegativeAndBoundary.test_readme_has_skill_table)
+README.md must retain the skill roles table. ... ok
+test_readme_is_not_empty (test_readme.TestReadmeNegativeAndBoundary.test_readme_is_not_empty)
+README.md must not be empty. ... ok
+test_dev_implementation_standard_can_use_any_authorized_llm (test_readme.TestReadmeOrchestratorRole.test_dev_implementation_standard_can_use_any_authorized_llm)
+The executor role is not bound to a provider. ... ok
+test_layer_separation_in_delegations (test_readme.TestReadmeOrchestratorRole.test_layer_separation_in_delegations)
+Banco, API/Backend, Frontend/UI are separated when independently reviewable. ... ok
+test_lean_delegation_fields (test_readme.TestReadmeOrchestratorRole.test_lean_delegation_fields)
+Delegation identifies a sector; required context is resolved, not pasted. ... ok
+test_orchestrator_delegates_to_dev_implementation_standard (test_readme.TestReadmeOrchestratorRole.test_orchestrator_delegates_to_dev_implementation_standard)
+Orchestrator delegates implementation to dev-implementation-standard after specs and task approved. ... ok
+test_orchestrator_does_not_send_full_project (test_readme.TestReadmeOrchestratorRole.test_orchestrator_does_not_send_full_project)
+Orchestrator does not send the whole project or full conversation to delegations. ... ok
+test_orchestrator_never_writes_product_code (test_readme.TestReadmeOrchestratorRole.test_orchestrator_never_writes_product_code)
+Orchestrator must explicitly state it never writes product code. ... ok
+test_old_scope_reference_updated (test_readme.TestReadmeRemovedContent.test_old_scope_reference_updated)
+The old phrasing about coordinating tasks updated from 'executar' to 'coordenar'. ... ok
+test_old_single_cli_model_replaced (test_readme.TestReadmeRemovedContent.test_old_single_cli_model_replaced)
+Old 'Codex: planejamento / Claude Code: implementacao' model was replaced by three-role model. ... ok
+test_old_visible_terminal_paragraph_replaced (test_readme.TestReadmeRemovedContent.test_old_visible_terminal_paragraph_replaced)
+The old paragraph describing VISIBLE_TERMINAL default mode in detail was replaced. ... ok
+test_governance_reference_and_four_operations_are_discoverable (test_readme.TestRepositoryGovernanceRoadmap.test_governance_reference_and_four_operations_are_discoverable) ... ok
+test_onboarding_covers_all_phases_and_human_boundaries (test_readme.TestRepositoryGovernanceRoadmap.test_onboarding_covers_all_phases_and_human_boundaries) ... ok
+test_product_journey_distinguishes_bootstrap_from_delivery (test_readme.TestRepositoryGovernanceRoadmap.test_product_journey_distinguishes_bootstrap_from_delivery) ... ok
+test_explicit_manager_mismatch_fails_before_install (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_explicit_manager_mismatch_fails_before_install) ... ok
+test_explicit_pnpm_uses_frozen_install (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_explicit_pnpm_uses_frozen_install) ... ok
+test_install_failure_is_propagated (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_install_failure_is_propagated) ... ok
+test_missing_lock_fails_before_manager_execution (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_missing_lock_fails_before_manager_execution) ... ok
+test_npm_bootstrap_environment_uses_pnpm_lock_and_discovery (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_npm_bootstrap_environment_uses_pnpm_lock_and_discovery) ... ok
+test_npm_requires_its_lock_and_uses_ci (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_npm_requires_its_lock_and_uses_ci) ... ok
+test_pnpm_lock_takes_precedence_when_both_exist (test_reverse_runtime_launch.ReverseRuntimeBootstrapTests.test_pnpm_lock_takes_precedence_when_both_exist) ... ok
+test_direct_javascript_package_manager (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_direct_javascript_package_manager) ... ok
+test_existing_absolute_target_uses_native_path (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_existing_absolute_target_uses_native_path) ... ok
+test_invalid_doctor_output_is_structured_failure (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_invalid_doctor_output_is_structured_failure) ... ok
+test_local_provider_config_rejects_extra_environment_injection (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_local_provider_config_rejects_extra_environment_injection) ... ok
+test_local_provider_paths_are_reused_and_environment_wins (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_local_provider_paths_are_reused_and_environment_wins) ... ok
+test_missing_runtime_explains_failure (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_missing_runtime_explains_failure) ... ok
+test_optional_provider_failure_does_not_hide_available_runtime (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_optional_provider_failure_does_not_hide_available_runtime) ... ok
+test_shell_metacharacters_are_literal_arguments (test_reverse_runtime_launch.ReverseRuntimeLaunchTests.test_shell_metacharacters_are_literal_arguments) ... ok
+test_example_is_not_fabricated_execution (test_sector_context_routing.TestSectorContextRouting.test_example_is_not_fabricated_execution) ... ok
+test_installed_host_and_checkpoint_completion_boundaries (test_sector_context_routing.TestSectorContextRouting.test_installed_host_and_checkpoint_completion_boundaries) ... ok
+test_legacy_v1_remains_valid_without_sectors (test_sector_context_routing.TestSectorContextRouting.test_legacy_v1_remains_valid_without_sectors) ... ok
+test_negative_cycles_in_either_phase (test_sector_context_routing.TestSectorContextRouting.test_negative_cycles_in_either_phase) ... ok
+test_negative_harness_omits_required_sector (test_sector_context_routing.TestSectorContextRouting.test_negative_harness_omits_required_sector) ... ok
+test_negative_na_without_reason (test_sector_context_routing.TestSectorContextRouting.test_negative_na_without_reason) ... ok
+test_negative_self_dependency (test_sector_context_routing.TestSectorContextRouting.test_negative_self_dependency) ... ok
+test_negative_source_without_purpose_and_condition (test_sector_context_routing.TestSectorContextRouting.test_negative_source_without_purpose_and_condition) ... ok
+test_negative_state_in_contract (test_sector_context_routing.TestSectorContextRouting.test_negative_state_in_contract) ... ok
+test_negative_unknown_dependency (test_sector_context_routing.TestSectorContextRouting.test_negative_unknown_dependency) ... ok
+test_negative_unknown_owner_and_sector (test_sector_context_routing.TestSectorContextRouting.test_negative_unknown_owner_and_sector) ... ok
+test_s01_docs_only_shape_does_not_require_other_specialists (test_sector_context_routing.TestSectorContextRouting.test_s01_docs_only_shape_does_not_require_other_specialists) ... ok
+test_s05_s07_final_qa_dependencies_separate_from_planning (test_sector_context_routing.TestSectorContextRouting.test_s05_s07_final_qa_dependencies_separate_from_planning) ... ok
+test_s09_security_slice_has_no_unrelated_sections_or_sources (test_sector_context_routing.TestSectorContextRouting.test_s09_security_slice_has_no_unrelated_sections_or_sources) ... ok
+test_s10_persistence_source_is_conditional_not_global (test_sector_context_routing.TestSectorContextRouting.test_s10_persistence_source_is_conditional_not_global) ... ok
+test_t01_t04_template_ten_rows_have_owners_applicability_dependencies (test_sector_context_routing.TestSectorContextRouting.test_t01_t04_template_ten_rows_have_owners_applicability_dependencies) ... ok
+test_t05_t07_example_and_actual_task_sources_resolve (test_sector_context_routing.TestSectorContextRouting.test_t05_t07_example_and_actual_task_sources_resolve) ... ok
+test_t08_t09_router_contains_no_mutable_state_or_bodies (test_sector_context_routing.TestSectorContextRouting.test_t08_t09_router_contains_no_mutable_state_or_bodies) ... ok
+test_t10_t13_harness_full_task_specialist_slice_and_sources (test_sector_context_routing.TestSectorContextRouting.test_t10_t13_harness_full_task_specialist_slice_and_sources) ... ok
+test_t14_t15_conditional_and_optional_are_not_automatic (test_sector_context_routing.TestSectorContextRouting.test_t14_t15_conditional_and_optional_are_not_automatic) ... ok
+test_t16_owner_cannot_attest_another_owner (test_sector_context_routing.TestSectorContextRouting.test_t16_owner_cannot_attest_another_owner) ... ok
+test_t17_t18_final_gate_requires_all_required_but_not_na (test_sector_context_routing.TestSectorContextRouting.test_t17_t18_final_gate_requires_all_required_but_not_na) ... ok
+test_t19_missing_anchor_rejected (test_sector_context_routing.TestSectorContextRouting.test_t19_missing_anchor_rejected) ... ok
+test_t19_missing_required_source_rejected (test_sector_context_routing.TestSectorContextRouting.test_t19_missing_required_source_rejected) ... ok
+test_t20_source_conflict_and_context_expansion_stop_claim (test_sector_context_routing.TestSectorContextRouting.test_t20_source_conflict_and_context_expansion_stop_claim) ... ok
+test_t21_existing_receipts_and_freshness_required (test_sector_context_routing.TestSectorContextRouting.test_t21_existing_receipts_and_freshness_required) ... ok
+test_t22_public_docs_explain_sector_routing (test_sector_context_routing.TestSectorContextRouting.test_t22_public_docs_explain_sector_routing) ... ok
+test_external_tracking_requires_confirmation (test_security_standard.TestSecurityValidationGate.test_external_tracking_requires_confirmation) ... ok
+test_false_positive_checklist_is_mandatory_and_complete (test_security_standard.TestSecurityValidationGate.test_false_positive_checklist_is_mandatory_and_complete) ... ok
+test_profiles_are_multistack_and_version_aware (test_security_standard.TestSecurityValidationGate.test_profiles_are_multistack_and_version_aware) ... ok
+test_report_separates_unconfirmed_candidates (test_security_standard.TestSecurityValidationGate.test_report_separates_unconfirmed_candidates) ... ok
+test_skill_loads_false_positive_and_multistack_references (test_security_standard.TestSecurityValidationGate.test_skill_loads_false_positive_and_multistack_references) ... ok
+test_checksum_failure_prevents_runtime_creation (test_seo_runtime_bootstrap.SeoBootstrap.test_checksum_failure_prevents_runtime_creation) ... ok
+test_http_only_is_forwarded_and_existing_runtime_is_preserved (test_seo_runtime_bootstrap.SeoBootstrap.test_http_only_is_forwarded_and_existing_runtime_is_preserved) ... ok
+test_runtime_junction_rejected_before_install_or_external_write (test_seo_runtime_bootstrap.SeoBootstrap.test_runtime_junction_rejected_before_install_or_external_write) ... skipped 'native Windows junction guard'
+test_unknown_option_cannot_trigger_install (test_seo_runtime_bootstrap.SeoBootstrap.test_unknown_option_cannot_trigger_install) ... ok
+test_cached_executable_cannot_redirect_execution (test_skill_owned_tools.ToolStateTests.test_cached_executable_cannot_redirect_execution) ... ok
+test_cli_streams_findings_unless_quiet_and_preserves_failure_exit (test_skill_owned_tools.ToolStateTests.test_cli_streams_findings_unless_quiet_and_preserves_failure_exit) ... ok
+test_contract_and_task_do_not_include_local_state (test_skill_owned_tools.ToolStateTests.test_contract_and_task_do_not_include_local_state) ... ok
+test_dynamic_owner_and_traversal (test_skill_owned_tools.ToolStateTests.test_dynamic_owner_and_traversal) ... ok
+test_empty_verification_output_is_not_verified (test_skill_owned_tools.ToolStateTests.test_empty_verification_output_is_not_verified) ... ok
+test_environment_change_does_not_reuse_host_state (test_skill_owned_tools.ToolStateTests.test_environment_change_does_not_reuse_host_state) ... ok
+test_execution_disappearance_invalidates_cache (test_skill_owned_tools.ToolStateTests.test_execution_disappearance_invalidates_cache) ... ok
+test_failure_never_claims_installed_and_can_retry_later (test_skill_owned_tools.ToolStateTests.test_failure_never_claims_installed_and_can_retry_later) ... ok
+test_fast_path_skips_discovery_and_uses_cached_executable (test_skill_owned_tools.ToolStateTests.test_fast_path_skips_discovery_and_uses_cached_executable) ... 1.0
+ok
+test_first_detection_records_version_path_and_source (test_skill_owned_tools.ToolStateTests.test_first_detection_records_version_path_and_source) ... ok
+test_install_uses_workspace_cwd (test_skill_owned_tools.ToolStateTests.test_install_uses_workspace_cwd) ... ok
+test_install_verifies_and_persists_or_records_failure_without_loop (test_skill_owned_tools.ToolStateTests.test_install_verifies_and_persists_or_records_failure_without_loop) ... ok
+test_local_executable_and_project_cwd (test_skill_owned_tools.ToolStateTests.test_local_executable_and_project_cwd) ... 3.1
+ok
+test_malformed_state_is_conservative_and_state_private (test_skill_owned_tools.ToolStateTests.test_malformed_state_is_conservative_and_state_private) ... ok
+test_missing_executable_and_required_version_invalidate (test_skill_owned_tools.ToolStateTests.test_missing_executable_and_required_version_invalidate) ... ok
+test_override_pair_and_registry_owner_are_checked (test_skill_owned_tools.ToolStateTests.test_override_pair_and_registry_owner_are_checked) ... ok
+test_post_install_detection_records_actual_method (test_skill_owned_tools.ToolStateTests.test_post_install_detection_records_actual_method) ... ok
+test_prerelease_build_version_token_keeps_official_suffix_without_logs (test_skill_owned_tools.ToolStateTests.test_prerelease_build_version_token_keeps_official_suffix_without_logs) ... ok
+test_probe_and_stale_cache_read_only_do_not_write (test_skill_owned_tools.ToolStateTests.test_probe_and_stale_cache_read_only_do_not_write) ... ok
+test_python_plugin_verification_uses_environment_interpreter (test_skill_owned_tools.ToolStateTests.test_python_plugin_verification_uses_environment_interpreter) ... ok
+test_registries_are_owned_and_contain_only_official_source_knowledge (test_skill_owned_tools.ToolStateTests.test_registries_are_owned_and_contain_only_official_source_knowledge) ... ok
+test_required_version_cannot_execute_incompatible_detected_tool (test_skill_owned_tools.ToolStateTests.test_required_version_cannot_execute_incompatible_detected_tool) ... ok
+test_resolution_supports_node_modules_and_venv_scripts (test_skill_owned_tools.ToolStateTests.test_resolution_supports_node_modules_and_venv_scripts) ... ok
+test_separately_installed_skill_can_use_writable_state_override (test_skill_owned_tools.ToolStateTests.test_separately_installed_skill_can_use_writable_state_override) ... ok
+test_version_and_failure_state_never_store_arbitrary_output (test_skill_owned_tools.ToolStateTests.test_version_and_failure_state_never_store_arbitrary_output) ... ok
+test_all_normative_extensions_and_context_render (test_studio_prd.StudioPlanTests.test_all_normative_extensions_and_context_render) ... ok
+test_bundled_md_matches_json_template (test_studio_prd.StudioPlanTests.test_bundled_md_matches_json_template) ... ok
+test_cli_check_detects_md_and_revision_drift (test_studio_prd.StudioPlanTests.test_cli_check_detects_md_and_revision_drift) ... ok
+test_cli_invalid_input_fails_without_traceback (test_studio_prd.StudioPlanTests.test_cli_invalid_input_fails_without_traceback) ... ok
+test_cycle_rejected (test_studio_prd.StudioPlanTests.test_cycle_rejected) ... ok
+test_dependent_parallelism_rejected (test_studio_prd.StudioPlanTests.test_dependent_parallelism_rejected) ... ok
+test_independent_parallelism_allowed_with_rationale (test_studio_prd.StudioPlanTests.test_independent_parallelism_allowed_with_rationale) ... ok
+test_invalid_estimates_fail (test_studio_prd.StudioPlanTests.test_invalid_estimates_fail) ... ok
+test_module_count_and_task_uniqueness (test_studio_prd.StudioPlanTests.test_module_count_and_task_uniqueness) ... ok
+test_no_execution_prompt_without_real_contract_link (test_studio_prd.StudioPlanTests.test_no_execution_prompt_without_real_contract_link) ... ok
+test_prompt_links_are_clickable_and_root_relative (test_studio_prd.StudioPlanTests.test_prompt_links_are_clickable_and_root_relative) ... ok
+test_raw_html_is_not_executable_in_markdown (test_studio_prd.StudioPlanTests.test_raw_html_is_not_executable_in_markdown) ... ok
+test_specification_can_start_with_urgent_module (test_studio_prd.StudioPlanTests.test_specification_can_start_with_urgent_module) ... ok
+test_stage_coverage_required (test_studio_prd.StudioPlanTests.test_stage_coverage_required) ... ok
+test_stages_cannot_put_urgent_module_before_dependency (test_studio_prd.StudioPlanTests.test_stages_cannot_put_urgent_module_before_dependency) ... ok
+test_unknown_dependency_rejected (test_studio_prd.StudioPlanTests.test_unknown_dependency_rejected) ... ok
+test_unknown_estimates_are_valid_and_not_converted_to_zero (test_studio_prd.StudioPlanTests.test_unknown_estimates_are_valid_and_not_converted_to_zero) ... ok
+test_unsafe_links_rejected (test_studio_prd.StudioPlanTests.test_unsafe_links_rejected) ... ok
+test_urgent_fiscal_cannot_precede_required_capability (test_studio_prd.StudioPlanTests.test_urgent_fiscal_cannot_precede_required_capability) ... ok
+test_card_has_glanceable_summary_and_collaborative_discovery (test_task_contract_v2.TestTaskContractV2.test_card_has_glanceable_summary_and_collaborative_discovery) ... ok
+test_delivery_card_covers_every_normative_json_value (test_task_contract_v2.TestTaskContractV2.test_delivery_card_covers_every_normative_json_value) ... ok
+test_delivery_references_and_microtasks_resolve (test_task_contract_v2.TestTaskContractV2.test_delivery_references_and_microtasks_resolve) ... ok
+test_execution_lists_have_resolvable_detailed_contracts (test_task_contract_v2.TestTaskContractV2.test_execution_lists_have_resolvable_detailed_contracts) ... ok
+test_full_delivery_and_independent_validation_are_present (test_task_contract_v2.TestTaskContractV2.test_full_delivery_and_independent_validation_are_present) ... ok
+test_json_is_equivalent_task_contract_v2 (test_task_contract_v2.TestTaskContractV2.test_json_is_equivalent_task_contract_v2) ... ok
+test_json_reports_policy_not_runtime_evidence (test_task_contract_v2.TestTaskContractV2.test_json_reports_policy_not_runtime_evidence) ... ok
+test_list_prompt_links_shared_json_without_embedding_it (test_task_contract_v2.TestTaskContractV2.test_list_prompt_links_shared_json_without_embedding_it) ... ok
+test_microtasks_route_skills_plugins_capabilities_and_tools (test_task_contract_v2.TestTaskContractV2.test_microtasks_route_skills_plugins_capabilities_and_tools) ... ok
+test_pipeline_requires_published_planning_report_before_ready (test_task_contract_v2.TestTaskContractV2.test_pipeline_requires_published_planning_report_before_ready) ... ok
+test_reference_library_and_design_are_first_class (test_task_contract_v2.TestTaskContractV2.test_reference_library_and_design_are_first_class) ... ok
+test_reporting_requires_tokens_and_changed_surface (test_task_contract_v2.TestTaskContractV2.test_reporting_requires_tokens_and_changed_surface) ... ok
+test_skills_share_the_same_contract_model (test_task_contract_v2.TestTaskContractV2.test_skills_share_the_same_contract_model) ... ok
+test_template_sector_dependencies_are_executable (test_task_contract_v2.TestTaskContractV2.test_template_sector_dependencies_are_executable) ... ok
+test_critical_examples_do_not_claim_executed_domain_tests (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_critical_examples_do_not_claim_executed_domain_tests) ... ok
+test_domain_rows_resolve_to_packaged_topic_files (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_domain_rows_resolve_to_packaged_topic_files) ... ok
+test_every_topic_has_decision_and_verification_guidance (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_every_topic_has_decision_and_verification_guidance) ... ok
+test_harness_and_sdd_reach_one_canonical_router (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_harness_and_sdd_reach_one_canonical_router) ... ok
+test_knowledge_gap_learning_reuses_research_and_durable_ownership (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_knowledge_gap_learning_reuses_research_and_durable_ownership) ... ok
+test_security_and_operations_reuse_existing_owners (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_security_and_operations_reuse_existing_owners) ... ok
+test_selection_preserves_existing_transport_and_ownership (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_selection_preserves_existing_transport_and_ownership) ... ok
+test_skill_discovery_sources_preserve_authority_and_adoption_gates (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_skill_discovery_sources_preserve_authority_and_adoption_gates) ... ok
+test_topics_are_directly_discoverable_from_sdd (test_technical_knowledge_library.TechnicalKnowledgeLibraryContract.test_topics_are_directly_discoverable_from_sdd) ... ok
+test_catalog_preserves_official_source_pins_and_restricted_terms (test_ui_library_routing.UiLibraryRouting.test_catalog_preserves_official_source_pins_and_restricted_terms) ... ok
+test_existing_prd_spec_task_sources_retain_identity_and_unknown_values (test_ui_library_routing.UiLibraryRouting.test_existing_prd_spec_task_sources_retain_identity_and_unknown_values) ... ok
+test_no_standalone_library_skills_components_or_dependencies_shipped (test_ui_library_routing.UiLibraryRouting.test_no_standalone_library_skills_components_or_dependencies_shipped) ... ok
+test_nonselected_candidates_not_required_and_instructions_not_os_gated (test_ui_library_routing.UiLibraryRouting.test_nonselected_candidates_not_required_and_instructions_not_os_gated) ... ok
+test_ui_local_reference_closure_after_removal (test_ui_library_routing.UiLibraryRouting.test_ui_local_reference_closure_after_removal) ... ok
+test_anti_generic_quality_gate_has_product_rules (test_ui_ux_standard.TestUiUxComponentIntelligence.test_anti_generic_quality_gate_has_product_rules) ... ok
+test_curated_sources_are_documented (test_ui_ux_standard.TestUiUxComponentIntelligence.test_curated_sources_are_documented) ... ok
+test_external_components_are_not_default_source_of_truth (test_ui_ux_standard.TestUiUxComponentIntelligence.test_external_components_are_not_default_source_of_truth) ... ok
+test_registry_policy_is_mcp_aware_and_safe (test_ui_ux_standard.TestUiUxComponentIntelligence.test_registry_policy_is_mcp_aware_and_safe) ... ok
+test_skill_loads_component_intelligence_references (test_ui_ux_standard.TestUiUxComponentIntelligence.test_skill_loads_component_intelligence_references) ... ok
+test_skill_requires_component_source_inventory (test_ui_ux_standard.TestUiUxComponentIntelligence.test_skill_requires_component_source_inventory) ... ok
+test_missing_tool_and_foreign_platform (test_v2_environment.PlatformSelectionTests.test_missing_tool_and_foreign_platform) ... ok
+test_platform_detection (test_v2_environment.PlatformSelectionTests.test_platform_detection) ... ok
+test_platforms_reference_same_canonical_scripts (test_v2_environment.PlatformSelectionTests.test_platforms_reference_same_canonical_scripts) ... ok
+test_runtime_presence_never_proves_operational_status (test_v2_environment.PlatformSelectionTests.test_runtime_presence_never_proves_operational_status) ... ok
+test_source_and_overlay_changes_invalidate_fingerprint (test_v2_environment.PlatformSelectionTests.test_source_and_overlay_changes_invalidate_fingerprint) ... ok
+test_win11_never_inherits_win10_certification (test_v2_environment.PlatformSelectionTests.test_win11_never_inherits_win10_certification) ... ok
+test_all_routes_exist_in_original_catalog (test_v2_environment.ReverseIntegrationTests.test_all_routes_exist_in_original_catalog) ... ok
+test_original_engine_is_pinned_and_distributed (test_v2_environment.ReverseIntegrationTests.test_original_engine_is_pinned_and_distributed) ... ok
+test_runtime_is_separate_and_unknown_routes_fail (test_v2_environment.ReverseIntegrationTests.test_runtime_is_separate_and_unknown_routes_fail) ... ok
+test_invalid_dependency_and_duplicate_list_fail_closed (test_v2_office.OfficeTests.test_invalid_dependency_and_duplicate_list_fail_closed) ... ERROR
+test_metadata_search_reuses_without_network (test_v2_office.OfficeTests.test_metadata_search_reuses_without_network) ... ok
+test_plan_is_not_execution_and_core_only_is_incomplete (test_v2_office.OfficeTests.test_plan_is_not_execution_and_core_only_is_incomplete) ... ok
+test_private_and_escape_paths_rejected (test_v2_office.OfficeTests.test_private_and_escape_paths_rejected) ... ok
+test_real_contract_and_handoff_reject_stale_revision (test_v2_office.OfficeTests.test_real_contract_and_handoff_reject_stale_revision) ... ERROR
+test_stale_cache_rejected_and_lower_priority_fallback (test_v2_office.OfficeTests.test_stale_cache_rejected_and_lower_priority_fallback) ... ok
+test_task_index_priority (test_v2_office.OfficeTests.test_task_index_priority) ... ok
+test_unknown_sector_or_cross_sector_capability (test_v2_office.OfficeTests.test_unknown_sector_or_cross_sector_capability) ... ok
+test_all_canonical_skills_are_covered_without_vendor_rewrite (test_v2_skill_routes.SkillRoutesTests.test_all_canonical_skills_are_covered_without_vendor_rewrite) ... ok
+test_dependencies_exist_are_acyclic_and_include_own_core (test_v2_skill_routes.SkillRoutesTests.test_dependencies_exist_are_acyclic_and_include_own_core) ... ok
+test_exact_source_and_destination_section_equivalence (test_v2_skill_routes.SkillRoutesTests.test_exact_source_and_destination_section_equivalence) ... ok
+test_fences_do_not_create_fake_sections (test_v2_skill_routes.SkillRoutesTests.test_fences_do_not_create_fake_sections) ... ok
+test_implementation_safety_workflow_is_always_in_core (test_v2_skill_routes.SkillRoutesTests.test_implementation_safety_workflow_is_always_in_core) ... ok
+test_new_sectors_have_concrete_procedures_and_resolvable_references (test_v2_skill_routes.SkillRoutesTests.test_new_sectors_have_concrete_procedures_and_resolvable_references) ... ok
+test_no_generation_drift (test_v2_skill_routes.SkillRoutesTests.test_no_generation_drift) ... ok
+test_trivial_ui_does_not_require_full_component_catalog (test_v2_skill_routes.SkillRoutesTests.test_trivial_ui_does_not_require_full_component_catalog) ... ok
+test_exclusive_file_and_pinned_root_reject_concurrent_mutation (test_windows_file_guards.WindowsFileGuards.test_exclusive_file_and_pinned_root_reject_concurrent_mutation) ... skipped 'native Windows HANDLE adapter'
+test_existing_file_is_not_overwritten_by_new_file_proposal (test_windows_file_guards.WindowsFileGuards.test_existing_file_is_not_overwritten_by_new_file_proposal) ... skipped 'native Windows HANDLE adapter'
+test_hardlink_is_rejected_without_changing_owned_external_file (test_windows_file_guards.WindowsFileGuards.test_hardlink_is_rejected_without_changing_owned_external_file) ... skipped 'native Windows HANDLE adapter'
+test_junction_parent_rejected_without_creating_external_file (test_windows_file_guards.WindowsFileGuards.test_junction_parent_rejected_without_creating_external_file) ... skipped 'native Windows HANDLE adapter'
+test_new_nested_file_creation_and_approved_existing_replacement (test_windows_file_guards.WindowsFileGuards.test_new_nested_file_creation_and_approved_existing_replacement) ... skipped 'native Windows HANDLE adapter'
+test_write_time_hash_preserves_concurrent_content (test_windows_file_guards.WindowsFileGuards.test_write_time_hash_preserves_concurrent_content) ... skipped 'native Windows HANDLE adapter'
+
+======================================================================
+ERROR: test_invalid_dependency_and_duplicate_list_fail_closed (test_v2_office.OfficeTests.test_invalid_dependency_and_duplicate_list_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/591ea5883473/The-office/tests/test_v2_office.py", line 57, in test_invalid_dependency_and_duplicate_list_fail_closed
+    contract=self.contract(); contract['sectors']['harness']['depends_on'].append('harness')
+             ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/591ea5883473/The-office/tests/test_v2_office.py", line 51, in contract
+    return office.read_json(ROOT/'docs/execution/THEOFFICE-V2-001.json')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/591ea5883473/The-office/scripts/office.py", line 19, in read_json
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/591ea5883473/The-office/docs/execution/THEOFFICE-V2-001.json'
+
+======================================================================
+ERROR: test_real_contract_and_handoff_reject_stale_revision (test_v2_office.OfficeTests.test_real_contract_and_handoff_reject_stale_revision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/591ea5883473/The-office/tests/test_v2_office.py", line 53, in test_real_contract_and_handoff_reject_stale_revision
+    contract=self.contract(); office.validate_contract(contract)
+             ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/591ea5883473/The-office/tests/test_v2_office.py", line 51, in contract
+    return office.read_json(ROOT/'docs/execution/THEOFFICE-V2-001.json')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/591ea5883473/The-office/scripts/office.py", line 19, in read_json
+    return json.loads(Path(path).read_text(encoding='utf-8'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/591ea5883473/The-office/docs/execution/THEOFFICE-V2-001.json'
+
+======================================================================
+FAIL: test_agents_file_is_a_short_map_to_canonical_sources (test_agent_skill_contract.TestAgentSkillContract.test_agents_file_is_a_short_map_to_canonical_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/591ea5883473/The-office/tests/test_agent_skill_contract.py", line 103, in test_agents_file_is_a_short_map_to_canonical_sources
+    self.assertIn(target, content)
+AssertionError: 'README.md' not found in "# The Office V2\n\nThis checkout is the canonical V2 bundle, not a running agent server. Read\n`docs/specs/the-office-v2.md` and the active Task JSON for material work.\n\n1. Inspect branch, remote and working tree. Preserve approved scope and human gates.\n2. Start with `agents/orchestrator/AGENT.md`; read the chosen sector's AGENT.md.\n3. Use `python scripts/office.py plan <sector>` to inspect capability IDs. Select\n   necessary capabilities with repeated `--capability <id>`. A core-only plan\n   with candidates is incomplete. Read every selected SKILL.md fully, then its\n   active mandatory references, before acting. Record actual skill receipts.\n4. V2 functional skills live in `skills/`; their original source sections and\n   hashes live in `library/indexes/skill-routes.json`. Relative legacy references\n   resolve against the explicit `reference_base` in the original plugin bundle.\n   A missing reference blocks the affected claim. Never read the whole legacy\n   SKILL.md solely to resolve a referenced file, unless legacy mode is selected.\n5. Shared lookup: `python scripts/office.py search '<need>'`. Consult Task-selected\n   resources and project/local metadata first (`--index` in priority order).\n   Read selected resources only. On gaps follow `agents/librarian/AGENT.md` and\n   canonical research registries; no automatic install or unknown-code execution.\n6. Keep GitHub Issue = Human Task, JSON v2 = equivalent normative instructions,\n   comments/receipts = mutable evidence. Preserve the ten canonical sector IDs;\n   logical V2 agents may share executors. One Task per functional module.\n7. Handoff plans do not prove execution, equivalence, approval or dependencies.\n   Verify current Issue/contract revision and owner receipts before execution.\n   Never self-certify independent QA or fabricate invocation/validation evidence.\n8. Reuse canonical Environment, provider resolver, context retriever, tool-state,\n   governance and REA gateway. Read-only V2 adapters do not install or run them.\n   Installation, configuration, authentication, availability and verified operation\n   remain separate. WSL is Linux. Windows 11/macOS are not natively validated here.\n9. Scale process TRIVIAL/NORMAL/COMPLEX using the routed orchestrator skill.\n   Task THEOFFICE-V2-001 already has owner-approved scope and autonomy; do not\n   restart Discovery. Other tasks retain their actual authorization gates.\n10. Never merge or deploy without explicit separate authorization.\n\n## Compatibility\n\nThe 12 original `plugins/` bundles and marketplaces remain usable in legacy\nmode, without loading all V2 skills as well. V2 uses this root bundle/checkout.\nHost registration is distinct from filesystem validity and must be smoke tested\non the actual host. V2 does not launch persistent background agents or servers.\n\n## Validation\n\n```bash\npython scripts/build_skill_routes.py --check\npython scripts/build_library.py\npython -m unittest discover -s tests -v\ngit diff --check\n```\n\nRecord commands, exit statuses, limitations and current artifact revision.\nDo not declare native OS homologation or token savings without executed evidence.\n"
+
+======================================================================
+FAIL: test_readme_and_agent_map_expose_real_skill (test_devops_standard.DevOpsIntegrationTests.test_readme_and_agent_map_expose_real_skill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/591ea5883473/The-office/tests/test_devops_standard.py", line 156, in test_readme_and_agent_map_expose_real_skill
+    self.assertIn("devops-standard", text)
+AssertionError: 'devops-standard' not found in "# The Office V2\n\nThis checkout is the canonical V2 bundle, not a running agent server. Read\n`docs/specs/the-office-v2.md` and the active Task JSON for material work.\n\n1. Inspect branch, remote and working tree. Preserve approved scope and human gates.\n2. Start with `agents/orchestrator/AGENT.md`; read the chosen sector's AGENT.md.\n3. Use `python scripts/office.py plan <sector>` to inspect capability IDs. Select\n   necessary capabilities with repeated `--capability <id>`. A core-only plan\n   with candidates is incomplete. Read every selected SKILL.md fully, then its\n   active mandatory references, before acting. Record actual skill receipts.\n4. V2 functional skills live in `skills/`; their original source sections and\n   hashes live in `library/indexes/skill-routes.json`. Relative legacy references\n   resolve against the explicit `reference_base` in the original plugin bundle.\n   A missing reference blocks the affected claim. Never read the whole legacy\n   SKILL.md solely to resolve a referenced file, unless legacy mode is selected.\n5. Shared lookup: `python scripts/office.py search '<need>'`. Consult Task-selected\n   resources and project/local metadata first (`--index` in priority order).\n   Read selected resources only. On gaps follow `agents/librarian/AGENT.md` and\n   canonical research registries; no automatic install or unknown-code execution.\n6. Keep GitHub Issue = Human Task, JSON v2 = equivalent normative instructions,\n   comments/receipts = mutable evidence. Preserve the ten canonical sector IDs;\n   logical V2 agents may share executors. One Task per functional module.\n7. Handoff plans do not prove execution, equivalence, approval or dependencies.\n   Verify current Issue/contract revision and owner receipts before execution.\n   Never self-certify independent QA or fabricate invocation/validation evidence.\n8. Reuse canonical Environment, provider resolver, context retriever, tool-state,\n   governance and REA gateway. Read-only V2 adapters do not install or run them.\n   Installation, configuration, authentication, availability and verified operation\n   remain separate. WSL is Linux. Windows 11/macOS are not natively validated here.\n9. Scale process TRIVIAL/NORMAL/COMPLEX using the routed orchestrator skill.\n   Task THEOFFICE-V2-001 already has owner-approved scope and autonomy; do not\n   restart Discovery. Other tasks retain their actual authorization gates.\n10. Never merge or deploy without explicit separate authorization.\n\n## Compatibility\n\nThe 12 original `plugins/` bundles and marketplaces remain usable in legacy\nmode, without loading all V2 skills as well. V2 uses this root bundle/checkout.\nHost registration is distinct from filesystem validity and must be smoke tested\non the actual host. V2 does not launch persistent background agents or servers.\n\n## Validation\n\n```bash\npython scripts/build_skill_routes.py --check\npython scripts/build_library.py\npython -m unittest discover -s tests -v\ngit diff --check\n```\n\nRecord commands, exit statuses, limitations and current artifact revision.\nDo not declare native OS homologation or token savings without executed evidence.\n"
+
+----------------------------------------------------------------------
+Ran 663 tests in 8.029s
+
+FAILED (failures=2, errors=2, skipped=7)

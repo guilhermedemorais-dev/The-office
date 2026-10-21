@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "execution_contract_template": "plugins/sdd-spec-factory/templates/execution-contract-template.json",
+  "human_task_template": "plugins/sdd-spec-factory/templates/task-template.md",
+  "context_routing": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-routing.md",
+  "receipts": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/skill-execution-contract.md"
+}

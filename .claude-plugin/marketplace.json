@@ -1,0 +1,171 @@
+{
+  "name": "guilherme-dev-workflow",
+  "owner": {
+    "name": "Guilherme"
+  },
+  "description": "Global strategic, engineering, UI/UX and security workflow plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "studio-prd",
+      "source": "./plugins/studio-prd",
+      "description": "Briefing colaborativo, PRD por módulos e planejamento interno supervisionado.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": ["briefing", "prd", "planning"]
+    },
+    {
+      "name": "parceiro-estrategico-global",
+      "source": "./plugins/parceiro-estrategico-global",
+      "description": "Global strategic layer: discovery, verification, critical reasoning and dynamic capability routing across available skills/plugins/tools; proposes new capabilities when a real gap exists.",
+      "version": "0.1.0",
+      "category": "productivity",
+      "tags": [
+        "global",
+        "orchestration",
+        "routing",
+        "strategy",
+        "verification"
+      ]
+    },
+    {
+      "name": "dev-workflow-standard",
+      "source": "./plugins/dev-workflow-standard",
+      "description": "Engineering Harness: scale intent contracts to complexity, invoke specialist/executor capabilities, capture execution evidence, validate results, recover or replan, and review delivery.",
+      "version": "0.7.0",
+      "category": "development",
+      "tags": [
+        "workflow",
+        "orchestrator",
+        "cto",
+        "planning",
+        "review"
+      ]
+    },
+    {
+      "name": "ui-ux-standard",
+      "source": "./plugins/ui-ux-standard",
+      "description": "Mockup-first UI/UX, design systems, media prompts, accessibility, and visual QA.",
+      "version": "0.3.0",
+      "category": "design",
+      "tags": [
+        "ui",
+        "ux",
+        "design-system",
+        "mockup",
+        "accessibility"
+      ]
+    },
+    {
+      "name": "security-standard",
+      "source": "./plugins/security-standard",
+      "description": "Risk-based AppSec review, threat modeling, validation, remediation, and security release gates.",
+      "version": "0.2.0",
+      "category": "security",
+      "tags": [
+        "security",
+        "appsec",
+        "review",
+        "threat-model",
+        "owasp"
+      ]
+    },
+    {
+      "name": "sdd-spec-factory",
+      "source": "./plugins/sdd-spec-factory",
+      "description": "Spec-driven factory: turns requests into product/module/page/component/validation/database/API/UI specs and an executable task with PR and QA/review checklists.",
+      "version": "0.2.0",
+      "category": "development",
+      "tags": [
+        "sdd",
+        "specs",
+        "tasks",
+        "pr",
+        "qa",
+        "review"
+      ]
+    },
+    {
+      "name": "dev-environment-standard",
+      "source": "./plugins/dev-environment-standard",
+      "description": "Portable environment bootstrap, MCP discovery and evidence-based plugin health.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": [
+        "environment",
+        "bootstrap",
+        "mcp",
+        "health"
+      ]
+    },
+    {
+      "name": "dev-implementation-standard",
+      "source": "./plugins/dev-implementation-standard",
+      "description": "Executor/coder: implements an approved task strictly within its spec scope on the suggested branch, runs required commands, updates the task result, and prepares the PR.",
+      "version": "0.2.0",
+      "category": "development",
+      "tags": [
+        "implementation",
+        "executor",
+        "coding",
+        "task",
+        "pr"
+      ]
+    },
+    {
+      "name": "devops-standard",
+      "source": "./plugins/devops-standard",
+      "description": "Governed DevOps specialist: CI/CD, infrastructure, releases, validation and rollback.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": [
+        "devops",
+        "infrastructure",
+        "ci-cd",
+        "operations"
+      ]
+    },
+    {
+      "name": "qa-testing-standard",
+      "source": "./plugins/qa-testing-standard",
+      "description": "Independent functional QA, bug reproduction, regression and fix verification.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": [
+        "qa",
+        "testing",
+        "regression",
+        "verification"
+      ]
+    },
+    {
+      "name": "reverse-engineering-standard",
+      "source": "./plugins/reverse-engineering-standard",
+      "description": "Authorized evidence-first reverse engineering of binaries, applications and runtime behavior with REA as the preferred external analysis tool.",
+      "version": "0.1.0",
+      "category": "security",
+      "tags": [
+        "reverse-engineering",
+        "rea",
+        "binary-analysis",
+        "electron",
+        "apk",
+        "firmware"
+      ]
+    },
+    {
+      "name": "seo-standard",
+      "source": "./plugins/seo-standard",
+      "description": "Website SEO/AEO/GEO and conversion specialist with BeyondSEO evidence runtime, conversion copy and post-change validation.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": [
+        "seo",
+        "aeo",
+        "geo",
+        "landing-page",
+        "conversion",
+        "schema"
+      ]
+    }
+  ]
+}

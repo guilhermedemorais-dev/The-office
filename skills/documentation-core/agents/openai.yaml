@@ -1,0 +1,4 @@
+interface:
+  display_name: "Documentation Core"
+  short_description: "Use the approved documentation core procedure"
+  default_prompt: "Read $documentation-core and apply its procedure to the approved Task."

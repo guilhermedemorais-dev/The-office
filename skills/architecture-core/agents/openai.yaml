@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Core"
+  short_description: "Use the approved architecture core procedure"
+  default_prompt: "Read $architecture-core and apply its procedure to the approved Task."

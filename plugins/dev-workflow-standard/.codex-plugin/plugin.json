@@ -1,0 +1,27 @@
+{
+  "name": "dev-workflow-standard",
+  "version": "0.3.0+codex.20260922",
+  "description": "Engineering harness: diagnose demands, apply complexity-proportional intent contracts, invoke specialist skills/executors, capture execution receipts after observable results, validate evidence, recover or replan, and review delivery.",
+  "author": {
+    "name": "Guilherme"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Dev Workflow Standard",
+    "shortDescription": "Orchestrate engineering execution, not just task planning.",
+    "longDescription": "Dev Workflow Standard acts as an engineering harness for software delivery: diagnose and scope the demand, select a TRIVIAL, NORMAL, or COMPLEX intent contract, resolve the required specialist skill/plugin/tool or executor, verify runtime availability, actively invoke the selected capability, preserve handoff context, capture an EXECUTION_RECEIPT from observable results, validate evidence before advancing, recover or replan on failure, and review delivery against its acceptance criteria. Product code remains the responsibility of dev-implementation-standard or another explicitly approved executor capability as a local architectural decision.",
+    "developerName": "Guilherme",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use Dev Workflow Standard as the engineering harness for this demand.",
+      "Resolve and invoke the capabilities required to execute this approved task.",
+      "Continue this engineering workflow from the current execution state and evidence.",
+      "Review this result against the task, specs, execution receipt and acceptance criteria."
+    ]
+  }
+}

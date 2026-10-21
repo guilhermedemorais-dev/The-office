@@ -1,0 +1,4 @@
+interface:
+  display_name: "Librarian Core"
+  short_description: "Use the approved librarian core procedure"
+  default_prompt: "Read $librarian-core and apply its procedure to the approved Task."
