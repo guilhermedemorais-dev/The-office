@@ -1,47 +1,122 @@
-# Install and select The Office V2
+# Guia de instalação e configuração do The Office V2
 
-This review branch is a repository-based overlay. Root `plugin.json`, `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` describe the V2 skill bundle for hosts that support the format; registration and automatic discovery were not validated in this environment. It does not overwrite an installed V1 plugin cache or start background agents. Keep the existing V1 installation until V2 acceptance. Native Windows/macOS execution and individual host plugin support require local validation.
+Use este guia para entender e conferir a instalação. Para delegar o trabalho ao
+agente, copie o [prompt de instalação](installation-prompt.md). São complementares:
+o prompt orienta execução assistida; o guia explica requisitos e aceitação.
 
-## Checkout
+## 1. Identificar a máquina e o host
 
-Use Git and Python 3.10 or newer (the helper uses `Path.is_relative_to`). In a new folder:
+Confirme SO/versão/arquitetura, local do projeto, host de IA e ferramentas já
+instaladas. O conjunto Environment exige **Python 3.11+**; esta entrega foi testada
+com Python 3.12. O roteador isolado usa Python stdlib. Git serve para obter a fonte.
+Node é necessário para recursos específicos, como preparar o template do Portal;
+REA e demais capacidades têm requisitos próprios. Docker não é obrigatório.
 
-```bash
+No Linux/macOS o executável pode se chamar `python3`; no Windows, `py -3`.
+Verifique `--version` antes de usar. WSL é Linux. A existência de catálogo nativo
+não homologa Windows 10, Windows 11 ou macOS nesta revisão.
+
+## 2. Obter a distribuição correta
+
+Em pasta nova, separada do código do cliente:
+
+```sh
 git clone --branch feat/the-office-v2 https://github.com/guilhermedemorais-dev/The-office.git
 cd The-office
+git rev-parse HEAD
 python scripts/office.py --help
-python scripts/office.py plan ux-design
-python scripts/office.py search "documentation"
 ```
 
-On systems where Python is `python3`, replace `python` accordingly. On Windows the Python launcher may be `py -3`; verify its version first. These alternatives are instructions, not proof of native execution. Do not use the V1 marketplace `main` command to obtain an unmerged V2 overlay. The inherited marketplace manifests distribute the preserved V1 bundles and do not automatically activate root V2 routing.
+Se houver checkout existente, confira remoto, branch e mudanças; siga
+[atualização](updating.md), sem sobrescrever trabalho. A V2 ainda está na branch
+de aceitação; os marketplaces herdados distribuem V1 e não ativam a V2 da raiz.
+Leia `AGENTS.md` e a política de execução desta versão.
 
-## Use in an agent host
+## 3. Registrar ou usar pelo checkout
 
-Open this checkout as the workspace in the intended host, read root `AGENTS.md`, and explicitly choose the V2 metadata routing path. Give the owner the approved Task JSON, list ID, revision and current Harness comparison/dependency evidence. Read selected skills fully and resolve canonical references from this checkout. A generated plan is not execution, an enabled plugin or owner validation.
+O bundle raiz contém `.codex-plugin/plugin.json` e `skills/`; há manifestos de
+compatibilidade para outros hosts. No host que suporta instalação local, use o
+mecanismo atual documentado para registrar a raiz da V2, preservando entradas
+existentes. Um marketplace local deve apontar à cópia correta. Recarregue o host
+quando necessário e verifique reconhecimento e execução real.
 
-For a different project keep this checkout reachable, supply its exact canonical location to the host, and route that project's approved Task. Do not copy all skills into every prompt or assume sibling plugin-cache paths. A host with no real multiagent facility executes the bounded steps serially and records that limitation.
+A documentação oficial consultada em 2026-10-21 descreve registro local e atualização
+da cópia ativa: https://developers.openai.com/plugins/build/plugins . O formato
+suportado depende do host; este guia não presume homologação do Desktop do usuário.
+O root `plugin.json` simplificado é histórico deste overlay; não assuma que já
+constitui o manifest portable Agent Plugins atual. Valide o manifest compatível
+real selecionado e seu comportamento no host antes de afirmar instalação.
 
-## Dependencies and tools
+Alternativa de trabalho: abrir este checkout e fornecer ao agente sua localização
+canônica e a do projeto cliente. Isso permite roteamento explícito por `AGENTS.md`,
+mas deve ser chamado **uso por checkout**, não registro confirmado do plugin.
+Não copie todas as skills para o prompt nem use V1 e V2 simultaneamente.
 
-The routing CLI uses the Python standard library. Selected V1 capabilities retain their own runtimes and requirements. Read the active environment skill and its catalogs before installations, configuration or authentication. No helper command installs external tools or publishes secrets. REA and SEO retain their original providers and gateway requirements.
+## 4. Diagnosticar e preparar seletivamente
 
-## Verify and remove
+Leia a skill Environment selecionada e suas referências antes de operações.
+O entrypoint existente diferencia raiz do Harness e workspace do cliente:
 
-```bash
+```sh
+python plugins/dev-environment-standard/skills/dev-environment-standard/scripts/environment.py doctor --repo-root . --workspace /projetos/cliente --json
+python plugins/dev-environment-standard/skills/dev-environment-standard/scripts/environment.py prepare --repo-root . --workspace /projetos/cliente --dry-run --json
+```
+
+Substitua caminhos reais e executável Python conforme o SO. `doctor` e dry-run
+não instalam. Defina seleções conforme requisitos/stack já aprovados; catálogo
+não significa instalação. Reuse Git/runtimes/gerenciador/lockfiles disponíveis.
+
+As ações concretas são aprovadas pelo mecanismo já existente do Environment,
+com comando/componente/escopo exatos; consulte a [referência de operações](../../plugins/dev-environment-standard/skills/dev-environment-standard/references/operations.md).
+A autorização já dada para preparo local necessário dispensa repetir perguntas
+rotineiras, mas não amplia permissões do host ou autoriza ações privilegiadas.
+Estado privado pode ficar em `--state-dir` gravável/ignorado quando o bundle for
+somente leitura. Nunca commitar credenciais, preferências ou estado de runtime.
+
+Depois reutilize `status` compatível e faça reparo pontual em falha/drift. Não
+instale todas as stacks/CLIs/MCPs nem execute bootstrap completo antes de cada Task.
+Autenticação é conduzida pelo host/usuário e verificada separadamente da configuração.
+
+## 5. Confirmar operação básica
+
+```sh
+python scripts/office.py plan documentation
+python scripts/office.py plan ux-design --capability ux-visual-validation
+python scripts/office.py search "OSV"
+python scripts/build_skill_routes.py --check
+python scripts/verify_preservation.py
 python -m unittest discover -s tests -v
 git diff --check
 ```
 
-Review results and skips on the local machine, then run the manual smoke tests in `docs/operations/user-guide.md`. To stop using the overlay, select the existing V1 entrypoint or close this checkout. No installed cache has been replaced by the checkout procedure. Removing this checkout is optional after preserving any local work; no removal is performed automatically.
+Anote comando, exit code e skips. O Plop real tem um teste opcional ativado por
+`OFFICE_PLOP_BINARY` quando esse runtime já estiver preparado para validação;
+a ausência é um skip, não execução inventada. Não instalar Plop em toda máquina.
+Os planos retornam caminhos/hashes e `PLANNED_NOT_EXECUTED`. O host precisa ler
+as skills e realizar uma operação segura real para demonstrar o fluxo.
 
-## Reproducible source hashes
+## 6. Preparar o projeto cliente
 
-The bundle enforces LF text checkout with `.gitattributes`, including on Windows,
-so source inventory hashes remain comparable. Four inherited Python 3.11 cache
-files are archived under `docs/migration/v1-bytecode/`; active interpreter caches
-remain local and ignored. This avoids treating regenerated bytecode as a source
-migration failure. Do not overwrite the bytecode archives when running tests.
-The preserved V1 tool bundle may require Python 3.11+ even though the V2 planner
-itself uses stdlib features available in Python 3.10+; Python 3.12 is the tested
-runtime for this delivery.
+O tutorial está em [utilização](tutorial.md); o plano aprovado organiza módulos e
+Tasks. Quando Portal foi adotado, siga [busca/preparação](client-portal.md) para
+copiar o template versionado a **CLIENT_ROOT/docs/portal/** e ligá-lo à home docs.
+Não instalar o portal dentro do Harness. Preparação não inicia backend ou deploy.
+
+## 7. Aceitar e manter
+
+Confirme revisão do bundle ativo, ferramentas realmente verificadas, preferência
+local reutilizada e uma Task descartável com evidência. Registre o que depende de
+login, ferramenta ausente ou homologação. Consulte o [smoke test](user-guide.md).
+Leia [atualização](updating.md) antes de atualizar fonte/cópia ativa/Portal.
+
+Para deixar de usar, selecione o entrypoint anterior ou feche o checkout. Preserve
+trabalho e configurações antes de remover qualquer cópia; não há desinstalação
+universal automática. O clone deste guia não substitui cache V1 instalado.
+
+## Integridade e limites
+
+`.gitattributes` conserva LF para comparar hashes. Os quatro caches Python
+herdados arquivados em `docs/migration/v1-bytecode/` são evidência de migração,
+não caches para regenerar. Fonte local íntegra, registro no host e execução nativa
+são verificações distintas. Não afirme homologação ou economia de tokens com
+base apenas na cópia dos arquivos ou nos testes estruturais.

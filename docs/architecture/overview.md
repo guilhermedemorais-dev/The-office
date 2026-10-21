@@ -21,3 +21,9 @@ Execution Contract v2, ten canonical validation sector IDs, Human Task equivalen
 ## Extensibility and failure
 
 Register source-derived capabilities in the metadata index and retain their core prerequisites. Validate routes and coverage before use. Missing required references block the affected claim. Optional tool failures use compatible cataloged alternatives; do not delete functionality or mark it verified. Handoffs carry IDs/revision/receipts rather than full source bodies. Revalidation follows material artifact changes.
+
+## Guia técnico atual
+
+Veja [construção e trade-offs](technical-guide.md), o [fluxograma visual](delivery-flow.svg)
+e a [documentação atual](../README.md). O README mantém o corpo legado recolhido
+para compatibilidade; a entrada V2 e sua política têm precedência operacional.
