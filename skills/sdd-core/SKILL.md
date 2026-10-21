@@ -3,6 +3,8 @@ name: sdd-core
 description: "Use for sdd core: Preamble; Mission; Vocabulary (non-negotiable); Mandatory hierarchy; Mandatory separation of concerns; Operating principles; Integration with the other plugins; Definition of done for this skill. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: sdd-core
 
 Source: `plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

@@ -3,6 +3,8 @@ name: environment-bootstrap
 description: "Use for environment bootstrap: Choose the operation; Bootstrap loop. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: environment-bootstrap
 
 Source: `plugins/dev-environment-standard/skills/dev-environment-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

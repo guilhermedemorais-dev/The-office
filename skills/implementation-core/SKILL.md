@@ -3,6 +3,8 @@ name: implementation-core
 description: "Use for implementation core: Preamble; Mission; Preconditions (do not start without these); Hard Limits (non-negotiable); Workflow; Escalation; Interfaces with other skills; Definition of done. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: implementation-core
 
 Source: `plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

@@ -3,6 +3,8 @@ name: sdd-review
 description: "Use for sdd review: Fase 4 - Checklist de PR/QA. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: sdd-review
 
 Source: `plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

@@ -3,6 +3,8 @@ name: global-core
 description: "Use for global core: Preamble; Papel e responsabilidade; Estilo obrigatório; Formato padrão; Classificação da demanda; Verificação e precisão; Práticas consolidadas antes de extensões locais; Execução; Descoberta e roteamento dinâmico de capacidades; Modos especiais; Missão. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: global-core
 
 Source: `plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

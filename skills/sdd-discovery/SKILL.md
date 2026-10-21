@@ -3,6 +3,8 @@ name: sdd-discovery
 description: "Use for sdd discovery: Phases; Studio PRD handoff; Fase 0 - Diagnóstico; Fase 1 - Consolidação. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: sdd-discovery
 
 Source: `plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

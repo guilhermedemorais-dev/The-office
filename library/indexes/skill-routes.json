@@ -2381,6 +2381,42 @@
       "integration_role": "second-audit",
       "after": "existing Security review",
       "description": "Cloudflare second security audit; independent investigation followed by evidence reconciliation."
+    },
+    {
+      "id": "apple-hig-designer",
+      "sector": "ux",
+      "path": "skills/apple-hig-designer/SKILL.md",
+      "source": null,
+      "role": "capability",
+      "requires": [
+        "global-core",
+        "ux-core"
+      ],
+      "triggers": [
+        "apple hig",
+        "Apple-inspired",
+        "iOS",
+        "macOS"
+      ],
+      "source_sections": [],
+      "reference_base": "skills/apple-hig-designer",
+      "references": [
+        "skills/apple-hig-designer/upstream/GUIDE.md"
+      ],
+      "origin": "https://github.com/axiaoge2/Apple-Hig-Designer",
+      "revision": "ff17b91ff2903ecd52940afabf97de5a73c9cd1b",
+      "license": "MIT",
+      "upstream_directory": "skills/apple-hig-designer/upstream",
+      "upstream_sha256": {
+        "GUIDE.md": "2d103e415964a97e9d9bb961857a38516dce4dcc46f53d27448f52fc7bc30ae4",
+        "LICENSE": "3106a684e633b8bec89b632a13f0519145d479b40dfdb80b8dea772cbad3f51d",
+        "REFERENCE.md": "eec21d86dcf7246bbb086d7739690aabba8bc9b4f779d46e563b94dc7ee132f6",
+        "provenance.json": "f45f270cc79296c13a287a82c4ff78b287694cd08c5e01cebb334ca7d98a6761",
+        "resources/components.jsx": "927302405667aa00a69b248af04b4ef4baba1945ece4e198b47761bac2aef8c7",
+        "resources/design-tokens.css": "c134b60ee0c88646bf875d109472c64804e34401f12830b677a1b228346e71f3",
+        "resources/ui-patterns.md": "683fef501929f0cffaebe1e2123da5bdf5dcef34bdc2465732cc2cadaaa6da1d"
+      },
+      "status": "INTEGRATED_NOT_VISUAL_VALIDATED"
     }
   ],
   "sectors": {
@@ -2402,7 +2438,8 @@
       "capabilities": [
         "ux-components",
         "ux-design-system",
-        "ux-visual-validation"
+        "ux-visual-validation",
+        "apple-hig-designer"
       ]
     },
     "sdd": {
@@ -2525,7 +2562,8 @@
       "capabilities": [
         "ux-components",
         "ux-design-system",
-        "ux-visual-validation"
+        "ux-visual-validation",
+        "apple-hig-designer"
       ]
     },
     "governance": {

@@ -3,6 +3,8 @@ name: ux-design-system
 description: "Use for ux design system: Default Design Structure. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: ux-design-system
 
 Source: `plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

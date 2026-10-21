@@ -3,6 +3,8 @@ name: orchestrator-task-governance
 description: "Use for orchestrator task governance: Mandatory Task Governance; Official Kanban Method; Definition of Entry / Exit; Repository Readiness Bootstrap; GitHub-Ready Task Structure; Recommended Task Template. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: orchestrator-task-governance
 
 Source: `plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

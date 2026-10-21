@@ -2384,3 +2384,12 @@ Para conhecer todas as regras, consulte diretamente:
 - [`workflow-pipeline.md`](docs/workflow-pipeline.md)
 - [`harness-execution.md`](plugins/dev-workflow-standard/skills/dev-workflow-standard/references/harness-execution.md)
 - [`capability-registry.md`](plugins/dev-workflow-standard/skills/dev-workflow-standard/references/capability-registry.md)
+
+## Consolidated delivery
+
+The current review branch includes Apple HIG as an optional UX skill, Cloudflare
+as the second Security audit, the V2 proportional-execution/technical-decision
+policy, Compose scope guard, and selected CLI/Plop/Tailwind resources. See
+[consolidation evidence](docs/migration/consolidation.md) and the
+[Desktop guide](docs/operations/desktop-handoff.md). Native-host acceptance and
+end-to-end efficiency metrics remain explicit, unvalidated acceptance items.

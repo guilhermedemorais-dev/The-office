@@ -4,7 +4,8 @@ This checkout is the canonical V2 bundle, not a running agent server. Read
 `docs/specs/the-office-v2.md` and the active Task JSON for material work.
 
 1. Inspect branch, remote and working tree. Preserve approved scope and human gates.
-2. Start with `agents/orchestrator/AGENT.md`; read the chosen sector's AGENT.md.
+2. First apply `docs/operations/v2-execution-policy.md`, including its bounded
+   TRIVIAL exception and material-decision procedure. Then start with `agents/orchestrator/AGENT.md`; read the chosen sector's AGENT.md.
 3. Use `python scripts/office.py plan <sector>` to inspect capability IDs. Select
    necessary capabilities with repeated `--capability <id>`. A core-only plan
    with candidates is incomplete. Read every selected SKILL.md fully, then its
@@ -70,3 +71,10 @@ official docs for gaps/version changes; preserve PRD/stack and reuse the project
 manager. Necessary selected project-local installations are owner-authorized;
 Environment executes under existing host gates and records verification. Catalog
 presence never triggers bulk install or proves operational readiness.
+
+## Consolidated V2 procedures
+
+For material technical decisions use `library/architecture/technical-decision-procedure.md`.
+UX selects `apple-hig-designer` only when the approved design direction calls for it.
+For repetitive code, reuse project/native generators first, then the Plop fallback
+in `library/templates/codegen/README.md`; never impose its template on every stack.

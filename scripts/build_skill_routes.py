@@ -164,6 +164,7 @@ def build(root=ROOT):
    for s in chunks:
     wrapper+=f'<!-- source-section:{s["id"]} sha256:{s["sha256"]} -->\n'+s['text']
    wrapper+='<!-- end of selected V2 skill -->\n'
+   wrapper=wrapper.replace('# The Office V2:', 'V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.\n\n# The Office V2:', 1)
    outputs[path]=wrapper
    for s in chunks:
     source['sections'].append({k:v for k,v in s.items() if k!='text'}|{'skill_id':sid})
@@ -203,6 +204,8 @@ def build(root=ROOT):
     raise ValueError('external capability must have an existing sector')
    registry['skills'].append(item)
    registry['sectors'][item['sector']]['capabilities'].append(item['id'])
+ for alias,target in {'ux-design':'ux'}.items():
+  registry['sectors'][alias]['capabilities']=list(registry['sectors'][target]['capabilities'])
  outputs['library/indexes/skill-routes.json']=json.dumps(registry,ensure_ascii=False,indent=2)+'\n'
  rows=['# Lossless V1 to V2 skill migration','',
  'This is a local functional migration, not a replacement execution engine. All twelve canonical V1 skills and their original references/scripts remain unchanged under `plugins/`. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.','',

@@ -25,3 +25,8 @@ Check existing project commands, then `library/tools/stack-clis.json`. Follow
 technology, choose a suitable CLI and prepare it under existing authorization.
 Frontend/Backend own suitability; Environment owns installation and tool-state
 verification. Reuse installed compatible tools; never bulk-install the catalog.
+
+## Consolidated V2 policy
+
+Apply `docs/operations/v2-execution-policy.md` before legacy procedural requirements.
+Read the material technical-decision procedure only when that decision is active.

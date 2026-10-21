@@ -11,6 +11,8 @@ def build(root=ROOT):
     paths = set(root.glob('plugins/*/skills/*/references/*'))
     paths.update(root.glob('library/skills/*.json'))
     paths.update(root.glob('library/tools/*'))
+    paths.update(root.glob('library/architecture/*.md'))
+    paths.update(root.glob('library/templates/**/*.md'))
     paths.update(root.glob('plugins/*/skills/*/library/**/*'))
     paths.update(root.glob('library/documentation-templates/**/*'))
     paths.update(root.glob('plugins/*/templates/*'))

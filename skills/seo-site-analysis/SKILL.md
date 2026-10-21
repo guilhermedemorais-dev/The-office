@@ -3,6 +3,8 @@ name: seo-site-analysis
 description: "Use for seo site analysis: Workflow; Commercial site standard. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: seo-site-analysis
 
 Source: `plugins/seo-standard/skills/seo-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

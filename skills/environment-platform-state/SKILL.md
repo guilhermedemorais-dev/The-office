@@ -3,6 +3,8 @@ name: environment-platform-state
 description: "Use for environment platform state: Platform routing; Library, ownership and local state; Health and handoff. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: environment-platform-state
 
 Source: `plugins/dev-environment-standard/skills/dev-environment-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

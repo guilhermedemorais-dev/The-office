@@ -3,6 +3,8 @@ name: security-review
 description: "Use for security review: Review Modes; Risk-Adaptive Depth; Security Workflow. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: security-review
 
 Source: `plugins/security-standard/skills/security-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

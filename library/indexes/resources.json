@@ -3,6 +3,31 @@
   "cache_policy": "Content-addressed metadata; reject changed/missing content, rebuild with scripts/build_library.py",
   "resources": [
     {
+      "id": "library/architecture/technical-decision-procedure.md",
+      "path": "library/architecture/technical-decision-procedure.md",
+      "title": "Evidence-based technical decisions",
+      "category": "references",
+      "keywords": [
+        "Evidence-based technical decisions",
+        "Decision sequence",
+        "Completion and recovery",
+        "library",
+        "architecture",
+        "technical",
+        "decision",
+        "procedure",
+        "md"
+      ],
+      "sha256": "f148ec7b8f8879c978d3ea4f7ac23cd89fd41b14116db6ea58ec51058703ad37",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/architecture/technical-decision-procedure.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
       "id": "library/documentation-templates/README.md",
       "path": "library/documentation-templates/README.md",
       "title": "Documentation templates and source metadata",
@@ -162,18 +187,43 @@
       "keywords": [
         "security-audit",
         "Cloudflare second security audit; independent investigation followed by evidence reconciliation.",
+        "apple-hig-designer",
         "library",
         "skills",
         "external",
         "skills",
         "json"
       ],
-      "sha256": "29519bb2a9571a260dd8b4f36e5243fee60cdf4f0e9c9583536c21b1e9329fd8",
+      "sha256": "9418f85462d18a49df0ef0a3224b21a70f16f507aef29fe3289b08e988039fcc",
       "provenance": {
         "type": "canonical-versioned-file",
         "license": "See source record and repository LICENSE; no external dependency relicensing",
         "version": "content-sha256",
         "source": "library/skills/external-skills.json"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/templates/codegen/README.md",
+      "path": "library/templates/codegen/README.md",
+      "title": "Project-owned generator fallback",
+      "category": "documentation-templates",
+      "keywords": [
+        "Project-owned generator fallback",
+        "JavaScript/JSX starter",
+        "React/Vite and Tailwind",
+        "library",
+        "templates",
+        "codegen",
+        "README",
+        "md"
+      ],
+      "sha256": "46484e0b3fb98517d2c05b176b47ddaa7a42c780522e3a8036d953b615a99221",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/templates/codegen/README.md"
       },
       "status": "CATALOGED_NOT_EXECUTED"
     },
@@ -275,13 +325,33 @@
         "OpenTofu CLI",
         "https://github.com/opentofu/opentofu",
         "Describe, plan and provision selected cloud or on-premises infrastructure through providers.",
+        "stack-cli",
+        "tailwind-vite",
+        "Tailwind CSS Vite integration",
+        "https://github.com/tailwindlabs/tailwindcss",
+        "Integrate Tailwind v4 with an existing Vite CSS pipeline.",
+        "stack-cli",
+        "tailwind-cli",
+        "Tailwind CSS standalone CLI",
+        "https://github.com/tailwindlabs/tailwindcss",
+        "Compile selected CSS outside a Vite integration.",
+        "stack-cli",
+        "plop-cli",
+        "Plop template fallback",
+        "https://github.com/plopjs/plop",
+        "Generate repetitive code from approved versioned project templates when a stack-specific generator is unsuitable.",
+        "stack-cli",
+        "compose-scope",
+        "Compose scope guard",
+        "https://github.com/guilhermedemorais-dev/Dev-workflow",
+        "Compare rendered Compose JSON with explicitly authorized resource changes.",
         "library",
         "tools",
         "stack",
         "clis",
         "json"
       ],
-      "sha256": "4b2763992e3d1459e244a046aeacd2fc9858b69894f365dc720d5f30c247fce7",
+      "sha256": "a67b5e8bf1fdd14a1ed86da880747292d74feaa945719be97623defd510103f4",
       "provenance": {
         "type": "canonical-versioned-file",
         "license": "See source record and repository LICENSE; no external dependency relicensing",

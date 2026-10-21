@@ -3,6 +3,8 @@ name: orchestrator-delegation
 description: "Use for orchestrator delegation: Delegation Rules; When to Trigger Each Specialist; Reference Routing. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: orchestrator-delegation
 
 Source: `plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

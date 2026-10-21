@@ -3,6 +3,8 @@ name: sdd-specifications
 description: "Use for sdd specifications: Consultative Technical Knowledge Routing; Fase 2 - Geração de Specs. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: sdd-specifications
 
 Source: `plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

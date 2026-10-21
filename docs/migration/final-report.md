@@ -1,5 +1,7 @@
 # THEOFFICE-V2-001 delivery report
 
+Current consolidation and tests: see `consolidation.md` (705 discovered, 698 passed, 7 native-Windows skips). Branch is published in PR #2: https://github.com/guilhermedemorais-dev/The-office/pull/2 . The detailed counts below describe the original migration baseline, before subsequent capability additions.
+
 Status: **IMPLEMENTED and locally TESTED; pending owner acceptance and native host/OS homologation**. This is The Office V2 `2.0.0-alpha.1`, delivered as a modular compatibility overlay. It is an agent instruction/tool bundle, not a new web application or autonomous background server.
 
 ## Repositories, branch and commits

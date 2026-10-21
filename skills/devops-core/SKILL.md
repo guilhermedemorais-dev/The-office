@@ -3,6 +3,8 @@ name: devops-core
 description: "Use for devops core: Preamble; Responsibility boundaries; Human safety gates; Evidence handoff. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: devops-core
 
 Source: `plugins/devops-standard/skills/devops-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

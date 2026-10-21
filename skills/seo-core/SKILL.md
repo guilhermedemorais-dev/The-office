@@ -3,6 +3,8 @@ name: seo-core
 description: "Use for seo core: Preamble; Preconditions; Ownership boundaries. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: seo-core
 
 Source: `plugins/seo-standard/skills/seo-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

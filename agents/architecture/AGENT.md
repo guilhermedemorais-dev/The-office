@@ -22,3 +22,8 @@ Architecture, ADRs and implementation constraints. Return canonical SKILL_RECEIP
 
 Consult `library/tools/stack-clis.json` and the shared
 `library/tools/stack-cli-policy.md` before selecting tools. Nx can generate structures and check configured module boundaries; domain ownership remains an architecture decision. Use the existing framework generator when sufficient. OpenTofu models deployment infrastructure, not application module design.
+
+## Consolidated V2 policy
+
+Apply `docs/operations/v2-execution-policy.md` before legacy procedural requirements.
+Read the material technical-decision procedure only when that decision is active.

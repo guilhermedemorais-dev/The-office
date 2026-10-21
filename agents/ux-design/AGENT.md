@@ -17,3 +17,9 @@ Inherit global allowed/protected paths, acceptance, stop conditions and human ga
 ## Outputs
 
 Design artifacts and independent visual evidence. Return canonical SKILL_RECEIPT and EXECUTION_RECEIPT with task/revision, loaded sources, actual operations, results, limitations, affected artifacts and next action. Runtime evidence stays outside normative JSON. Missing evidence is NOT_VALIDATED; failure is REWORK or BLOCKED. Human final acceptance remains separate.
+
+## Consolidated V2 policy
+
+Apply `docs/operations/v2-execution-policy.md` before legacy procedural requirements.
+Read the material technical-decision procedure only when that decision is active.
+Select the independent `apple-hig-designer` capability only for approved Apple design work.

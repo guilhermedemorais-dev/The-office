@@ -3,6 +3,8 @@ name: orchestrator-discovery
 description: "Use for orchestrator discovery: Mandatory Flow. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: orchestrator-discovery
 
 Source: `plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

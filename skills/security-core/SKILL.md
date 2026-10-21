@@ -3,6 +3,8 @@ name: security-core
 description: "Use for security core: Preamble; Scope And Safety; Relationship To The Main Workflow; External Publication Gate; Completion Rules; Handoff To Dev Workflow. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: security-core
 
 Source: `plugins/security-standard/skills/security-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

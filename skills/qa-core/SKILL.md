@@ -3,6 +3,8 @@ name: qa-core
 description: "Use for qa core: Preamble; Context and activation; Execution and ownership; Provenance. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: qa-core
 
 Source: `plugins/qa-testing-standard/skills/qa-testing-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

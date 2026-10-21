@@ -3,6 +3,8 @@ name: devops-operations
 description: "Use for devops operations: Operational contract; Progressive domain routing. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: devops-operations
 
 Source: `plugins/devops-standard/skills/devops-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

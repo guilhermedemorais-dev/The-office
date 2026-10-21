@@ -1298,3 +1298,7 @@ in existing receipts. Contract revision 1 remains unchanged; this implements the
 approved library/environment scope. Evidence: `docs/migration/stack-cli-catalog.md`.
 
 Owner addition, 2026-10-21: catalog Nx and OpenTofu as optional architecture/infrastructure capabilities. Nest CLI already exists. Preserve separate domain design, code generation, tool installation and target-specific provisioning authorization. No tool installation or infrastructure operation is performed by this catalog change.
+
+### Consolidation requested by owner, 2026-10-21
+
+Resolve the fragmented delivery by integrating the V1 technical-decision and TRIVIAL policies, Compose guard, independent Apple HIG skill, Tailwind/React JavaScript recipes and real Plop fallback into V2. Responsibility: Architecture, UX, implementation, DevOps, catalog and QA. Impact: additive V2 policy and capability routing, frozen V1 sources retained. Normative JSON revision 1 is unchanged; this completes existing approved requirements and later explicit owner additions. Executed evidence and precise remaining platform/acceptance limits: `docs/migration/consolidation.md`.

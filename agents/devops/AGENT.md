@@ -22,3 +22,9 @@ Operational plans and environment-specific executed evidence. Return canonical S
 
 Consult `library/tools/stack-clis.json` and the shared
 `library/tools/stack-cli-policy.md` before selecting tools. Select OpenTofu only when it matches the approved infrastructure and existing toolchain. Installation is distinct from init/plan network/state access and from resource provisioning. Catalog adoption never authorizes apply/destroy or state changes.
+
+## Consolidated V2 policy
+
+Apply `docs/operations/v2-execution-policy.md` before legacy procedural requirements.
+Read the material technical-decision procedure only when that decision is active.
+Use the selected Compose scope guard at `library/tools/compose-scope.py`; do not infer operational health.

@@ -66,7 +66,8 @@
       "sector": "frontend",
       "documentation": [
         "https://react.dev/learn/build-a-react-app-from-scratch",
-        "https://react.dev/learn/creating-a-react-app"
+        "https://react.dev/learn/creating-a-react-app",
+        "https://vite.dev/guide/"
       ],
       "official_repository": "https://github.com/vitejs/vite",
       "package": "create-vite",
@@ -84,10 +85,10 @@
         "create-vite",
         "NEW_TARGET",
         "--template",
-        "react-ts"
+        "REACT_TEMPLATE"
       ],
       "capability": "Bootstrap a React SPA when the approved architecture calls for Vite.",
-      "notes": "React has no single first-party generator. Vite is a tool documented by React, not a React-owned CLI. Choose architecture first; never re-scaffold existing applications or install deprecated Create React App for a new project."
+      "notes": "React has no single first-party generator. Vite is a tool documented by React, not a React-owned CLI. Choose architecture first; never re-scaffold existing applications or install deprecated Create React App for a new project. Choose react for JavaScript/JSX or react-ts for TypeScript; retain React 19 if that is the approved version instead of accepting a future template default."
     },
     {
       "id": "nextjs-create-next-app",
@@ -395,6 +396,121 @@
       "install_argv_template": null,
       "capability": "Describe, plan and provision selected cloud or on-premises infrastructure through providers.",
       "notes": "Catalog adoption authorizes research/selection, not provisioning. Environment chooses official OS/architecture-specific installation, pin and checksum verification; no arbitrary curl-to-shell or privileged install assumed. Reuse current Terraform/OpenTofu toolchain and state, no automatic migration. init may download provider/module code or access backend state; plan may access APIs, execute data sources, lock state and expose sensitive values. Neither is presumed offline or harmless. apply, destroy, import and state mutations require concrete target-specific authorization. Keep credentials, state and saved plans outside committed source. No resource creation, paid service, container, merge or deploy is authorized by this entry."
+    },
+    {
+      "category": "stack-cli",
+      "sector": "frontend",
+      "availability": "DOCUMENTED",
+      "installation": "NOT_OBSERVED",
+      "verification": "NOT_VALIDATED",
+      "reviewed_on": "2026-10-21",
+      "version_policy": "Reuse project lock and installed version; otherwise resolve and record an exact compatible version before execution. VERSION is not executable text.",
+      "id": "tailwind-vite",
+      "name": "Tailwind CSS Vite integration",
+      "stack": "tailwind-v4-vite",
+      "kind": "official-build-plugin",
+      "package": "@tailwindcss/vite",
+      "documentation": [
+        "https://tailwindcss.com/docs/installation/using-vite"
+      ],
+      "official_repository": "https://github.com/tailwindlabs/tailwindcss",
+      "probe_argv_template": null,
+      "install_argv_template": [
+        "npm",
+        "install",
+        "--save-dev",
+        "tailwindcss@VERSION",
+        "@tailwindcss/vite@VERSION"
+      ],
+      "capability": "Integrate Tailwind v4 with an existing Vite CSS pipeline.",
+      "notes": "Prefer this integration for an approved Vite project; preserve the existing React plugin. Add tailwindcss() to Vite and @import \"tailwindcss\" to project CSS. Not a CLI. Do not also install a standalone Tailwind pipeline without need; preserve existing v3 projects unless migration is approved."
+    },
+    {
+      "category": "stack-cli",
+      "sector": "frontend",
+      "availability": "DOCUMENTED",
+      "installation": "NOT_OBSERVED",
+      "verification": "NOT_VALIDATED",
+      "reviewed_on": "2026-10-21",
+      "version_policy": "Reuse project lock and installed version; otherwise resolve and record an exact compatible version before execution. VERSION is not executable text.",
+      "id": "tailwind-cli",
+      "name": "Tailwind CSS standalone CLI",
+      "stack": "tailwind-v4",
+      "kind": "official-css-cli",
+      "package": "@tailwindcss/cli",
+      "documentation": [
+        "https://tailwindcss.com/docs/installation/tailwind-cli"
+      ],
+      "official_repository": "https://github.com/tailwindlabs/tailwindcss",
+      "probe_argv_template": [
+        "LOCAL_TAILWINDCSS",
+        "--help"
+      ],
+      "install_argv_template": [
+        "npm",
+        "install",
+        "--save-dev",
+        "tailwindcss@VERSION",
+        "@tailwindcss/cli@VERSION"
+      ],
+      "capability": "Compile selected CSS outside a Vite integration.",
+      "notes": "Conditional alternative to the Vite plugin; avoid duplicate watchers. Tailwind v4 CLI lives in @tailwindcss/cli; do not apply the old v3 init -p recipe to v4."
+    },
+    {
+      "category": "stack-cli",
+      "sector": "frontend",
+      "availability": "DOCUMENTED",
+      "installation": "NOT_OBSERVED",
+      "verification": "NOT_VALIDATED",
+      "reviewed_on": "2026-10-21",
+      "version_policy": "Reuse project lock and installed version; otherwise resolve and record an exact compatible version before execution. VERSION is not executable text.",
+      "id": "plop-cli",
+      "name": "Plop template fallback",
+      "stack": "template-codegen",
+      "kind": "template-generator",
+      "package": "plop",
+      "documentation": [
+        "https://plopjs.com/documentation/"
+      ],
+      "official_repository": "https://github.com/plopjs/plop",
+      "probe_argv_template": [
+        "LOCAL_PLOP",
+        "--version"
+      ],
+      "install_argv_template": [
+        "npm",
+        "install",
+        "--save-dev",
+        "plop@VERSION"
+      ],
+      "capability": "Generate repetitive code from approved versioned project templates when a stack-specific generator is unsuitable.",
+      "notes": "Optional fallback, not universal architecture or Clean Code certification. Reuse project/native generator first. Starter template and adaptation guide: library/templates/codegen/README.md. No --force, overwrite, arbitrary target path or automatic project migration."
+    },
+    {
+      "category": "stack-cli",
+      "sector": "devops",
+      "availability": "DOCUMENTED",
+      "installation": "NOT_OBSERVED",
+      "verification": "NOT_VALIDATED",
+      "reviewed_on": "2026-10-21",
+      "version_policy": "Reuse project lock and installed version; otherwise resolve and record an exact compatible version before execution. VERSION is not executable text.",
+      "id": "compose-scope",
+      "name": "Compose scope guard",
+      "stack": "docker-compose",
+      "kind": "local-scope-validator",
+      "package": null,
+      "documentation": [
+        "docs/operations/v2-execution-policy.md"
+      ],
+      "official_repository": "https://github.com/guilhermedemorais-dev/Dev-workflow",
+      "probe_argv_template": [
+        "PYTHON",
+        "library/tools/compose-scope.py",
+        "--help"
+      ],
+      "install_argv_template": null,
+      "capability": "Compare rendered Compose JSON with explicitly authorized resource changes.",
+      "notes": "Canonical V2 path; copied verbatim from V1 revision 354349c369c4deb312c5e58d729a8a17e26f1ea6. No Docker, network, installation or operational validation is performed."
     }
   ]
 }

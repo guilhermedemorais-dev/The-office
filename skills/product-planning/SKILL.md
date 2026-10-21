@@ -3,6 +3,8 @@ name: product-planning
 description: "Use for product planning: Produce the project artifacts; Plan and hand off under supervision. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: product-planning
 
 Source: `plugins/studio-prd/skills/studio-prd/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

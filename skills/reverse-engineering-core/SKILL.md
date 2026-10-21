@@ -3,6 +3,8 @@ name: reverse-engineering-core
 description: "Use for reverse-engineering core: Preamble; Preconditions; Safety and legal boundary; Relationship with other skills. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: reverse-engineering-core
 
 Source: `plugins/reverse-engineering-standard/skills/reverse-engineering-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

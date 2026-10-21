@@ -3,6 +3,8 @@ name: implementation-frontend
 description: "Use for implementation frontend: Frontend design sources. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: implementation-frontend
 
 Source: `plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

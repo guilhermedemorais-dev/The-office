@@ -3,6 +3,8 @@ name: ux-visual-validation
 description: "Use for ux visual validation: Visual Quality Gate; Visual QA Checklist. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: ux-visual-validation
 
 Source: `plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

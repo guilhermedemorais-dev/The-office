@@ -3,6 +3,8 @@ name: security-tools-reporting
 description: "Use for security tools reporting: Tool Policy; Evidence And Reporting. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: security-tools-reporting
 
 Source: `plugins/security-standard/skills/security-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.

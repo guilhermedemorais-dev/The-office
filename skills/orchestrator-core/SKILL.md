@@ -3,6 +3,8 @@ name: orchestrator-core
 description: "Use for orchestrator core: Preamble; Mission; Harness Contract; Mandatory Entry Gate; Hard Limits (non-negotiable); Skill Roles (who does what); Practice Provenance; Task And Execution Context; Change Complexity Gate; Context Budget Rules. Load required core skills first."
 ---
 
+V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
+
 # The Office V2: orchestrator-core
 
 Source: `plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md`. Read this selected skill in full and emit SKILL_RECEIPT.
