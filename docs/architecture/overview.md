@@ -28,3 +28,9 @@ Studio PRD now evolves under STUDIO-PRD-002 / [ADR 006](../adr/006-studio-prd-cr
 Affected original files are retained byte-for-byte in explicit v1-frozen archives;
 the immutable V1 inventory is still verified. Live Studio and its generated V2
 routes share the evolved canonical source. Other preserved bundles are unchanged.
+
+## Guia técnico atual
+
+Veja [construção e trade-offs](technical-guide.md), o [fluxograma visual](delivery-flow.svg)
+e a [documentação atual](../README.md). O README mantém o corpo legado recolhido
+para compatibilidade; a entrada V2 e sua política têm precedência operacional.

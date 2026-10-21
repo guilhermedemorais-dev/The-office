@@ -102,3 +102,19 @@ merge, native Windows/macOS validation or Desktop activation performed. Token
 metrics NOT_AVAILABLE; no numerical efficiency improvement claimed. Host agents
 must actually follow and load the procedure. Final human PR acceptance remains
 pending. Existing SDD contracts and plan schema are unchanged.
+
+## Main synchronization before review
+
+The main branch advanced to fbdcce3f9152f8a9194ef5318349fba0fb8bb706 while this
+branch was being published. Both appended architecture sections were retained,
+resource metadata regenerated and current documentation index linked to Studio.
+Only the feature branch is synchronized; the agent does not merge this PR to main.
+
+After synchronization the previously used temporary Plop binary was no longer
+available. An initial rerun with its stale OFFICE_PLOP_BINARY path failed in that
+optional runtime test (FileNotFoundError); no product/Studio failure occurred.
+Reran with actual available capabilities (`env -u OFFICE_PLOP_BINARY python -m
+unittest discover -s tests -v`): 725 discovered, **717 passed, 8 skips** (7 native
+Windows + 1 optional Plop runtime), 10.598 seconds, exit 0. No test was removed or
+modified, and Plop support is retained. Earlier full run with the supplied runtime
+passed 718 tests as recorded above. No package was installed for this sync.
