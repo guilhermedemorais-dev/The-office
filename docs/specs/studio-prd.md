@@ -37,3 +37,19 @@ Portal somente regras já existentes de fonte externa para docs/portal; não con
 ## Limites de validação
 
 Testes estruturais e revisão de cenários não garantem comportamento de toda LLM futura. Instalação, descoberta na nova sessão e autenticação de MCP são verificações diferentes.
+
+
+## Approved strategic discovery evolution, 2026-10-21
+
+REQ-09: debate problem/solution assumptions, alternatives and contradictions before
+consolidation; retain one canonical Studio owner and generated V2 slices.
+REQ-10: explicit product diagnosis/debate/PRD phases, distinct from SDD phases;
+critical blockers prevent false completion, not independent work or honest drafts.
+REQ-11: technical recommendations require applicable evidence or explicit unknown,
+version-matched primary docs for gaps, rationale/trade-offs and traceable sources.
+REQ-12: separate evidence nature from approval state in existing tables; approved
+hypothesis stays hypothesis. No new normative execution schema or memory store.
+REQ-13: conceptual Data/Backend/UI triage only when relevant; details stay with
+Architecture/SDD/UX. No product code, install, build, deploy or operational mutation.
+REQ-14: preserve original frozen files by exact archives with immutable baseline
+hashes and explicit migration mapping; test archive and evolved source separately.

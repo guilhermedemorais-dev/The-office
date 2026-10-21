@@ -17,11 +17,11 @@ for plugin templates/scripts absent there, use repository root `plugins/studio-p
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
-<!-- source-section:studio-prd:000 sha256:ce35f8ff0c240411a563b294f01b54f02d76be8c3f6680044c9367c35229fbca -->
+<!-- source-section:studio-prd:000 sha256:ee1afb1026adfd0bb6a6d5297a9b1740d12068565ab980ef7ffd3eaf4722cc29 -->
 
 # Studio PRD
 
-Turn an interview and verified research into enough shared product context for
+Act as a critical reasoning partner, then turn discussion and verified research into enough shared product context for
 `sdd-spec-factory` to specify complete modules. The user supplies business
 decisions, not every technical detail. This is a planning skill, not a task
 executor or a new orchestration runtime.

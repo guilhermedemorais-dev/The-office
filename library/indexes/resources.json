@@ -3839,6 +3839,15 @@
       "category": "references",
       "keywords": [
         "Interview and authorized inventory",
+        "Critical discovery: phases and proportional gates",
+        "Evidence-based technical debate",
+        "Preliminary impact triage, not implementation design",
+        "Method sources and limits",
+        "Area",
+        "---",
+        "Banco de dados",
+        "API / Backend",
+        "Frontend / UI",
         "plugins",
         "studio",
         "prd",
@@ -3849,7 +3858,7 @@
         "briefing",
         "md"
       ],
-      "sha256": "be851896e0e2d7464fa73caeaa128638a6c48238bf1612ae258a8bb727fa6947",
+      "sha256": "74add4b3868791749126f06860754f1c54d83932f41d6bbfc781a1b2a8cc0844",
       "provenance": {
         "type": "canonical-versioned-file",
         "license": "See source record and repository LICENSE; no external dependency relicensing",

@@ -21,7 +21,7 @@ Load only the references whose conditions hold; retain all explicit mandatory ga
 Canonical link resolution (repository-relative paths, not skill-directory-relative):
 - `references/briefing.md`: `plugins/studio-prd/skills/studio-prd/references/briefing.md`
 
-<!-- source-section:studio-prd:001 sha256:eb3cc9f6079c6a6717f59e021ccef2b7e36c0bc46f7fd8fc255ff3aa1a390e54 -->
+<!-- source-section:studio-prd:001 sha256:cf2a00de3cefd070f715a7832b4d5d151121b1f6d13a6d4015764eaec354cfe3 -->
 ## Start from evidence
 
 Read existing brief, PRD, decisions, architecture and reference index first.
@@ -30,12 +30,19 @@ system, including low-code. Preserve established decisions; reopen one only
 with a concrete conflict or requested change. Read [briefing.md](references/briefing.md)
 for the interview and existing-system inventory.
 
-Before external briefing research, apply the active Harness capability
-registry's whole-inventory consultation and research routing. Inspect the MCP
-Library, all active specialist tool-registry metadata and actual host
-availability; prefer suitable documentation/code/extraction/search capabilities
-and record justified fallbacks in research evidence. Reuse existing records,
-never install the whole catalog or claim an unavailable MCP was invoked.
+Use the active Harness selective research routing. Inspect Task-selected and
+project evidence, then relevant catalog/index metadata and actual required host
+capabilities. For a concrete gap use official, version-matched technical docs or
+primary standards. Read the original source, not only a search snippet. Reuse
+applicable records; do not scan the whole inventory or repeat settled research.
+Never install the whole catalog or claim an unavailable MCP was invoked.
+
+Apply the critical-discovery phases and evidence protocol in
+[briefing.md](references/briefing.md). Investigate the problem before endorsing a
+solution. Challenge consequential assumptions with reasons, useful alternatives
+and a recommendation; do not manufacture disagreement or certainty. Research
+technical facts instead of asking the owner to guess them. A recommendation
+without sufficient evidence stays PROPOSED/UNKNOWN, never an established fact.
 
 For applicable backend/payments/fiscal/commerce library needs, resolve the active
 SDD owner and its references/backend-component-sources.md catalog metadata.

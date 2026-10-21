@@ -1,6 +1,6 @@
 # Lossless V1 to V2 skill migration
 
-This is a local functional migration, not a replacement execution engine. All twelve canonical V1 skills and their original references/scripts remain unchanged under `plugins/`. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.
+This is a local functional migration, not a replacement execution engine. Original V1 resources remain preserved at canonical paths or explicit byte-identical archives. Studio PRD evolves under approved STUDIO-PRD-002 / ADR 006; its current slices cover the evolved canonical source, while the original remains in docs/migration/v1-frozen/. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.
 
 Each V1 body section is assigned once. Registry offsets are 1-based inclusive and SHA-256 hashes cover exact UTF-8 text. Frontmatter remains in the canonical source and is covered by the full source hash. Generated skills contain source text verbatim after an explicit reference-base adapter. Regenerate with `python scripts/build_skill_routes.py`; validate with `python scripts/build_skill_routes.py --check`.
 
@@ -102,10 +102,10 @@ Full behavioral parity across arbitrary agent hosts is NOT VALIDATED. Exact text
 | `security-standard` | Completion Rules (394–405) | `security-core` |
 | `security-standard` | Handoff To Dev Workflow (406–416) | `security-core` |
 | `studio-prd` | Preamble (5–12) | `product-core` |
-| `studio-prd` | Start from evidence (13–49) | `product-discovery` |
-| `studio-prd` | Produce the project artifacts (50–78) | `product-planning` |
-| `studio-prd` | Plan and hand off under supervision (79–134) | `product-planning` |
-| `studio-prd` | Evidence and continuation (135–147) | `product-core` |
+| `studio-prd` | Start from evidence (13–56) | `product-discovery` |
+| `studio-prd` | Produce the project artifacts (57–87) | `product-planning` |
+| `studio-prd` | Plan and hand off under supervision (88–144) | `product-planning` |
+| `studio-prd` | Evidence and continuation (145–157) | `product-core` |
 | `reverse-engineering-standard` | Preamble (5–18) | `reverse-engineering-core` |
 | `reverse-engineering-standard` | Preconditions (19–30) | `reverse-engineering-core` |
 | `reverse-engineering-standard` | Workflow (31–49) | `reverse-engineering-investigation` |

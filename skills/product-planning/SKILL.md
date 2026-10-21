@@ -19,14 +19,16 @@ Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
 Canonical link resolution (repository-relative paths, not skill-directory-relative):
+- `references/briefing.md`: `plugins/studio-prd/skills/studio-prd/references/briefing.md`
 - `assets/briefing-template.md`: `plugins/studio-prd/skills/studio-prd/assets/briefing-template.md`
 - `assets/prd-template.md`: `plugins/studio-prd/skills/studio-prd/assets/prd-template.md`
 - `references/planning.md`: `plugins/studio-prd/skills/studio-prd/references/planning.md`
 - `assets/plan-template.json`: `plugins/studio-prd/skills/studio-prd/assets/plan-template.json`
 
-<!-- source-section:studio-prd:002 sha256:507ac4465ee26f6acdeafdb644784cbb4d44ad7dc52be2a5bdc137ff8e6ca6e8 -->
+<!-- source-section:studio-prd:002 sha256:5f96f7ba8f5bd4a9b9b0aad2aaffa1ced10ce2eceba029942063c6f36fa2099f -->
 ## Produce the project artifacts
 
+Before consolidating the PRD apply the phase gates in [briefing.md](references/briefing.md).
 Keep artifacts in the **client project**, not this plugin; reuse equivalent
 existing locations and preserve content:
 
@@ -51,10 +53,11 @@ boundary and user decision. Preserve the existing SDD template and equivalent
 JSON v2, including all ten sectors; do not invent a Studio task template.
 
 The target is production quality within the agreed complete scope, **not an
-automatic MVP**. Delivery stages do not waive tests, negative states, security
+automatic MVP**. Compare an explicitly proposed MVP/first release with later
+evolutions when useful; only the owner may approve a scope reduction. Delivery stages do not waive tests, negative states, security
 or polish. Do not promise complete discovery, zero rework or guaranteed dates.
 
-<!-- source-section:studio-prd:003 sha256:bbe8a247c42cb51ca8497a9f09e37d9f413d4dce1d6e45b1ac2fb97428547f7e -->
+<!-- source-section:studio-prd:003 sha256:b336f3642e5667d4f0af964cd3f988911d5ed7a018201d8232f8acf9adb288eb -->
 ## Plan and hand off under supervision
 
 Read [planning.md](references/planning.md) before estimates or handoff.
@@ -93,7 +96,7 @@ For every PRD/spec, retain a compact record in its existing references section:
 applicable catalog indexes/metadata consulted and revision, selected source ID or
 project-native reuse, or N/A with reason. Unavailable/stale evidence is NOT_VALIDATED,
 never an invented consultation. Metadata review does not load every source body;
-only selected necessary sources become REQUIRED. Preserve the Harness whole-inventory rule.
+only selected necessary sources become REQUIRED. Preserve the active Harness selective-lookup policy; retain selected mandatory sources.
 
 When UI libraries are relevant, keep catalog-first selection with UI/UX ownership:
 project-native first, curated matching-stack candidates second, targeted Context7
@@ -108,7 +111,8 @@ skills or blanket dependency installation follow from the catalog.
 
 Portal requests go to the active Harness `references/client-portal.md` and
 DevOps: external template into client `docs/portal/`, not a portal bundled here.
-An unavailable future template is a recorded dependency, not permission to
+Verify the currently selected template revision and availability rather than
+assuming it is missing. An unavailable template is a recorded dependency, not permission to
 build it or block unrelated modules.
 
 <!-- end of selected V2 skill -->
