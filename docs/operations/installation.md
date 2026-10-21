@@ -28,8 +28,9 @@ python scripts/office.py --help
 ```
 
 Se houver checkout existente, confira remoto, branch e mudanças; siga
-[atualização](updating.md), sem sobrescrever trabalho. A V2 ainda está na branch
-de aceitação; os marketplaces herdados distribuem V1 e não ativam a V2 da raiz.
+[atualização](updating.md), sem sobrescrever trabalho. A base V2 já está na main após o PR #2; esta branch contém os manuais mais
+recentes ainda em revisão. Os marketplaces herdados distribuem V1 e não ativam
+a V2 da raiz.
 Leia `AGENTS.md` e a política de execução desta versão.
 
 ## 3. Registrar ou usar pelo checkout

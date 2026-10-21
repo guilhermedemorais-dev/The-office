@@ -3,7 +3,7 @@
 Destination: https://github.com/guilhermedemorais-dev/The-office
 Branch: `feat/the-office-v2`. No merge or deployment is authorized.
 
-The branch is already published in PR #2:
+The base V2 was merged through PR #2 (observed during the documentation update):
 https://github.com/guilhermedemorais-dev/The-office/pull/2
 
 On Desktop, clone the published branch directly. The earlier bundle is an optional
@@ -50,3 +50,6 @@ Publication and helper tests do not close the remaining acceptance gaps.
 Current docs index: `docs/README.md`. Assisted setup prompt: `docs/operations/installation-prompt.md`.
 Documentation/metrics closure evidence: `docs/migration/documentation-delivery.md`.
 Portal source preparation was rehearsed in a disposable client fixture only.
+
+The latest manuals on feat/the-office-v2 require their own review after PR #2.
+No agent merge/deploy action was performed.

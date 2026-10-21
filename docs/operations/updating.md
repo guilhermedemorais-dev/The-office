@@ -21,8 +21,9 @@ git log --oneline HEAD..origin/feat/the-office-v2
 git diff --stat HEAD..origin/feat/the-office-v2
 ```
 
-A branch de aceitação continua `feat/the-office-v2` até decisão explícita de
-publicação. Não assumir main atualizada. Revise mudanças materiais em skills,
+A main já recebeu a base V2 pelo PR #2. `feat/the-office-v2` contém esta rodada
+de manuais; confira o PR/revisão desejados antes de trocar a origem ativa.
+Revise mudanças materiais em skills,
 referências, scripts e dependências. Se o checkout estiver limpo e sua branch
 local puder avançar sem divergência, `git merge --ff-only origin/feat/the-office-v2`
 é uma atualização local da cópia de trabalho; não é merge do PR na main.

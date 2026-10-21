@@ -65,3 +65,10 @@ into the actual host, follow the guide and record the active revision/real smoke
 checks. In a client project that adopts Portal, inspect the pinned template
 plan before preparation, confirm docs/portal/ and verify the actual docs link.
 Continue only through the project-specific auth/publication gates when required.
+
+## Concurrent repository update
+
+While publishing these manuals, GitHub reported PR #2 merged at 2026-10-21T19:43:35Z
+with main at ef948a44288b1d080f142998f3870568620b4638. The agent did not invoke
+merge/deploy. This documentation delta requires a new PR; current installation
+text now distinguishes merged V2 base from manuals still under review.

@@ -1,8 +1,8 @@
 # The Office V2
 
 **Engineering Harness modular para desenvolver software com escopo, execução e evidências rastreáveis.**
-Versão de aceitação: `2.0.0-alpha.1`. Distribuição atual: branch `feat/the-office-v2`,
-[PR #2](https://github.com/guilhermedemorais-dev/The-office/pull/2), sem merge/deploy.
+Versão de aceitação: `2.0.0-alpha.1`. A base V2 foi integrada pelo [PR #2](https://github.com/guilhermedemorais-dev/The-office/pull/2).
+Os manuais desta revisão estão na branch `feat/the-office-v2` para revisão.
 
 ## Tópicos
 

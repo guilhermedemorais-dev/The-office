@@ -7,7 +7,8 @@ necessária, sem substituir permissões do host. Não instala todas as stacks.
 ```text
 Instale e configure o The Office V2 nesta máquina para o workspace atual.
 Fonte: https://github.com/guilhermedemorais-dev/The-office.git
-Distribuição para aceitação: feat/the-office-v2. Não usar main como se já tivesse V2.
+Revisão deste guia: feat/the-office-v2, com manuais em revisão. A base V2 já
+está na main após o PR #2; confira a revisão desejada antes de obter a fonte.
 
 1. Identifique sistema/versão/arquitetura e runtime real, host do agente,
    workspace cliente, Git e Python existentes. WSL é Linux. Preserve arquivos,
