@@ -182,9 +182,9 @@ def build(root=ROOT):
  'data-core':('data','Design or validate data models, migrations, queries and concurrency constraints.',
   'Inspect actual schemas, migrations, database/runtime versions and existing transactions before changes. Identify invariants, uniqueness, ownership, isolation and concurrency boundaries. Reuse repository migration and query conventions. Plan negative cases, rollback and recovery; route product implementation through the selected executor. A production migration or destructive operation requires its explicit target-specific gate. Return schema/query evidence and executed validation, never infer data integrity from lint success.',
   ['plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-data-concurrency.md']),
- 'documentation-core':('documentation','Produce technical documentation and user procedures from verified implementation.',
+ 'documentation-core':('documentation','Document technical changes and user tutorials; assess documentation at every Task closure.',
   'Read approved Task and the actual current code or executable behavior being documented. Ask the shared Librarian for only the required documentation template. Trace each described screen, field, permission, error and outcome to its source revision or executed observation. Distinguish code-observed, runtime-tested and NOT_VALIDATED behavior. Use synthetic data in real captures; never fabricate screenshots. Keep help articles versioned in the product project and reuse them as the source for an optional Help Center. An absent UI or capture capability is a documented limitation, not permission to invent it. Preserve applicable Issue/contract/report gates.',
-  []),
+  ['docs/operations/documentation.md', 'library/documentation-templates/README.md']),
  'librarian-core':('librarian','Retrieve selected reusable resources by metadata and preserve provenance.',
   'Search Task-selected resources, project indexes, distributed catalog, inherited V1 catalogs, available host capabilities, then bounded official sources for an actual gap. Return stable resource ID, path, origin, version or UNKNOWN, license, purpose and compatibility evidence. Load only selected bodies. Reuse prior compatible results and invalidate on source or query drift. Separate distributed knowledge, private project/user extensions and runtime observations. Never publish local knowledge globally or store credentials. Evaluate external skill code, instructions, dependencies, license and permissions before recommending adoption; installation is a separate authorized operation. A catalog listing never proves availability, authentication or validation.',
   ['plugins/dev-workflow-standard/skills/dev-workflow-standard/references/capability-registry.md'])
@@ -206,6 +206,15 @@ def build(root=ROOT):
    registry['sectors'][item['sector']]['capabilities'].append(item['id'])
  for alias,target in {'ux-design':'ux'}.items():
   registry['sectors'][alias]['capabilities']=list(registry['sectors'][target]['capabilities'])
+ # Local capabilities have their own registry; do not mislabel them as upstream skills.
+ local=root/'library/skills/local-skills.json'
+ if local.exists():
+  for item in json.loads(local.read_text(encoding='utf-8'))['skills']:
+   if item['id'] in {entry['id'] for entry in registry['skills']}:
+    raise ValueError('duplicate local capability ID')
+   registry['skills'].append(item)
+   registry['sectors'][item['sector']]['capabilities'].append(item['id'])
+ registry['sectors']['governance']['capabilities']=list(registry['sectors']['orchestrator']['capabilities'])
  outputs['library/indexes/skill-routes.json']=json.dumps(registry,ensure_ascii=False,indent=2)+'\n'
  rows=['# Lossless V1 to V2 skill migration','',
  'This is a local functional migration, not a replacement execution engine. All twelve canonical V1 skills and their original references/scripts remain unchanged under `plugins/`. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.','',

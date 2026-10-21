@@ -22,3 +22,10 @@ Task/list routing and consolidated owner evidence. Return canonical SKILL_RECEIP
 
 Apply `docs/operations/v2-execution-policy.md` before legacy procedural requirements.
 Read the material technical-decision procedure only when that decision is active.
+
+## Closure routing
+
+Before final review use `docs/operations/delivery-lifecycle.md`: obtain technical
+and user documentation assessments, then Governance's measured progress and safe
+client report. A TRIVIAL outcome records these inline. Do not create a second
+Task per phase or assume agent hooks execute automatically.

@@ -18,3 +18,50 @@ Keep stable article IDs, relative links and a revision map in the existing proje
 ## Verification limits
 
 The migration supplies templates and an operational procedure. It does not implement a universal documentation renderer or claim client-app capture execution. The manual CLI examples in `user-guide.md` must be checked against actual helper behavior. Docusaurus, Microsoft and Diátaxis sources/provenance are in the template catalog; optional vendor candidates require separate inspection.
+
+## Task closure and selective procedures
+
+Every Task ends with the documentation assessment in
+`docs/operations/delivery-lifecycle.md`. The Documentation owner coordinates
+technical documentation AND end-user usability procedures. Do not load a full
+writing handbook for a prose typo; record its compact impact assessment instead.
+
+For actual authoring, read
+`library/documentation-templates/upstream/awesome-copilot/GUIDE.md` in full.
+This pinned community skill from github/awesome-copilot provides Diátaxis writing
+structure. Adapter precedence: infer known type/audience/goal/scope from the
+approved Task and PRD; do not ask questions already answered. Existing owner
+approval authorizes ordinary documentation; do not pause at every outline.
+Research official sources when necessary under the Bibliotecário procedure.
+These override the upstream's repeated outline-approval and blanket external
+research prohibition; they do not waive material scope or publication gates.
+No upstream scripts/dependencies are executed. Provenance is alongside the guide.
+
+### Technical procedure
+
+Inspect changed interfaces, architecture, persistence/migrations, configuration,
+errors, integrations and tests at the actual revision. Update only affected
+architecture/API/reference/runbook/ADR content. Include inputs/outputs,
+auth/permissions, side effects, compatibility, validation and recovery where
+relevant. Examples must use real supported commands/contracts and synthetic data.
+Distinguish observed code, executed tests and unverified runtime behavior.
+
+### Usability procedure
+
+Document a real reader task: purpose, role/access, prerequisites, exact navigation,
+labels, numbered actions, field meanings, validations/messages, expected outcome,
+known errors and safe recovery. Use tutorial for learning and how-to for a specific
+operation; link technical reference instead of mixing audiences into one article.
+Use real screenshots/GIFs only when product execution is possible and authorized;
+record revision, synthetic fixture, captions/alt text and redaction. Do not create
+fake UI evidence. Significant procedures need independent replay when required.
+Existing Help Center consumes these same versioned articles, not an editable copy.
+
+### Closure evidence
+
+Record technical and user status separately: UPDATED with article paths and
+verification evidence; UNCHANGED with inspected scope and reason; NOT_APPLICABLE
+with reason; PENDING when required content/evidence is missing. Return this in the
+existing Task receipt/comment. A screenshot unavailable is a capture limitation,
+not a claim the workflow ran. Hand public-safe summaries and article links to
+Delivery Metrics after validation; keep private implementation details internal.

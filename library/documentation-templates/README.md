@@ -17,3 +17,11 @@ Checked 2026-10-16 through official pages. Diátaxis identifies tutorials, how-t
 ## Optional candidates supplied by the PRD
 
 Intercom Help Center (https://www.intercom.com/help/), Zendesk Guide (https://support.zendesk.com/) and Scribe (https://scribehow.com/) remain template-discovery candidates. Their current product behavior, licenses and integrations were NOT VALIDATED for this migration. Inspect official documentation before selecting an implementation. Do not copy proprietary content or install a provider automatically.
+
+## Selected writing skill
+
+`upstream/awesome-copilot/GUIDE.md`: github/awesome-copilot documentation-writer,
+commit `613efc8c21d9b3ce642dff361d17006cd9967e28`, MIT. Read only for actual
+authoring. `docs/operations/documentation.md` adapts approval/research behavior
+to the approved Task. The original text and license are preserved unchanged.
+This is a selected fit, not a benchmark claim that it is universally the best.

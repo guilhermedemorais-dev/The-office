@@ -2310,7 +2310,10 @@
       ],
       "source_sections": [],
       "reference_base": ".",
-      "references": []
+      "references": [
+        "docs/operations/documentation.md",
+        "library/documentation-templates/README.md"
+      ]
     },
     {
       "id": "librarian-core",
@@ -2417,6 +2420,32 @@
         "resources/ui-patterns.md": "683fef501929f0cffaebe1e2123da5bdf5dcef34bdc2465732cc2cadaaa6da1d"
       },
       "status": "INTEGRATED_NOT_VISUAL_VALIDATED"
+    },
+    {
+      "id": "delivery-metrics",
+      "sector": "orchestrator",
+      "path": "skills/delivery-metrics/SKILL.md",
+      "source": null,
+      "role": "capability",
+      "requires": [
+        "global-core",
+        "orchestrator-core"
+      ],
+      "triggers": [
+        "delivery metrics",
+        "client report",
+        "Task closure",
+        "progresso",
+        "portal do cliente"
+      ],
+      "source_sections": [],
+      "reference_base": ".",
+      "references": [
+        "docs/operations/delivery-lifecycle.md",
+        "skills/delivery-metrics/references/measurement.md",
+        "library/integrations/client-portal.md"
+      ],
+      "description": "Verified baseline progress and client-safe report preparation."
     }
   ],
   "sectors": {
@@ -2428,7 +2457,8 @@
         "orchestrator-discovery",
         "orchestrator-task-governance",
         "orchestrator-delegation",
-        "orchestrator-review"
+        "orchestrator-review",
+        "delivery-metrics"
       ]
     },
     "ux": {
@@ -2574,7 +2604,8 @@
         "orchestrator-discovery",
         "orchestrator-task-governance",
         "orchestrator-delegation",
-        "orchestrator-review"
+        "orchestrator-review",
+        "delivery-metrics"
       ]
     },
     "architecture": {

@@ -2393,3 +2393,12 @@ policy, Compose scope guard, and selected CLI/Plop/Tailwind resources. See
 [consolidation evidence](docs/migration/consolidation.md) and the
 [Desktop guide](docs/operations/desktop-handoff.md). Native-host acceptance and
 end-to-end efficiency metrics remain explicit, unvalidated acceptance items.
+
+### Task closure, documentation and client progress
+
+Every Task records technical and usability documentation impact, then delivery
+progress, proportionally to its risk. See [lifecycle](docs/operations/delivery-lifecycle.md),
+[documentation](docs/operations/documentation.md) and
+[Portal integration](library/integrations/client-portal.md). The
+`delivery-metrics` capability prepares evidence-based reports and existing portal
+payloads; no background hook or remote publication is implied.

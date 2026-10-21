@@ -78,3 +78,11 @@ For material technical decisions use `library/architecture/technical-decision-pr
 UX selects `apple-hig-designer` only when the approved design direction calls for it.
 For repetitive code, reuse project/native generators first, then the Plop fallback
 in `library/templates/codegen/README.md`; never impose its template on every stack.
+
+## Delivery closure
+
+Apply `docs/operations/delivery-lifecycle.md` at each Task checkpoint/closure.
+Route technical and usability documentation assessment to `documentation-core`,
+then verified progress/client reporting to Governance's `delivery-metrics`.
+TRIVIAL retains a compact inline outcome. Skills are agent protocols, not running
+hooks. Preserve one Task per module, JSON v2 and explicit human release gates.

@@ -17,3 +17,11 @@ Inherit global allowed/protected paths, acceptance, stop conditions and human ga
 ## Outputs
 
 Technical docs, task tutorials and source-linked help articles. Return canonical SKILL_RECEIPT and EXECUTION_RECEIPT with task/revision, loaded sources, actual operations, results, limitations, affected artifacts and next action. Runtime evidence stays outside normative JSON. Missing evidence is NOT_VALIDATED; failure is REWORK or BLOCKED. Human final acceptance remains separate.
+
+## Mandatory closure
+
+At every Task closure apply `docs/operations/delivery-lifecycle.md` and
+`docs/operations/documentation.md`. Own both technical and user documentation,
+with separate UPDATED/UNCHANGED/NOT_APPLICABLE/PENDING assessments and evidence.
+Use the selected Diátaxis guide only for authoring. For TRIVIAL work satisfy this
+responsibility in the same compact outcome. Hand client-safe summaries to metrics.

@@ -17,3 +17,10 @@ Inherit global allowed/protected paths, acceptance, stop conditions and human ga
 ## Outputs
 
 Issue ledger, reviewable PR and final reconciliation. Return canonical SKILL_RECEIPT and EXECUTION_RECEIPT with task/revision, loaded sources, actual operations, results, limitations, affected artifacts and next action. Runtime evidence stays outside normative JSON. Missing evidence is NOT_VALIDATED; failure is REWORK or BLOCKED. Human final acceptance remains separate.
+
+## Delivery metrics
+
+Select `delivery-metrics` for checkpoint/Task closure reports. Reconcile the
+approved plan with evidence, include unfinished work in the denominator and
+separate closure readiness from actual Done and publication. Reuse the inspected
+Portal do Cliente adapter. Do not publish customer reports without authorization.

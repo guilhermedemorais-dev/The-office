@@ -86,3 +86,9 @@ allowed resource names. Never create a service/container per logical module by
 default. The guard never invokes Docker and cannot prove health or security.
 Security still reviews sensitive configuration changes. No merge or deployment
 is authorized by a passing scope comparison.
+
+## Documentation and delivery checkpoints
+
+The owner-requested closure overlay is `docs/operations/delivery-lifecycle.md`.
+It applies to every Task; TRIVIAL satisfies it in its existing inline result.
+Documentation and progress do not require a new Task or persistent agent.

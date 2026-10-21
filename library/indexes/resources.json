@@ -36,6 +36,7 @@
         "Documentation templates and source metadata",
         "Verified references",
         "Optional candidates supplied by the PRD",
+        "Selected writing skill",
         "ID",
         "---",
         "DOC-TUTORIAL",
@@ -49,7 +50,7 @@
         "README",
         "md"
       ],
-      "sha256": "e84d50204f5d341b363df92f056122e16a92177dfd40f900d44b7685a3cba848",
+      "sha256": "de98a6d99c727b1f88b06e3878d5a714c264ef51eb0783f4c758c6da091554d9",
       "provenance": {
         "type": "canonical-versioned-file",
         "license": "See source record and repository LICENSE; no external dependency relicensing",
@@ -157,6 +158,59 @@
       "status": "CATALOGED_NOT_EXECUTED"
     },
     {
+      "id": "library/documentation-templates/upstream/awesome-copilot/GUIDE.md",
+      "path": "library/documentation-templates/upstream/awesome-copilot/GUIDE.md",
+      "title": "Diátaxis Documentation Expert",
+      "category": "documentation-templates",
+      "keywords": [
+        "Diátaxis Documentation Expert",
+        "GUIDING PRINCIPLES",
+        "YOUR TASK: The Four Document Types",
+        "WORKFLOW",
+        "CONTEXTUAL AWARENESS",
+        "library",
+        "documentation",
+        "templates",
+        "upstream",
+        "awesome",
+        "copilot",
+        "GUIDE",
+        "md"
+      ],
+      "sha256": "7e8244988c9f4eb63bf8c0edf160578544621eb96e5e51e2d848f1401c5de8f1",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/documentation-templates/upstream/awesome-copilot/GUIDE.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/documentation-templates/upstream/awesome-copilot/provenance.json",
+      "path": "library/documentation-templates/upstream/awesome-copilot/provenance.json",
+      "title": "provenance",
+      "category": "documentation-templates",
+      "keywords": [
+        "library",
+        "documentation",
+        "templates",
+        "upstream",
+        "awesome",
+        "copilot",
+        "provenance",
+        "json"
+      ],
+      "sha256": "8833686c5fb2ac9cc168ab03a639ad55acb640da4659bbc4bef59cd35613fbc0",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/documentation-templates/upstream/awesome-copilot/provenance.json"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
       "id": "library/documentation-templates/visual-evidence.md",
       "path": "library/documentation-templates/visual-evidence.md",
       "title": "Visual capture record",
@@ -176,6 +230,32 @@
         "license": "See source record and repository LICENSE; no external dependency relicensing",
         "version": "content-sha256",
         "source": "library/documentation-templates/visual-evidence.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/integrations/client-portal.md",
+      "path": "library/integrations/client-portal.md",
+      "title": "Portal do Cliente, inspected integration",
+      "category": "references",
+      "keywords": [
+        "Portal do Cliente, inspected integration",
+        "Reuse",
+        "Existing API, preparation only",
+        "Remaining gap",
+        "Client docs destination, owner clarification",
+        "library",
+        "integrations",
+        "client",
+        "portal",
+        "md"
+      ],
+      "sha256": "7fe7fe4851c383f676bd05e26fc20162543c52ff85f9e24e5a414619a8658aba",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/integrations/client-portal.md"
       },
       "status": "CATALOGED_NOT_EXECUTED"
     },
@@ -204,6 +284,29 @@
       "status": "CATALOGED_NOT_EXECUTED"
     },
     {
+      "id": "library/skills/local-skills.json",
+      "path": "library/skills/local-skills.json",
+      "title": "local-skills",
+      "category": "references",
+      "keywords": [
+        "delivery-metrics",
+        "Verified baseline progress and client-safe report preparation.",
+        "library",
+        "skills",
+        "local",
+        "skills",
+        "json"
+      ],
+      "sha256": "dc4ba9f6aea332c5330c4f2e329de6616f3ffbadad459fc9da65ec7f8ecdba7d",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/skills/local-skills.json"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
       "id": "library/templates/codegen/README.md",
       "path": "library/templates/codegen/README.md",
       "title": "Project-owned generator fallback",
@@ -224,6 +327,60 @@
         "license": "See source record and repository LICENSE; no external dependency relicensing",
         "version": "content-sha256",
         "source": "library/templates/codegen/README.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/templates/delivery/README.md",
+      "path": "library/templates/delivery/README.md",
+      "title": "Delivery snapshot template",
+      "category": "documentation-templates",
+      "keywords": [
+        "Delivery snapshot template",
+        "library",
+        "templates",
+        "delivery",
+        "README",
+        "md"
+      ],
+      "sha256": "41054ff747c80c2b5123bd869c166274e4ebce2e372a8a0d4f23b7d3e3d46088",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/templates/delivery/README.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/templates/delivery/snapshot.json",
+      "path": "library/templates/delivery/snapshot.json",
+      "title": "snapshot",
+      "category": "documentation-templates",
+      "keywords": [
+        "implementation",
+        "Implementação",
+        "validation",
+        "Validação",
+        "documentation",
+        "Documentação",
+        "acceptance",
+        "Aceite",
+        "REPLACE_WITH_EXISTING_TASK_ID",
+        "REPLACE_WITH_CLIENT_SAFE_TITLE",
+        "REPLACE_WITH_EXISTING_CRITERION_ID",
+        "library",
+        "templates",
+        "delivery",
+        "snapshot",
+        "json"
+      ],
+      "sha256": "92488c070f084029a8f1d92f8cea22a82df926d87f2df58797ee7fc47be47c96",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/templates/delivery/snapshot.json"
       },
       "status": "CATALOGED_NOT_EXECUTED"
     },

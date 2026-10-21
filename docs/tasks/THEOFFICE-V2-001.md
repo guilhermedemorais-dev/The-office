@@ -1302,3 +1302,24 @@ Owner addition, 2026-10-21: catalog Nx and OpenTofu as optional architecture/inf
 ### Consolidation requested by owner, 2026-10-21
 
 Resolve the fragmented delivery by integrating the V1 technical-decision and TRIVIAL policies, Compose guard, independent Apple HIG skill, Tailwind/React JavaScript recipes and real Plop fallback into V2. Responsibility: Architecture, UX, implementation, DevOps, catalog and QA. Impact: additive V2 policy and capability routing, frozen V1 sources retained. Normative JSON revision 1 is unchanged; this completes existing approved requirements and later explicit owner additions. Executed evidence and precise remaining platform/acceptance limits: `docs/migration/consolidation.md`.
+
+
+### Owner-requested documentation and delivery metrics, 2026-10-21
+
+Original scope: product documentation, stage governance, measured delivery and
+shared catalog. Owner request: explicit documentation responsibility for both
+technical reference and usability tutorials on every Task closure; a metrics
+skill to consolidate phases/total progress and reuse Portal do Cliente as the
+customer reporting destination, inside the client project's docs tree.
+Decision: extend Documentation core, add Governance delivery-metrics, retain the
+existing Studio PRD stage plan and JSON v2 sector/schema, add an offline derived
+report calculator and inspected Portal adapter. Pin the selected community
+Diátaxis writing guide with unmodified original/license and documented approval/
+research overrides. No production service, bulk install or separate Task system.
+Impact: future normative closure obligations must be reflected in approved
+Human Task/JSON before affected execution; TRIVIAL retains inline evidence.
+This migration contract revision 1 is unchanged: implementation stays within its
+approved documentation/metrics/catalog scope. Responsible: Documentation,
+Governance and Architecture. ADR: `docs/adr/005-delivery-documentation-metrics.md`.
+Evidence: `docs/migration/documentation-delivery.md`. Portal customer deployment,
+auth and whole-baseline dashboard display are not claimed implemented.
