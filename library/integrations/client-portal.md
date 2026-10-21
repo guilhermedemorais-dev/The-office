@@ -62,3 +62,6 @@ verify the chosen renderer/build/base path. Reports and tutorials are maintained
 in the same client's versioned docs tree, with access appropriate to their audience.
 The Harness catalogs the source/procedure only. Never put a client's portal,
 customer payloads or generated reports in the shared Harness or another project.
+
+Procedure for owner-approved fetching and preparation: `docs/operations/client-portal.md`.
+The responsible sector performs the existing sync, not a newly invented installer.

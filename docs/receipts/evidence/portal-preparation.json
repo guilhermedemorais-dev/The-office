@@ -1,0 +1,11 @@
+{
+  "source_commit": "82226fbb2385639d7812b2de929b435e6480fbbc",
+  "target": "disposable client Git fixture/docs/portal",
+  "planned_files": 36,
+  "applied_files": 36,
+  "repeat_unchanged": 36,
+  "customizations_preserved": 1,
+  "result": "PASS",
+  "customer_installation": "NOT_EXECUTED",
+  "build_auth_deploy": "NOT_VALIDATED"
+}

@@ -1323,3 +1323,18 @@ approved documentation/metrics/catalog scope. Responsible: Documentation,
 Governance and Architecture. ADR: `docs/adr/005-delivery-documentation-metrics.md`.
 Evidence: `docs/migration/documentation-delivery.md`. Portal customer deployment,
 auth and whole-baseline dashboard display are not claimed implemented.
+
+
+### Owner-requested manuals and assisted setup, 2026-10-21
+
+Request: fetch Portal template into client docs, then organize README topics,
+product purpose/problems, development methodology, installation GUIDE AND PROMPT,
+usage tutorial, technical construction/trade-offs/flowchart, and updating.
+Decision: reuse the pinned owner's existing sync-template script, make fetching
+and client docs navigation explicit, preserve historical README body in details
+for existing compatibility anchors/tests, and add Portuguese operational manuals.
+No new installer, client application, deployment or global tool installation.
+Contract revision 1 unchanged; within documentation/install/migration scope.
+Evidence: docs/migration/documentation-manuals.md and
+`docs/receipts/evidence/portal-preparation.json`. Native host registration remains
+NOT_VALIDATED; guide/prompt distinguish checkout, registration and actual readiness.

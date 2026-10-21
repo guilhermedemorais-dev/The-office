@@ -36,3 +36,10 @@ The output is a handoff plan requiring current Human Task/JSON equivalence and d
 - [ ] Verify actual Linux/Windows/macOS environment catalogs locally and record executed commands; catalog presence alone is not homologation.
 
 No application UI is shipped in this migration. Consequently there are no real product screenshots or GIFs to capture here. Test visual-documentation workflows only against an actual authorized application.
+
+## Aprendizado e metodologia
+
+Para o passo a passo em português use [tutorial](tutorial.md),
+[metodologia](methodology.md) e [instalação assistida](installation-prompt.md).
+Após cada Task aplique [fechamento](delivery-lifecycle.md). O template fica em
+[docs/portal/ do cliente](client-portal.md), não neste Harness.

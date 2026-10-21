@@ -1,45 +1,150 @@
 # The Office V2
 
-Engineering Harness setorial e modular, migrado do Dev-workflow preservando os
-12 plugins, contratos JSON v2, ferramentas, referências e testes originais.
-**Versão de aceitação: 2.0.0-alpha.1.** Validação local não equivale a homologação
-nativa de todos os sistemas ou registro efetivo no host.
+**Engineering Harness modular para desenvolver software com escopo, execução e evidências rastreáveis.**
+Versão de aceitação: `2.0.0-alpha.1`. A base V2 foi integrada pelo [PR #2](https://github.com/guilhermedemorais-dev/The-office/pull/2).
+Os manuais desta revisão estão na branch `feat/the-office-v2` para revisão.
 
-## Começar com a V2
+## Tópicos
 
-```bash
+- [O que é](#o-que-é)
+- [O que resolve](#o-que-resolve)
+- [Metodologia de desenvolvimento](#metodologia-de-desenvolvimento)
+- [Instalação e configuração da máquina](#instalação-e-configuração-da-máquina)
+- [Tutorial de utilização](#tutorial-de-utilização)
+- [Documentação técnica e fluxograma](#documentação-técnica-e-fluxograma)
+- [Atualização](#atualização)
+- [Validação e limites](#validação-e-limites)
+
+## O que é
+
+É um conjunto versionado de instruções, skills, catálogos e ferramentas para um
+host de IA conduzir trabalho de engenharia. O responsável setorial decide e
+responde pelo resultado; a skill orienta o procedimento; a ferramenta executa;
+o catálogo fornece recursos; a Task registra escopo e evidências.
+
+A V2 preserva os 12 plugins da V1 e acrescenta roteamento por responsabilidade.
+Não é um servidor de agentes, um aplicativo Docker ou uma promessa de software
+correto sem validação. O host fornece modelo, ferramentas e agentes reais quando
+existirem; etapas podem ser executadas serialmente com responsabilidade explícita.
+
+## O que resolve
+
+- Seleciona skills e referências pertinentes, evitando carregar todos os setores.
+- Distingue tarefas pequenas de mudanças com arquitetura, dados ou segurança.
+- Mantém PRD/spec, código, Task, testes e revisão ligados à mesma entrega.
+- Prioriza ferramentas/componentes existentes e pesquisa oficial para lacunas.
+- Exige documentação técnica e instruções reais de uso no fechamento de cada Task.
+- Consolida progresso por fases/critérios e prepara relatório para o cliente.
+
+São mecanismos implementados; a economia real de tokens depende de benchmark,
+e nenhum percentual de economia foi comprovado nesta entrega.
+
+## Metodologia de desenvolvimento
+
+| Etapa | Entrega principal |
+| --- | --- |
+| Produto e planejamento | PRD, módulos, prioridades e baseline aprovados |
+| Arquitetura e especificação | Decisões justificadas, specs e uma Task por módulo |
+| Implementação | Mudanças dentro do contrato e verificações do executor |
+| Validação e correção | QA independente e setores aplicáveis, na revisão atual |
+| Documentação | Referência técnica e tutorial/guia de uso, ou N/A fundamentado |
+| Relatório e revisão | Progresso, bloqueios, PR e pacote para o cliente |
+| Aceite e release | Gates humanos; merge e deploy têm autorizações próprias |
+
+As etapas são checkpoints dentro da Task, não Issues por especialista ou camada.
+TRIVIAL usa registro inline; NORMAL usa contrato conciso; COMPLEX exige SDD e
+rastreabilidade proporcionais. Uma mudança visual aciona UX; um bug requer QA
+funcional aplicável. A matriz canônica continua sendo **Sector Validation Matrix**;
+**Context Routing** transfere IDs, revisão e evidências, não todo o projeto.
+
+O catálogo central é compartilhado. Cada setor consulta primeiro seus índices;
+para uma lacuna pesquisa fontes externas, adapta/valida e encaminha o registro
+ao Bibliotecário. O cliente não precisa escolher sozinho detalhes técnicos sem
+contexto. [Metodologia completa](docs/operations/methodology.md).
+
+## Instalação e configuração da máquina
+
+```sh
 git clone --branch feat/the-office-v2 https://github.com/guilhermedemorais-dev/The-office.git
 cd The-office
-python scripts/office.py plan ux-design --capability ux-visual-validation
-python scripts/office.py search "backend pagamentos"
-python -m unittest discover -s tests -v
+python scripts/office.py --help
 ```
 
-O plano retorna caminhos para leitura integral das skills e referências
-condicionais. Ele não inicia agentes, não instala ferramentas e não atesta gates.
-O host coordena a execução real; leia [AGENTS.md](AGENTS.md) neste checkout.
+Use Python 3.11+ para o conjunto Environment; o roteador isolado usa stdlib.
+A configuração verifica SO, host e ferramentas existentes, prepara somente
+capacidades necessárias e reutiliza estado local. Docker, Redis, bancos, todas
+as stacks e todos os MCPs não são pré-requisitos universais.
 
-- [Instalação e teste de aceitação](docs/operations/installation.md)
-- [Manual operacional](docs/operations/user-guide.md)
-- [Arquitetura](docs/architecture/overview.md)
-- [Matriz de migração](docs/migration/v1-to-v2.md)
-- [Baseline](docs/migration/baseline.md)
-- [Plataformas e limites](docs/operations/platforms.md)
-- [Task #1](https://github.com/guilhermedemorais-dev/The-office/issues/1)
+**Copie o [prompt de instalação assistida](docs/operations/installation-prompt.md)**
+para seu agente com acesso à máquina. Ele cobre diagnóstico, registro compatível
+com o host, preparo selecionado, autenticação assistida e smoke test.
+[Instalação detalhada](docs/operations/installation.md). Clonar não prova ativação.
 
-A distribuição V2 está na raiz (`skills/` e manifests de plugin da raiz).
-Os marketplaces herdados abaixo continuam distribuindo os bundles V1 para
-compatibilidade. Escolha um modo por execução. Não carregue ambas metodologias.
-O registro e descoberta da V2 pelo Codex Desktop/CLI e outros hosts precisam
-ser conferidos na máquina de destino; clone e validação estrutural não provam
-que o host carregou o plugin.
+## Tutorial de utilização
 
-A documentação histórica abaixo é preservada para contratos e referências
-existentes. Registros antigos de Windows e de publicação são fatos históricos;
-o baseline e o relatório V2 descrevem esta entrega. Nenhuma integração externa
-foi certificada apenas pela preservação dos arquivos.
+Comece pelo [tutorial do usuário](docs/operations/tutorial.md): projeto novo,
+projeto existente, execução de uma Task, correção pequena, retomada e entrega.
+O [manual de comandos](docs/operations/user-guide.md) mostra chamadas reais.
 
-***
+```sh
+python scripts/office.py plan documentation
+python scripts/office.py plan governance --capability delivery-metrics
+python scripts/office.py search "OSV"
+```
+
+Cada plano é `PLANNED_NOT_EXECUTED`. O host lê as skills selecionadas e executa
+com evidências. Para revisão funcional o owner preservado é `qa-testing-standard`;
+para infraestrutura é `devops-standard`. Disponibilidade real continua NOT VALIDATED
+até verificação no ambiente. README stale = NOT READY TO COMMIT.
+
+### Portal do Cliente dentro de docs
+
+No projeto cliente, o responsável busca o template versionado de
+[portal-clientes](https://github.com/guilhermedemorais-dev/portal-clientes),
+prepara em **`docs/portal/`**, preserva customizações e cria um link na navegação
+da documentação. Não copia o portal para o Harness ou instala um portal por Task.
+A Task alimenta documentação e relatório; publicação na API/servidor tem gate próprio.
+Veja o [procedimento de preparação](docs/operations/client-portal.md).
+
+## Documentação técnica e fluxograma
+
+- [Mapa da documentação](docs/README.md)
+- [Como foi construído, limites e trade-offs](docs/architecture/technical-guide.md)
+- [Fluxograma visual](docs/architecture/delivery-flow.svg)
+- [Contratos dos setores](docs/architecture/agents.md)
+- [ADRs](docs/adr/) e [matriz V1 → V2](docs/migration/v1-to-v2.md)
+- [Documentação técnica e de uso](docs/operations/documentation.md)
+- [Métricas e relatórios](docs/operations/delivery-report-guide.md)
+
+## Atualização
+
+[Guia de atualização](docs/operations/updating.md): identificar revisão instalada,
+preservar trabalho local, revisar mudanças, atualizar fonte e cópia ativa, verificar
+registro no host e repetir apenas os checks afetados. Atualizar Git, plugin ativo,
+portal do cliente e dependências do software são operações diferentes.
+
+## Validação e limites
+
+Última regressão completa do código de métricas: **721 testes, 714 aprovados e 7
+skips por Windows nativo**, com execução real do Plop opcional em fixture. Os 342
+arquivos congelados da V1 foram preservados. [Evidência](docs/migration/documentation-delivery.md).
+O ensaio do portal validou cópia/repetição/customizações em projeto descartável;
+não é instalação em cliente ou verificação de OAuth, backend, navegador ou deploy.
+
+O portal existente mede done/eligible e exclui backlog. O novo relatório mede
+critérios do baseline completo; sua exibição no dashboard requer adaptação própria
+no portal. Homologação Desktop/Windows/macOS e ganhos de tokens permanecem pendentes.
+Confira [plataformas](docs/operations/platforms.md) e evidências por revisão.
+
+## Referência histórica e compatibilidade V1
+
+As instruções abaixo são preservadas para rastrear decisões e contratos antigos.
+Para uso V2, siga os tópicos acima, `AGENTS.md` e a política V2. Datas, comandos e
+claims históricos não descrevem automaticamente a distribuição atual. A leitura
+deste corpo histórico só é necessária para uma investigação ou execução legada.
+
+<details>
+<summary>Expandir documentação histórica da V1 e registros anteriores</summary>
 
 # Engineering Harness
 
@@ -2402,3 +2507,5 @@ progress, proportionally to its risk. See [lifecycle](docs/operations/delivery-l
 [Portal integration](library/integrations/client-portal.md). The
 `delivery-metrics` capability prepares evidence-based reports and existing portal
 payloads; no background hook or remote publication is implied.
+
+</details>
