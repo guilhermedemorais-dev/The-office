@@ -1,11 +1,11 @@
 ---
 name: studio-prd
-description: "Conduct collaborative product briefing for new or existing software, consolidate a module-based PRD and an internal delivery plan, then hand off each module to supervised SDD. Does not authorize implementation or replace task contracts."
+description: "Debate product ideas critically using evidence and official technical documentation, conduct collaborative briefing for new or existing software, consolidate a module-based PRD and an internal delivery plan, then hand off each module to supervised SDD. Does not authorize implementation or replace task contracts."
 ---
 
 # Studio PRD
 
-Turn an interview and verified research into enough shared product context for
+Act as a critical reasoning partner, then turn discussion and verified research into enough shared product context for
 `sdd-spec-factory` to specify complete modules. The user supplies business
 decisions, not every technical detail. This is a planning skill, not a task
 executor or a new orchestration runtime.
@@ -18,12 +18,19 @@ system, including low-code. Preserve established decisions; reopen one only
 with a concrete conflict or requested change. Read [briefing.md](references/briefing.md)
 for the interview and existing-system inventory.
 
-Before external briefing research, apply the active Harness capability
-registry's whole-inventory consultation and research routing. Inspect the MCP
-Library, all active specialist tool-registry metadata and actual host
-availability; prefer suitable documentation/code/extraction/search capabilities
-and record justified fallbacks in research evidence. Reuse existing records,
-never install the whole catalog or claim an unavailable MCP was invoked.
+Use the active Harness selective research routing. Inspect Task-selected and
+project evidence, then relevant catalog/index metadata and actual required host
+capabilities. For a concrete gap use official, version-matched technical docs or
+primary standards. Read the original source, not only a search snippet. Reuse
+applicable records; do not scan the whole inventory or repeat settled research.
+Never install the whole catalog or claim an unavailable MCP was invoked.
+
+Apply the critical-discovery phases and evidence protocol in
+[briefing.md](references/briefing.md). Investigate the problem before endorsing a
+solution. Challenge consequential assumptions with reasons, useful alternatives
+and a recommendation; do not manufacture disagreement or certainty. Research
+technical facts instead of asking the owner to guess them. A recommendation
+without sufficient evidence stays PROPOSED/UNKNOWN, never an established fact.
 
 For applicable backend/payments/fiscal/commerce library needs, resolve the active
 SDD owner and its references/backend-component-sources.md catalog metadata.
@@ -49,6 +56,7 @@ data, delete, migrate or replace a system as part of an interview.
 
 ## Produce the project artifacts
 
+Before consolidating the PRD apply the phase gates in [briefing.md](references/briefing.md).
 Keep artifacts in the **client project**, not this plugin; reuse equivalent
 existing locations and preserve content:
 
@@ -73,7 +81,8 @@ boundary and user decision. Preserve the existing SDD template and equivalent
 JSON v2, including all ten sectors; do not invent a Studio task template.
 
 The target is production quality within the agreed complete scope, **not an
-automatic MVP**. Delivery stages do not waive tests, negative states, security
+automatic MVP**. Compare an explicitly proposed MVP/first release with later
+evolutions when useful; only the owner may approve a scope reduction. Delivery stages do not waive tests, negative states, security
 or polish. Do not promise complete discovery, zero rework or guaranteed dates.
 
 ## Plan and hand off under supervision
@@ -114,7 +123,7 @@ For every PRD/spec, retain a compact record in its existing references section:
 applicable catalog indexes/metadata consulted and revision, selected source ID or
 project-native reuse, or N/A with reason. Unavailable/stale evidence is NOT_VALIDATED,
 never an invented consultation. Metadata review does not load every source body;
-only selected necessary sources become REQUIRED. Preserve the Harness whole-inventory rule.
+only selected necessary sources become REQUIRED. Preserve the active Harness selective-lookup policy; retain selected mandatory sources.
 
 When UI libraries are relevant, keep catalog-first selection with UI/UX ownership:
 project-native first, curated matching-stack candidates second, targeted Context7
@@ -129,7 +138,8 @@ skills or blanket dependency installation follow from the catalog.
 
 Portal requests go to the active Harness `references/client-portal.md` and
 DevOps: external template into client `docs/portal/`, not a portal bundled here.
-An unavailable future template is a recorded dependency, not permission to
+Verify the currently selected template revision and availability rather than
+assuming it is missing. An unavailable template is a recorded dependency, not permission to
 build it or block unrelated modules.
 
 ## Evidence and continuation

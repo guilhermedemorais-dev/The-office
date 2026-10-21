@@ -796,7 +796,7 @@
     {
       "id": "studio-prd",
       "path": "plugins/studio-prd/skills/studio-prd/SKILL.md",
-      "sha256": "3eb5b526ac44cf9f200cc7ab1f14934f4ed81cfee17af92a682d06b7bafb54cd",
+      "sha256": "99ec843831ceff67cb1cf1bfcf9dce82139314c2ffdbeef229fdb11f81182464",
       "body_start_line": 5,
       "sections": [
         {
@@ -804,42 +804,47 @@
           "heading": "Preamble",
           "start_line": 5,
           "end_line": 12,
-          "sha256": "ce35f8ff0c240411a563b294f01b54f02d76be8c3f6680044c9367c35229fbca",
+          "sha256": "ee1afb1026adfd0bb6a6d5297a9b1740d12068565ab980ef7ffd3eaf4722cc29",
           "skill_id": "product-core"
         },
         {
           "id": "studio-prd:001",
           "heading": "Start from evidence",
           "start_line": 13,
-          "end_line": 49,
-          "sha256": "eb3cc9f6079c6a6717f59e021ccef2b7e36c0bc46f7fd8fc255ff3aa1a390e54",
+          "end_line": 56,
+          "sha256": "cf2a00de3cefd070f715a7832b4d5d151121b1f6d13a6d4015764eaec354cfe3",
           "skill_id": "product-discovery"
         },
         {
           "id": "studio-prd:002",
           "heading": "Produce the project artifacts",
-          "start_line": 50,
-          "end_line": 78,
-          "sha256": "507ac4465ee26f6acdeafdb644784cbb4d44ad7dc52be2a5bdc137ff8e6ca6e8",
+          "start_line": 57,
+          "end_line": 87,
+          "sha256": "5f96f7ba8f5bd4a9b9b0aad2aaffa1ced10ce2eceba029942063c6f36fa2099f",
           "skill_id": "product-planning"
         },
         {
           "id": "studio-prd:003",
           "heading": "Plan and hand off under supervision",
-          "start_line": 79,
-          "end_line": 134,
-          "sha256": "bbe8a247c42cb51ca8497a9f09e37d9f413d4dce1d6e45b1ac2fb97428547f7e",
+          "start_line": 88,
+          "end_line": 144,
+          "sha256": "b336f3642e5667d4f0af964cd3f988911d5ed7a018201d8232f8acf9adb288eb",
           "skill_id": "product-planning"
         },
         {
           "id": "studio-prd:004",
           "heading": "Evidence and continuation",
-          "start_line": 135,
-          "end_line": 147,
+          "start_line": 145,
+          "end_line": 157,
           "sha256": "dc604cdaedab20ee82a87ba6f2a28905103cc1936626332ad7947c07a007b88f",
           "skill_id": "product-core"
         }
-      ]
+      ],
+      "evolution": {
+        "authorization": "STUDIO-PRD-002",
+        "original_archive": "docs/migration/v1-frozen/plugins/studio-prd/skills/studio-prd/SKILL.md",
+        "note": "Current canonical content evolved after the recorded V1 baseline; original bytes remain archived."
+      }
     },
     {
       "id": "reverse-engineering-standard",
@@ -2049,6 +2054,11 @@
       "reference_base": "plugins/studio-prd/skills/studio-prd",
       "reference_fallback": "plugins/studio-prd",
       "reference_map": [
+        {
+          "original": "references/briefing.md",
+          "resolved": "plugins/studio-prd/skills/studio-prd/references/briefing.md",
+          "status": "RESOLVED"
+        },
         {
           "original": "assets/briefing-template.md",
           "resolved": "plugins/studio-prd/skills/studio-prd/assets/briefing-template.md",

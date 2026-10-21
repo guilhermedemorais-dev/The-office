@@ -10,6 +10,7 @@ projeto real; não representam execuções já realizadas.
 | Preparar a máquina com o agente | [Prompt de instalação](operations/installation-prompt.md) |
 | Clonar, registrar e verificar | [Instalação](operations/installation.md) |
 | Aprender a usar com exemplos | [Tutorial](operations/tutorial.md) |
+| Debater ideias com evidências e consolidar PRD | [Studio PRD](operations/studio-prd.md) |
 | Entender fases, Tasks e responsabilidades | [Metodologia](operations/methodology.md) |
 | Consultar comandos/smoke tests | [Manual operacional](operations/user-guide.md) |
 | Buscar template no projeto cliente | [Portal do Cliente](operations/client-portal.md) |

@@ -22,6 +22,13 @@ Execution Contract v2, ten canonical validation sector IDs, Human Task equivalen
 
 Register source-derived capabilities in the metadata index and retain their core prerequisites. Validate routes and coverage before use. Missing required references block the affected claim. Optional tool failures use compatible cataloged alternatives; do not delete functionality or mark it verified. Handoffs carry IDs/revision/receipts rather than full source bodies. Revalidation follows material artifact changes.
 
+## Approved canonical evolution
+
+Studio PRD now evolves under STUDIO-PRD-002 / [ADR 006](../adr/006-studio-prd-critical-evidence.md).
+Affected original files are retained byte-for-byte in explicit v1-frozen archives;
+the immutable V1 inventory is still verified. Live Studio and its generated V2
+routes share the evolved canonical source. Other preserved bundles are unchanged.
+
 ## Guia técnico atual
 
 Veja [construção e trade-offs](technical-guide.md), o [fluxograma visual](delivery-flow.svg)

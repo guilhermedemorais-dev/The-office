@@ -40,3 +40,23 @@ real, esperas externas, recursos e restrições. Desconhecidos explícitos.
 | --- | --- | --- | --- | --- |
 
 Até três perguntas pendentes para esta rodada. Reutilizar decisões já aprovadas.
+
+
+## Diagnóstico e debate proporcionais
+
+Fase atual: diagnóstico / debate / PRD, conforme evidência; não é fase da SDD.
+O que está claro, lacunas, hipóteses, riscos e até três perguntas prioritárias.
+Registrar problema separadamente da solução sugerida; explicitar contradições.
+
+## Impactos preliminares
+
+Banco de dados; API/Backend; Frontend/UI. Para cada área relevante, registrar
+impacto conceitual, evidência, risco e owner técnico; N/A fundamentado nas demais.
+Não definir implementação prematuramente.
+
+## Alternativas e evidência das decisões
+
+Estender a tabela de decisões existente com natureza (FACT/HYPOTHESIS/PREFERENCE/
+DECISION), alternativa considerada/descartada, trade-off, fonte/versão/seção/data,
+aplicabilidade, limitação e próxima validação. Estado de aprovação é independente
+da natureza. Reutilizar o mesmo ID e referências, sem segundo registro concorrente.

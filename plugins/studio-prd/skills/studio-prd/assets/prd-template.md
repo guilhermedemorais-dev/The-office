@@ -40,7 +40,7 @@ Registro de consulta: índices/metadados dos catálogos aplicáveis e revisão
 consultados; ID da fonte escolhida ou reuso nativo; ou N/A com justificativa.
 Evidência indisponível/desatualizada: NOT_VALIDATED, sem inventar consulta.
 Consultar metadados não exige ler todas as fontes; somente fontes selecionadas
-necessárias seguem como REQUIRED, preservando a consulta global do Harness.
+necessárias seguem como REQUIRED, preservando o roteamento seletivo vigente do Harness.
 
 Inventário de sistema existente quando aplicável; evidências e limites, decisões
 manter/completar/corrigir/refatorar/substituir/descontinuar, sem exclusão implícita.
@@ -65,3 +65,21 @@ Lacunas materiais impedem declarar a respectiva especificação completa.
 Registrar aprovação real do PRD, módulos e sequência. Informar N módulos e pedir
 início da primeira especificação. Não autoriza implementação, merge ou deploy.
 SDD reutiliza o template completo existente e JSON equivalente, sem novo modelo.
+
+
+## Fundamentação e impactos preliminares
+
+Separar Banco de dados, API/Backend e Frontend/UI quando relevantes; registrar
+entidades/regras/jornadas conceituais, qualidades observáveis, restrições e riscos.
+Detalhes de implementação pertencem à Arquitetura/SDD/UX. N/A precisa de motivo.
+
+Na tabela/seção existente de decisões, manter natureza FACT/HYPOTHESIS/PREFERENCE/
+DECISION separada de APPROVED/PROPOSED/UNKNOWN/EXCLUDED. Incluir alternativas,
+trade-offs, recomendação e fonte original consultada (caminho/URL, versão, seção,
+data, o que sustenta e limites). Distinguir inferência de fato. Hipótese aprovada
+não vira fato; fonte inacessível é NOT_VALIDATED, não consulta inventada.
+
+Se houver proposta de MVP/primeira entrega, separar do escopo completo e das
+futuras evoluções, sem reduzir compromisso aprovado automaticamente. Bloqueios
+críticos impedem declarar consolidação concluída; rascunhos podem expô-los.
+Registrar aprovação humana real e decisões revisitadas com justificativa/impacto.

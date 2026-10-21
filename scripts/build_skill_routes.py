@@ -125,6 +125,10 @@ def build(root=ROOT):
   if len(set(expected)) != len(expected) or set(expected)!=set(actual):
    raise ValueError(f'{source_id}: unreviewed/missing headings: {set(expected)^set(actual)}')
   source={'id':source_id,'path':rel,'sha256':digest(text),'body_start_line':body_start,'sections':[]}
+  if source_id=='studio-prd':
+   source['evolution']={'authorization':'STUDIO-PRD-002',
+    'original_archive':'docs/migration/v1-frozen/'+rel,
+    'note':'Current canonical content evolved after the recorded V1 baseline; original bytes remain archived.'}
   for group,headings in groups.items():
    sid=f'{sector}-{group}'
    chunks=[s for s in spans if s['heading'] in headings]
@@ -217,7 +221,7 @@ def build(root=ROOT):
  registry['sectors']['governance']['capabilities']=list(registry['sectors']['orchestrator']['capabilities'])
  outputs['library/indexes/skill-routes.json']=json.dumps(registry,ensure_ascii=False,indent=2)+'\n'
  rows=['# Lossless V1 to V2 skill migration','',
- 'This is a local functional migration, not a replacement execution engine. All twelve canonical V1 skills and their original references/scripts remain unchanged under `plugins/`. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.','',
+ 'This is a local functional migration, not a replacement execution engine. Original V1 resources remain preserved at canonical paths or explicit byte-identical archives. Studio PRD evolves under approved STUDIO-PRD-002 / ADR 006; its current slices cover the evolved canonical source, while the original remains in docs/migration/v1-frozen/. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.','',
  'Each V1 body section is assigned once. Registry offsets are 1-based inclusive and SHA-256 hashes cover exact UTF-8 text. Frontmatter remains in the canonical source and is covered by the full source hash. Generated skills contain source text verbatim after an explicit reference-base adapter. Regenerate with `python scripts/build_skill_routes.py`; validate with `python scripts/build_skill_routes.py --check`.','',
  'Select global core, relevant sector core, and only capabilities required by the Task. A selected capability depends on its core. Explicit IDs take priority over lexical trigger hints; ambiguous matching must be resolved from Task scope, not treated as authorization. Shared executor aliases do not create duplicate skills.','',
  'Full behavioral parity across arbitrary agent hosts is NOT VALIDATED. Exact text coverage proves no section was dropped; it does not prove all models follow the instructions, nor tokens saved. SDD task-contract generation and implementation workflow remain deliberately cohesive and relatively large to preserve coupled gates. Legacy bundles continue loading their original monolithic SKILL.md, so selective-loading gains require the V2 router.','',

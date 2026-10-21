@@ -17,3 +17,13 @@ Inherit global allowed/protected paths, acceptance, stop conditions and human ga
 ## Outputs
 
 Approved PRD and scoped module inventory. Return canonical SKILL_RECEIPT and EXECUTION_RECEIPT with task/revision, loaded sources, actual operations, results, limitations, affected artifacts and next action. Runtime evidence stays outside normative JSON. Missing evidence is NOT_VALIDATED; failure is REWORK or BLOCKED. Human final acceptance remains separate.
+
+
+## Discovery before a Task exists
+
+An initial idea/brief does not yet require a Task ID, execution list or JSON v2.
+Accept the problem/context and available authorized project evidence; Studio owns
+critical discovery and the product PRD. Bind Task/revision/list only when those
+artifacts exist. Never fabricate identifiers or require a downstream contract
+before product discovery. Reuse Studio's evidence protocol and proportional phases;
+consult technical sectors for material gaps without assuming they executed.
