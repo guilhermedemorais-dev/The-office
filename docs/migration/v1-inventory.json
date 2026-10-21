@@ -1,0 +1,2151 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/guilhermedemorais-dev/Dev-workflow",
+  "source_commit": "af94e8022eaec3e4eedfb4a2a62e13c6b349b9c4",
+  "files": [
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "bytes": 3570,
+      "sha256": "deeb9a8011fa957bae41404176a2bc118981c5bd563b30956d0c9c38de8bd396"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "bytes": 5213,
+      "sha256": "4f2779bc0a131eae67dd52d52b8a9d573530888e0217f08952004cbc3e9ec0e2"
+    },
+    {
+      "path": ".github/workflows/vendor-beyondseo-runtime.yml",
+      "bytes": 2009,
+      "sha256": "8b9ff004c6d3f06e2b9116c3b54f27feb7b95c0ba0ad9ce6b0e3958853e79798"
+    },
+    {
+      "path": ".github/workflows/vendor-rea-runtime.yml",
+      "bytes": 3773,
+      "sha256": "83ee88ee910d4574c7daa5b706c0f8d0a03c83e8d03cfad21ea1b7065adfccf0"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 456,
+      "sha256": "8470d7077615d7e91097fc46f953ddfee68c4c7c0ba0eded4bed676373875675"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3364,
+      "sha256": "42c49ee8f188425bb84add3db904caff9d71a6a21799fe76c987e94a947c8e63"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 6386,
+      "sha256": "d2cbfa3ebba33b315172524128f9b96893f5dd8388d33f52abd78a37bb632bcc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 129469,
+      "sha256": "59559df7e3ddc723068fc29d60147757ca7fe063c25c8cb91c819ba53b05e04a"
+    },
+    {
+      "path": "docs/devops-standard-delivery.md",
+      "bytes": 16137,
+      "sha256": "e172d290457046a08df8c8f6f5aaaf64cb9e3997a5b15048db1d0b47b9ed6eb6"
+    },
+    {
+      "path": "docs/engineering-harness-audit.md",
+      "bytes": 7302,
+      "sha256": "13a6024bc47b21297f46db347d176c0df8abc287d51545d8eababd450ec6c8a2"
+    },
+    {
+      "path": "docs/examples/sector-context-qa/TASK-EXAMPLE.md",
+      "bytes": 8374,
+      "sha256": "aeea9f176f0d8dcf385b6d01e0c8bd4007c4a90f755c9bb4c32232b17364facb"
+    },
+    {
+      "path": "docs/examples/sector-context-qa/execution-contract.json",
+      "bytes": 5844,
+      "sha256": "9186ca64ef3f3126688251b8fb6411743b18a001e6922af109d7ef1f1bc474ff"
+    },
+    {
+      "path": "docs/examples/sector-context-qa/feature-spec.md",
+      "bytes": 2729,
+      "sha256": "9191334fb7a8b67216baeef799307c684cfece7d73d06fbb106b1acb097fbd38"
+    },
+    {
+      "path": "docs/execution/LOCAL-platform-tools.json",
+      "bytes": 10938,
+      "sha256": "d23cbd6565a8687dfd7cef62eb0542b1f27dc3ba6712938a9bcd3f9662c70e6f"
+    },
+    {
+      "path": "docs/execution/LOCAL-windows-port.json",
+      "bytes": 3948,
+      "sha256": "d2349fc220a0e793203377ec4a84b99d1c4987be4fc09d6af540ad7a0a5bd38c"
+    },
+    {
+      "path": "docs/execution/TASK-002.json",
+      "bytes": 1732,
+      "sha256": "f73da81d33ad2cfcfd516dd9e86abbe76afbbcb3ea155a06d6a11e2430481b69"
+    },
+    {
+      "path": "docs/execution/TASK-003.json",
+      "bytes": 1948,
+      "sha256": "32f62ffae82468ef13f7affd5568bfb4ae2760d194d2c5e3476880dc2b4f0af9"
+    },
+    {
+      "path": "docs/execution/TASK-004.json",
+      "bytes": 1537,
+      "sha256": "43b3c3088a69dac30b13a3f7c8df9ab19c46b2ee21f0a58537c26cc891fc20f9"
+    },
+    {
+      "path": "docs/execution/TASK-005.json",
+      "bytes": 4083,
+      "sha256": "52becfe5a5182f7e316db234f192bee6a6803b12533cba989e8593c12601ce54"
+    },
+    {
+      "path": "docs/execution/TASK-006.json",
+      "bytes": 2237,
+      "sha256": "1df1e852f87bee8e2cdbb6f40632a17af78a1114a07680b2f4ce2c26f0064806"
+    },
+    {
+      "path": "docs/execution/TASK-009.json",
+      "bytes": 7305,
+      "sha256": "9e4e9858a5d4e7b5000f9ad025cad143bdb047028eb959dcb0cf60991b08c83f"
+    },
+    {
+      "path": "docs/execution/TASK-010.json",
+      "bytes": 6323,
+      "sha256": "344fe15e39586df8bc7f4a89c4f9d982d7d4a45f87e42f413e2edcd14272c4e6"
+    },
+    {
+      "path": "docs/execution/TASK-011.json",
+      "bytes": 12559,
+      "sha256": "845d5b72fa5b273477b2fa86a9c34b8980d093b6c87aff9df186c1cb28bcbe57"
+    },
+    {
+      "path": "docs/execution/TASK-041.json",
+      "bytes": 24936,
+      "sha256": "72b7f581a5dc15872c3ec0f040f365b9ff41981dfa6343d01ec45f674580bb99"
+    },
+    {
+      "path": "docs/execution/TASK-047.json",
+      "bytes": 27264,
+      "sha256": "a3ce88b20d7cf5f37b732c0acb9e12c4125f24b26cd417e5f5daca4b0250b9cb"
+    },
+    {
+      "path": "docs/execution/TASK-051.json",
+      "bytes": 4788,
+      "sha256": "ac871af27bff324d74a66c7b0114da5910ec6737b71d6f0e41dfac2b992a9567"
+    },
+    {
+      "path": "docs/execution/TASK-053.json",
+      "bytes": 3116,
+      "sha256": "5ecfdd76725ab10e4bd1ac34cd25cccc666247c384e1b5b94f0ab9616d31ba61"
+    },
+    {
+      "path": "docs/github-governance-delivery.md",
+      "bytes": 8866,
+      "sha256": "e94be18443dcc6a68b9791e8d5a113f1c87ed0c5420d850a2896bcb450e7725d"
+    },
+    {
+      "path": "docs/platform-tools.md",
+      "bytes": 5054,
+      "sha256": "041b487bb1e62977d25bc548265dff0d69fd10af0199a808d25f6042782cbfb0"
+    },
+    {
+      "path": "docs/qa/TASK-009-review.md",
+      "bytes": 10345,
+      "sha256": "df562b9ef434f36293d863ddc38464a18595eec382bd00dd5d1e926725d4a539"
+    },
+    {
+      "path": "docs/qa/TASK-010-review.md",
+      "bytes": 17974,
+      "sha256": "8e7dbfa7d941b7439056a0006ce2d5ccece0ab132a02d0af490a56f21962336e"
+    },
+    {
+      "path": "docs/receipts/LOCAL-platform-tools-harness-final.md",
+      "bytes": 1506,
+      "sha256": "4363934c58d674e0b8ee4c0d97f45873cba547497a55a85cb399ba1ae7dfadf2"
+    },
+    {
+      "path": "docs/receipts/LOCAL-platform-tools-implementation.md",
+      "bytes": 5344,
+      "sha256": "c08d6bbba93f29db59844d92e23d6353e0aaff9d9de133e6f18d80581f05863e"
+    },
+    {
+      "path": "docs/receipts/LOCAL-platform-tools-review.md",
+      "bytes": 2201,
+      "sha256": "d448d4c2a6655d0ca5eed22735e7f3f77d6b0c9fc06b0af8e4943db8b87bee62"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-harness-revision4.md",
+      "bytes": 1682,
+      "sha256": "9698d231a81ecc698072fb1cba1c7d446d00a489127670e8011177fea64f0023"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-publication-review.md",
+      "bytes": 2000,
+      "sha256": "a0c15be1e85d073f844abfee8b3c29a4e74dcaf4ae502b17d3b6d2f44f85a29f"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-reverse-cutter.md",
+      "bytes": 3822,
+      "sha256": "59745820426099f1de405e470704862fd1e014b5516bee8f76945e2756de5bcc"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-reverse.md",
+      "bytes": 6456,
+      "sha256": "2382353e96e53f80a12012f10d7af468029befc2bac59391f90e94b7b0ea1734"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-review-revision4.md",
+      "bytes": 5384,
+      "sha256": "6ca24dbed48ca07082ae488a9f1ff0700e5625088c18608700e53fded42f222b"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-review.md",
+      "bytes": 5357,
+      "sha256": "c77fa1b97f737648a2f80b49bef4042a36a4e8c682938242ec9a0ac1af20e7c5"
+    },
+    {
+      "path": "docs/receipts/LOCAL-windows-port-tools.md",
+      "bytes": 7978,
+      "sha256": "670ae899223eb4c290e503f8a853b4c6ddaaaf99525fc7367e74a6d037a56ea9"
+    },
+    {
+      "path": "docs/receipts/TASK-011-validation.json",
+      "bytes": 2890,
+      "sha256": "ff88b304186792915895663b8ad94808386ba4010b61328d9e8b3ff74e49f0fc"
+    },
+    {
+      "path": "docs/receipts/TASK-041-handoff.md",
+      "bytes": 1114,
+      "sha256": "a3d8f475826315efb4723cee01b86e95c31401973e28c4a0a94867a4e30da402"
+    },
+    {
+      "path": "docs/receipts/TASK-041-implementation.md",
+      "bytes": 2700,
+      "sha256": "dc3430cfe29c0e62004b01f5fe5d534109fc72715418c102a82ae3669541b7e9"
+    },
+    {
+      "path": "docs/receipts/TASK-041-validation.md",
+      "bytes": 2064,
+      "sha256": "5fb6553e49cd7832cdbc91b325ef0798f0f48c2f67521fa6eb0630f816861955"
+    },
+    {
+      "path": "docs/receipts/TASK-047-harness-comparison.md",
+      "bytes": 1375,
+      "sha256": "e68a2bc57adbe45859009173fd1838c00ce2e598ceb56701e4758992931644a1"
+    },
+    {
+      "path": "docs/receipts/TASK-047-harness-final.md",
+      "bytes": 2367,
+      "sha256": "13d710bd045250b67bfcd3eef9bf8f2a491b1a9ca0f93b3b4d40e1547e3a7b35"
+    },
+    {
+      "path": "docs/receipts/TASK-047-implementation.md",
+      "bytes": 2005,
+      "sha256": "4b11e5b4099fd856524d3f68bd4ca54ba6faa778e3551c6961b56f6b75bf6cc5"
+    },
+    {
+      "path": "docs/receipts/TASK-047-qa.md",
+      "bytes": 17387,
+      "sha256": "a8bc66317674b219be02aa623e93f84a09742735d949d8768c0850f57c42d960"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r3.md",
+      "bytes": 4230,
+      "sha256": "adba5c8f95daf904f74fdb064431943b0e04f8942f07d58868f91c60a69c9a4a"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r4.md",
+      "bytes": 2014,
+      "sha256": "6c4618653aff4aae2fce29d3f71563290df4ce8433146019633f8e1cd65b1648"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r5.md",
+      "bytes": 2175,
+      "sha256": "8b1ee4b999e26239e763a669176f12f23cfef321671a837ac8ff032645b4c0df"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r6.md",
+      "bytes": 2135,
+      "sha256": "3fb2783d399484c5e9aca6f8dbadc0b1f83c36dc6735115c604c5e57efda487d"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r7.md",
+      "bytes": 1812,
+      "sha256": "ec6ea92815c85881de16b7e62a1ef5833b0622a922350d2afd52ec1a990f9e18"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r8.md",
+      "bytes": 2096,
+      "sha256": "ecd4db91b2639a32e894632b7d92cdad3329959913547dfd0cac60fff2347cf4"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation-r9.md",
+      "bytes": 1763,
+      "sha256": "9686b409cbe06e0bc599630b8686824b2acd15809eaef428e1bec4e68b0a6bb4"
+    },
+    {
+      "path": "docs/receipts/TASK-051-implementation.md",
+      "bytes": 4822,
+      "sha256": "41d50d45e337dfb2f39b855e8ff8cf1f8ca135e87377080b625bba5a7a5de665"
+    },
+    {
+      "path": "docs/receipts/TASK-051-local-install-r3.md",
+      "bytes": 1156,
+      "sha256": "551e8520819f024ed77500c8df2653ac92dd7fe8e9b038c61b2cde506d495c43"
+    },
+    {
+      "path": "docs/receipts/TASK-051-local-install-r4.md",
+      "bytes": 1077,
+      "sha256": "a2db6fdaeb2e42de08c31aae8fe49b5fd2c1bc8b393f98a30c9b2b51e5b2ba68"
+    },
+    {
+      "path": "docs/receipts/TASK-051-local-install-r7.md",
+      "bytes": 1323,
+      "sha256": "726a327858321c146fe3e52d6cf9b4ae862abc5420caefb76b682e62241d58b4"
+    },
+    {
+      "path": "docs/receipts/TASK-051-local-install-r8.md",
+      "bytes": 1233,
+      "sha256": "c8e354c31d8f7ef13a24fbde080fafc3f4cb9d9bcf5b0bb90ecc422c0efe3d1e"
+    },
+    {
+      "path": "docs/receipts/TASK-051-local-install-r9.md",
+      "bytes": 1281,
+      "sha256": "2271fa71af7acdd9fb4b6880414a23d1e7f6dde5d963ed99b4440d0af0a8df98"
+    },
+    {
+      "path": "docs/receipts/TASK-051-local-install.md",
+      "bytes": 1143,
+      "sha256": "a28452bf6aee6450d9cf688e605abb2288f2d358b9f0481aaefb1dafd2dd00ce"
+    },
+    {
+      "path": "docs/receipts/TASK-051-qa-revision3.md",
+      "bytes": 5286,
+      "sha256": "b8d0645b65f151352f9a3f4d6bc89b2a7e124924e33e06f1b9e2ce3a3b34c6e8"
+    },
+    {
+      "path": "docs/receipts/TASK-051-qa-revision4.md",
+      "bytes": 4058,
+      "sha256": "675d6e8d759ada54ad3d40a6198a095811a9b35e8ae4066f71f868000581f276"
+    },
+    {
+      "path": "docs/receipts/TASK-051-qa-revision7.md",
+      "bytes": 5790,
+      "sha256": "ce3f99ec5249d23d5e14b8a9f49a521386e687aa85b69c766ec31ff8a435507e"
+    },
+    {
+      "path": "docs/receipts/TASK-051-qa-revision8.md",
+      "bytes": 4855,
+      "sha256": "d27a17563b8bea0bd3e31dc4a2d1ccb386bbb0264c48c60e09cf03fcb1cabbcd"
+    },
+    {
+      "path": "docs/receipts/TASK-051-qa-revision9.md",
+      "bytes": 3712,
+      "sha256": "59fee1178c7fe6b63a49c91f593454e94eb34f4b3ce0bb9eb184870d59346066"
+    },
+    {
+      "path": "docs/receipts/TASK-051-qa.md",
+      "bytes": 7035,
+      "sha256": "03c70e5afcd50f48a01d6df5564c8359d399575de989a2da9c40dceb29cfcad2"
+    },
+    {
+      "path": "docs/receipts/TASK-051-runtime.md",
+      "bytes": 6143,
+      "sha256": "e8656326e4ecfafbf6688d844d9560d8ae8517f26bc02ec544c7db603cb5f2b5"
+    },
+    {
+      "path": "docs/receipts/TASK-053-implementation.md",
+      "bytes": 3703,
+      "sha256": "81e42eed3b5fba35039bbe1e26a56bf67a8e557316c9d32f9795ca7ebc92462a"
+    },
+    {
+      "path": "docs/receipts/TASK-053-qa.md",
+      "bytes": 4463,
+      "sha256": "63d583d1d908ea97ae374a191761d8308aa104a241fff244cf69d0bd9a048d77"
+    },
+    {
+      "path": "docs/sector-context-qa-delivery.md",
+      "bytes": 15141,
+      "sha256": "3c15e70ffe5d010b753ff473a477d6c4683b9fffe97e6aa0201127c96c8a59c2"
+    },
+    {
+      "path": "docs/security/reviews/TASK-006-devops-standard.md",
+      "bytes": 12940,
+      "sha256": "07827b3b083d8eb376ff262db15000325dedbccaff32c4e066597ad1b32334b1"
+    },
+    {
+      "path": "docs/security/reviews/TASK-010-github-governance.md",
+      "bytes": 10337,
+      "sha256": "ce3687b612a99d309625cf8a82a5bfd758d1141732b547f9d506a883e60d1bf7"
+    },
+    {
+      "path": "docs/specs/devops-standard/module-spec.md",
+      "bytes": 9814,
+      "sha256": "bbf4ea4d32118e3a65dcd0ffbcbe3f1b256ef2ae17e715068df824a31e4740da"
+    },
+    {
+      "path": "docs/specs/devops-standard/review-checklist.md",
+      "bytes": 2839,
+      "sha256": "0e0939d100c081f0b59762be9b85857237b53eb7c3cd2002d8dfb1278c6e9fb6"
+    },
+    {
+      "path": "docs/specs/engineering-harness-review/module-spec.md",
+      "bytes": 3262,
+      "sha256": "5085a0e5b31af75984979a6a8dadbdb0eb6ad53773bd79f6a5d8f0e1b5b950bc"
+    },
+    {
+      "path": "docs/specs/environment-bootstrap/mcp-source-audit.md",
+      "bytes": 7615,
+      "sha256": "dcc34a1aafa2d58b4449cdd065a881db013cdad4cd3678fd6d984990bfe5ff3a"
+    },
+    {
+      "path": "docs/specs/environment-bootstrap/module-spec.md",
+      "bytes": 17306,
+      "sha256": "69a86a88687ea37bc0a9e90b69f4f1e71bcd689b08ac9eb78137a6a515c13cf3"
+    },
+    {
+      "path": "docs/specs/execution-contracts/module-spec.md",
+      "bytes": 2838,
+      "sha256": "132a0a9f38a20db89dd79131e955611d24012a650fb1bf4156e48dcdbcae18e0"
+    },
+    {
+      "path": "docs/specs/github-governance/module-spec.md",
+      "bytes": 9733,
+      "sha256": "d7c737a5d045ebd2b6ad35f089a582592c6f8cd5779689ee49bb76b2d3002a03"
+    },
+    {
+      "path": "docs/specs/github-governance/validation-rules.md",
+      "bytes": 6286,
+      "sha256": "d518a4e652c930f3e6a8c4130e753e65eefc1787766d7d09cae1194d937f468e"
+    },
+    {
+      "path": "docs/specs/human-execution-reporting/module-spec.md",
+      "bytes": 2767,
+      "sha256": "398d4df3343625182a8f8b2f3647112904678ecb1fa2e7e83b611b3222348580"
+    },
+    {
+      "path": "docs/specs/sector-context-qa/module-spec.md",
+      "bytes": 7853,
+      "sha256": "2e674279961b11a8287673cf05bba171c4b8175d9f8559847c7bb2354055695f"
+    },
+    {
+      "path": "docs/specs/sector-context-qa/validation-rules.md",
+      "bytes": 6118,
+      "sha256": "9ef2b518a968bbafd1b89cd4f19f19f7af028d45f0f2fa1ba70b3367407af60d"
+    },
+    {
+      "path": "docs/specs/skill-owned-tools/module-spec.md",
+      "bytes": 1805,
+      "sha256": "c9ca7d3b3befb44c8f5e952e8b5139d8208177aa91bb2a0246783e7ef1c1f4bf"
+    },
+    {
+      "path": "docs/specs/studio-prd.md",
+      "bytes": 1835,
+      "sha256": "8b98f15e6c81ffe2b2064ec12ec09159ea8dd84681adc875a74b29107d0be9c5"
+    },
+    {
+      "path": "docs/specs/task-contract-v2/module-spec.md",
+      "bytes": 2610,
+      "sha256": "55f5a741750e4f529079cec94e8c714f3d2f530fd7c33e76f9cbb6019ec5e0af"
+    },
+    {
+      "path": "docs/specs/task-contract-v2/validation-rules.md",
+      "bytes": 1476,
+      "sha256": "14de79b16a8e7502480eebf9ed9c75900d1a0f299fc2ff36022be0c126134708"
+    },
+    {
+      "path": "docs/task-contract-v2-delivery.md",
+      "bytes": 3198,
+      "sha256": "3ecd62c001e9b9dc0d93e2afa4cc39920b2f3f6779491a33cc91e9ecaa629ca2"
+    },
+    {
+      "path": "docs/tasks/LOCAL-platform-tools.md",
+      "bytes": 4790,
+      "sha256": "6843f1a864c1dc8210e87ec67b569d43ae38326150fe7fe40c457128a2c83ee6"
+    },
+    {
+      "path": "docs/tasks/LOCAL-windows-port.md",
+      "bytes": 6712,
+      "sha256": "d31d6b6e0abfa07af195c726fa8d89383b2fefab460d29a26177a898f7393169"
+    },
+    {
+      "path": "docs/tasks/TASK-001-align-engineering-harness-practices.md",
+      "bytes": 5762,
+      "sha256": "2c86e668c405d56dda1a6c009b5759ba56712f0d0561c6ea8203652f087285c6"
+    },
+    {
+      "path": "docs/tasks/TASK-002-add-lean-execution-contracts.md",
+      "bytes": 3985,
+      "sha256": "75a73921789f8b315ebeab50d1e1ac4e26b7f1ef4b63bbd403e513951d92706f"
+    },
+    {
+      "path": "docs/tasks/TASK-003-add-human-execution-reports.md",
+      "bytes": 5057,
+      "sha256": "396740cfb5a4fe7e609af745115011ec58fe2b5cd3b8a4e5802bf615125e19be"
+    },
+    {
+      "path": "docs/tasks/TASK-004-skill-owned-tools.md",
+      "bytes": 2382,
+      "sha256": "4525bb0b898a55663933b6c35973e4c15215a027b7670be12fe5448ef1881aad"
+    },
+    {
+      "path": "docs/tasks/TASK-005-environment-bootstrap.md",
+      "bytes": 21856,
+      "sha256": "0fbd44ec42f387dfa145f3b1cdc514497163504bf06237913e56f403eb8437d3"
+    },
+    {
+      "path": "docs/tasks/TASK-006-devops-standard.md",
+      "bytes": 13870,
+      "sha256": "417ab1690e9e07db7caf0beb50e6ad2c1f34ee5063e4f6b2a7f574398b2b019a"
+    },
+    {
+      "path": "docs/tasks/TASK-009-sector-context-qa.md",
+      "bytes": 12806,
+      "sha256": "c2a01e1e765b52102420f421d03f3ccf51cb6ce7e138013a31c3c61e44c5b50a"
+    },
+    {
+      "path": "docs/tasks/TASK-010-github-governance.md",
+      "bytes": 12142,
+      "sha256": "b63c12a5f6a1f460b98968c35bbffcba2fab33b928377214128d34f27a883810"
+    },
+    {
+      "path": "docs/tasks/TASK-011-task-contract-v2.md",
+      "bytes": 13527,
+      "sha256": "a4fbad6f3612bec6a85643d8183b977b737dc03dbd38fb84896dfdad06a2b504"
+    },
+    {
+      "path": "docs/tasks/TASK-041-studio-prd.md",
+      "bytes": 9622,
+      "sha256": "9b5ff8d3097aeefa59e458513bb87cde95729981a5a0ba3b9fd63b66793c4b90"
+    },
+    {
+      "path": "docs/tasks/TASK-047-technical-knowledge.md",
+      "bytes": 13369,
+      "sha256": "cce8bd4ccee15960e4d07bde79d9e0a6afc33b3afdeedacb3ae8667d8bd780e3"
+    },
+    {
+      "path": "docs/tasks/TASK-051-ui-libraries.md",
+      "bytes": 8438,
+      "sha256": "ab6c0d2eec85102452ec4cf67ff5fd68e039082e7a942ff2026e2bbbfc2423d7"
+    },
+    {
+      "path": "docs/tasks/TASK-053-minimal-code.md",
+      "bytes": 2242,
+      "sha256": "8781e4057cfdd8937544dc6b912301bb7763bd28fdaf1c3f1aa90c735158dd59"
+    },
+    {
+      "path": "docs/technical-knowledge-upgrade-audit.md",
+      "bytes": 6554,
+      "sha256": "7490a718004cee7c3ca26221f7f86d0a50238cb5e507f44f8237f180662c42fc"
+    },
+    {
+      "path": "docs/workflow-pipeline.md",
+      "bytes": 14780,
+      "sha256": "a5ad38c386237f5ccc263e33782cfe761ce9fb4fe49d57d99c60da91ab46f138"
+    },
+    {
+      "path": "plugins/dev-environment-standard/.claude-plugin/plugin.json",
+      "bytes": 382,
+      "sha256": "c80c37b5167af829cf4c919ffefa601c50871a3832be581f381ba5d0928f87a8"
+    },
+    {
+      "path": "plugins/dev-environment-standard/.codex-plugin/plugin.json",
+      "bytes": 1085,
+      "sha256": "975ce6fe3d33abfc7010a9350560dc97baabcebdbca0e2c3ecbd11129201e33a"
+    },
+    {
+      "path": "plugins/dev-environment-standard/Tools (Linux)/README.md",
+      "bytes": 410,
+      "sha256": "855c3dd8e3b3ba3842bf84ccb66a76e9e0906ef9d6aaa08c013148a8468cb059"
+    },
+    {
+      "path": "plugins/dev-environment-standard/Tools (Linux)/catalog.json",
+      "bytes": 4210,
+      "sha256": "a27244f4dac9d0a6389e4f295adbaa266934519d1af9df35bc3715f8cda14b90"
+    },
+    {
+      "path": "plugins/dev-environment-standard/Tools (Windows)/README.md",
+      "bytes": 412,
+      "sha256": "840be6d4eed40a9dba0ce4a48a5cfa42c2fa4902ee5085d5bece7259cb76d07a"
+    },
+    {
+      "path": "plugins/dev-environment-standard/Tools (Windows)/catalog.json",
+      "bytes": 4964,
+      "sha256": "efd4a976475bb020deebe087333a01c641c1a4b6234ccbc3118e33894e2221f3"
+    },
+    {
+      "path": "plugins/dev-environment-standard/Tools (macOS)/README.md",
+      "bytes": 410,
+      "sha256": "c9ca0ae24c33e7ee042f4b8886b90b21dede7f6f7d514eeb7e7aa8faaf9129ea"
+    },
+    {
+      "path": "plugins/dev-environment-standard/Tools (macOS)/catalog.json",
+      "bytes": 4066,
+      "sha256": "339964d4dbde9b04f53c47e4d9a9d867cd3a41bc748d7c0603ee8fa0e67d1d7a"
+    },
+    {
+      "path": "plugins/dev-environment-standard/plugin.json",
+      "bytes": 41,
+      "sha256": "76cb4951d6805aa377263cdf31d37c456a4f48e9de4015cadbca81411b44be90"
+    },
+    {
+      "path": "plugins/dev-environment-standard/skills/dev-environment-standard/SKILL.md",
+      "bytes": 9945,
+      "sha256": "f3ee18c42d3b9550dc4bb4a4b853d7f4a64a04971677c1c4322d25fc67752ae1"
+    },
+    {
+      "path": "plugins/dev-environment-standard/skills/dev-environment-standard/agents/openai.yaml",
+      "bytes": 242,
+      "sha256": "4bf3beb5c5e76ef7f8d4cf2d0b81983fe28a4028489e9999a04c87004f7fe1fe"
+    },
+    {
+      "path": "plugins/dev-environment-standard/skills/dev-environment-standard/references/mcp-library.json",
+      "bytes": 13386,
+      "sha256": "b20776e04bea6fab8589e99adce5ab6042fbf22428a34f7e69378db927657196"
+    },
+    {
+      "path": "plugins/dev-environment-standard/skills/dev-environment-standard/references/operations.md",
+      "bytes": 11583,
+      "sha256": "6f5ad39b0909cc93f9de0ebd3aee6cf64cfabb0c7c8f409ddf7a20e9ce65895d"
+    },
+    {
+      "path": "plugins/dev-environment-standard/skills/dev-environment-standard/references/state-and-consent.md",
+      "bytes": 4980,
+      "sha256": "ab25f045b253c180d1ce5fe833630f2ae2f978c7754ca63a58d5c42fd6799dfa"
+    },
+    {
+      "path": "plugins/dev-environment-standard/skills/dev-environment-standard/scripts/environment.py",
+      "bytes": 55069,
+      "sha256": "c3bb9dfbf2ec18d7e318f54707b1d5e8a79d60e4b84f5e42854e69aa3629452a"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/.claude-plugin/plugin.json",
+      "bytes": 525,
+      "sha256": "d6dce27fc037aba3c32e20887c813a85791f8143b51c0c9d141d031b98d28ff2"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/.codex-plugin/plugin.json",
+      "bytes": 1644,
+      "sha256": "338a029faed505e3cf49e92f18f34ab55c557c643bd3b0074625167f9a18d201"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/plugin.json",
+      "bytes": 44,
+      "sha256": "486a0689d5b72e9bda6c32697bacc311fe824480d25575d256ece40b574f7a83"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md",
+      "bytes": 14196,
+      "sha256": "e7538f20d871c10c5f65bbe193cf072de6aefdc72f6da83040adc272f3666264"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/skills/dev-implementation-standard/agents/openai.yaml",
+      "bytes": 239,
+      "sha256": "06e192f64fb4fc6fbed616f3995c9fcef84c519dcb302f1dcc6d68c373278a88"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/skills/dev-implementation-standard/references/tool-registry.json",
+      "bytes": 1461,
+      "sha256": "20e53ed1d2d112b1045abe0d092750561d0a524a23365e27574a84f654882e86"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/templates/execution-report-comment-template.md",
+      "bytes": 1281,
+      "sha256": "c493f921d9b3c4f8679dc424034a0b7ee1cd1fc4874971f09104275c24df6e71"
+    },
+    {
+      "path": "plugins/dev-implementation-standard/templates/execution-report-template.md",
+      "bytes": 4297,
+      "sha256": "586cbc2090935693d6014c0b902a0719d1934813d5d81b7c4983995df6e3daee"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/.claude-plugin/plugin.json",
+      "bytes": 531,
+      "sha256": "9891cb32e757782742464247d44f7c38ef321132c7b5034885694799bc77f621"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/.codex-plugin/plugin.json",
+      "bytes": 1749,
+      "sha256": "5fc42ffd21f5c9f5e21a2fff3ec3473748f31ee93bedcd98fb3ec1e91f5d8d08"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/plugin.json",
+      "bytes": 38,
+      "sha256": "ed99bb2247ab423d7f5c360aff24d87c9496f6854d516e5d738772bbbe48c715"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/scripts/claude-visible-delegate.sh",
+      "bytes": 1639,
+      "sha256": "e94551f9b9e3edb56f040409c0b0e5a793f4506504e2496b37c7e34e32f4feca"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/scripts/context-retriever.py",
+      "bytes": 9117,
+      "sha256": "58fb0ba5266b0dc226651b2ca3002a28428597a022793502e1289c48009c9f22"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/scripts/provider-resolver.py",
+      "bytes": 10105,
+      "sha256": "9daf41873819ef18094802a6552933ebc8c2738f2761e24b9d40a3d84b479707"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/scripts/tool-state.py",
+      "bytes": 19309,
+      "sha256": "0750567820472fcc15a7bb66df72e34c384497b3feead0aca176ff39aa0e22b0"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md",
+      "bytes": 38885,
+      "sha256": "0780763d5b323049addd44d0d256ad4bc64573e8d7378e6663058ffae578cfd1"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/agents/openai.yaml",
+      "bytes": 237,
+      "sha256": "c31ec8f0681b270d59f3936147839692d510249a590aad6ff87aea48926bc91f"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/capability-registry.md",
+      "bytes": 14644,
+      "sha256": "e0917fabbdec37f0ad2902d10740d0ea57f2df7107aeb9f76dec0749a29eab12"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/claude-delegation.md",
+      "bytes": 7321,
+      "sha256": "90b0db95db7f9ec406215243e9d939addb8039af792d374d494cda89df5d2189"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/client-portal.md",
+      "bytes": 7123,
+      "sha256": "35c72db9915c958a3a2418829872993fd0c0d31dddec320599b94b7e4374c268"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-retrieval.md",
+      "bytes": 1940,
+      "sha256": "0827fce700b842583e15e8a692921f69c689681d7aa9ceb0bbb39e6942e2b444"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-routing.md",
+      "bytes": 15683,
+      "sha256": "ff3abf2b9850954c94c29f6d5d7ab9dcb77252b04ca6e403a838c5b1905bdbca"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/continuous-improvement.md",
+      "bytes": 16931,
+      "sha256": "0ce065a4aae533c38b15481ebf4ce322ae16a1a69cfecd0ae3183fc72b6b0499"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/execution-report-comments.md",
+      "bytes": 4109,
+      "sha256": "775e8b82cdb107d5f740504f0ee81f3dc5ae596d3d9a8bc0e6372e563f5009a1"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/harness-execution.md",
+      "bytes": 8846,
+      "sha256": "42c0f899a55d9cf4ce95d201448db7e5d868026ab9b208656f164ec27dda3487"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/llm-handoff.md",
+      "bytes": 2027,
+      "sha256": "eaa60de3df80406c557bdf2bd6368b8f42153b6e4015762edc40a2109c4d66c4"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/minimal-code-gate.md",
+      "bytes": 6676,
+      "sha256": "e7cfc7008de42d760766318648d64fd85ef9ebb5c79a8e81a0810a3236a96d4c"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/provider-registry.json",
+      "bytes": 3744,
+      "sha256": "47e2f8df89ff911e6f1f826f9366149011f64b989f4cba85a54dff0b6f7a3355"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/provider-routing.md",
+      "bytes": 2895,
+      "sha256": "be1c8299c61a809f50308b88dcbffa7c2a583440135a759e6472af866243459b"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/skill-execution-contract.md",
+      "bytes": 2024,
+      "sha256": "227f6e71fb9195f3cb2dd6100655e9fb5b4b01d4f050d923a4607939cb281756"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/skill-owned-tools.md",
+      "bytes": 4989,
+      "sha256": "577dfc1e4ddc455877a325aa7dd1014132143e3be3ad35fad9e6fd9305f0c467"
+    },
+    {
+      "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/tool-registry.json",
+      "bytes": 917,
+      "sha256": "db9f305dac1c0995ea4cbd267e913b1577685dbea8a0cbf0fdf3030c2189e056"
+    },
+    {
+      "path": "plugins/devops-standard/.claude-plugin/plugin.json",
+      "bytes": 306,
+      "sha256": "449edf55f5909e67ab8b265bab7e21f42cf0e621a339dc9eeb108f9d37fe1608"
+    },
+    {
+      "path": "plugins/devops-standard/.codex-plugin/plugin.json",
+      "bytes": 931,
+      "sha256": "47338396b2257a93f0ef772053c685a7db2121fa567cb5ef7c092bee2db112ff"
+    },
+    {
+      "path": "plugins/devops-standard/THIRD_PARTY_NOTICES.md",
+      "bytes": 1514,
+      "sha256": "dcf670958ca4f777f7c32aaddfe472bd8ee071efa20ba4df2153e5a13494298f"
+    },
+    {
+      "path": "plugins/devops-standard/plugin.json",
+      "bytes": 155,
+      "sha256": "d1e02c3ead03cde61b26aa3a6bd264c35195bbcd345312a3a858ac82dafa7b0d"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/SKILL.md",
+      "bytes": 10436,
+      "sha256": "71e9b868f9909696648174ed03863c733f099d39ccf207bc75fae67807303719"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/agents/openai.yaml",
+      "bytes": 217,
+      "sha256": "54d36106ae3804fdad4fa91454c5114c56180fbdff10b4c50b95615d10ad9e60"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/ORIGIN.md",
+      "bytes": 5615,
+      "sha256": "4cf0934969f7553426189769ceb89c74c08f782df1c2660e5a0f35df5999c397"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/backup-disaster-recovery.md",
+      "bytes": 1377,
+      "sha256": "0c95c68119a73ccd181bd48ecef7a8ce6a09bb83942560ee7b6e72d7bb563800"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/ci-cd.md",
+      "bytes": 1313,
+      "sha256": "9a8674a0eb3e7fb9be312a7effc04e2c496d5d7bbbf3bdb1417670879d85ad22"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/cloud.md",
+      "bytes": 1184,
+      "sha256": "27e4c025146e73ce68415051f5e4e8760ccaca082500562a2ee9a4c89e27dc3d"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/containers.md",
+      "bytes": 1254,
+      "sha256": "fdc52640e3f4572746e24c3d9c82ecc6ed58547710e27ade85776fee018f2373"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/deployments.md",
+      "bytes": 1130,
+      "sha256": "9d59255e0ffbbefb5dd7f2276d157ab2ecccb4905aaff2b1dfb5868ae95c28c1"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/devops-operating-model.md",
+      "bytes": 2348,
+      "sha256": "1515d3c0cb9d7367d95f77f0534a5aac4e180b028472de9bb3b62ee69ee105e6"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/git-release.md",
+      "bytes": 1069,
+      "sha256": "8b3a87abecb6f2bd664493f4aabf6e9babc12c66b89876c1d815387497e0c31b"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/github-governance.md",
+      "bytes": 19810,
+      "sha256": "2ad904a3f91e18d354694c5b8c393654db66b27102afce59380378e1258e6492"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/gitops.md",
+      "bytes": 1063,
+      "sha256": "e9051b6d5ee6fcbeaf9eeab44ecfa3ac4f6ca35b56d61e4bcacc9869d649f7ca"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/incident-response.md",
+      "bytes": 1102,
+      "sha256": "b2629dd8f86993db76c683a8c333dd75dc02b02c4e9ce51672e0b3086c8d7eab"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/infrastructure-as-code.md",
+      "bytes": 1697,
+      "sha256": "02a7471f27d57fbac847ff034999486e533fcf2f529147c748c4662217682162"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/kubernetes.md",
+      "bytes": 1552,
+      "sha256": "50aa92d41ca39dd04cd2b7940631877870e3dcb9ee77c90715197172abed22cd"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/observability.md",
+      "bytes": 1244,
+      "sha256": "357a0b4ed114740317e4161c564da2e53702ef6645864091d26e11d114e0c059"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/review.md",
+      "bytes": 1802,
+      "sha256": "81d0356a79a27fc468183b24044c6b383b975699d7801c19e4794af8475d5b9e"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/server-operations.md",
+      "bytes": 1422,
+      "sha256": "ac1951e5b7ebf5289f4ae67601fcef637beec4d6bf7df6d4a49110acfc246ead"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/references/tool-registry.json",
+      "bytes": 6705,
+      "sha256": "ba7d180b2db951912d5c253471715c3b25a7866b0f004d9db9d5a3a19492f0ed"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/scripts/github_governance.py",
+      "bytes": 55407,
+      "sha256": "7aa54c7700a9c542899a7931bca81d1e882e34ccda306fd63006ad9d0df4d176"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/templates/backup-restore-plan.md",
+      "bytes": 2560,
+      "sha256": "efd66333d1610cf2e54ecc38c2f0e2f42fbb7463632b48969fecb49af4d831cf"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/templates/ci-cd-plan.md",
+      "bytes": 2629,
+      "sha256": "f5669d3b73a0a033c590805ebc20a5afddf88e04817505e02eb3804dca8ae34d"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/templates/finding.md",
+      "bytes": 796,
+      "sha256": "58b020ffa909753563d2ea89d37886bec36020b66bdb3fed0c9f8c4bb16794a1"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/templates/github-governance.json",
+      "bytes": 970,
+      "sha256": "d2d58b97623c75cfff514f5895a4f0ad5918eda2e6eb37b9a9e7a03e36883179"
+    },
+    {
+      "path": "plugins/devops-standard/skills/devops-standard/templates/operational-change.md",
+      "bytes": 994,
+      "sha256": "2f0f1d56d81c6467180939051caee800181ff03f646807dd5f62974d0fa282f9"
+    },
+    {
+      "path": "plugins/parceiro-estrategico-global/.claude-plugin/plugin.json",
+      "bytes": 477,
+      "sha256": "e486a79fc978c0c89cc35937b767d2dea410a6fd48d0e72d4e4c8511715a51c8"
+    },
+    {
+      "path": "plugins/parceiro-estrategico-global/.codex-plugin/plugin.json",
+      "bytes": 1594,
+      "sha256": "16fe0c3b832dd67c3f522894e2cdf12cf795d1226c06c54726332c8ce3b40271"
+    },
+    {
+      "path": "plugins/parceiro-estrategico-global/plugin.json",
+      "bytes": 44,
+      "sha256": "e02d871e701f5ecf8c3543e4a80cd5242507f0faa84168463d1f45234d623b52"
+    },
+    {
+      "path": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global/SKILL.md",
+      "bytes": 17058,
+      "sha256": "3907fba5a095c27f44fcabf64d5902670f18304a3e8b907554b23f9e8d3facc7"
+    },
+    {
+      "path": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global/agents/openai.yaml",
+      "bytes": 645,
+      "sha256": "b10af467b016d28eb66ef4871d2c36ad00c7f160ef52223d69f79121b24fa680"
+    },
+    {
+      "path": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global/assets/icon.svg",
+      "bytes": 420,
+      "sha256": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b"
+    },
+    {
+      "path": "plugins/qa-testing-standard/.claude-plugin/plugin.json",
+      "bytes": 309,
+      "sha256": "34c0f6e3642444cda9a75002af7e72cf7682edee51b2e348bf9352eae798bf11"
+    },
+    {
+      "path": "plugins/qa-testing-standard/.codex-plugin/plugin.json",
+      "bytes": 943,
+      "sha256": "7fb3ba31f50c8ee358a6792bf6436aae2c6388f8f1e5b4a63b7284d59b2a97ef"
+    },
+    {
+      "path": "plugins/qa-testing-standard/plugin.json",
+      "bytes": 179,
+      "sha256": "806bcd19c675790654dc32284c0895a92bc36cf8ecda733a69748af0980a8e34"
+    },
+    {
+      "path": "plugins/qa-testing-standard/skills/qa-testing-standard/SKILL.md",
+      "bytes": 10678,
+      "sha256": "c96c6d464d4bd7dc376b35d20d1bbb739191fc8832f35d04d29d786225399838"
+    },
+    {
+      "path": "plugins/qa-testing-standard/skills/qa-testing-standard/agents/openai.yaml",
+      "bytes": 214,
+      "sha256": "40bc4971e9bf98ab6f6640503c93cffe67cf4a996d9d115440ef7c27e8e26175"
+    },
+    {
+      "path": "plugins/qa-testing-standard/skills/qa-testing-standard/references/bug-report.md",
+      "bytes": 3802,
+      "sha256": "78ba69cb039bfa4a153f255d0a6a73c7d4dd1e1ae1df2122717b3e04e3c5933a"
+    },
+    {
+      "path": "plugins/qa-testing-standard/skills/qa-testing-standard/references/test-strategy.md",
+      "bytes": 4809,
+      "sha256": "090a9b78d32a591291610138f3715512adb4f737f13a3bd3ef99008544a3bd19"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/.claude-plugin/plugin.json",
+      "bytes": 384,
+      "sha256": "59b86508b4029ae5508a158271b0e05670990d9cd51505386245252e12f0a208"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/.codex-plugin/plugin.json",
+      "bytes": 1179,
+      "sha256": "d68834adc8b31efe8ce3994b39e7d796fcaa4491296e948d99b29d47bbb2ae85"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/plugin.json",
+      "bytes": 187,
+      "sha256": "a351ad4bbddeaf8cd133d6d539f12b539b79d18a6d6e21d009b3544679a78cbf"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/ORIGIN.md",
+      "bytes": 1148,
+      "sha256": "96349680880277cb8281d2a5d0607c00808a3f88617b2144bc09d018497cc1c1"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/README.md",
+      "bytes": 7129,
+      "sha256": "8e54bf52488daa9f9844953862c0bd8573e866f7715c34ed28c1cfe3c7555c60"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/install-local-runtime.mjs",
+      "bytes": 2129,
+      "sha256": "8e158fa60c34114300c2ba8892f6f3e229592725b5e9882fbc6bb9970408bf06"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/package.json",
+      "bytes": 481,
+      "sha256": "fd99de844827cbf0b079d3a572478ecf1a66d3d732ad237bf74e03175167b30a"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/pnpm-lock.yaml",
+      "bytes": 34302,
+      "sha256": "d2f791ad3619faecf4b81fcf4971befdae8156b9e800d7834c02b479d5784d54"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/process-launch.mjs",
+      "bytes": 1935,
+      "sha256": "927c52e7da860e2c3a27c63fe68c0735c95664f1cf74ca80cdcd62a0de95213c"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/rea-capability-catalog.json",
+      "bytes": 4565,
+      "sha256": "9e76ed2a14ded4b62f6a75fa10afb5e589728e3e99da2688c92560dccc2196fe"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/rea-runtime.lock.json",
+      "bytes": 626,
+      "sha256": "d60d5d523313007349a64590e93a21d47237d2ffdeb9068d18bc399454839095"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/runtime/reverse-context-gateway.mjs",
+      "bytes": 3353,
+      "sha256": "5b8b1c5ae8b51a281a460b5cdb7f47e8355a3221ede6786c79bdecb7e4758609"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/SKILL.md",
+      "bytes": 3759,
+      "sha256": "6102fbd4f4e8d885dc203e0eac186f1946c96fe87ff98341cc43c9d80a29ec1a"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/agents/openai.yaml",
+      "bytes": 277,
+      "sha256": "7cb242440250286579f4bedd1740e9c6e2583d7cea362db623eea19edb598871"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/references/rea-integration.md",
+      "bytes": 2929,
+      "sha256": "d63c7a5c31dcffbd12d00e6bb452441caf7982470043a77f7009d82b00deba8d"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/references/tool-registry.json",
+      "bytes": 3051,
+      "sha256": "f18abbe67fe9fa1813298376af4e87bd8bd44f62035bb2dcabb0aeec73a27cf8"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/vendor/rea/SKILL.md",
+      "bytes": 11094,
+      "sha256": "4bf38a8c742a5da61c7c2553c45b9740fef44fffa8249175909f5fa295983a05"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/vendor/rea-runtime/PACKAGE-CONTENTS.txt",
+      "bytes": 36565,
+      "sha256": "0302c9a859ead7d447b794ab8fc2dd3c714ea3aaf761f2d161bc64092f7e820c"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/vendor/rea-runtime/rea-agents-4.1.0.tgz",
+      "bytes": 1532540,
+      "sha256": "d4859719e27cd405daea45f88aed60b5136df628da2290d9e5e299d09f7a711c"
+    },
+    {
+      "path": "plugins/reverse-engineering-standard/vendor/rea-runtime/rea-agents-4.1.0.tgz.sha256",
+      "bytes": 65,
+      "sha256": "8f80f035bde475a725fbff7d5c09c492cf6076cf04f36f9e43e416b22991603e"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/.claude-plugin/plugin.json",
+      "bytes": 522,
+      "sha256": "f75bac4ca02b6607055c27a2ceacd66ff03c73637d495464b2e91d95ca28fcb2"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/.codex-plugin/plugin.json",
+      "bytes": 1794,
+      "sha256": "342fefdd7a431bf701b1ad4b6f2aa5f76aab06da293be853bd3b3014ed57a3f1"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/plugin.json",
+      "bytes": 33,
+      "sha256": "b6b685088571d9dac3b207bf6e65bd66ab25a9c38e7da784cf449432b26d280d"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md",
+      "bytes": 30200,
+      "sha256": "2b97a4cbc92474e162a40c487787eea1cf37df3ab2316ecb4e3a81214537231b"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/agents/openai.yaml",
+      "bytes": 236,
+      "sha256": "2386b8db9e0b62b1a64fd09aac4e4013eacedb33187de6c1d122e7b25b8b4412"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/api-research-library.md",
+      "bytes": 7386,
+      "sha256": "ddce58be1beeff8dcd7d7260a2fd1503e6d4fca2cbf06859aa740741582d0631"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/backend-component-sources.md",
+      "bytes": 33235,
+      "sha256": "b73369257212cadf0f1f000814c34059e8762e723b4d19915b52e889470282e1"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/devops-planning.md",
+      "bytes": 4207,
+      "sha256": "f0583ec9539c872b6ba1f9a5308670661c511af4162260299ac87421c7003ed9"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/public-code-discovery.md",
+      "bytes": 3217,
+      "sha256": "f450aaa27b04cf8a8f6e47b9d3ff22daa71654e760191aa6194f6bcb3fcc167e"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/spec-consistency-analysis.md",
+      "bytes": 4086,
+      "sha256": "74eba512d2d3a5efe88f8c94e402aa280ac5d6982fe27cfc7c91247ea90b85a4"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-apis-jobs.md",
+      "bytes": 2873,
+      "sha256": "28931e53fd0d2ff1178c8c871a53eee62aee27d711d7a10846b67d4e222b3570"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-architecture.md",
+      "bytes": 2580,
+      "sha256": "bebabb5b80d74755f07a53a31e3a09cf9a159b6f2dc44676f9bc864acc491b92"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-auth-sessions.md",
+      "bytes": 2971,
+      "sha256": "bfb7ffc8cb25fbdc070b291ee2ceb19b44f846b7a54f083e5ac3184b39419e5e"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-data-concurrency.md",
+      "bytes": 3324,
+      "sha256": "7006485f0d3bcfe864d656e18e13b1886f372de5611020c1c322c3cd6fa3f0d9"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-fiscal.md",
+      "bytes": 4570,
+      "sha256": "8cc966a34e90550f3130dffdc64c7dde897de61e83b11102254f2c68dd7e65f0"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-knowledge-router.md",
+      "bytes": 10453,
+      "sha256": "4d63aa7093acc66874999a1e9d1a93539a449955f1e1b4c7050501c6586e3a06"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-quality-operations.md",
+      "bytes": 3706,
+      "sha256": "8c1f17d5e391e52025f7d544bc2904a16731b43fc48283f6a832bc5b9d074c21"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/web3-component-sources.md",
+      "bytes": 10057,
+      "sha256": "b162d342bca3fec532130395e7e6ca82ad233aa247c15f2924807f7c3c1cccea"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/api-spec-template.md",
+      "bytes": 2091,
+      "sha256": "8fb2cf937031c9b22acec8bbc3e27e7cb78a178a87e3e2e8c3663b775b1ce461"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/component-spec-template.md",
+      "bytes": 1966,
+      "sha256": "8a0d0b62dbb5736e668ac0a94e0c2d3d16f1533143a0b887792d641180e21052"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/database-spec-template.md",
+      "bytes": 2129,
+      "sha256": "5458bbb608d03d0ef48b6e4c10b19293ddcaa73a7b49f8afb02e9d54191e7bf3"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/execution-contract-template.json",
+      "bytes": 10041,
+      "sha256": "9edf525ae9fe90e3c951ac7ff964e02234dffcb762610e529c9241b4de0c1119"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/module-spec-template.md",
+      "bytes": 2083,
+      "sha256": "234acfa692cd9585cba2e20727a54ef991a42c7fed2fa257761932226c47b68f"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/page-spec-template.md",
+      "bytes": 2352,
+      "sha256": "c5206ce5954cee298055f7c55bdcc32863eb9cb06c7377ff558eea0b0af65e7a"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/pr-template.md",
+      "bytes": 2288,
+      "sha256": "471cb7dd1c89e3e75615ceb4ff30d002923cfb379f952c10bbd579a6001bb7c4"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/product-spec-template.md",
+      "bytes": 1620,
+      "sha256": "70d38623483f73491cfde63ba4bf4e857ac3042c59589734d721523aaf777688"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/qa-review-template.md",
+      "bytes": 3042,
+      "sha256": "9e346b253c84679cb4833b19588a135b7aceadf930fca6d2d2f473f63881b9ed"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/review-template.md",
+      "bytes": 1582,
+      "sha256": "5c1823df9dd55338c93a676ae107359bd459d31acceb5645fada3f3d728929b8"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/task-template.md",
+      "bytes": 19442,
+      "sha256": "3cb170b40011034f4836a4f731028c8a96bd6fdb65338d3fa73a4d9b646be212"
+    },
+    {
+      "path": "plugins/sdd-spec-factory/templates/validation-rules-spec-template.md",
+      "bytes": 1826,
+      "sha256": "c28a712d1b5d89ca4de52c07cad5feaacaafc4c1d26902912d1dfc160b741b39"
+    },
+    {
+      "path": "plugins/security-standard/.claude-plugin/plugin.json",
+      "bytes": 362,
+      "sha256": "fbb8fcd606bfd5b6ac6ca82db63ffb6c284747f0ef11e5710c7887931a171f2c"
+    },
+    {
+      "path": "plugins/security-standard/.codex-plugin/plugin.json",
+      "bytes": 1232,
+      "sha256": "89bc56d954a6eafaadeefc3ea7ae3400c34bc8d2673ee8a49afdd1321047451a"
+    },
+    {
+      "path": "plugins/security-standard/plugin.json",
+      "bytes": 34,
+      "sha256": "c3a253bdabfa206bd024a40b0c2082e276e055ab0d4b8b29f6628995dc0e325b"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/SKILL.md",
+      "bytes": 18542,
+      "sha256": "da2e3fd55998735ba1a641a968610d13514998dee43e1a40f49ca669d50616cb"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/agents/openai.yaml",
+      "bytes": 230,
+      "sha256": "9f3c8cd9f92949695faba19ae01ff6013ee867b44ee2088e1a79f0fcb6e0bac4"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/coverage-model.md",
+      "bytes": 3429,
+      "sha256": "1f19128e6410fdc185744c4bb96d7427b3f819b1dad426f5dc95afb9b14f6221"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/false-positive-validation.md",
+      "bytes": 3600,
+      "sha256": "d62e021a12bc5ecb8ec26a3b1613bf21543ec354b9fd8680fa91cd0c60670f08"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/finding-standard.md",
+      "bytes": 3622,
+      "sha256": "a6f85d62ac637e391d0eac30d56322d78071f0dd807e40ca3109f5b07eaa43d5"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/preventive-security-research.md",
+      "bytes": 4957,
+      "sha256": "57fd6923d3f2383510927d2c4484e177a80cd148a635963af2045c1e80f1497e"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/report-template.md",
+      "bytes": 2186,
+      "sha256": "da9b597b7399624d56fe8ad07a10c41c1ac27a752e711bb95523272330600bd3"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/review-pipeline.md",
+      "bytes": 4540,
+      "sha256": "e225a961e34a3caa2440a74e0ca40cd525cdc254f370ef3db3189825f797e05f"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/stack-profiles.md",
+      "bytes": 2769,
+      "sha256": "99a37184e22566b3db3a9243cb9e5587bc0cea50374c1c5c00d4f8df16c1066c"
+    },
+    {
+      "path": "plugins/security-standard/skills/security-standard/references/tool-registry.json",
+      "bytes": 1414,
+      "sha256": "7ed961b632bb9d3355d6ad86bbb0fc8eb1060d830b2dcf13e3e0b64a0b9055e5"
+    },
+    {
+      "path": "plugins/seo-standard/.claude-plugin/plugin.json",
+      "bytes": 322,
+      "sha256": "66b72339c61e411fb7f5e52acd34c032eeb02f7408f148c7dba4beb5e8743e03"
+    },
+    {
+      "path": "plugins/seo-standard/.codex-plugin/plugin.json",
+      "bytes": 948,
+      "sha256": "c00cee70becd11bf58619799094068e838f287d4d27049894b08c438716722d1"
+    },
+    {
+      "path": "plugins/seo-standard/plugin.json",
+      "bytes": 179,
+      "sha256": "8a0113394caa7c193733d71c9b98b3b1d0e38fb76898c4aade6d364f65703333"
+    },
+    {
+      "path": "plugins/seo-standard/runtime/bootstrap.py",
+      "bytes": 2344,
+      "sha256": "9319c835b4754a8be630919aa57c44e81e4316d7269e6ea4b9394bb706264011"
+    },
+    {
+      "path": "plugins/seo-standard/runtime/runtime.lock.json",
+      "bytes": 386,
+      "sha256": "382c4a531ed30f0016478418c3b3af77cefd6041f801016468bf58dd958b613c"
+    },
+    {
+      "path": "plugins/seo-standard/runtime/seo-gateway.py",
+      "bytes": 1787,
+      "sha256": "5124dd845327c55a3f31826853d4562ca219ad1cf82f7dac3e88c61782b704c4"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/SKILL.md",
+      "bytes": 2653,
+      "sha256": "929f94a70f17c4b8ca5c682f14f16843b6bbca4e68aa55cf4681b97ea83a5a7d"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/agents/openai.yaml",
+      "bytes": 212,
+      "sha256": "8e53967b85f36f557a0ad88ac1c677e56c18b19d6effbfe5c7b6c2b1b1d55c97"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/references/beyondseo-integration.md",
+      "bytes": 1370,
+      "sha256": "a85ea131877ece1816b5467c3a4dc7d0d34c67b035e48fcd1231ab0ec63ef488"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/references/site-delivery.md",
+      "bytes": 1485,
+      "sha256": "9af379444c6e315e26152b729078a1866c17abd2c64fd8a1363769cb2f8efd52"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/references/tool-registry.json",
+      "bytes": 1095,
+      "sha256": "437a793aa5a440e3c98a9e55de3cdf7528c62ca1d8702f2c5656ceae402ac717"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/aeo-geo/ai-friendly-seo-master-workflow.md",
+      "bytes": 4778,
+      "sha256": "62d940cd6b6ca5cfbd6f5ec7ccb336b08d6d7b6b9978ef451af5afa63c5b80f2"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/aeo-geo/answer-engine-optimization.md",
+      "bytes": 2694,
+      "sha256": "b5a65d89d7160501d398c40a48b9ac49bc04e30d4fa3799141ca63943f0546b7"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/aeo-geo/generative-engine-optimization.md",
+      "bytes": 2561,
+      "sha256": "a7252f601733bf3499457b686fb8510aef18d40b0f052cd3d4a4d7dc5d873da3"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/audit/conversion-seo-audit.md",
+      "bytes": 8554,
+      "sha256": "56d373b9813ffab9c9ef6eb1d0d08a20a8645fd6c1f3f68324bdc4881679eb06"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/audit/on-page-seo-audit.md",
+      "bytes": 8352,
+      "sha256": "b248cf04d0974bfe9a04a8876903a9d39bdfb17643545e2134d58e47f1d50763"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/audit/schema-audit.md",
+      "bytes": 8299,
+      "sha256": "f1fa20e52fec01f0824dc70c26fdac0854f7ec318b62b8c0e14d0212ac41fd14"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/audit/technical-seo-audit.md",
+      "bytes": 9074,
+      "sha256": "cafc2784e051764c8c817b4f33749a7423929fb9b52f168c206afff998bccdd5"
+    },
+    {
+      "path": "plugins/seo-standard/skills/seo-standard/vendor/beyondseo/playbooks/keyword-research/search-intent-analysis.md",
+      "bytes": 455,
+      "sha256": "0660426316677dc5082f9838ffa27dc2dffe33fc6a28a00eaab3b86536e353ba"
+    },
+    {
+      "path": "plugins/seo-standard/vendor/beyondseo/LICENSE",
+      "bytes": 1093,
+      "sha256": "ccd9da58aecd30bb9319350d1dff720a19e1a157b4de2810227da1e830d4ea29"
+    },
+    {
+      "path": "plugins/seo-standard/vendor/beyondseo/ORIGIN.md",
+      "bytes": 653,
+      "sha256": "5993a6c5e81984568053dcf155adf57c492f7986c6383ebcfeee8fc3b9f66906"
+    },
+    {
+      "path": "plugins/seo-standard/vendor/beyondseo/PACKAGE-CONTENTS.txt",
+      "bytes": 15364,
+      "sha256": "ae823b49b55524e13a032095a27aa9987b756b89c0a7164f38ac0b95aee89519"
+    },
+    {
+      "path": "plugins/seo-standard/vendor/beyondseo/beyondseo-2.9.1-skill.zip",
+      "bytes": 1726754,
+      "sha256": "e9ab0e9e3a2ef46a9e3b3b3e4699b988fa256dcac91ef5e3539b49b850ac5010"
+    },
+    {
+      "path": "plugins/studio-prd/.claude-plugin/plugin.json",
+      "bytes": 277,
+      "sha256": "9bd0312c0b9f7226d20a0795faa6d936f0f080a779829e191d7d4ec4f92ff67e"
+    },
+    {
+      "path": "plugins/studio-prd/.codex-plugin/plugin.json",
+      "bytes": 934,
+      "sha256": "4e1fd50903737e794e6685442de3271f2942983dabc23e45c3b59956e2a74994"
+    },
+    {
+      "path": "plugins/studio-prd/plugin.json",
+      "bytes": 27,
+      "sha256": "642902c405098214c3d096692472380a6eaeef42496f7c260fba37b27e2a6a5f"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/SKILL.md",
+      "bytes": 8992,
+      "sha256": "3eb5b526ac44cf9f200cc7ab1f14934f4ed81cfee17af92a682d06b7bafb54cd"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/agents/openai.yaml",
+      "bytes": 219,
+      "sha256": "01ac1c97f9b84bb6950d9c0bc996be8aeb6a0129b8e0153e8f80d3a9f9b612ea"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/assets/briefing-template.md",
+      "bytes": 1636,
+      "sha256": "a7d176de200baefb53f65fadea35fc0ede20a23f8a0731132cca89002ac4b97d"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/assets/plan-template.json",
+      "bytes": 2245,
+      "sha256": "a7fae4723f072cba7ceb97a1304d4877f8decee69ae31e5f768469327236f116"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/assets/plan-template.md",
+      "bytes": 3289,
+      "sha256": "e9026cfb603f7ac7bbd6f854cc43bc04e01c9032a7ebd2d90a09226a911f6ac6"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/assets/prd-template.md",
+      "bytes": 3325,
+      "sha256": "47a77349fb53515b278c85ff64ecd5e1533444a7cc0e9c60e8d43647245eb4f3"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/references/briefing.md",
+      "bytes": 2285,
+      "sha256": "be851896e0e2d7464fa73caeaa128638a6c48238bf1612ae258a8bb727fa6947"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/references/planning.md",
+      "bytes": 4484,
+      "sha256": "35f1497546b9952d5d184fb79846f1d80aed1da661b3b12949389b1eeb5b4ab1"
+    },
+    {
+      "path": "plugins/studio-prd/skills/studio-prd/scripts/plan.py",
+      "bytes": 14996,
+      "sha256": "0d1f4ef1629ee67f9f6c2ce0f23772db3cb580b081c4e588b270ca9af6dd75e6"
+    },
+    {
+      "path": "plugins/ui-ux-standard/.claude-plugin/plugin.json",
+      "bytes": 415,
+      "sha256": "9fd39682831df193c361bb13de9b3f72ad9e886e12468cadcecaca93d954b451"
+    },
+    {
+      "path": "plugins/ui-ux-standard/.codex-plugin/plugin.json",
+      "bytes": 1422,
+      "sha256": "00d395d4732e7970b20084c10130c507c23ae0bc14d3a60bb9c7466f2da3a8c0"
+    },
+    {
+      "path": "plugins/ui-ux-standard/plugin.json",
+      "bytes": 31,
+      "sha256": "73a36dfcbb59ffeeb2d1d8a9129a60f986452d826baa2ccfb5d8d4b8e5060a4f"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md",
+      "bytes": 13073,
+      "sha256": "1330d469dbe32d73c8f141bd49e8a3c85c12855c9631e24e292a4ee250631564"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/agents/openai.yaml",
+      "bytes": 232,
+      "sha256": "c9a24731b314cc386aa00908d9b30bb4404336bd9e40bbf16f555a16c6a38c68"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/assets/live-design-guide/index.html",
+      "bytes": 4265,
+      "sha256": "cb6a6953282a7f9786476cce8d4f9e421772a2210b22031c6ff1fe0524857a57"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/anti-ai-design.md",
+      "bytes": 4571,
+      "sha256": "a83f98aee3ca09b32e530e7075059512f5fba463b09d84d956db91582ee54652"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/component-selection.md",
+      "bytes": 3328,
+      "sha256": "59ce0f8d2ce257667b351cd298fe5ac21b93e8e71fc2504a7e2a0eba16d4d24f"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/component-sources.md",
+      "bytes": 10774,
+      "sha256": "1b06c622fbf75e86dc447008b7c51883a23e684d974d4a30c6d0ff3c3737568c"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/library-source-handoff.md",
+      "bytes": 2958,
+      "sha256": "6f3f4f9a5e879f66edcf70313f5cebbbb4f3403734f7bcab96cf965d73090808"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/live-design-guide.md",
+      "bytes": 4669,
+      "sha256": "d1c03c3de04543872762f9313d24d84fad631e4995cd3b4851194f6a54f6895f"
+    },
+    {
+      "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/tool-registry.json",
+      "bytes": 352,
+      "sha256": "53069423f0f151f448e6a0fc6f7a2e7d7195de56e2e22769ee7f3d6425b83584"
+    },
+    {
+      "path": "tests/__pycache__/test_dev_implementation_skill.cpython-311.pyc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/__pycache__/test_dev_workflow_skill.cpython-311.pyc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/__pycache__/test_execution_report_template.cpython-311.pyc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/__pycache__/test_readme.cpython-311.pyc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests/fixtures/devops/compose.yaml",
+      "bytes": 413,
+      "sha256": "9d7428ce9be5c3f28a39d1080713fab9ad424331132167b5115f141cc9e61b27"
+    },
+    {
+      "path": "tests/portable_executable.py",
+      "bytes": 1126,
+      "sha256": "b8770513573f6b023beadb1c26ea031f6e003a88fb9ea71ce9ecac8677b6553b"
+    },
+    {
+      "path": "tests/test_agent_skill_contract.py",
+      "bytes": 5349,
+      "sha256": "000882a39f45654a63614a211fd6f27ad7bd0755fa92f73f8e6018d757ee875a"
+    },
+    {
+      "path": "tests/test_api_research_library.py",
+      "bytes": 3042,
+      "sha256": "dbfa0d060d5355434cfb79cbbbc8d728ad54a6cd4fbb8d295558e714e0e99c64"
+    },
+    {
+      "path": "tests/test_dev_implementation_skill.py",
+      "bytes": 19931,
+      "sha256": "6876159dd2b7e99ea635af78b7cd7ee86a13772b79a9442889c71120c2c33d5a"
+    },
+    {
+      "path": "tests/test_dev_workflow_skill.py",
+      "bytes": 25360,
+      "sha256": "703576c3e83cc5e4d23c416c138d7aabe46d08a25468df21a1cbf749e715855c"
+    },
+    {
+      "path": "tests/test_devops_standard.py",
+      "bytes": 9550,
+      "sha256": "b689668132928ecf6d0648f2c4a0002c202a9beb2cec4e83d84f2c1e408b8309"
+    },
+    {
+      "path": "tests/test_devops_tools.py",
+      "bytes": 10894,
+      "sha256": "61651cfc7b5051dbda9cb0f9ba7b95b949276dc333c5825862edad13b41ba1dd"
+    },
+    {
+      "path": "tests/test_environment_bootstrap.py",
+      "bytes": 35620,
+      "sha256": "bfb249e3ff800a5a4a39ab0a89dcdd25e899977d95c2eca39d5d51e9bab15888"
+    },
+    {
+      "path": "tests/test_environment_devops_integration.py",
+      "bytes": 6214,
+      "sha256": "1b5b71f112190a3d67a16b972aa502106b6c32ffbe8c9740ccda24b3c0ed41da"
+    },
+    {
+      "path": "tests/test_execution_contract.py",
+      "bytes": 3538,
+      "sha256": "6562b543b44a2efd1c7be0b39345ac4553fef6b202807029e2e5182b72760ca8"
+    },
+    {
+      "path": "tests/test_execution_report_comments.py",
+      "bytes": 4000,
+      "sha256": "01301b711fcadb3e5451cce3f402acfa802a57d0f3e091a4419dc56d0117da66"
+    },
+    {
+      "path": "tests/test_execution_report_template.py",
+      "bytes": 16503,
+      "sha256": "7526dfa48a55c1c67a9b2ff55739306a459eb7efc7442149eb98d43aa60a1f10"
+    },
+    {
+      "path": "tests/test_github_governance.py",
+      "bytes": 29213,
+      "sha256": "1bead4ffec687850f236cc341b3be62ae04d21ceb05c4f1dcae2043704ba50fc"
+    },
+    {
+      "path": "tests/test_live_design_guide.py",
+      "bytes": 4587,
+      "sha256": "e893eba622d33e9cf11f6ec30acab16153683a4ad39c7b06244e15c9857c9785"
+    },
+    {
+      "path": "tests/test_multi_provider_context.py",
+      "bytes": 4969,
+      "sha256": "c97fb63c6427b6f866bafd0e3ac187318c418cc90cea6b3624bf17460887128a"
+    },
+    {
+      "path": "tests/test_platform_tool_routing.py",
+      "bytes": 11333,
+      "sha256": "05b5d387e57f84fc86713f527517d8c5b9a6d8f9876fc939d0785e89240dcb26"
+    },
+    {
+      "path": "tests/test_qa_testing_standard.py",
+      "bytes": 7462,
+      "sha256": "6cee920a6c966e1b107f66d189542673767574582c848c5c8d4afd1790547577"
+    },
+    {
+      "path": "tests/test_readme.py",
+      "bytes": 12215,
+      "sha256": "4371e86845151c0291d8fb07a47c73bc012bdc444f1fc9cf1a4f65d1c2c38ca1"
+    },
+    {
+      "path": "tests/test_reverse_runtime_launch.py",
+      "bytes": 10242,
+      "sha256": "9c81f1ae43371e97f34aa1562f115a4af3daeaa843848b1ab7ef000e11299b89"
+    },
+    {
+      "path": "tests/test_sector_context_routing.py",
+      "bytes": 14263,
+      "sha256": "fcc0d6fa6e3cc7ca0b6023d2a5277e58d3309a92fb4ff5bf4c6ad76e6f81d198"
+    },
+    {
+      "path": "tests/test_security_standard.py",
+      "bytes": 2099,
+      "sha256": "6152166c57a32213f2e001b9f6c2c7f80689934e9f5cf34af379633fa06f4bc2"
+    },
+    {
+      "path": "tests/test_seo_runtime_bootstrap.py",
+      "bytes": 4115,
+      "sha256": "61556a30d53c615a6fb76ee4d97e528171669bea491431f55d95a673f7cb6886"
+    },
+    {
+      "path": "tests/test_seo_standard.py",
+      "bytes": 1949,
+      "sha256": "99a50b7e631c91cd0a0c58d4ccdc435fc7282d2d1052ac81f3e0971094d02b53"
+    },
+    {
+      "path": "tests/test_skill_owned_tools.py",
+      "bytes": 16233,
+      "sha256": "ef125cb71ef973250c80743e372037e73b923d0234383a92fd9597ba07ef266c"
+    },
+    {
+      "path": "tests/test_studio_prd.py",
+      "bytes": 8137,
+      "sha256": "8399d7ca15327f582515fd9da9dbf161989f8c6ae90043c667b6acce4b0a31a9"
+    },
+    {
+      "path": "tests/test_task_contract_v2.py",
+      "bytes": 11951,
+      "sha256": "e4c4adec58edb713b23f514bde5c8bfe78380c30cab6331bda05a5b87e6c07a0"
+    },
+    {
+      "path": "tests/test_technical_knowledge_library.py",
+      "bytes": 6417,
+      "sha256": "d817f94aa991ef87221576a125e331057ce3d98f432bb2079981fdb682893807"
+    },
+    {
+      "path": "tests/test_ui_library_routing.py",
+      "bytes": 4369,
+      "sha256": "b4ebd29b676dfa6105ca10681e7c4d5cc21e99ff3839ce3e3f4282cf7671354b"
+    },
+    {
+      "path": "tests/test_ui_ux_standard.py",
+      "bytes": 2515,
+      "sha256": "c448cfa392eb3467cfac54e264b04f75cbaea32733727884c015b8f1e3ed862f"
+    },
+    {
+      "path": "tests/test_windows_file_guards.py",
+      "bytes": 4280,
+      "sha256": "0f9a9fd653b4ef3255ff1a74d67078c6dd18949569cd5827984b06d390116256"
+    }
+  ],
+  "plugins": [
+    {
+      "id": "dev-environment-standard",
+      "version": "0.1.0",
+      "file_count": 15,
+      "skill": "plugins/dev-environment-standard/skills/dev-environment-standard/SKILL.md",
+      "skill_bytes": 9945,
+      "skill_lines": 169,
+      "sections": [
+        "## Choose the operation",
+        "## Bootstrap loop",
+        "## Platform routing",
+        "## Library, ownership and local state",
+        "## Preparation authority",
+        "## Health and handoff",
+        "## Scope and security"
+      ],
+      "references": [
+        "plugins/dev-environment-standard/skills/dev-environment-standard/references/mcp-library.json",
+        "plugins/dev-environment-standard/skills/dev-environment-standard/references/operations.md",
+        "plugins/dev-environment-standard/skills/dev-environment-standard/references/state-and-consent.md"
+      ],
+      "registries": []
+    },
+    {
+      "id": "dev-implementation-standard",
+      "version": "0.1.0",
+      "file_count": 8,
+      "skill": "plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md",
+      "skill_bytes": 14196,
+      "skill_lines": 255,
+      "sections": [
+        "## Mission",
+        "## Preconditions (do not start without these)",
+        "## Hard Limits (non-negotiable)",
+        "## Task Status Rules",
+        "## Workflow",
+        "## Frontend design sources",
+        "## GitHub Projects Readiness",
+        "## Recommended Task Template",
+        "## Escalation",
+        "## Interfaces with other skills",
+        "## Definition of done"
+      ],
+      "references": [
+        "plugins/dev-implementation-standard/skills/dev-implementation-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/dev-implementation-standard/skills/dev-implementation-standard/references/tool-registry.json",
+          "tools": [
+            "python-unittest",
+            "pytest",
+            "pytest-cov",
+            "hypothesis",
+            "ruff",
+            "mypy"
+          ],
+          "providers": []
+        }
+      ]
+    },
+    {
+      "id": "dev-workflow-standard",
+      "version": "0.7.0",
+      "file_count": 24,
+      "skill": "plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md",
+      "skill_bytes": 38885,
+      "skill_lines": 678,
+      "sections": [
+        "## Mission",
+        "## Harness Contract",
+        "## Mandatory Entry Gate",
+        "## Hard Limits (non-negotiable)",
+        "## Skill Roles (who does what)",
+        "## Practice Provenance",
+        "## Task And Execution Context",
+        "## Change Complexity Gate",
+        "## Mandatory Flow",
+        "## Mandatory Task Governance",
+        "## Official Kanban Method",
+        "## Definition of Entry / Exit",
+        "## Repository Readiness Bootstrap",
+        "## GitHub-Ready Task Structure",
+        "## Recommended Task Template",
+        "## Delegation Rules",
+        "## When to Trigger Each Specialist",
+        "## Review Rules",
+        "## Context Budget Rules",
+        "## Reference Routing"
+      ],
+      "references": [
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/capability-registry.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/claude-delegation.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/client-portal.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-retrieval.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-routing.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/continuous-improvement.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/execution-report-comments.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/harness-execution.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/llm-handoff.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/minimal-code-gate.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/provider-registry.json",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/provider-routing.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/skill-execution-contract.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/skill-owned-tools.md",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/tool-registry.json",
+          "tools": [
+            "potpie"
+          ],
+          "providers": []
+        },
+        {
+          "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/provider-registry.json",
+          "tools": [],
+          "providers": [
+            "openai",
+            "nvidia",
+            "groq",
+            "openrouter",
+            "gemini",
+            "anthropic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-standard",
+      "version": "0.1.0",
+      "file_count": 29,
+      "skill": "plugins/devops-standard/skills/devops-standard/SKILL.md",
+      "skill_bytes": 10436,
+      "skill_lines": 157,
+      "sections": [
+        "## Responsibility boundaries",
+        "## Operational contract",
+        "## Human safety gates",
+        "## Progressive domain routing",
+        "## Evidence handoff"
+      ],
+      "references": [
+        "plugins/devops-standard/skills/devops-standard/references/ORIGIN.md",
+        "plugins/devops-standard/skills/devops-standard/references/backup-disaster-recovery.md",
+        "plugins/devops-standard/skills/devops-standard/references/ci-cd.md",
+        "plugins/devops-standard/skills/devops-standard/references/cloud.md",
+        "plugins/devops-standard/skills/devops-standard/references/containers.md",
+        "plugins/devops-standard/skills/devops-standard/references/deployments.md",
+        "plugins/devops-standard/skills/devops-standard/references/devops-operating-model.md",
+        "plugins/devops-standard/skills/devops-standard/references/git-release.md",
+        "plugins/devops-standard/skills/devops-standard/references/github-governance.md",
+        "plugins/devops-standard/skills/devops-standard/references/gitops.md",
+        "plugins/devops-standard/skills/devops-standard/references/incident-response.md",
+        "plugins/devops-standard/skills/devops-standard/references/infrastructure-as-code.md",
+        "plugins/devops-standard/skills/devops-standard/references/kubernetes.md",
+        "plugins/devops-standard/skills/devops-standard/references/observability.md",
+        "plugins/devops-standard/skills/devops-standard/references/review.md",
+        "plugins/devops-standard/skills/devops-standard/references/server-operations.md",
+        "plugins/devops-standard/skills/devops-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/devops-standard/skills/devops-standard/references/tool-registry.json",
+          "tools": [
+            "git",
+            "gh",
+            "docker",
+            "docker-compose",
+            "terraform",
+            "tofu",
+            "ansible",
+            "ansible-lint",
+            "kubectl",
+            "helm",
+            "kustomize",
+            "argocd",
+            "flux",
+            "actionlint",
+            "act",
+            "hadolint",
+            "tflint",
+            "kubeconform",
+            "shellcheck",
+            "promtool"
+          ],
+          "providers": []
+        }
+      ]
+    },
+    {
+      "id": "parceiro-estrategico-global",
+      "version": "0.1.0",
+      "file_count": 6,
+      "skill": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global/SKILL.md",
+      "skill_bytes": 17058,
+      "skill_lines": 264,
+      "sections": [
+        "## Papel e responsabilidade",
+        "## Estilo obrigatório",
+        "## Formato padrão",
+        "## Classificação da demanda",
+        "## Descoberta adaptativa",
+        "## Comando `SemPerguntas`",
+        "## Briefing estruturado",
+        "## Tecnologia e software",
+        "## Marketing",
+        "## Vendas",
+        "## Verificação e precisão",
+        "## Práticas consolidadas antes de extensões locais",
+        "## Execução",
+        "## Descoberta e roteamento dinâmico de capacidades",
+        "## Modos especiais",
+        "## Missão"
+      ],
+      "references": [],
+      "registries": []
+    },
+    {
+      "id": "qa-testing-standard",
+      "version": "0.1.0",
+      "file_count": 7,
+      "skill": "plugins/qa-testing-standard/skills/qa-testing-standard/SKILL.md",
+      "skill_bytes": 10678,
+      "skill_lines": 176,
+      "sections": [
+        "## Context and activation",
+        "## Modes and phases",
+        "## Execution and ownership",
+        "## Shared tools, not duplicated ownership",
+        "## Evidence gate",
+        "## Provenance"
+      ],
+      "references": [
+        "plugins/qa-testing-standard/skills/qa-testing-standard/references/bug-report.md",
+        "plugins/qa-testing-standard/skills/qa-testing-standard/references/test-strategy.md"
+      ],
+      "registries": []
+    },
+    {
+      "id": "reverse-engineering-standard",
+      "version": "0.1.0",
+      "file_count": 20,
+      "skill": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/SKILL.md",
+      "skill_bytes": 3759,
+      "skill_lines": 76,
+      "sections": [
+        "## Preconditions",
+        "## Workflow",
+        "## Safety and legal boundary",
+        "## Relationship with other skills"
+      ],
+      "references": [
+        "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/references/rea-integration.md",
+        "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard/references/tool-registry.json",
+          "tools": [
+            "reverse-context-gateway",
+            "rea-runtime",
+            "cutter",
+            "rizin"
+          ],
+          "providers": []
+        }
+      ]
+    },
+    {
+      "id": "sdd-spec-factory",
+      "version": "0.1.0",
+      "file_count": 30,
+      "skill": "plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md",
+      "skill_bytes": 30200,
+      "skill_lines": 523,
+      "sections": [
+        "## Mission",
+        "## Vocabulary (non-negotiable)",
+        "## Mandatory hierarchy",
+        "## Mandatory separation of concerns",
+        "## Operating principles",
+        "## Consultative Technical Knowledge Routing",
+        "## Phases",
+        "## Integration with the other plugins",
+        "## Definition of done for this skill"
+      ],
+      "references": [
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/api-research-library.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/backend-component-sources.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/devops-planning.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/public-code-discovery.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/spec-consistency-analysis.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-apis-jobs.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-architecture.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-auth-sessions.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-data-concurrency.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-fiscal.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-knowledge-router.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-quality-operations.md",
+        "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/web3-component-sources.md"
+      ],
+      "registries": []
+    },
+    {
+      "id": "security-standard",
+      "version": "0.1.1",
+      "file_count": 13,
+      "skill": "plugins/security-standard/skills/security-standard/SKILL.md",
+      "skill_bytes": 18542,
+      "skill_lines": 416,
+      "sections": [
+        "## Scope And Safety",
+        "## Relationship To The Main Workflow",
+        "## Review Modes",
+        "## Risk-Adaptive Depth",
+        "## Security Workflow",
+        "## Tool Policy",
+        "## External Publication Gate",
+        "## Evidence And Reporting",
+        "## Completion Rules",
+        "## Handoff To Dev Workflow"
+      ],
+      "references": [
+        "plugins/security-standard/skills/security-standard/references/coverage-model.md",
+        "plugins/security-standard/skills/security-standard/references/false-positive-validation.md",
+        "plugins/security-standard/skills/security-standard/references/finding-standard.md",
+        "plugins/security-standard/skills/security-standard/references/preventive-security-research.md",
+        "plugins/security-standard/skills/security-standard/references/report-template.md",
+        "plugins/security-standard/skills/security-standard/references/review-pipeline.md",
+        "plugins/security-standard/skills/security-standard/references/stack-profiles.md",
+        "plugins/security-standard/skills/security-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/security-standard/skills/security-standard/references/tool-registry.json",
+          "tools": [
+            "semgrep",
+            "trivy",
+            "gitleaks",
+            "zap",
+            "bandit",
+            "pip-audit"
+          ],
+          "providers": []
+        }
+      ]
+    },
+    {
+      "id": "seo-standard",
+      "version": "0.1.0",
+      "file_count": 23,
+      "skill": "plugins/seo-standard/skills/seo-standard/SKILL.md",
+      "skill_bytes": 2653,
+      "skill_lines": 64,
+      "sections": [
+        "## Preconditions",
+        "## Workflow",
+        "## Commercial site standard",
+        "## Ownership boundaries"
+      ],
+      "references": [
+        "plugins/seo-standard/skills/seo-standard/references/beyondseo-integration.md",
+        "plugins/seo-standard/skills/seo-standard/references/site-delivery.md",
+        "plugins/seo-standard/skills/seo-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/seo-standard/skills/seo-standard/references/tool-registry.json",
+          "tools": [
+            "beyondseo-runtime"
+          ],
+          "providers": []
+        }
+      ]
+    },
+    {
+      "id": "studio-prd",
+      "version": "0.1.0",
+      "file_count": 12,
+      "skill": "plugins/studio-prd/skills/studio-prd/SKILL.md",
+      "skill_bytes": 8992,
+      "skill_lines": 147,
+      "sections": [
+        "## Start from evidence",
+        "## Produce the project artifacts",
+        "## Plan and hand off under supervision",
+        "## Evidence and continuation"
+      ],
+      "references": [
+        "plugins/studio-prd/skills/studio-prd/references/briefing.md",
+        "plugins/studio-prd/skills/studio-prd/references/planning.md"
+      ],
+      "registries": []
+    },
+    {
+      "id": "ui-ux-standard",
+      "version": "0.3.0",
+      "file_count": 12,
+      "skill": "plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md",
+      "skill_bytes": 13073,
+      "skill_lines": 276,
+      "sections": [
+        "## Ownership",
+        "## Non-Negotiables",
+        "## Component Intelligence",
+        "## Registry and MCP Policy",
+        "## Minimal Workflow",
+        "## Default Design Structure",
+        "## Visual Quality Gate",
+        "## Visual QA Checklist",
+        "## Handoff Output"
+      ],
+      "references": [
+        "plugins/ui-ux-standard/skills/ui-ux-standard/references/anti-ai-design.md",
+        "plugins/ui-ux-standard/skills/ui-ux-standard/references/component-selection.md",
+        "plugins/ui-ux-standard/skills/ui-ux-standard/references/component-sources.md",
+        "plugins/ui-ux-standard/skills/ui-ux-standard/references/library-source-handoff.md",
+        "plugins/ui-ux-standard/skills/ui-ux-standard/references/live-design-guide.md",
+        "plugins/ui-ux-standard/skills/ui-ux-standard/references/tool-registry.json"
+      ],
+      "registries": [
+        {
+          "path": "plugins/ui-ux-standard/skills/ui-ux-standard/references/tool-registry.json",
+          "tools": [
+            "playwright"
+          ],
+          "providers": []
+        }
+      ]
+    }
+  ]
+}

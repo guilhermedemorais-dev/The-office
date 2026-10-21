@@ -1,0 +1,14 @@
+{
+  "task_id": "THEOFFICE-V2-001",
+  "contract_revision": "1",
+  "human_task": "https://github.com/guilhermedemorais-dev/The-office/issues/1",
+  "issue_updated_at": "2026-10-16T07:11:40Z",
+  "remote_body_characters": 58296,
+  "remote_equals_local_mirror": true,
+  "comparison": "GitHub returned body exactly equals final local mirror,58296characters; formatting-only whitespace normalization, no normative JSON changes.",
+  "normative_equivalence": "scripts/task_mirror.py --check executed exit0: all29 fields and exact full body match canonical contract.",
+  "approval": "Owner supplied approved PRD and explicit construction/push instruction in current session. No merge/deploy authorization.",
+  "state": "COMPLETED",
+  "contract_sha256": "962b25b7d3c26975db0d03c59d713c70d1274cdf04312794368ee2bf21d2b36a",
+  "mirror_sha256": "688911070ffce9494cf8f0700c358482b63423ae6bf4a42fa846d4ab0dc14f68"
+}

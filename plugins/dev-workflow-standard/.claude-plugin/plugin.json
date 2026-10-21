@@ -1,0 +1,10 @@
+{
+  "name": "dev-workflow-standard",
+  "description": "Engineering harness: apply complexity-proportional intent contracts, resolve and invoke specialist skills/executor capabilities, track execution state, require execution receipts after observable results, validate evidence, recover or replan, and review delivery.",
+  "version": "0.7.0",
+  "author": {
+    "name": "Guilherme"
+  },
+  "homepage": "https://github.com/guilhermedemorais-dev/Dev-workflow",
+  "repository": "https://github.com/guilhermedemorais-dev/Dev-workflow"
+}

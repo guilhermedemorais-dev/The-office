@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Core"
+  short_description: "Use the approved data core procedure"
+  default_prompt: "Read $data-core and apply its procedure to the approved Task."

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "platform": "windows/win10",
+  "canonical_catalog": "plugins/dev-environment-standard/Tools (Windows)/catalog.json",
+  "validation_scope": "Inherited V1 claims only; no native V2 certification.",
+  "native_v2_validation": "NOT_VALIDATED",
+  "inherit_suite_evidence": true
+}

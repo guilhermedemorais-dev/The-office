@@ -1,0 +1,7 @@
+{
+  "name": "the-office-v2",
+  "version": "2.0.0-alpha.1",
+  "description": "Modular Engineering Harness; use root AGENTS.md and sector contracts.",
+  "author": {"name": "Guilherme"},
+  "repository": "https://github.com/guilhermedemorais-dev/The-office"
+}

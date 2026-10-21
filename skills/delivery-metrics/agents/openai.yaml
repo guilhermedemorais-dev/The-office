@@ -1,0 +1,4 @@
+interface:
+  display_name: "Métricas de Entrega"
+  short_description: "Progresso verificável e relatório para o cliente"
+  default_prompt: "Use $delivery-metrics para consolidar fases e evidências do projeto."
