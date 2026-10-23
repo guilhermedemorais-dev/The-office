@@ -6,7 +6,7 @@ Each V1 body section is assigned once. Registry offsets are 1-based inclusive an
 
 ## Additive V2 overlays
 
-- `global-core` / `curated-catalog-before-external-research`: Search current task and project sources, then The Office V2 catalog before external search; verify dynamic claims with official sources. Imported V1 content remains unchanged.
+- `global-core` / `curated-catalog-before-external-research`: Search task and project sources, proactively map needs to The Office catalog capabilities, then verify external gaps with official sources. Imported V1 content remains unchanged.
 
 Select global core, relevant sector core, and only capabilities required by the Task. A selected capability depends on its core. Explicit IDs take priority over lexical trigger hints; ambiguous matching must be resolved from Task scope, not treated as authorization. Shared executor aliases do not create duplicate skills.
 

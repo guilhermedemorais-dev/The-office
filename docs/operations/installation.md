@@ -78,6 +78,29 @@ Depois reutilize `status` compatível e faça reparo pontual em falha/drift. Nã
 instale todas as stacks/CLIs/MCPs nem execute bootstrap completo antes de cada Task.
 Autenticação é conduzida pelo host/usuário e verificada separadamente da configuração.
 
+### Roteamento proativo de MCPs por projeto
+
+No início de um projeto ou quando uma Task mudar materialmente, traduza o objetivo
+em capacidades necessárias e pesquise cada necessidade no catálogo MCP. Informe
+quais opções relevantes já estão disponíveis e quais exigiriam instalação,
+configuração, autenticação ou validação. Explique em linguagem concreta o problema
+que cada opção resolve, acesso solicitado, escopo, custo conhecido e alternativa
+sem MCP. `CORE` no catálogo significa prioridade para avaliar, não requisito global:
+nenhum MCP de terceiros é obrigatório para o plugin básico funcionar.
+
+Quando não houver opção adequada no catálogo, faça descoberta externa delimitada,
+começando pela documentação oficial/registro do provedor; use GitHub/grep.app para
+exemplos de código quando isso ajudar. Antes de recomendar a instalação, informe
+fonte, compatibilidade e limitações. Não instale ou conecte silenciosamente. Para
+autenticação, indique a URL e o fluxo seguro oferecido pelo host; não solicite token
+no chat nem o grave em arquivo versionado.
+
+Relate a prontidão com evidência separada: plugin reconhecido, ferramentas exigidas
+disponíveis, MCP configurado, autenticação concluída e operação verificada. Estado
+não observado é `UNKNOWN`; entrada no catálogo ou arquivo de configuração não prova
+conexão. Só declare uma Task pronta quando suas capacidades necessárias estiverem
+disponíveis e verificadas no nível exigido.
+
 ## 5. Confirmar operação básica
 
 ```sh
@@ -107,7 +130,8 @@ Não instalar o portal dentro do Harness. Preparação não inicia backend ou de
 
 Confirme revisão do bundle ativo, ferramentas realmente verificadas, preferência
 local reutilizada e uma Task descartável com evidência. Registre o que depende de
-login, ferramenta ausente ou homologação. Consulte o [smoke test](user-guide.md).
+login, ferramenta ausente ou homologação. “Plugin instalado” e “Task pronta” são
+estados diferentes. Consulte o [smoke test](user-guide.md).
 Leia [atualização](updating.md) antes de atualizar fonte/cópia ativa/Portal.
 
 Para deixar de usar, selecione o entrypoint anterior ou feche o checkout. Preserve
