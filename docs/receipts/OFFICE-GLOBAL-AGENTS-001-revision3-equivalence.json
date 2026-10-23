@@ -1,0 +1,13 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 3,
+  "owner": "office_governance",
+  "result": "READY_FOR_SCOPED_P2_CORRECTION",
+  "observed_head": "76bd25b832120b9354dd50745c5c312c5d281f00",
+  "issue_updatedAt": "2026-10-23T23:10:58Z",
+  "contract_sha256": "c014d1dd722fdc03cb32ed53083ef1154275e59bcd8aa2501ea63ef257183b67",
+  "local_fields_match": true,
+  "remote_issue_body_match": true,
+  "protected_paths_unchanged": true,
+  "next_action": "Environment reproduce/correct register list; independent QA/Security and documentation applicability on actual delta before publish."
+}

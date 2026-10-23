@@ -1,7 +1,7 @@
 # Registrar e usar agentes globais no Codex
 
 Aplica-se ao helper desta revisão do The Office V2, Task
-`OFFICE-GLOBAL-AGENTS-001`, contrato revisão 1. Público: mantenedor ou agente
+`OFFICE-GLOBAL-AGENTS-001`, contrato revisão 3. Público: mantenedor ou agente
 Environment com autorização de escrita no diretório Codex escolhido. O helper
 exige Python 3.11+ (`tomllib` da biblioteca padrão), sem dependências adicionais.
 
@@ -99,6 +99,36 @@ conhecidos de instruções globais customizados e `multi_agent = false` explíci
 Links simbólicos, reparse points e hardlinks nos alvos são recusados. Não há
 flag de força para sobrescrever customizações. Um host já registrado com perfis
 próprios pode exigir reconciliação manual, mesmo quando seu registro funciona.
+
+## Atualizar perfis gerenciados
+
+Depois de atualizar o bundle revisado, execute os mesmos `plan`, `check` e,
+quando autorizado, `apply` com as raízes explícitas. O helper guarda estado local
+em `CODEX_HOME/.office-agent-profiles.json`, com `schema_version`, identificador
+`generator` e, por perfil, `sha256`, `description` e `config_file`. Cada perfil
+TOML gerado recebe o envelope `# THE-OFFICE-CODEX-PROFILE v1 sha256=...`, cujo hash
+cobre o payload abaixo do cabeçalho. O estado registra o hash do arquivo completo.
+
+- Com estado válido, o perfil existente deve coincidir com o hash anteriormente
+  registrado, ter envelope íntegro e nome/descrição compatíveis. Se permanecer
+  intacto, `apply` pode atualizá-lo para a geração corrente do bundle. A descrição
+  gerada no registro TOML também pode ser atualizada; layouts divergentes bloqueiam.
+- Perfil alterado, ausente quando esperado, estado inválido ou caminho/registro
+  divergente resultam em `BLOCKED`. Não há adoção forçada de customizações.
+- Sem estado, um perfil legado só é adotado quando seus bytes forem exatamente
+  iguais à geração corrente, com envelope, ou ao payload corrente sem envelope.
+  `apply` acrescenta envelope/estado. Um perfil de geração antiga que já diverge
+  do bundle corrente exige backup e reconciliação manual, mesmo sem edição local.
+- O arquivo de estado participa do mesmo plano, backup e tentativa de rollback
+  dos demais artefatos. Na recuperação, preserve um conjunto consistente de
+  perfis, estado e registro. Não edite hashes para contornar um conflito.
+
+Hash, envelope e estado são controles locais de consistência, **não são assinatura
+nem autenticação de origem**. Quem controla `CODEX_HOME` pode editar tanto os
+perfis como o estado e seus hashes. O mecanismo pressupõe diretório confiável,
+pertencente ao usuário e quiescente; não oferece proteção contra falsificação por
+um ator com escrita nesse diretório. Esses registros não comprovam execução de
+agentes nem ampliam permissões do host.
 
 ## Responsabilidade em cada chat
 

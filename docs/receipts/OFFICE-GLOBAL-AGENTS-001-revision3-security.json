@@ -1,0 +1,106 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 3,
+  "list_id": "security",
+  "owner": "office_security",
+  "review_mode": "CHANGE_REVIEW",
+  "risk": "HIGH",
+  "SECURITY_STATUS": "PASS",
+  "scope": "AC-07 helper upgrade and new managed-state mutation boundaries, trusted user-owned quiescent CODEX_HOME only",
+  "SKILL_RECEIPT": {
+    "bundle": "C:/Users/teste/.codex/plugins/cache/the-office-local/the-office-v2/2.0.0-alpha.1",
+    "sources": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/security/AGENT.md",
+      "agents/orchestrator/AGENT.md"
+    ],
+    "skills": [
+      "global-core",
+      "security-core",
+      "security-review",
+      "security-tools-reporting"
+    ],
+    "reference_base": "plugins/security-standard/skills/security-standard",
+    "references": [
+      "references/review-pipeline.md",
+      "references/preventive-security-research.md",
+      "references/stack-profiles.md",
+      "references/false-positive-validation.md",
+      "references/finding-standard.md"
+    ],
+    "additional_source": "library/architecture/technical-decision-procedure.md",
+    "plan": "python scripts/office.py plan security --capability security-review --capability security-tools-reporting",
+    "exit_code": 0,
+    "selection_complete": true
+  },
+  "EXECUTION_RECEIPT": {
+    "sources": [
+      "docs/execution/OFFICE-GLOBAL-AGENTS-001.json security list",
+      "docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision3-equivalence.json",
+      "scripts/register_codex_agents.py",
+      "tests/test_codex_agent_registration.py"
+    ],
+    "hashes": {
+      "scripts/register_codex_agents.py": "18e158c3d6d2e8dbcccc0c7824b33ab5dfbaffa05c3987d44758908c5552dc0d",
+      "tests/test_codex_agent_registration.py": "23fa04ad625fcd668392515ed873e5622f5be7c261e169f87b3c00cf40c7381f",
+      "docs/execution/OFFICE-GLOBAL-AGENTS-001.json": "c014d1dd722fdc03cb32ed53083ef1154275e59bcd8aa2501ea63ef257183b67"
+    },
+    "equivalence_contract_hash_match": true,
+    "commands": [
+      {
+        "command": "python scripts/office.py plan security --capability security-review --capability security-tools-reporting",
+        "exit_code": 0,
+        "selection_complete": true
+      },
+      {
+        "command": "python -m unittest discover -s tests -p test_codex_agent_registration.py -q",
+        "exit_code": 0,
+        "tests": 23,
+        "skips": 0
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      },
+      {
+        "command": "Independent tempdir negative probes",
+        "exit_code": 0,
+        "checks": [
+          "Symlink managed state rejects without external mutation",
+          "State config_file parent traversal rejects preserving bytes",
+          "Managed state modified between plan/apply rejects preserving bytes",
+          "Rehashed profile plus updated state carrying sandbox_mode rejects extra keys",
+          "Joint state/profile developer_instructions edit reproduced local trust limit; not authenticated provenance"
+        ]
+      }
+    ],
+    "review": [
+      "Separate managed state exact schema/names/hash fields, no state-selected write target",
+      "Existing file full digest plus envelope and identity/description checked before update",
+      "Legacy adoption restricted to current generation byte equality",
+      "Exact literal generated description patch plus full parsed TOML semantic invariant",
+      "State is snapshotted, included in backup/rollback, linked targets rejected by shared checks",
+      "No process/network/permission/model/MCP delta"
+    ],
+    "modified_artifacts": [
+      "docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision3-security.json"
+    ]
+  },
+  "findings": [],
+  "residual_risks": [
+    "Local state is a trusted baseline, not signed/authenticated provenance. Same-user edits to both profile payload/envelope and recorded digest can make a customization eligible for overwrite. This is outside protection against actors already controlling user-owned CODEX_HOME, but must be explicit in documentation. Hash detects accidental/single-artifact drift, not malicious joint forgery.",
+    "Windows ACL and hostile filesystem races remain outside attested scope.",
+    "No crash-safe multi-file atomicity; best-effort rollback can leave private backups/directories.",
+    "No live host apply, reload or runtime all-agent execution."
+  ],
+  "documentation_handoff": "Coordinator notified to document local-state trust limit and backup/rollback; this receipt does not attest Documentation sector.",
+  "layer_status": {
+    "Banco": "NOT_APPLICABLE",
+    "API/Backend": "NOT_APPLICABLE",
+    "Frontend/UI": "NOT_APPLICABLE",
+    "Infra/DevOps": "PASS scoped synthetic mutation checks only",
+    "Dependencias/Supply Chain": "No new third-party package; canonical bundle remains trusted input"
+  },
+  "next_action": "Documentation owner reconcile state/trust-limit article; Governance reconcile current artifact hashes and independent QA before publishing. No merge/live apply authorized by this receipt."
+}

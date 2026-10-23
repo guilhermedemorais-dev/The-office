@@ -1,0 +1,40 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 3,
+  "list_id": "publish",
+  "owner": "office_governance",
+  "state": "READY_FOR_REVIEW_PUBLICATION",
+  "finding": "https://github.com/guilhermedemorais-dev/The-office/pull/8#discussion_r4364962075",
+  "operations": [
+    "Read actual Environment, QA and Security rev3 receipts",
+    "Inspected helper/guide diff and no protected/V1 diff",
+    "Compared actual current hashes of helper/tests/contract against three owners",
+    "Read Issue7 and compared complete current rev3 mirror and normative fields"
+  ],
+  "results": {
+    "owner_hashes_match": true,
+    "remote_issue_body_match": true,
+    "contract_sha256": "c014d1dd722fdc03cb32ed53083ef1154275e59bcd8aa2501ea63ef257183b67",
+    "QA": "Actual owner23testsPASS plus3additional scenarios",
+    "Security": "Actual owner23testsPASS plus scoped independent negative probes",
+    "live_host_apply": false,
+    "merge_or_close": false,
+    "Documentation": "Actual owner UPDATED technical/user guide;4synthetic focusedchecksPASS; current guide/helper hashesMATCH.",
+    "Windows7": "Actual native office_qa rerun7PASSzero skips on current rev3workingtree, sixsource hashesMATCH."
+  },
+  "scope": "Same Task and PR8. Managed profile update correction plus focused docs/tests; preserved frozen V1 and PR6.",
+  "limitations": [
+    "Provenance is local consistency, not signed authenticity against user controlling entire home.",
+    "Legacy divergent no-state profiles require manual reconciliation, no force adoption.",
+    "Trusted/quiescent home, WindowsACL and best-effort rollback limitations remain.",
+    "Previous rev1/rev2 receipts remain historical, no simulated renewed approval."
+  ],
+  "next_action": "Commit/push current scoped rev3delta to PR8; respond P2 with concrete fix/owner evidence; observe final-head CI and review feedback without merge/close.",
+  "owner_receipts": [
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-register-revision3.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-qa-revision3.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision3-security.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision3-documentation.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-windows-qa-revision3.json"
+  ]
+}

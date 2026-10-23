@@ -8,6 +8,7 @@ stdlib path checks cannot eliminate hostile filesystem races on every platform.
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -27,6 +28,8 @@ SECTORS = (
 )
 BEGIN = '<!-- THE-OFFICE-GLOBAL-AGENTS BEGIN '
 END = '<!-- THE-OFFICE-GLOBAL-AGENTS END -->'
+PROFILE_BEGIN = b'# THE-OFFICE-CODEX-PROFILE v1 sha256='
+PROFILE_STATE = '.office-agent-profiles.json'
 
 
 class Blocked(Exception):
@@ -109,10 +112,59 @@ def render_profiles(bundle):
         )
         values = {'name': name, 'description': description,
                   'developer_instructions': instructions}
-        profiles[name] = (description, ''.join(
+        payload = ''.join(
             f'{key} = {json.dumps(value, ensure_ascii=False)}\n'
-            for key, value in values.items()).encode('utf-8'))
+            for key, value in values.items()).encode('utf-8')
+        profiles[name] = (description, PROFILE_BEGIN + digest(payload).encode() + b'\n' + payload)
     return profiles
+
+
+def profile_payload(data):
+    """Validate the profile envelope; the separate local state establishes provenance."""
+    header, separator, payload = data.partition(b'\n')
+    if (not separator or not header.startswith(PROFILE_BEGIN)
+            or header[len(PROFILE_BEGIN):] != digest(payload).encode()):
+        raise Blocked('invalid or customized managed profile envelope; reconcile manually')
+    return payload
+
+
+def load_profile_state(data, names):
+    if data is None:
+        return None
+    try:
+        state = json.loads(text(data))
+        if (not isinstance(state, dict)
+                or set(state) != {'schema_version', 'generator', 'profiles'}
+                or type(state['schema_version']) is not int or state['schema_version'] != 1
+                or state['generator'] != 'the-office-codex-agents'
+                or not isinstance(state['profiles'], dict)
+                or set(state['profiles']) != set(names)):
+            raise ValueError
+        for record in state['profiles'].values():
+            if (not isinstance(record, dict)
+                    or set(record) != {'sha256', 'description', 'config_file'}
+                    or not all(isinstance(value, str) for value in record.values())
+                    or not re.fullmatch('[0-9a-f]{64}', record['sha256'])):
+                raise ValueError
+    except (ValueError, TypeError, KeyError):
+        raise Blocked('invalid managed profile state; restore backup or reconcile manually') from None
+    return state['profiles']
+
+
+def refresh_description(config_bytes, name, old, new):
+    """Edit only the literal generated description line; other layouts fail closed."""
+    if old == new:
+        return config_bytes
+    pattern = (rb'(?m)^(\[agents\.' + re.escape(name.encode()) + rb'\]\r?\n)'
+               + re.escape(('description = ' + json.dumps(old, ensure_ascii=False)).encode())
+               + rb'(\r?\n)')
+    matches = list(re.finditer(pattern, config_bytes))
+    if len(matches) != 1:
+        raise Blocked(f'custom registration layout: {name}; reconcile manually')
+    match = matches[0]
+    replacement = (match[1] + ('description = ' + json.dumps(new, ensure_ascii=False)).encode()
+                   + match[2])
+    return config_bytes[:match.start()] + replacement + config_bytes[match.end():]
 
 
 def routing_block(bundle):
@@ -178,10 +230,12 @@ def plan(bundle_root, codex_home):
             raise Blocked('backup parent must be a directory')
         if os.name != 'nt' and stat.S_IMODE(backup_parent.stat().st_mode) & 0o077:
             raise Blocked('backup parent is not private')
-    if (read_optional(home / 'AGENTS.override.md') or b'').strip():
+    override_bytes = read_optional(home / 'AGENTS.override.md')
+    if (override_bytes or b'').strip():
         raise Blocked('global AGENTS.override.md may suppress routing; reconcile manually')
     original = read_optional(home / 'config.toml')
     config = parse_toml(original or b'')
+    expected_config = copy.deepcopy(config)
     if any(config.get(key) for key in ('instructions', 'developer_instructions',
                                      'model_instructions_file', 'experimental_instructions_file')):
         raise Blocked('custom global instruction override requires manual reconciliation')
@@ -193,43 +247,70 @@ def plan(bundle_root, codex_home):
         raise Blocked('agents configuration is not a table')
     snapshots, desired = {}, {}
 
-    def target(relative, content):
+    def target(relative, content, previous):
         path = home / relative
         checked_path(path)
         if not path.is_relative_to(home):
             raise Blocked('target outside CODEX_HOME')
-        snapshots[path] = read_optional(path)
+        if read_optional(path) != previous:
+            raise Blocked('concurrent target changes during plan')
+        snapshots[path] = previous
         desired[path] = content
 
     profiles = render_profiles(bundle)
+    state_path = home / PROFILE_STATE
+    state_bytes = read_optional(state_path)
+    old_state = load_profile_state(state_bytes, profiles)
+    new_state = {'schema_version': 1, 'generator': 'the-office-codex-agents', 'profiles': {}}
+    amended = original or b''
     append = ''
     for name, (description, profile) in profiles.items():
         relative = f'agents/{name}.toml'
         expected = {'description': description, 'config_file': (home / relative).as_posix()}
-        if name in agents and agents[name] != expected:
-            raise Blocked(f'agent registration conflict: {name}')
+        expected_config.setdefault('agents', {})[name] = expected
         existing = read_optional(home / relative)
+        prior = old_state[name] if old_state is not None else None
+        previous_expected = ({'description': prior['description'], 'config_file': prior['config_file']}
+                             if prior is not None else expected)
+        if name in agents and agents[name] != previous_expected:
+            raise Blocked(f'agent registration conflict: {name}')
+        if prior is not None and prior['config_file'] != expected['config_file']:
+            raise Blocked(f'managed profile path conflict: {name}')
         if existing is not None:
-            parse_toml(existing)
-            if existing != profile:
-                raise Blocked(f'customized agent profile: {name}')
-        target(relative, profile)
+            values = parse_toml(existing)
+            if prior is not None:
+                if (digest(existing) != prior['sha256']
+                        or set(values) != {'name', 'description', 'developer_instructions'}
+                        or values.get('name') != name
+                        or values.get('description') != prior['description']):
+                    raise Blocked(f'customized agent profile: {name}; restore backup or reconcile manually')
+                profile_payload(existing)
+            elif existing not in (profile, profile_payload(profile)):
+                # Legacy bytes may be recognized only by exact equality to current generation.
+                raise Blocked(f'profile without matching managed provenance: {name}; back up and reconcile manually')
+        elif prior is not None:
+            raise Blocked(f'managed profile missing: {name}; restore backup or reconcile manually')
+        target(relative, profile, existing)
+        new_state['profiles'][name] = {'sha256': digest(profile), **expected}
+        if name in agents and prior is not None:
+            amended = refresh_description(amended, name, prior['description'], description)
         if name not in agents:
             append += f'\n[agents.{name}]\n' + ''.join(
                 f'{key} = {json.dumps(value, ensure_ascii=False)}\n'
                 for key, value in expected.items())
-    amended = original or b''
     if append:
         newline = b'\r\n' if b'\r\n' in amended else b'\n'
         if amended and not amended.endswith(b'\n'):
             amended += newline
         amended += append.encode('utf-8').replace(b'\n', newline)
-        parse_toml(amended)
-    target('config.toml', amended)
+    if parse_toml(amended) != expected_config:
+        raise Blocked('registration amendment would change unrelated configuration; reconcile manually')
+    target('config.toml', amended, original)
     instructions = read_optional(home / 'AGENTS.md')
-    target('AGENTS.md', merge_instructions(instructions, routing_block(bundle)))
+    target('AGENTS.md', merge_instructions(instructions, routing_block(bundle)), instructions)
+    target(PROFILE_STATE, (json.dumps(new_state, indent=2, ensure_ascii=False) + '\n').encode(), state_bytes)
     # Also recheck non-written safety inputs immediately before applying.
-    snapshots[home / 'AGENTS.override.md'] = read_optional(home / 'AGENTS.override.md')
+    snapshots[home / 'AGENTS.override.md'] = override_bytes
     changes = {p: data for p, data in desired.items() if snapshots[p] != data}
     return home, snapshots, changes
 

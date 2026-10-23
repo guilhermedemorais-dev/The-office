@@ -1,0 +1,77 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 3,
+  "list_id": "documentation",
+  "owner": "office_documentation",
+  "result": "UPDATED",
+  "skill_receipt": {
+    "plan": "python scripts/office.py plan documentation",
+    "result": "selection_complete true; global-core and documentation-core; no optional capabilities",
+    "read_full_previously_in_same_task": [
+      "skills/global-core/SKILL.md",
+      "skills/documentation-core/SKILL.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/documentation/AGENT.md",
+      "docs/operations/documentation.md",
+      "docs/operations/delivery-lifecycle.md",
+      "library/documentation-templates/README.md",
+      "library/documentation-templates/upstream/awesome-copilot/GUIDE.md",
+      "library/documentation-templates/reference.md",
+      "library/documentation-templates/how-to.md"
+    ],
+    "reference_bases": {
+      "global-core": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global",
+      "documentation-core": "."
+    },
+    "current_sources": [
+      "docs/execution/OFFICE-GLOBAL-AGENTS-001.json",
+      "scripts/register_codex_agents.py",
+      "tests/test_codex_agent_registration.py"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "docs/operations/codex-agents.md",
+      "sha256": "dfde275d4ec1cc2b2545321ee58034b8b77914c52cd59d8b82006a6d73465e99"
+    }
+  ],
+  "implementation_observed": {
+    "path": "scripts/register_codex_agents.py",
+    "sha256": "18e158c3d6d2e8dbcccc0c7824b33ab5dfbaffa05c3987d44758908c5552dc0d",
+    "documented": [
+      "local .office-agent-profiles.json schema/generator/profiles metadata",
+      "profile envelope payload hash versus full-file state hash",
+      "unchanged managed upgrade; customization/missing/state/config conflict blocks",
+      "legacy exact-current-byte adoption only; divergent legacy manual reconciliation",
+      "state participates in backup and rollback",
+      "local hashes do not authenticate origin; writer controlling CODEX_HOME can edit profiles and state; trusted quiescent user-owned directory precondition"
+    ]
+  },
+  "checks": [
+    {
+      "command": "python -m unittest tests.test_codex_agent_registration.RegistrationTests.test_managed_upgrade_refreshes_profile_state_and_description_with_backup tests.test_codex_agent_registration.RegistrationTests.test_legacy_exact_generation_can_migrate_but_divergence_blocks tests.test_codex_agent_registration.RegistrationTests.test_invalid_state_and_custom_registration_preserved tests.test_codex_agent_registration.RegistrationTests.test_upgrade_partial_failure_restores_profile_config_and_state -v",
+      "exit_code": 0,
+      "result": "4 tests passed in synthetic temporary fixtures; no live host apply"
+    },
+    {
+      "command": "guide relative link existence check",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "documentation": {
+    "technical": "UPDATED",
+    "user": "UPDATED",
+    "captures": "NOT_APPLICABLE: CLI procedure"
+  },
+  "limitations": [
+    "Documentation does not attest QA or Security sectors.",
+    "Synthetic fixture behavior is not real Desktop execution or installation proof.",
+    "No live apply, commit, push, protected file or unrelated document change.",
+    "Hashes/state provide local consistency only, no signature, origin authentication or anti-forgery guarantee."
+  ],
+  "next_action": "Parent reconcile Documentation rev3 hashes with independent Environment/QA/Security receipts before publication."
+}

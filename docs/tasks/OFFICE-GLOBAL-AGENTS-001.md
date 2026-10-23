@@ -1,6 +1,6 @@
 # OFFICE-GLOBAL-AGENTS-001: Global sector agents
 
-Contract revision: 2. NORMAL. Branch: `codex/global-sector-agents`.
+Contract revision: 3. NORMAL. Branch: `codex/global-sector-agents`.
 
 
 <!-- contract-field: schema_version -->
@@ -13,7 +13,7 @@ Contract revision: 2. NORMAL. Branch: `codex/global-sector-agents`.
 <!-- contract-field: contract_revision -->
 ## contract_revision
 
-2
+3
 
 <!-- /contract-field: contract_revision -->
 
@@ -80,7 +80,7 @@ d97ec71828a275b983262470beb67b05ac074518
 <!-- contract-field: allowed_paths -->
 ## allowed_paths
 
-scripts/register_codex_agents.py; agents/**; AGENTS.md; docs/operations/**; tests/test_codex_agent_registration.py; docs/tasks/OFFICE-GLOBAL-AGENTS-001.md; docs/execution/OFFICE-GLOBAL-AGENTS-001.json; docs/receipts/OFFICE-GLOBAL-AGENTS-001*; README.md; CHANGELOG.md; docs/architecture/agents.md
+scripts/register_codex_agents.py; agents/**; AGENTS.md; docs/operations/**; tests/test_codex_agent_registration.py; docs/tasks/OFFICE-GLOBAL-AGENTS-001.md; docs/execution/OFFICE-GLOBAL-AGENTS-001.json; docs/receipts/OFFICE-GLOBAL-AGENTS-001*; README.md; CHANGELOG.md; docs/architecture/agents.md; docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision3*
 
 <!-- /contract-field: allowed_paths -->
 
@@ -94,7 +94,7 @@ plugins/**; credentials; runtime-state; models/providers/MCP/permissions setting
 <!-- contract-field: requirements -->
 ## requirements
 
-AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.
+AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
 
 <!-- /contract-field: requirements -->
 
@@ -153,7 +153,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **list_id**: register
   - **owner_skill**: office_environment
   - **phase**: implementation
-  - **objective**: Implement the scoped opt-in helper and canonical profile rendering.
+  - **objective**: Correct reproduced managed-profile upgrade P2 with provenance and strict customization preservation.
   - **microtask_ids**:
     register
   - **depends_on**:
@@ -166,20 +166,20 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
     plugins/**; credentials; runtime-state; models/providers/MCP/permissions settings; existing user config outside owned agent registrations; main; unrelated dirty checkouts; PR #6
   - **deliverables**:
     register owner receipt and scoped artifacts
-  - **completion_condition**: Applicable acceptance criteria satisfied with actual owner evidence.
+  - **completion_condition**: AC-07 reproduced and corrected under existing safety invariants, with executor tests and exact artifact hashes.
   - **required_tests**:
     focused registration tests; git diff --check
   - **acceptance_criteria**:
-    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
   - **stop_conditions**:
     All global stop_conditions above apply unchanged.
   - **checklist**:
     -
-      - **instruction**: Implement the scoped opt-in helper and canonical profile rendering.
+      - **instruction**: Record narrowly scoped managed-profile provenance/hashes as necessary under the explicitly selected Codex home; safely distinguish generated-unchanged profiles from customized ones.
     -
-      - **instruction**: Update focused installation/routing documentation and development tests.
+      - **instruction**: Refresh eligible managed profiles when canonical contracts change, preserving exact backup/rollback and conflict handling guarantees.
     -
-      - **instruction**: Verify backups, idempotency and preservation; do not apply to real host unless separately routed.
+      - **instruction**: No forced adoption, silent overwrite, policy/model/MCP change or reliance on untrusted self-declared provenance.
 -
   - **list_id**: documentation
   - **owner_skill**: office_documentation
@@ -201,7 +201,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **required_tests**:
     Documentation inspection and git diff --check
   - **acceptance_criteria**:
-    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
   - **stop_conditions**:
     All global stop_conditions above apply unchanged.
   - **checklist**:
@@ -219,7 +219,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **references**:
     POLICY; V2; INSTALL; HOST
   - **allowed_paths**:
-    Same approved allowed_paths as the global allowed_paths section above (all entries inherited).
+    scripts/register_codex_agents.py; agents/**; AGENTS.md; docs/operations/**; tests/test_codex_agent_registration.py; docs/tasks/OFFICE-GLOBAL-AGENTS-001.md; docs/execution/OFFICE-GLOBAL-AGENTS-001.json; docs/receipts/OFFICE-GLOBAL-AGENTS-001*; README.md; CHANGELOG.md; docs/architecture/agents.md
   - **protected_paths**:
     plugins/**; credentials; runtime-state; models/providers/MCP/permissions settings; existing user config outside owned agent registrations; main; unrelated dirty checkouts; PR #6
   - **deliverables**:
@@ -228,7 +228,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **required_tests**:
     focused registration tests; git diff --check
   - **acceptance_criteria**:
-    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
   - **stop_conditions**:
     All global stop_conditions above apply unchanged.
   - **checklist**:
@@ -248,7 +248,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **references**:
     POLICY; V2; INSTALL; HOST
   - **allowed_paths**:
-    Same approved allowed_paths as the global allowed_paths section above (all entries inherited).
+    scripts/register_codex_agents.py; agents/**; AGENTS.md; docs/operations/**; tests/test_codex_agent_registration.py; docs/tasks/OFFICE-GLOBAL-AGENTS-001.md; docs/execution/OFFICE-GLOBAL-AGENTS-001.json; docs/receipts/OFFICE-GLOBAL-AGENTS-001*; README.md; CHANGELOG.md; docs/architecture/agents.md
   - **protected_paths**:
     plugins/**; credentials; runtime-state; models/providers/MCP/permissions settings; existing user config outside owned agent registrations; main; unrelated dirty checkouts; PR #6
   - **deliverables**:
@@ -257,7 +257,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **required_tests**:
     focused registration tests; git diff --check
   - **acceptance_criteria**:
-    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
   - **stop_conditions**:
     All global stop_conditions above apply unchanged.
   - **checklist**:
@@ -277,7 +277,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **references**:
     POLICY; V2; INSTALL; HOST
   - **allowed_paths**:
-    Same approved allowed_paths as the global allowed_paths section above (all entries inherited).
+    scripts/register_codex_agents.py; agents/**; AGENTS.md; docs/operations/**; tests/test_codex_agent_registration.py; docs/tasks/OFFICE-GLOBAL-AGENTS-001.md; docs/execution/OFFICE-GLOBAL-AGENTS-001.json; docs/receipts/OFFICE-GLOBAL-AGENTS-001*; README.md; CHANGELOG.md; docs/architecture/agents.md
   - **protected_paths**:
     plugins/**; credentials; runtime-state; models/providers/MCP/permissions settings; existing user config outside owned agent registrations; main; unrelated dirty checkouts; PR #6
   - **deliverables**:
@@ -286,7 +286,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **required_tests**:
     focused registration tests; git diff --check
   - **acceptance_criteria**:
-    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+    AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
   - **stop_conditions**:
     All global stop_conditions above apply unchanged.
   - **checklist**:
@@ -457,7 +457,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
 <!-- contract-field: acceptance_criteria -->
 ## acceptance_criteria
 
-AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.
+AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.; AC-07: Ordinary bundle updates safely refresh helper-managed profiles only when unchanged from previously generated provenance; true customizations remain blocked. Preserve backups, read-only plan/check and unrelated configuration. Existing registrations without trusted provenance must fail closed with an actionable reconciliation path.
 
 <!-- /contract-field: acceptance_criteria -->
 
@@ -471,7 +471,7 @@ scope_expansion_required; source_of_truth_conflict; mandatory_reference_missing;
 <!-- contract-field: required_tests -->
 ## required_tests
 
-Focused unit tests for registration/preservation and explicit conflict handling.; Independent QA and Security scoped checks.; Existing generated-skills check, applicable regression and git diff --check; distinguish preexisting failures.; Execute seven Ubuntu-skipped Windows-specific cases natively on Windows; diagnose and independently retest authorized applicable corrections.
+Focused unit tests for registration/preservation and explicit conflict handling.; Independent QA and Security scoped checks.; Existing generated-skills check, applicable regression and git diff --check; distinguish preexisting failures.; Execute seven Ubuntu-skipped Windows-specific cases natively on Windows; diagnose and independently retest authorized applicable corrections.; Managed-profile upgrade regression and negative provenance/customization/rollback paths; independent QA/Security for actual delta.
 
 <!-- /contract-field: required_tests -->
 
@@ -505,11 +505,23 @@ Host has 15 registered profiles and global routing instructions per parent evide
 
 <!-- /contract-field: revision2_addendum -->
 
+<!-- contract-field: revision3_addendum -->
+## revision3_addendum
+
+- **trigger**: Automated review P2 https://github.com/guilhermedemorais-dev/The-office/pull/8#discussion_r4364962075 on initial helper ee0eb40, still unchanged in revision2.
+- **approved_scope**: Reproduce and correct ordinary managed profile upgrades within the same registration capability, helper/tests/docs paths already approved. No V1 or PR6 protected expansion.
+- **requirements**:
+  Record narrowly scoped managed-profile provenance/hashes as necessary under the explicitly selected Codex home; safely distinguish generated-unchanged profiles from customized ones.; Refresh eligible managed profiles when canonical contracts change, preserving exact backup/rollback and conflict handling guarantees.; No forced adoption, silent overwrite, policy/model/MCP change or reliance on untrusted self-declared provenance.; Independent QA covers initial install, unchanged repeat, bundle revision update, customized managed file, missing/stale/malformed provenance, partial failure and preservation; responsible Security reviews added persisted-state/file mutations.; Update focused operator docs if recovery/upgrade behavior changes; preserve existing seven-case native Windows evidence for unchanged tested sources, re-evaluate applicability after actual diff.
+- **acceptance**: Reproduction and fix evidence, independent owner QA/Security current hashes, documentation applicability, final-head CI and explicit bot disposition.
+- **no_authorization**: No live host apply, merge, PR close or deploy.
+
+<!-- /contract-field: revision3_addendum -->
+
 ## Execution prompts
 
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=register`, revision 2, owner `office_environment`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=documentation`, revision 2, owner `office_documentation`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=qa`, revision 2, owner `office_qa`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=security`, revision 2, owner `office_security`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=publish`, revision 2, owner `office_governance`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=windows-seven`, revision 2, owner `office_qa`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=register`, revision 3, owner `office_environment`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=documentation`, revision 3, owner `office_documentation`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=qa`, revision 3, owner `office_qa`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=security`, revision 3, owner `office_security`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=publish`, revision 3, owner `office_governance`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=windows-seven`, revision 3, owner `office_qa`. Inherit every scope constraint and source.

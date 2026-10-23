@@ -200,6 +200,157 @@ class RegistrationTests(unittest.TestCase):
         self.assertEqual(self.cli('apply')[0], 2)
         self.assertEqual(self.files(), before)
 
+    def change_contract(self, responsibility=False):
+        path = self.bundle / 'agents/sdd/AGENT.md'
+        content = path.read_text(encoding='utf-8')
+        if responsibility:
+            content = content.replace('Own sdd.', 'Own updated sdd responsibilities.')
+        path.write_text(content + 'New canonical output.\n', encoding='utf-8')
+
+    def test_managed_upgrade_refreshes_profile_state_and_description_with_backup(self):
+        prefix = b'\xef\xbb\xbf# retain exactly\r\nmodel="fixture"\r\n'
+        self.write('config.toml', prefix)
+        self.assertEqual(self.cli('apply')[0], 0)
+        before = self.files()
+        previous_config = (self.home / 'config.toml').read_bytes()
+        self.change_contract(responsibility=True)
+        self.assertEqual(self.cli('plan')[1]['status'], 'CHANGES_REQUIRED')
+        self.assertEqual(self.cli('check')[0], 1)
+        self.assertEqual(self.files(), before)
+        code, result = self.cli('apply')
+        self.assertEqual(code, 0)
+        self.assertEqual(set(result['changed_paths']), {
+            'agents/office_sdd.toml', 'config.toml', REG.PROFILE_STATE})
+        updated = (self.home / 'config.toml').read_bytes()
+        self.assertEqual(updated, previous_config.replace(
+            b'description = "Own sdd."', b'description = "Own updated sdd responsibilities."'))
+        profile = (self.home / 'agents/office_sdd.toml').read_bytes()
+        self.assertIn('New canonical output.', tomllib.loads(profile.decode())['developer_instructions'])
+        state = json.loads((self.home / REG.PROFILE_STATE).read_text())
+        self.assertEqual(state['profiles']['office_sdd']['sha256'], REG.digest(profile))
+        backup = self.home / result['backup']
+        manifest = json.loads((backup / 'manifest.json').read_text())
+        for item in manifest:
+            self.assertEqual((backup / item['backup']).read_bytes(), before[str(Path(item['path']))])
+        self.assertEqual(self.cli('check')[0], 0)
+        self.assertEqual(self.cli('apply')[1]['status'], 'CONFIGURED')
+
+    def test_output_only_contract_update_needs_no_config_rewrite(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        config = (self.home / 'config.toml').read_bytes()
+        self.change_contract()
+        code, result = self.cli('apply')
+        self.assertEqual(code, 0)
+        self.assertEqual(set(result['changed_paths']), {'agents/office_sdd.toml', REG.PROFILE_STATE})
+        self.assertEqual((self.home / 'config.toml').read_bytes(), config)
+
+    def test_custom_profile_and_self_rehashed_envelope_cannot_claim_provenance(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        path = self.home / 'agents/office_sdd.toml'
+        original = path.read_bytes()
+        payload = REG.profile_payload(original).replace(b'Own sdd.', b'Customized sdd.')
+        variants = [original.replace(b'sha256=', b'unsupported='),
+                    original.replace(b'Own sdd.', b'Customized sdd.'),
+                    REG.PROFILE_BEGIN + REG.digest(payload).encode() + b'\n' + payload]
+        for data in variants:
+            with self.subTest(data=data[:40]):
+                path.write_bytes(data)
+                before = self.files()
+                self.assertEqual(self.cli('apply')[0], 2)
+                self.assertEqual(self.files(), before)
+
+    def test_wrong_identity_blocked_even_when_profile_and_state_hashes_match(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        path = self.home / 'agents/office_sdd.toml'
+        payload = REG.profile_payload(path.read_bytes()).replace(
+            b'name = "office_sdd"', b'name = "office_backend"')
+        data = REG.PROFILE_BEGIN + REG.digest(payload).encode() + b'\n' + payload
+        path.write_bytes(data)
+        state_path = self.home / REG.PROFILE_STATE
+        state = json.loads(state_path.read_text())
+        state['profiles']['office_sdd']['sha256'] = REG.digest(data)
+        state_path.write_text(json.dumps(state))
+        before = self.files()
+        self.assertEqual(self.cli('apply')[0], 2)
+        self.assertEqual(self.files(), before)
+
+    def test_legacy_exact_generation_can_migrate_but_divergence_blocks(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        (self.home / REG.PROFILE_STATE).unlink()
+        profile = self.home / 'agents/office_sdd.toml'
+        profile.write_bytes(REG.profile_payload(profile.read_bytes()))
+        self.assertEqual(self.cli('apply')[0], 0)
+        self.assertTrue((self.home / REG.PROFILE_STATE).exists())
+        (self.home / REG.PROFILE_STATE).unlink()
+        self.change_contract()
+        before = self.files()
+        code, result = self.cli('apply')
+        self.assertEqual(code, 2)
+        self.assertIn('back up and reconcile manually', result['reason'])
+        self.assertEqual(self.files(), before)
+
+    def test_invalid_state_and_custom_registration_preserved(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        state = self.home / REG.PROFILE_STATE
+        original = state.read_bytes()
+        for invalid in (b'not-json', b'[]', b'{"schema_version":1}', b'{"secret":"DO_NOT_DISCLOSE"}'):
+            state.write_bytes(invalid)
+            before = self.files()
+            code, result = self.cli('apply')
+            self.assertEqual(code, 2)
+            self.assertNotIn('DO_NOT_DISCLOSE', json.dumps(result))
+            self.assertEqual(self.files(), before)
+        state.write_bytes(original)
+        config = self.home / 'config.toml'
+        config.write_bytes(config.read_bytes().replace(b'description = "Own sdd."', b'description = "custom"'))
+        self.change_contract(responsibility=True)
+        before = self.files()
+        self.assertEqual(self.cli('apply')[0], 2)
+        self.assertEqual(self.files(), before)
+
+    def test_upgrade_partial_failure_restores_profile_config_and_state(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        self.change_contract(responsibility=True)
+        before = self.files()
+        real_replace = REG.replace_file
+        calls = 0
+
+        def failing_replace(*args, **kwargs):
+            nonlocal calls
+            calls += 1
+            if calls == 3:  # profile and config changed; fail writing provenance state.
+                raise OSError('synthetic state replacement failure')
+            return real_replace(*args, **kwargs)
+
+        with patch.object(REG, 'replace_file', side_effect=failing_replace):
+            self.assertEqual(self.cli('apply')[0], 2)
+        after = self.files()
+        for name, data in before.items():
+            self.assertEqual(after[name], data)
+        self.assertEqual(self.cli('check')[0], 1)
+
+    def test_managed_state_hardlink_blocks_without_external_mutation(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        external = self.base / 'external-state.json'
+        state = self.home / REG.PROFILE_STATE
+        os.link(state, external)
+        original = external.read_bytes()
+        self.change_contract()
+        self.assertEqual(self.cli('apply')[0], 2)
+        self.assertEqual(external.read_bytes(), original)
+
+    def test_custom_table_layout_with_table_text_inside_user_string_is_not_rewritten(self):
+        self.assertEqual(self.cli('apply')[0], 0)
+        config = self.home / 'config.toml'
+        original = config.read_bytes()
+        custom = original.replace(b'[agents.office_sdd]', b'[agents."office_sdd"]')
+        user = b'custom_text = """\n[agents.office_sdd]\ndescription = "Own sdd."\n"""\n'
+        config.write_bytes(user + custom)
+        self.change_contract(responsibility=True)
+        before = self.files()
+        self.assertEqual(self.cli('apply')[0], 2)
+        self.assertEqual(self.files(), before)
+
 
 if __name__ == '__main__':
     unittest.main()
