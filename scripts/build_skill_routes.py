@@ -81,6 +81,27 @@ TRIGGERS = {
  'sdd-review':['review','qa','pr'],
 }
 
+# Additive V2 behavior; the imported V1 skill bodies remain byte-for-byte intact.
+V2_OVERLAYS = {
+ 'global-core': {
+  'id': 'curated-catalog-before-external-research',
+  'summary': 'Search current task and project sources, then The Office V2 catalog before external search; verify dynamic claims with official sources.',
+  'text': '''## Curated catalog before external research
+
+For technical, product, API, repository, library or tool research, consult current task and project sources first, then search The Office shared catalog before using the web, GitHub search or code-search services. In a The Office checkout, use:
+
+```bash
+python scripts/office.py search "<specific need>" --index library/indexes/resources.json --limit 8
+```
+
+Read the relevant matched resource files, not only search metadata and not the entire catalog. In an installed bundle, resolve the command and index from that active bundle; do not guess sibling cache paths. If the catalog is inaccessible, state that and continue with the sources actually available. Never claim a search was performed when it was not.
+
+Use catalog entries as curated starting points. For current API behavior, official provider documentation, price, quotas, legal terms and availability, verify the relevant claims with the provider after the internal search. A catalog candidate is enough to keep PRD discovery moving: record it as a candidate and leave unsupported facts UNKNOWN or NOT VALIDATED; do not block the PRD by asserting that a paid API or new provider is required before checking the catalog.
+
+Use public-code search such as the cataloged Grep MCP only when repository examples would materially help. Confirm the capability is actually available in the current host; if it is not, use the grep.app site through approved browsing when available. Treat code snippets as examples, not proof of provider support, current API behavior, license compatibility or production suitability. Do not install a CLI or connect an MCP automatically.'''
+ },
+}
+
 def digest(text):
  return hashlib.sha256(text.encode('utf-8')).hexdigest()
 
@@ -138,6 +159,8 @@ def build(root=ROOT):
     required.insert(0,'global-core')
    triggers=TRIGGERS.get(sid,[group.replace('-',' '),sector])
    entry={'id':sid,'sector':sector,'path':path,'source':source_id,'role':'core' if group=='core' else 'capability','requires':required,'triggers':triggers,'source_sections':[s['id'] for s in chunks],'reference_base':str(Path(rel).parent),'reference_fallback':f'plugins/{source_id}'}
+   if sid in V2_OVERLAYS:
+    entry['v2_overlays']=[V2_OVERLAYS[sid]['id']]
    reference_map=[]
    for target in dict.fromkeys(re.findall(r'\]\(([^)]+)\)', ''.join(item['text'] for item in chunks))):
     if '://' in target or target.startswith('#'):
@@ -160,6 +183,8 @@ def build(root=ROOT):
    wrapper+=f'Resolve original relative references and backticked resource paths from repository root `{Path(rel).parent}/`;\nfor plugin templates/scripts absent there, use repository root `plugins/{source_id}/`.\n'
    wrapper+='Never resolve inherited relative paths against this generated directory.\n'
    wrapper+='Load only the references whose conditions hold; retain all explicit mandatory gates.\n\n'
+   if sid in V2_OVERLAYS:
+    wrapper+=V2_OVERLAYS[sid]['text']+'\n\n'
    if reference_map:
     wrapper+='Canonical link resolution (repository-relative paths, not skill-directory-relative):\n'
     for ref in reference_map:
@@ -222,7 +247,9 @@ def build(root=ROOT):
  outputs['library/indexes/skill-routes.json']=json.dumps(registry,ensure_ascii=False,indent=2)+'\n'
  rows=['# Lossless V1 to V2 skill migration','',
  'This is a local functional migration, not a replacement execution engine. Original V1 resources remain preserved at canonical paths or explicit byte-identical archives. Studio PRD evolves under approved STUDIO-PRD-002 / ADR 006; its current slices cover the evolved canonical source, while the original remains in docs/migration/v1-frozen/. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.','',
- 'Each V1 body section is assigned once. Registry offsets are 1-based inclusive and SHA-256 hashes cover exact UTF-8 text. Frontmatter remains in the canonical source and is covered by the full source hash. Generated skills contain source text verbatim after an explicit reference-base adapter. Regenerate with `python scripts/build_skill_routes.py`; validate with `python scripts/build_skill_routes.py --check`.','',
+ 'Each V1 body section is assigned once. Registry offsets are 1-based inclusive and SHA-256 hashes cover exact UTF-8 text. Frontmatter remains in the canonical source and is covered by the full source hash. Generated skills contain source text verbatim after an explicit reference-base adapter. Additive V2-only overlays are recorded in `library/indexes/skill-routes.json` and do not modify imported V1 files. Regenerate with `python scripts/build_skill_routes.py`; validate with `python scripts/build_skill_routes.py --check`.','',
+ '## Additive V2 overlays','',
+ *[f'- `{sid}` / `{overlay["id"]}`: {overlay["summary"]} Imported V1 content remains unchanged.' for sid,overlay in V2_OVERLAYS.items()],'',
  'Select global core, relevant sector core, and only capabilities required by the Task. A selected capability depends on its core. Explicit IDs take priority over lexical trigger hints; ambiguous matching must be resolved from Task scope, not treated as authorization. Shared executor aliases do not create duplicate skills.','',
  'Full behavioral parity across arbitrary agent hosts is NOT VALIDATED. Exact text coverage proves no section was dropped; it does not prove all models follow the instructions, nor tokens saved. SDD task-contract generation and implementation workflow remain deliberately cohesive and relatively large to preserve coupled gates. Legacy bundles continue loading their original monolithic SKILL.md, so selective-loading gains require the V2 router.','',
  '| V1 source | Section and original lines | V2 skill |','| --- | --- | --- |']

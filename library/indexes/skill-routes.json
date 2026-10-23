@@ -2222,6 +2222,9 @@
       ],
       "reference_base": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global",
       "reference_fallback": "plugins/parceiro-estrategico-global",
+      "v2_overlays": [
+        "curated-catalog-before-external-research"
+      ],
       "reference_map": []
     },
     {
