@@ -21,6 +21,7 @@ projeto real; não representam execuções já realizadas.
 | Ver o fluxo | [Fluxograma](architecture/delivery-flow.svg) |
 | Atualizar sem perder customizações | [Atualização](operations/updating.md) |
 | Conferir limitações reais | [Plataformas](operations/platforms.md) |
+| Notas da versão alpha.2 | [The Office V2 2.0.0-alpha.2](releases/2.0.0-alpha.2.md) |
 
 Decisões: [ADRs](adr/). Evidências: [migração](migration/), [receipts](receipts/),
 [Task-mestra](tasks/THEOFFICE-V2-001.md). A Task é escopo; receipts e comentários

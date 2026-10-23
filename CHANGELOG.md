@@ -7,11 +7,6 @@ unica estabelecida; cada plugin/host possui seu manifest.
 
 ## Nao publicado
 
-- The Office V2 `2.0.0-alpha.2`: adiciona onboarding Codex via manifesto e Setup
-  pós-instalação para registrar a regra global de delegação com backup, diff,
-  aprovação e validação. A instalação não executa a configuração automaticamente;
-  agentes canônicos, perfis nativos e dispatch real são estados separados.
-
 - TASK-053: upgrade aditivo do Minimal Code Gate inspirado em Ponytail, com
   limpeza comprovada, biblioteca padrao/plataforma/dependencias, correcao na
   origem e consumidores completos. Preserva regras anteriores, escopo aprovado
