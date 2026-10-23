@@ -1,0 +1,14 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 2,
+  "sector": "governance",
+  "result": "READY_FOR_WINDOWS_SEVEN_DIAGNOSIS",
+  "observed_head": "ee0eb40b1364e4475267040411ff90512efca5e0",
+  "issue_updatedAt": "2026-10-23T23:07:46Z",
+  "contract_sha256": "6161ad6250bad5a836be51889049661afc9aba69d0adb7f592c138c574c6acf4",
+  "local_fields_match": true,
+  "remote_issue_body_match": true,
+  "prior_receipts": "Revision1 owner evidence remains historical and scoped to unchanged helper/artifacts; it does not attest new AC-06.",
+  "scope_boundary": "No implementation/protected-path expansion before diagnosis and explicit exact-file routing.",
+  "next_action": "QA execute windows-seven list and return diagnosis; retain other owners evidence without simulating renewed approval."
+}

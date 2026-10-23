@@ -1,6 +1,6 @@
 # OFFICE-GLOBAL-AGENTS-001: Global sector agents
 
-Contract revision: 1. NORMAL. Branch: `codex/global-sector-agents`.
+Contract revision: 2. NORMAL. Branch: `codex/global-sector-agents`.
 
 
 <!-- contract-field: schema_version -->
@@ -13,7 +13,7 @@ Contract revision: 1. NORMAL. Branch: `codex/global-sector-agents`.
 <!-- contract-field: contract_revision -->
 ## contract_revision
 
-1
+2
 
 <!-- /contract-field: contract_revision -->
 
@@ -57,7 +57,7 @@ Make the existing 15 sector profiles reusable across projects and chats without 
 <!-- contract-field: authorization -->
 ## authorization
 
-- **source**: Direct user request 2026-10-23 to apply global agents and upload plugin updates.
+- **source**: Direct user request 2026-10-23 to apply global agents and upload plugin updates. User explicitly requested native Windows execution of the seven Ubuntu-skipped Windows cases and correction of reproduced applicable failures before PR readiness.
 - **allowed**: Scoped implementation, tests, branch push and review PR.
 - **excluded**: Merge, deploy, unrelated installation, permission/model/MCP changes. No live host apply in this scope.
 
@@ -94,7 +94,7 @@ plugins/**; credentials; runtime-state; models/providers/MCP/permissions setting
 <!-- contract-field: requirements -->
 ## requirements
 
-AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.
 
 <!-- /contract-field: requirements -->
 
@@ -139,6 +139,10 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
   - **id**: documentation
   - **owner_skill**: office_documentation
   - **title**: Focused registration and routing documentation
+-
+  - **id**: windows-seven
+  - **owner_skill**: office_qa
+  - **title**: Native Windows seven-case validation
 
 <!-- /contract-field: microtasks -->
 
@@ -290,6 +294,37 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
       - **instruction**: Reconcile current contract, owner receipts, diff, test evidence and documentation.
     -
       - **instruction**: Commit scoped files, push isolated branch and create review PR; never merge/deploy.
+-
+  - **list_id**: windows-seven
+  - **owner_skill**: office_qa
+  - **phase**: validation
+  - **objective**: Enumerate and execute the seven Windows-specific cases skipped on Ubuntu, natively on Windows.
+  - **microtask_ids**:
+    windows-seven
+  - **depends_on**:
+    None.
+  - **references**:
+    POLICY; V2; INSTALL; HOST
+  - **allowed_paths**:
+    docs/receipts/OFFICE-GLOBAL-AGENTS-001-windows*
+  - **protected_paths**:
+    Same protected_paths as the global protected_paths section above (all entries inherited).
+  - **deliverables**:
+    Seven exact test IDs, native runtime, commands/outcomes and reproduction evidence; exact affected files if failures.
+  - **completion_condition**: Seven cases executed without skips, or exact reproducible blocker recorded; no readiness claim while an applicable failure remains.
+  - **required_tests**:
+    Seven Windows-specific skipped tests on native Windows, synthetic temporary destinations only.
+  - **acceptance_criteria**:
+    AC-06
+  - **stop_conditions**:
+    All global stop_conditions above apply unchanged.
+  - **checklist**:
+    -
+      - **instruction**: Recover the seven actual Windows-only skipped test IDs from existing CI/tests, preserving the eighth unrelated skip.
+    -
+      - **instruction**: Execute natively on Windows, using temporary paths and no real host config or infrastructure mutation.
+    -
+      - **instruction**: Report results/diagnosis and exact fix candidates; do not edit implementation or bypass invariants.
 
 <!-- /contract-field: execution_lists -->
 
@@ -422,7 +457,7 @@ AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* prof
 <!-- contract-field: acceptance_criteria -->
 ## acceptance_criteria
 
-AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.
+AC-01: Reproducible opt-in plan/check/apply registration of all 15 office_* profiles from canonical contracts; no persistent agents or automatic invocation of all sectors.; AC-02: Default plan/check read-only; explicit apply backs up affected files and preserves unrelated TOML settings, user files and existing customizations; conflicts block safely.; AC-03: Global instructions route activated sectors to actual registered host subagents, distinguish registration from execution, and retain human release gates.; AC-04: Independent QA covers missing/invalid configuration, repeat apply, collisions/custom changes, dry run and preservation; docs accurately distinguish installed/registered/available/executed.; AC-05: Isolated reviewed commit, branch and PR published with exact validation/limitations; no merge/deploy or changed permissions/models/MCP.; AC-06: Execute the seven Windows-specific cases skipped by Ubuntu CI on native Windows with the responsible QA agent; enumerate test IDs/results and fix reproduced applicable failures under exact diagnosed paths, then independent retest before considering PR ready.
 
 <!-- /contract-field: acceptance_criteria -->
 
@@ -436,7 +471,7 @@ scope_expansion_required; source_of_truth_conflict; mandatory_reference_missing;
 <!-- contract-field: required_tests -->
 ## required_tests
 
-Focused unit tests for registration/preservation and explicit conflict handling.; Independent QA and Security scoped checks.; Existing generated-skills check, applicable regression and git diff --check; distinguish preexisting failures.
+Focused unit tests for registration/preservation and explicit conflict handling.; Independent QA and Security scoped checks.; Existing generated-skills check, applicable regression and git diff --check; distinguish preexisting failures.; Execute seven Ubuntu-skipped Windows-specific cases natively on Windows; diagnose and independently retest authorized applicable corrections.
 
 <!-- /contract-field: required_tests -->
 
@@ -456,10 +491,25 @@ Host has 15 registered profiles and global routing instructions per parent evide
 
 <!-- /contract-field: current_state -->
 
+<!-- contract-field: revision2_addendum -->
+## revision2_addendum
+
+- **goal**: Close the seven native Windows validation obligations inside the same Task and PR #8.
+- **observed_head**: ee0eb40b1364e4475267040411ff90512efca5e0
+- **native_windows**: Required; Linux CI skips do not satisfy these seven cases.
+- **first_step**: Independent office_qa enumerates and executes only the seven Windows-specific skipped tests using temporary targets; record test IDs and actual outcomes.
+- **fix_scope**: Pending diagnosis; only reproduced applicable defects. No code/test/protected-path permission is granted before exact file paths and source-preservation impacts are reconciled.
+- **source_freeze**: If a defect concerns frozen V1 sources or PR #6 protected files, record the conflict and alternatives before changing scope. Do not copy four preexisting dirty patches.
+- **validation**: Applicable responsible executor fixes, independent QA retest, Security only for triggered affected behavior; publish to existing PR #8 and observe final-head CI.
+- **human_gates**: No live host apply, merge, deploy or closing PR. Existing synthetic/OS limitations remain.
+
+<!-- /contract-field: revision2_addendum -->
+
 ## Execution prompts
 
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=register`, revision 1, owner `office_environment`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=documentation`, revision 1, owner `office_documentation`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=qa`, revision 1, owner `office_qa`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=security`, revision 1, owner `office_security`. Inherit every scope constraint and source.
-- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=publish`, revision 1, owner `office_governance`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=register`, revision 2, owner `office_environment`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=documentation`, revision 2, owner `office_documentation`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=qa`, revision 2, owner `office_qa`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=security`, revision 2, owner `office_security`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=publish`, revision 2, owner `office_governance`. Inherit every scope constraint and source.
+- [ ] Execute [single Task JSON](../execution/OFFICE-GLOBAL-AGENTS-001.json), `list_id=windows-seven`, revision 2, owner `office_qa`. Inherit every scope constraint and source.
