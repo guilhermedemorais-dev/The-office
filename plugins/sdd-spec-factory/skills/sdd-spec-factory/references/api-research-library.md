@@ -15,7 +15,7 @@ acceptance criteria; a free external API is an option, not a mandatory dependenc
 
 | Source | URL | Use |
 | --- | --- | --- |
-| Inventário de APIs Gratuitas | https://github.com/philipecomputacao/inventario-apis-gratuitas | Broad API/service discovery, including Brazilian sources and a separate MCP collection. |
+| Inventário de APIs Gratuitas | https://github.com/philipecomputacao/inventario-apis-gratuitas | Broad API/service discovery, including Brazilian government APIs and a separate MCP collection. See the [V2 discovery record](../../../../../library/integrations/api-discovery-brazilian-inventory.md). |
 | PublicAPIs.io Development | https://publicapis.io/category/development | Find development, testing and validation API candidates by category. |
 
 These third-party directories are leads, not authoritative provider
@@ -46,6 +46,8 @@ environment-library registration.
 
 - Official client: [APIBrasil/apibrasil-mcp-client](https://github.com/APIBrasil/apibrasil-mcp-client),
   verified revision `f030daeb4c47df65380bb0f07eccfdec3561aa03`.
+- See the [V2 APIBrasil MCP consumption reference](../../../../../library/integrations/apibrasil-mcp-candidate.md)
+  for a standalone summary and connection boundaries.
 - [Pinned README](https://github.com/APIBrasil/apibrasil-mcp-client/blob/f030daeb4c47df65380bb0f07eccfdec3561aa03/README.md)
   and [MIT code license](https://github.com/APIBrasil/apibrasil-mcp-client/blob/f030daeb4c47df65380bb0f07eccfdec3561aa03/LICENSE).
 - Provider: https://www.apibrasil.io/ ; API docs: https://doc.apibrasil.io/ .
