@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 3,
+  "list_id": "register",
+  "owner": "office_environment",
+  "observed_at": "2026-10-23T23:13:47Z",
+  "result": "IMPLEMENTED_WITH_EXECUTOR_TEST_EVIDENCE",
+  "finding": "PR #8 discussion_r4364962075, generated profiles could not refresh after ordinary canonical contract changes",
+  "contract": {
+    "path": "docs/execution/OFFICE-GLOBAL-AGENTS-001.json",
+    "sha256": "c014d1dd722fdc03cb32ed53083ef1154275e59bcd8aa2501ea63ef257183b67",
+    "equivalence_receipt_read": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision3-equivalence.json"
+  },
+  "skill_receipt": {
+    "selected_skills_previously_read_fully_in_same_agent_execution": [
+      "global-core",
+      "environment-core",
+      "environment-bootstrap",
+      "environment-platform-state"
+    ],
+    "selection_command": "python scripts/office.py plan environment --capability environment-bootstrap --capability environment-platform-state",
+    "selection_result": "selection_complete true, exit 0; selection is not execution",
+    "reference_base": "plugins/dev-environment-standard/skills/dev-environment-standard",
+    "mandatory_references_read": [
+      "plugins/dev-environment-standard/skills/dev-environment-standard/references/operations.md",
+      "plugins/dev-environment-standard/skills/dev-environment-standard/references/state-and-consent.md"
+    ],
+    "sources_refreshed": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/environment/AGENT.md",
+      "docs/execution/OFFICE-GLOBAL-AGENTS-001.json revision 3 register list and AC-07",
+      "scripts/register_codex_agents.py",
+      "tests/test_codex_agent_registration.py"
+    ]
+  },
+  "execution_receipt": {
+    "reproduction": {
+      "scope": "Temporary synthetic bundle and CODEX_HOME only, before repository edits",
+      "initial_apply": "exit 0 APPLIED",
+      "change": "Appended output text to the temporary sdd canonical contract",
+      "subsequent_check": "exit 2 BLOCKED: customized agent profile office_sdd",
+      "conclusion": "Reproduced ordinary-update false customization conflict"
+    },
+    "scope_control": "Waited for Governance revision 3 equivalence before editing helper or tests",
+    "implemented": [
+      "Versioned profile envelope with payload checksum",
+      "Separate local .office-agent-profiles.json state records generated file hash, prior description and configuration path",
+      "Upgrade checks separate state against actual bytes, parsed identity, previous registration and envelope before replacement",
+      "Generated description changes use literal bounded substitution plus complete semantic TOML preservation check",
+      "Local state participates in path checks, snapshots, backups and rollback",
+      "Legacy profiles recognized only by exact equality to current generated marked or unmarked payload; divergence blocks with manual reconciliation guidance",
+      "Added regression coverage for ordinary upgrades, read-only checks, preservation, envelope tampering, self-rehash without matching state, wrong identity, legacy migration, invalid state, state hardlinks and partial-upgrade rollback"
+    ],
+    "checks": [
+      {
+        "command": "python -m unittest discover -s tests -p test_codex_agent_registration.py -v",
+        "exit_code": 0,
+        "tests": 23,
+        "skips": 0,
+        "duration_seconds": 6.062,
+        "result": "PASS"
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0,
+        "result": "PASS"
+      }
+    ],
+    "live_host_apply": "NOT_PERFORMED",
+    "commit_push_merge_deploy": "NOT_PERFORMED_BY_ENVIRONMENT",
+    "independent_sector_approval": "NOT_ATTESTED"
+  },
+  "affected_artifacts": [
+    {
+      "path": "scripts/register_codex_agents.py",
+      "sha256": "18e158c3d6d2e8dbcccc0c7824b33ab5dfbaffa05c3987d44758908c5552dc0d"
+    },
+    {
+      "path": "tests/test_codex_agent_registration.py",
+      "sha256": "23fa04ad625fcd668392515ed873e5622f5be7c261e169f87b3c00cf40c7381f"
+    }
+  ],
+  "limitations": [
+    "Local state and checksums identify accidental/customized divergence; they are not signatures and cannot authenticate against an actor controlling the entire CODEX_HOME.",
+    "Legacy divergent profiles without matching prior state require explicit backup and manual reconciliation; there is no forced adoption option.",
+    "Unusual customized registration formatting blocks description replacement rather than rewriting unrelated TOML.",
+    "Existing trusted/quiescent filesystem assumption, Windows ACL limitation and best-effort multi-file rollback limitation remain unchanged.",
+    "No live host apply, agent execution, existing-chat reload, documentation acceptance, independent QA/Security approval or production readiness is attested here."
+  ],
+  "next_action": "Independent QA and Security inspect the recorded helper/test hashes, Documentation assesses upgrade instructions, and Governance reconciles current revision before publication."
+}

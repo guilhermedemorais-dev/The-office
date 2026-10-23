@@ -1,0 +1,30 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 2,
+  "owner": "office_governance",
+  "list_id": "publish",
+  "state": "READY_FOR_EVIDENCE_PUBLICATION",
+  "observed_head": "ee0eb40b1364e4475267040411ff90512efca5e0",
+  "actual_operations": [
+    "Read git status/remote main and PR head",
+    "Updated same Task contract/mirror to revision2 per explicit user instruction",
+    "Updated Issue7 and read back exact normative mirror",
+    "Preserved all source/test/config/protected paths"
+  ],
+  "source_currentity": {
+    "contract_sha256": "6161ad6250bad5a836be51889049661afc9aba69d0adb7f592c138c574c6acf4",
+    "helper_unchanged": true,
+    "test_unchanged": true
+  },
+  "revision1_receipt_applicability": "Historical owner results remain applicable only to unchanged implementation/docs/artifacts; prior contract hash is historical and not asserted equal to rev2. New AC06 needs actual native Windows QA receipt. No renewed sector approval invented.",
+  "limits": [
+    "No code fix authorized without reproduced failure/exact paths; no failures reported by parent initially.",
+    "No frozen V1 or PR6 scope expansion.",
+    "No live host apply, merge, deploy or closing PR."
+  ],
+  "next_action": "Commit/push evidence-only update to existing PR8 and observe final-head CI; retain human review/no merge/no close.",
+  "native_windows_owner_receipt": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-windows-qa.json",
+  "actual_result": "7 native Windows cases PASS, zero skips; no failure reproduced and no fix needed.",
+  "artifact_currentity": "All four tested source hashes MATCH current files and no diff from tested head ee0eb40.",
+  "publication_scope": "Contract, mirror and revision2/Windows receipts only. Existing code/tests, frozen V1 and revision1 receipts unchanged."
+}

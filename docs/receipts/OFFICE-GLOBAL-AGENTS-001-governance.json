@@ -1,0 +1,128 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 1,
+  "list_id": "publish",
+  "owner": "office_governance",
+  "state": "READY_FOR_REVIEW_PUBLICATION",
+  "SKILL_RECEIPT": {
+    "selection": "python scripts/office.py plan governance --capability orchestrator-task-governance --capability orchestrator-review --capability delivery-metrics",
+    "selection_complete": true,
+    "sources_loaded": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/governance/AGENT.md",
+      "agents/orchestrator/AGENT.md",
+      "skills/global-core/SKILL.md",
+      "skills/orchestrator-core/SKILL.md",
+      "skills/orchestrator-task-governance/SKILL.md",
+      "skills/orchestrator-review/SKILL.md",
+      "skills/delivery-metrics/SKILL.md",
+      "skills/delivery-metrics/references/measurement.md",
+      "docs/operations/delivery-lifecycle.md",
+      "docs/operations/delivery-report-guide.md",
+      "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-routing.md"
+    ],
+    "reference_bases": {
+      "global-core": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global",
+      "orchestrator": "plugins/dev-workflow-standard/skills/dev-workflow-standard",
+      "delivery-metrics": "."
+    }
+  },
+  "EXECUTION_RECEIPT": {
+    "base": "d97ec71828a275b983262470beb67b05ac074518",
+    "branch": "codex/global-sector-agents",
+    "issue": "https://github.com/guilhermedemorais-dev/The-office/issues/7",
+    "remote_issue_body_matches_local": true,
+    "current_QA_Security_artifact_hashes_match": true,
+    "owner_receipts": [
+      "register",
+      "qa",
+      "security",
+      "documentation"
+    ],
+    "other_owner_results": "Imported actual returned receipts only; no self-certification of another sector.",
+    "checks": [
+      {
+        "command": "python -m unittest discover -s tests -q",
+        "exit_code": 1,
+        "tests": 739,
+        "failures": 5,
+        "errors": 2,
+        "skipped": 1,
+        "seconds": 62.579
+      },
+      {
+        "command": "Run the four failing test modules in isolated git archive of base",
+        "exit_code": 1,
+        "result": "Five existing Windows failures/errors reproduced; two new documentation regressions absent in baseline."
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      }
+    ],
+    "new_findings": [
+      "AGENTS.md length108 exceeds existing100-line limit.",
+      "CHANGELOG.md is frozen in V1 inventory; new changelog delta breaks preservation."
+    ],
+    "baseline_failures": [
+      "test_stack_cli_catalog.test_metadata_rebuild_tracks_catalog_and_policy",
+      "test_v2_skill_routes.test_all_canonical_skills_are_covered_without_vendor_rewrite",
+      "test_v2_skill_routes.test_no_generation_drift",
+      "test_v2_skill_routes.test_implementation_safety_workflow_is_always_in_core: cp1252 UnicodeDecodeError",
+      "test_v2_skill_routes.test_trivial_ui_does_not_require_full_component_catalog: cp1252 UnicodeDecodeError"
+    ],
+    "preservation": "No diff in protected PR #6 paths or plugins; original dirty source/update checkouts untouched.",
+    "live_apply": false,
+    "merge_deploy": false,
+    "new_findings_resolution": "Both introduced failures fixed by Documentation and independently retested by QA: 13 focused tests PASS; AGENTS100 lines; CHANGELOG exact base. Helper/test unchanged, prior 14-test checks remain applicable.",
+    "security_currentity": "All artifacts/hashes covered in Security owner receipt remain unchanged, including helper/test/contract/guide. Root AGENTS documentation compaction does not alter reviewed executable helper or global generated instruction block.",
+    "branch_protection_observation": "GitHub main.protected=false, read-only observation; does not authorize merge or self-approval.",
+    "publication": "PENDING",
+    "checkpoint_comment": "https://github.com/guilhermedemorais-dev/The-office/issues/7#issuecomment-6376440439",
+    "final_owner_hash_reconciliation": "MATCH",
+    "git_newline_normalization": [
+      {
+        "path": "docs/execution/OFFICE-GLOBAL-AGENTS-001.json",
+        "owner_observed_local_sha256": "ee7837cd592129b3eb8037d90be29ae30cb6c81d3060fa7a6319a43c5ce61aa7",
+        "published_LF_blob_sha256": "891b4127fe893202e2c6b97bc777dfa6efe56dcaeb72c3bd916a0f3303d8c640",
+        "difference": "Git LF normalization only; no semantic change. Original owner receipts remain observations of Windows bytes."
+      },
+      {
+        "path": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-equivalence.json",
+        "owner_observed_local_sha256": "a3283e7bbb9482af82965d6b2703d922ed6a6ccecb42a892a0afe55df2ba3285",
+        "published_LF_blob_sha256": "0f8004661274f3861d79b6979dd5339fba4d5e769134be3b6b0f4f82052409a4",
+        "difference": "Git LF normalization only; no semantic change. Original owner receipts remain observations of Windows bytes."
+      },
+      {
+        "path": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-qa.json",
+        "owner_observed_local_sha256": "7b54d9d3e14f1049bcc22f8d4708292876473b5ad1ee7910c778f974587a2735",
+        "published_LF_blob_sha256": "3df4bad42ccf7cd7ef7b55c103bb9e25a5fa9796b885a198dd8ff7394ad9bb3c",
+        "difference": "Git LF normalization only; no semantic change. Original owner receipts remain observations of Windows bytes."
+      },
+      {
+        "path": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-security.json",
+        "owner_observed_local_sha256": "fd6304de3c66935db95a6c3db169d5ea402e2a455ee4f6241d23fc73416256b1",
+        "published_LF_blob_sha256": "e6e1931efc68078813cff22e6addbe4c1c151fe39e244764facdf4b7b69d1acc",
+        "difference": "Git LF normalization only; no semantic change. Original owner receipts remain observations of Windows bytes."
+      },
+      {
+        "path": "docs/tasks/OFFICE-GLOBAL-AGENTS-001.md",
+        "owner_observed_local_sha256": "b6b0a2737f8517ea73c584bcf9ab2b18062c37a8756b74132c4fa9409164027c",
+        "published_LF_blob_sha256": "53ddba8db70c69a26e1d55ef53d4cf7d4529af19059a63bd2447e7bb69e463c6",
+        "difference": "Git LF normalization only; no semantic change. Original owner receipts remain observations of Windows bytes."
+      }
+    ]
+  },
+  "delivery_checkpoint": {
+    "criteria_denominator": 5,
+    "accepted_criteria": 4,
+    "publication_criterion": "IN_PROGRESS",
+    "calculator": "python scripts/delivery_report.py disposable snapshot --root worktree --format json",
+    "calculator_exit": 0,
+    "closure_ready": false,
+    "canonical_done": "NOT_VERIFIED",
+    "metrics_limitation": "Scope-unit checkpoint, not effort/time or human acceptance; new documentation regressions currently require rework."
+  },
+  "next_action": "Commit scoped artifacts, push isolated branch, open review PR, observe actual CI/bot state."
+}

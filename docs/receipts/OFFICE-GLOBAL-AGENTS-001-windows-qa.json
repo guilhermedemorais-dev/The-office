@@ -1,0 +1,145 @@
+{
+  "receipt_type": "EXECUTION_RECEIPT",
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 2,
+  "sector": "qa",
+  "list_id": "windows-seven",
+  "phase": "validation",
+  "mode": "scoped-qa",
+  "QA_STATUS": "PASS",
+  "state": "COMPLETED",
+  "tested_head": "ee0eb40b1364e4475267040411ff90512efca5e0",
+  "invocation_evidence": "Actual office_qa subagent /root/windows_qa_seven; independently executed native tool commands in this session.",
+  "inputs_used": [
+    "docs/execution/OFFICE-GLOBAL-AGENTS-001.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-revision2-equivalence.json",
+    "tests/test_windows_file_guards.py",
+    "tests/test_seo_runtime_bootstrap.py",
+    "plugins/devops-standard/skills/devops-standard/scripts/github_governance.py",
+    "plugins/seo-standard/runtime/bootstrap.py"
+  ],
+  "contract_sha256": "6161ad6250bad5a836be51889049661afc9aba69d0adb7f592c138c574c6acf4",
+  "environment": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "sys_platform": "win32",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\teste\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "shell": "PowerShell",
+    "fixtures": "Synthetic tempfile.TemporaryDirectory only, real native junction/hardlink/HANDLE behavior; no WSL."
+  },
+  "artifact_sha256": {
+    "tests/test_windows_file_guards.py": "0f9a9fd653b4ef3255ff1a74d67078c6dd18949569cd5827984b06d390116256",
+    "tests/test_seo_runtime_bootstrap.py": "61556a30d53c615a6fb76ee4d97e528171669bea491431f55d95a673f7cb6886",
+    "plugins/devops-standard/skills/devops-standard/scripts/github_governance.py": "7aa54c7700a9c542899a7931bca81d1e882e34ccda306fd63006ad9d0df4d176",
+    "plugins/seo-standard/runtime/bootstrap.py": "9319c835b4754a8be630919aa57c44e81e4316d7269e6ea4b9394bb706264011"
+  },
+  "SKILL_RECEIPT": {
+    "status": "LOADED",
+    "canonical_bundle": "C:/Users/teste/.codex/plugins/cache/the-office-local/the-office-v2/2.0.0-alpha.1",
+    "selection_command": "python scripts/office.py plan qa --capability qa-validation",
+    "skills": [
+      "skills/global-core/SKILL.md",
+      "skills/qa-core/SKILL.md",
+      "skills/qa-validation/SKILL.md"
+    ],
+    "reference_base": "plugins/qa-testing-standard/skills/qa-testing-standard",
+    "references_loaded": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/qa/AGENT.md",
+      "agents/orchestrator/AGENT.md",
+      "docs/specs/the-office-v2.md",
+      "docs/operations/installation.md",
+      "docs/operations/delivery-lifecycle.md",
+      "plugins/qa-testing-standard/skills/qa-testing-standard/references/test-strategy.md",
+      "plugins/qa-testing-standard/skills/qa-testing-standard/references/bug-report.md",
+      "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/skill-owned-tools.md",
+      "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/minimal-code-gate.md",
+      "plugins/dev-implementation-standard/skills/dev-implementation-standard/references/tool-registry.json"
+    ],
+    "applied_rules": [
+      "Independent functional checks; no implementation edits",
+      "Native runtime and synthetic fixtures only",
+      "Keep Security/DevOps/visual acceptance separate"
+    ]
+  },
+  "QA_GUARDRAILS": [
+    "Only this receipt written by QA",
+    "No real CODEX_HOME, services, installs, network effects, or external data",
+    "No weakening tests or skipping required cases"
+  ],
+  "TEST_SCENARIOS": [
+    {
+      "id": "test_windows_file_guards.WindowsFileGuards.test_exclusive_file_and_pinned_root_reject_concurrent_mutation",
+      "result": "PASS"
+    },
+    {
+      "id": "test_windows_file_guards.WindowsFileGuards.test_existing_file_is_not_overwritten_by_new_file_proposal",
+      "result": "PASS"
+    },
+    {
+      "id": "test_windows_file_guards.WindowsFileGuards.test_hardlink_is_rejected_without_changing_owned_external_file",
+      "result": "PASS"
+    },
+    {
+      "id": "test_windows_file_guards.WindowsFileGuards.test_junction_parent_rejected_without_creating_external_file",
+      "result": "PASS"
+    },
+    {
+      "id": "test_windows_file_guards.WindowsFileGuards.test_new_nested_file_creation_and_approved_existing_replacement",
+      "result": "PASS"
+    },
+    {
+      "id": "test_windows_file_guards.WindowsFileGuards.test_write_time_hash_preserves_concurrent_content",
+      "result": "PASS"
+    },
+    {
+      "id": "test_seo_runtime_bootstrap.SeoBootstrap.test_runtime_junction_rejected_before_install_or_external_write",
+      "result": "PASS"
+    }
+  ],
+  "REGRESSION_TARGETS": [
+    "tests/test_windows_file_guards.py",
+    "tests/test_seo_runtime_bootstrap.py",
+    "plugins/devops-standard/skills/devops-standard/scripts/github_governance.py",
+    "plugins/seo-standard/runtime/bootstrap.py"
+  ],
+  "VALIDATION_REQUIREMENTS": [
+    "Exactly seven executed natively, zero skips",
+    "All existing assertions retained",
+    "Current tested source hashes recorded"
+  ],
+  "validation_evidence": [
+    {
+      "command": "python -m unittest discover -s tests -p test_windows_file_guards.py -v",
+      "exit_code": 0,
+      "tests": 6,
+      "passed": 6,
+      "skipped": 0,
+      "seconds": 0.065
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_seo_runtime_bootstrap.py -k test_runtime_junction_rejected_before_install_or_external_write -v",
+      "exit_code": 0,
+      "tests": 1,
+      "passed": 1,
+      "skipped": 0,
+      "seconds": 0.259
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "bug_disposition": "No failure reproduced in these seven cases. No correction needed or made. No rerun necessary after governance-only contract/receipt changes; tested artifact hashes unchanged.",
+  "outputs_produced": [
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-windows-qa.json"
+  ],
+  "limitations": [
+    "Bounded seven-case PASS on observed Windows10 build19045, not Windows11 or whole-platform homologation",
+    "Optional real-Plop eighth skip remains outside this scope and was not installed or executed",
+    "No broad-suite, Security, UX, DevOps, merge, deploy or close attestation",
+    "Tests executed on initial rev1 source after direct owner authorization; rev2 records same validation obligation, read and equivalence checked before final receipt."
+  ],
+  "next_safe_action": "Governance reconcile this rev2 AC-06 evidence with existing receipts and preserve PR human review; no merge/close authorized."
+}

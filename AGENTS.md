@@ -34,6 +34,18 @@ This checkout is the canonical V2 bundle, not a running agent server. Read
    restart Discovery. Other tasks retain their actual authorization gates.
 10. Never merge or deploy without explicit separate authorization.
 
+## Real sector agents
+
+Execute each activated engineering sector through its registered `office_*` host
+subagent. The principal coordinates, without simulating owners, reviews or receipts.
+Read its contract, selected plan, skills and references; reading/planning is not execution.
+Discover actual profiles/tools; select only required sectors, respect concurrency,
+file ownership, independent review and human gates. Do not duplicate the principal
+with another orchestrator. If unavailable, record sector NOT_EXECUTED and dependent
+claims NOT_VALIDATED. Conversation needs no pipeline; registration is reusable,
+not permanent execution or proof that existing chats reloaded instructions.
+See [Codex registration](docs/operations/codex-agents.md) for the opt-in helper.
+
 ## Compatibility
 
 The 12 original `plugins/` bundles and marketplaces remain usable in legacy
