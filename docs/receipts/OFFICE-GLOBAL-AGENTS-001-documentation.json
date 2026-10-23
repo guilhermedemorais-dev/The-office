@@ -1,0 +1,136 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 1,
+  "list_id": "documentation",
+  "owner": "office_documentation",
+  "result": "DOCUMENTATION_UPDATED",
+  "skill_receipt": {
+    "plan": "python scripts/office.py plan documentation",
+    "plan_result": "PLANNED_NOT_EXECUTED; selection_complete true; no optional capabilities",
+    "skills": [
+      {
+        "id": "global-core",
+        "read": "FULL",
+        "reference_base": "plugins/parceiro-estrategico-global/skills/parceiro-estrategico-global"
+      },
+      {
+        "id": "documentation-core",
+        "read": "FULL",
+        "reference_base": "."
+      }
+    ],
+    "loaded_sources": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/documentation/AGENT.md",
+      "agents/orchestrator/AGENT.md",
+      "docs/operations/delivery-lifecycle.md",
+      "docs/operations/documentation.md",
+      "library/documentation-templates/README.md",
+      "library/documentation-templates/upstream/awesome-copilot/GUIDE.md",
+      "library/documentation-templates/reference.md",
+      "library/documentation-templates/how-to.md",
+      "docs/execution/OFFICE-GLOBAL-AGENTS-001.json",
+      "docs/tasks/OFFICE-GLOBAL-AGENTS-001.md",
+      "scripts/register_codex_agents.py"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "221fd894d5f838daec41306d194746a2e33e0a113580b4b16437128dd6906860",
+      "change_status": "UPDATED"
+    },
+    {
+      "path": "README.md",
+      "sha256": "dcd659fb37e0df74df60b864b93a5921dedc1cde478de6ce86f0942b99eb535d",
+      "change_status": "UPDATED"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "d2cbfa3ebba33b315172524128f9b96893f5dd8388d33f52abd78a37bb632bcc",
+      "change_status": "UNCHANGED_FROZEN_BASE_RESTORED"
+    },
+    {
+      "path": "docs/architecture/agents.md",
+      "sha256": "98356ecd9212478161fcf8880435fcaf54c6bd87c63c095f4c2026d7cbf78ed1",
+      "change_status": "UPDATED"
+    },
+    {
+      "path": "docs/operations/codex-agents.md",
+      "sha256": "9b88c1299729a64a7775cadbf6918aef2c10d7eb1ab2ba80ac319d4630673bcf",
+      "change_status": "UPDATED"
+    }
+  ],
+  "documented_helper": {
+    "path": "scripts/register_codex_agents.py",
+    "sha256": "6c6e5632024facd3cd7e0f40028cf50a2bb259d5ead9057e9b7561401006aecd",
+    "compatibility": "Current CLI, flags, statuses, exit codes, conflicts, preservation and backup/rollback behavior inspected; no documentation divergence requiring further edit."
+  },
+  "execution_receipt": {
+    "operations": [
+      "Authored only five assigned documentation files; preserved unrelated files.",
+      "Inspected actual helper source and final CLI/preflight/rollback code.",
+      "Verified current SHA256 of all five documentation artifacts and final helper.",
+      "REWORK: compacted AGENTS.md to100 lines; restored CHANGELOG.md byte-exact to HEAD after proving diff was solely this owner addition; no test/inventory changes."
+    ],
+    "prior_checks": [
+      {
+        "command": "python scripts/register_codex_agents.py --help",
+        "exit_code": 0,
+        "observed": "plan/check/apply and required --bundle-root/--codex-home"
+      },
+      {
+        "command": "python scripts/register_codex_agents.py plan --bundle-root <absolute-worktree> --codex-home <absolute-worktree>/.documentation-no-write-probe",
+        "exit_code": 0,
+        "observed": "CHANGES_REQUIRED; 15 profiles; target remained nonexistent"
+      },
+      {
+        "command": "python scripts/register_codex_agents.py check --bundle-root <absolute-worktree> --codex-home <absolute-worktree>/.documentation-no-write-probe",
+        "exit_code": 1,
+        "observed": "Expected differences; target remained nonexistent"
+      },
+      {
+        "command": "Documentation local-link existence check for guide and agent map",
+        "exit_code": 0,
+        "observed": "All relative links resolved"
+      }
+    ],
+    "closure_checks": [
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m unittest tests.test_agent_skill_contract.TestAgentSkillContract.test_agents_file_is_a_short_map_to_canonical_sources tests.test_v2_preservation.FrozenV1.test_all_canonical_sources_and_archives_match_inventory -v",
+        "exit_code": 0,
+        "observed": "2 tests passed after correction"
+      },
+      {
+        "command": "python -m unittest tests.test_agent_skill_contract tests.test_v2_preservation -v",
+        "exit_code": 0,
+        "observed": "13 tests passed; focused suites only, no full-suite claim"
+      }
+    ],
+    "validation_boundary": "Prior CLI probes were executed before final helper closure. Final helper was source/hash inspected; this receipt does not claim those prior probes were rerun on the final hash."
+  },
+  "documentation": {
+    "technical": "UPDATED",
+    "user": "UPDATED",
+    "user_audience": "Maintainer/operator using CLI",
+    "media": "NOT_APPLICABLE: no UI authored or executed"
+  },
+  "limitations": [
+    "No apply against the real host by Documentation.",
+    "No new final-hash runtime smoke or agent invocation by Documentation.",
+    "No QA or Security approval issued by Documentation; their independent receipts belong to those owners.",
+    "No commit, push, merge, deployment or host configuration change by Documentation."
+  ],
+  "next_action": "Governance reconcile current hashes, independent owner receipts and contract before authorized PR publication.",
+  "rework": {
+    "cause": "Governance broader regression found AGENTS length over100 and frozen CHANGELOG changed by Documentation.",
+    "resolution": "AGENTS now100 lines; CHANGELOG exact HEAD; README and guide retain announcement.",
+    "notification": "Parent notified before final for QA impact review.",
+    "other_sectors": "No claim concerning the five baseline Windows failures/errors reported by Governance."
+  }
+}

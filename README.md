@@ -25,7 +25,8 @@ o catálogo fornece recursos; a Task registra escopo e evidências.
 A V2 preserva os 12 plugins da V1 e acrescenta roteamento por responsabilidade.
 Não é um servidor de agentes, um aplicativo Docker ou uma promessa de software
 correto sem validação. O host fornece modelo, ferramentas e agentes reais quando
-existirem; etapas podem ser executadas serialmente com responsabilidade explícita.
+existirem. Cada setor de engenharia acionado deve usar seu agente `office_*`
+registrado. Se indisponível, registre o setor não executado e o limite da entrega.
 
 ## O que resolve
 
@@ -79,6 +80,15 @@ as stacks e todos os MCPs não são pré-requisitos universais.
 para seu agente com acesso à máquina. Ele cobre diagnóstico, registro compatível
 com o host, preparo selecionado, autenticação assistida e smoke test.
 [Instalação detalhada](docs/operations/installation.md). Clonar não prova ativação.
+
+### Agentes globais no Codex
+
+O [guia de registro global](docs/operations/codex-agents.md) descreve o helper
+opt-in `scripts/register_codex_agents.py`, com raízes explícitas. `plan` e `check`
+são somente leitura; `apply` preserva configurações alheias e cria backup dos
+arquivos alterados. O registro disponibiliza 15 perfis reutilizáveis entre projetos,
+sem iniciar agentes permanentes nem acionar todos os setores. Instalar o plugin,
+registrar perfis e executar um agente são verificações distintas.
 
 ## Tutorial de utilização
 

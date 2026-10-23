@@ -1,6 +1,6 @@
 # Sector ownership
 
-The 14 logical sectors plus transversal librarian have contracts under `agents/`. These are responsibility contracts, not permanently running processes. An LLM host instantiates real agents only where available and useful.
+The 14 logical sectors plus transversal librarian have contracts under `agents/`. These are responsibility contracts, not permanently running processes. Every activated engineering sector must run through its corresponding registered host subagent. The principal coordinates and consolidates; it does not simulate sector owners.
 
 | Agent | Output | Canonical procedural owner |
 | --- | --- | --- |
@@ -21,3 +21,32 @@ The 14 logical sectors plus transversal librarian have contracts under `agents/`
 | librarian | Purpose-qualified source IDs, compatibility notes and cache provenance | dev-workflow-standard |
 
 The canonical JSON sector IDs remain database, backend, frontend, ui_ux, qa, security, devops, observability, documentation and harness. Do not rename schema fields to match agent directory names. Final Harness reconciliation depends on every other REQUIRED sector and current owner evidence.
+
+## Codex host roles
+
+The registration helper maps each contract directory to one role:
+
+| Contract directory | Codex role |
+| --- | --- |
+| orchestrator | `office_orchestrator` |
+| product | `office_product` |
+| sdd | `office_sdd` |
+| architecture | `office_architecture` |
+| data | `office_data` |
+| backend | `office_backend` |
+| frontend | `office_frontend` |
+| ux-design | `office_ux_design` |
+| qa | `office_qa` |
+| security | `office_security` |
+| devops | `office_devops` |
+| environment | `office_environment` |
+| governance | `office_governance` |
+| documentation | `office_documentation` |
+| librarian | `office_librarian` |
+
+Select only the required sectors, respecting slots and exclusive file ownership.
+The principal must not spawn a second orchestrator merely to duplicate its own
+coordination. If a profile/tool is unavailable, record NOT_EXECUTED for that sector
+and NOT_VALIDATED for its affected claims. Registration/checking does not prove
+invocation or review. The contracts remain the procedural source, not a second
+agent methodology. See the [Codex guide](../operations/codex-agents.md).

@@ -1,0 +1,119 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 1,
+  "list_id": "security",
+  "owner": "office_security",
+  "review_mode": "CHANGE_REVIEW",
+  "risk": "HIGH",
+  "SECURITY_STATUS": "PASS",
+  "result_scope": "Scoped helper review and synthetic negative validation only, against trusted user-owned quiescent CODEX_HOME. Ready for human/code review, not production acceptance.",
+  "SKILL_RECEIPT": {
+    "bundle": "C:/Users/teste/.codex/plugins/cache/the-office-local/the-office-v2/2.0.0-alpha.1",
+    "sources": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/security/AGENT.md",
+      "agents/orchestrator/AGENT.md"
+    ],
+    "skills": [
+      "global-core",
+      "security-core",
+      "security-review",
+      "security-tools-reporting"
+    ],
+    "reference_base": "plugins/security-standard/skills/security-standard",
+    "references": [
+      "references/review-pipeline.md",
+      "references/preventive-security-research.md",
+      "references/stack-profiles.md",
+      "references/false-positive-validation.md",
+      "references/finding-standard.md"
+    ],
+    "additional_source": "library/architecture/technical-decision-procedure.md",
+    "plan": "python scripts/office.py plan security --capability security-review --capability security-tools-reporting",
+    "exit_code": 0,
+    "selection_complete": true
+  },
+  "EXECUTION_RECEIPT": {
+    "reviewed_artifacts_sha256": {
+      "scripts/register_codex_agents.py": "6c6e5632024facd3cd7e0f40028cf50a2bb259d5ead9057e9b7561401006aecd",
+      "tests/test_codex_agent_registration.py": "c685ee8277eab61d3a9bf3e707e754c7e1b1dea116452fff53cecf8834b4a2db",
+      "docs/execution/OFFICE-GLOBAL-AGENTS-001.json": "ee7837cd592129b3eb8037d90be29ae30cb6c81d3060fa7a6319a43c5ce61aa7",
+      "docs/operations/codex-agents.md": "9b88c1299729a64a7775cadbf6918aef2c10d7eb1ab2ba80ac319d4630673bcf"
+    },
+    "equivalence": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-equivalence.json: contract hash matched ee7837cd592129b3eb8037d90be29ae30cb6c81d3060fa7a6319a43c5ce61aa7",
+    "runtime": "Python 3.12.10",
+    "operations": [
+      {
+        "command": "python -m unittest discover -s tests -p test_codex_agent_registration.py -q",
+        "exit_code": 0,
+        "tests": 14,
+        "skips": 0
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      },
+      {
+        "command": "Independent inline Python tests using synthetic TemporaryDirectory fixtures",
+        "exit_code": 0,
+        "checks": [
+          "plan/check on existing files preserves byte snapshots",
+          "hardlinked global AGENTS rejected; external file unchanged",
+          "symlink ancestor rejected; external tree unchanged",
+          "symlink registration lock rejected without mutation",
+          "symlink backup parent rejected by plan/apply without mutation"
+        ]
+      }
+    ],
+    "code_review": [
+      "Fixed allowlist of 15 profiles from canonical contracts; no subprocess/network/dependency install",
+      "Config original byte prefix preserved; appended config parsed; existing registrations/profile customizations fail closed",
+      "Global managed block content digest checked; outside text preserved",
+      "Config overrides and explicit multi_agent false blocked",
+      "All path ancestors checked for links/reparse points and regular hardlinked files",
+      "Exclusive lock/backup creation; temporary file replace; concurrent byte snapshot rechecks",
+      "Backup before target replacement and best-effort reverse rollback; no host file contents in returned errors"
+    ],
+    "modified_artifacts": [
+      "docs/receipts/OFFICE-GLOBAL-AGENTS-001-security.json"
+    ]
+  },
+  "threat_model": {
+    "assets": [
+      "Existing Codex settings including potential secrets",
+      "Global instructions",
+      "Sector profile files",
+      "Private backup copies"
+    ],
+    "entry_points": [
+      "Explicit bundle-root and codex-home arguments",
+      "Existing TOML/instruction/profile files",
+      "Local filesystem entries"
+    ],
+    "boundary": "Trusted canonical bundle to explicitly selected user-owned host configuration; no privilege elevation",
+    "controls": "Opt-in apply; read-only plan/check; conflict preservation; sanitized diagnostics; link rejection; backups and rollback",
+    "assumptions": [
+      "Trusted canonical source and user-owned destination",
+      "Quiescent filesystem; no hostile concurrent local process",
+      "Destination ACL already restricts access to the user"
+    ]
+  },
+  "confirmed_findings": [],
+  "layer_status": {
+    "Banco": "NOT_APPLICABLE",
+    "API/Backend": "NOT_APPLICABLE",
+    "Frontend/UI": "NOT_APPLICABLE",
+    "Infra/DevOps": "Scoped file/config mutation PASS; real host operation excluded",
+    "Dependencias/Supply Chain": "No third-party dependency introduced; source contracts trusted; no OSV package query applicable"
+  },
+  "limitations": [
+    "No live CODEX_HOME apply, host reload or all-15 runtime invocation",
+    "Windows ACL protection is not established by chmod; user-owned private home precondition must be verified before live apply",
+    "Stdlib path checks do not eliminate hostile filesystem races; no claim of hardened privilege boundary",
+    "Best-effort rollback is not crash-safe multi-file atomicity and may leave directories/private backups",
+    "No repository-wide audit or independent Cloudflare second audit selected",
+    "No external scanners installed, no remote code/config sent, no merge/deploy authority"
+  ],
+  "next_action": "Governance reconcile current hashes/owner receipts and publish reviewed branch/PR within existing authorization. Live host apply requires separate routed scope and destination access/privacy checks."
+}

@@ -1,0 +1,157 @@
+{
+  "receipt_type": "EXECUTION_RECEIPT",
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 1,
+  "sector": "qa",
+  "list_id": "qa",
+  "phase": "validation",
+  "mode": "change-validation",
+  "QA_STATUS": "PASS",
+  "state": "COMPLETED",
+  "functional_result": "PASS_BOUNDED_SYNTHETIC_SCOPE",
+  "invocation_evidence": "Actual office_qa child agent /root/plugin_qa invoked by parent; tool executions in this agent session.",
+  "inputs_used": [
+    "docs/execution/OFFICE-GLOBAL-AGENTS-001.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-equivalence.json",
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-documentation.json"
+  ],
+  "artifact_sha256": {
+    "scripts/register_codex_agents.py": "6c6e5632024facd3cd7e0f40028cf50a2bb259d5ead9057e9b7561401006aecd",
+    "tests/test_codex_agent_registration.py": "c685ee8277eab61d3a9bf3e707e754c7e1b1dea116452fff53cecf8834b4a2db",
+    "docs/execution/OFFICE-GLOBAL-AGENTS-001.json": "ee7837cd592129b3eb8037d90be29ae30cb6c81d3060fa7a6319a43c5ce61aa7",
+    "AGENTS.md": "221fd894d5f838daec41306d194746a2e33e0a113580b4b16437128dd6906860",
+    "README.md": "dcd659fb37e0df74df60b864b93a5921dedc1cde478de6ce86f0942b99eb535d",
+    "CHANGELOG.md": "d2cbfa3ebba33b315172524128f9b96893f5dd8388d33f52abd78a37bb632bcc",
+    "docs/architecture/agents.md": "98356ecd9212478161fcf8880435fcaf54c6bd87c63c095f4c2026d7cbf78ed1",
+    "docs/operations/codex-agents.md": "9b88c1299729a64a7775cadbf6918aef2c10d7eb1ab2ba80ac319d4630673bcf"
+  },
+  "environment": {
+    "system": "Windows",
+    "python": "3.12.10",
+    "shell": "PowerShell",
+    "target": "isolated temporary directories, no live CODEX_HOME"
+  },
+  "SKILL_RECEIPT": {
+    "status": "LOADED",
+    "canonical_bundle": "C:/Users/teste/.codex/plugins/cache/the-office-local/the-office-v2/2.0.0-alpha.1",
+    "selection_command": "python scripts/office.py plan qa --capability qa-validation",
+    "skills": [
+      "global-core",
+      "qa-core",
+      "qa-validation"
+    ],
+    "references_loaded": [
+      "AGENTS.md",
+      "docs/operations/v2-execution-policy.md",
+      "agents/qa/AGENT.md",
+      "agents/orchestrator/AGENT.md",
+      "docs/operations/installation.md",
+      "plugins/qa-testing-standard/skills/qa-testing-standard/references/test-strategy.md",
+      "plugins/qa-testing-standard/skills/qa-testing-standard/references/bug-report.md",
+      "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/minimal-code-gate.md"
+    ],
+    "reference_base": "plugins/qa-testing-standard/skills/qa-testing-standard",
+    "applied_rules": [
+      "Independent functional QA only",
+      "Synthetic fixtures; no live apply",
+      "No implementation or developer test edits",
+      "No Security or visual attestation"
+    ]
+  },
+  "QA_GUARDRAILS": [
+    "Only QA receipt may be written in repository",
+    "No installation/network/billing/live host mutation",
+    "Preserve all other owners edits"
+  ],
+  "TEST_SCENARIOS": {
+    "QA01": "PASS: missing/existing home plan/check read-only",
+    "QA02": "PASS: explicit apply generates 15 real-contract profiles, preserves custom agent/max_threads/config bytes and instructions",
+    "QA03": "PASS: repeated apply/configured check idempotent, no extra backup",
+    "QA04": "PASS: malformed TOML, collision/custom profile/override/disabled agent/missing contract/modified managed body safely blocked",
+    "QA05": "PASS: backup bytes and manifest; injected 17th write failure restores originals and removes new profile files; lock cleanup",
+    "QA06": "PASS: symlink, hardlink, native Windows junction /J rejected, outside unchanged",
+    "QA07": "PASS: source/diff/documentation inspected; registration versus invocation distinction preserved"
+  },
+  "REGRESSION_TARGETS": [
+    "Registration CLI and owned config/profile files",
+    "Canonical contract embedding",
+    "Existing generated skill drift baseline comparison"
+  ],
+  "VALIDATION_REQUIREMENTS": [
+    "All planned functional scenarios executed",
+    "Current helper/tests hashes captured",
+    "Owner register receipt required before final QA PASS"
+  ],
+  "validation_evidence": [
+    {
+      "command": "python -m unittest discover -s tests -p test_codex_agent_registration.py -v",
+      "exit_code": 0,
+      "result": "14 tests passed, zero skips; repeated after final preflight delta and at resumed currentity checkpoint"
+    },
+    {
+      "command": "independent inline Python subprocess CLI against actual bundle and temp home",
+      "exit_code": 0,
+      "result": "15 canonical contracts embedded, custom agent and max_threads retained, TOML bytes retained, read-only plan/check, repeat apply idempotent"
+    },
+    {
+      "command": "cmd /c mklink /J TEMP/junctionhome/agents TEMP/outside, then helper apply",
+      "exit_code": 0,
+      "result": "junction created natively; helper returned2, outside empty; junction cleaned safely"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/build_skill_routes.py --check",
+      "exit_code": 1,
+      "classification": "PREEXISTING_BASELINE_FAILURE",
+      "result": "Same generated skill drift reproduced in isolated git archive of base d97ec71828a275b983262470beb67b05ac074518, with unchanged relevant sources; no generated-skill modifications made"
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_agent_skill_contract.py -v",
+      "exit_code": 0,
+      "result": "12 tests PASS, zero skips; after AGENTS short-map rework"
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_v2_preservation.py -v",
+      "exit_code": 0,
+      "result": "1 test PASS, zero skips; after restoring frozen CHANGELOG byte-exact"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS after documentation rework"
+    }
+  ],
+  "MINIMAL_CODE_GATE": {
+    "result": "PASS_BOUNDED_QA_REVIEW",
+    "reuse": "Existing canonical agents and stdlib registration used; no new dependency",
+    "connected_consumers": "CLI documented in README/AGENTS/architecture and dedicated guide; profiles embed existing sector contracts",
+    "deletions": "N/A, no deletion",
+    "intentional_limits": "Trusted quiescent home; custom profile conflict requires manual reconciliation; no multi-file atomicity, rollback may leave directories/private backups",
+    "security": "Separate responsible Security agent review required"
+  },
+  "bug_disposition": "Two introduced documentation regression failures verified fixed by independent13-test run after owner correction. No unresolved introduced functional bug reproduced. Generated-skill baseline drift remains preexisting.",
+  "outputs_produced": [
+    "docs/receipts/OFFICE-GLOBAL-AGENTS-001-qa.json"
+  ],
+  "limitations": [
+    "No live Codex Desktop registration or chat reload validated",
+    "No blanket native Windows/WSL/Linux/macOS homologation; concrete checks executed on Windows Python3.12.10 only",
+    "No Security, visual, merge or deploy approval",
+    "No broad repository regression executed by QA; parent owns reconciliation of broader required checks",
+    "Hostile filesystem races excluded by documented trusted/quiescent precondition"
+  ],
+  "next_safe_action": "Governance reconciles independent Security/documentation and broader regression evidence, then publishes isolated branch and review PR under authorized gates. No live host apply, merge or deploy.",
+  "dependency_receipt": "docs/receipts/OFFICE-GLOBAL-AGENTS-001-register.json",
+  "dependency_validation": "Read actual owner receipt; rev1 and exact current helper/test/contract hashes match.",
+  "rework_verification": {
+    "cause": "Governance broad regression found two introduced documentation failures: AGENTS over100 lines and frozen CHANGELOG modified.",
+    "actual_diff_review": "AGENTS routing section compacted while preserving real-agent routing rules; CHANGELOG no diff from HEAD.",
+    "independent_retest": "Both focused suites executed by QA,13 tests PASS.",
+    "helper_retest_decision": "No rerun of14 registration tests: helper and test SHA256 unchanged; documentation edits do not change generated profile body. Previous exact-hash results retained.",
+    "dependency": "Documentation current receipt read; all five doc hashes match current artifacts.",
+    "baseline_boundary": "Governance-reported five baseline Windows failures/errors retained separately; QA independently reproduced only generated-skill drift at base as already recorded, does not claim independent execution of all five."
+  }
+}

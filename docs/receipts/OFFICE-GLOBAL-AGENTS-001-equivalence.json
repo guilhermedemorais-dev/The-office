@@ -1,0 +1,38 @@
+{
+  "task_id": "OFFICE-GLOBAL-AGENTS-001",
+  "contract_revision": 1,
+  "sector": "governance",
+  "phase": "planning",
+  "result": "READY_FOR_SCOPED_IMPLEMENTATION",
+  "issue": "https://github.com/guilhermedemorais-dev/The-office/issues/7",
+  "issue_updatedAt": "2026-10-23T19:39:28Z",
+  "base": "d97ec71828a275b983262470beb67b05ac074518",
+  "branch": "codex/global-sector-agents",
+  "local_field_comparison": [],
+  "remote_body_equality": true,
+  "contract_sha256": "ee7837cd592129b3eb8037d90be29ae30cb6c81d3060fa7a6319a43c5ce61aa7",
+  "actual_operations": [
+    "fetch origin main",
+    "create isolated worktree and branch",
+    "create and update Issue #7",
+    "read Issue back and compare all normative fields/body"
+  ],
+  "limitations": [
+    "No implementation validation",
+    "No QA/Security attestation",
+    "No live host apply",
+    "No merge/deploy"
+  ],
+  "sources_loaded": [
+    "AGENTS.md",
+    "docs/operations/v2-execution-policy.md",
+    "agents/governance/AGENT.md",
+    "agents/orchestrator/AGENT.md",
+    "skills/global-core/SKILL.md",
+    "skills/orchestrator-core/SKILL.md",
+    "skills/orchestrator-task-governance/SKILL.md",
+    "skills/orchestrator-review/SKILL.md",
+    "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-routing.md"
+  ],
+  "next_action": "Execute routed register and documentation lists; independent QA and Security then publication gate."
+}
