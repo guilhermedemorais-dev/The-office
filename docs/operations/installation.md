@@ -1,8 +1,11 @@
 # Guia de instalação e configuração do The Office V2
 
-Use este guia para entender e conferir a instalação. Para delegar o trabalho ao
-agente, copie o [prompt de instalação](installation-prompt.md). São complementares:
-o prompt orienta execução assistida; o guia explica requisitos e aceitação.
+Use este guia para entender e conferir a instalação. Na versão `2.0.0-alpha.2`
+deste branch, instale o plugin e execute a ação **Setup** para iniciar o onboarding.
+Essa versão ainda aguarda integração/publicação; o plugin atualmente disponível
+no marketplace não oferece essa ação. Para hosts sem esse fluxo, use o
+[prompt manual de instalação](installation-prompt.md). O guia explica requisitos,
+limites e critérios de aceitação.
 
 ## 1. Identificar a máquina e o host
 
@@ -21,16 +24,14 @@ não homologa Windows 10, Windows 11 ou macOS nesta revisão.
 Em pasta nova, separada do código do cliente:
 
 ```sh
-git clone --branch feat/the-office-v2 https://github.com/guilhermedemorais-dev/The-office.git
+git clone --branch codex/add-public-apis-discovery https://github.com/guilhermedemorais-dev/The-office.git
 cd The-office
 git rev-parse HEAD
 python scripts/office.py --help
 ```
 
 Se houver checkout existente, confira remoto, branch e mudanças; siga
-[atualização](updating.md), sem sobrescrever trabalho. A base V2 já está na main após o PR #2; esta branch contém os manuais mais
-recentes ainda em revisão. Os marketplaces herdados distribuem V1 e não ativam
-a V2 da raiz.
+[atualização](updating.md), sem sobrescrever trabalho. A base V2 já está na main após o PR #2; este branch contém os manuais e o onboarding ainda em revisão. Os marketplaces herdados distribuem V1 e não ativam a V2 da raiz.
 Leia `AGENTS.md` e a política de execução desta versão.
 
 ## 3. Registrar ou usar pelo checkout
@@ -55,21 +56,21 @@ Não copie todas as skills para o prompt nem use V1 e V2 simultaneamente.
 
 ### Regra global de delegação no Codex
 
-Quando o host for Codex, a instalação deve verificar o `AGENTS.md` global em
-`$CODEX_HOME/AGENTS.md` ou no diretório padrão do Codex do usuário. Com autorização
-para essa instalação, preserve o texto existente, faça backup datado e mescle o
-bloco `the-office-v2:agent-routing` de forma idempotente. A regra orienta o agente
-a consultar o roteador e delegar setores pertinentes aos agentes canônicos do
-plugin, sem simular pareceres e sem alterar gates humanos ou escopo.
+O manifesto Codex associa a ação **Setup** à skill `skills/setup/SKILL.md`. O
+onboarding só roda quando iniciado pelo usuário depois da instalação; a instalação
+do plugin não executa comandos de escrita. A skill localiza o `AGENTS.md` global em
+`$CODEX_HOME/AGENTS.md` ou no diretório padrão Codex do usuário, mostra o diff,
+obtém aprovação para alterar o escopo global, faz backup datado e valida a mesclagem
+marcada. Se o bloco já estiver idêntico, não escreve nem cria backup; conflito nos
+marcadores ou falha de backup interrompe a alteração.
 
-Perfis do host e contratos `agents/<setor>/AGENT.md` são artefatos distintos.
-Inspecione `config.toml` e perfis existentes sem expor segredos. Não crie perfis
-nem altere configuração por inferência. Verifique separadamente se a sessão atual
-tem ferramenta de delegação e se um dispatch real retorna resposta. Registre
-`AGENTS_GLOBAL_RULE`, `AGENT_PROFILES_DISCOVERED` e `AGENT_DISPATCH_VERIFIED` com
-evidência; diretório, perfil, chave de configuração ou regra escrita não provam
-invocação. Se a sessão não permitir o dispatch, informe `UNKNOWN` ou
-`USER_ACTION_REQUIRED`; não diga que agentes foram usados.
+Perfis nativos do host e contratos `agents/<setor>/AGENT.md` são artefatos
+distintos. A skill inspeciona `config.toml` e perfis existentes sem expor segredos,
+mas não cria perfis nem altera configuração por inferência. Ela verifica em
+separado se a sessão pode delegar e se um dispatch real retorna resposta.
+`AGENTS_GLOBAL_RULE`, `AGENT_PROFILES_DISCOVERED` e `AGENT_DISPATCH_VERIFIED`
+exigem evidência distinta; diretório, perfil, flag ou regra escrita não provam
+invocação. Sessões já abertas podem precisar ser reiniciadas para carregar a regra.
 
 ## 4. Diagnosticar e preparar seletivamente
 

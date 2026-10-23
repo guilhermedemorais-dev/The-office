@@ -7,7 +7,8 @@ projeto real; não representam execuções já realizadas.
 | Objetivo | Documento |
 | --- | --- |
 | Entender produto e problemas resolvidos | [README](../README.md) |
-| Preparar a máquina com o agente | [Prompt de instalação](operations/installation-prompt.md) |
+| Configurar após instalar no Codex | [Skill de onboarding](../skills/setup/SKILL.md) |
+| Preparar a máquina com outro host | [Prompt manual de instalação](operations/installation-prompt.md) |
 | Clonar, registrar e verificar | [Instalação](operations/installation.md) |
 | Aprender a usar com exemplos | [Tutorial](operations/tutorial.md) |
 | Debater ideias com evidências e consolidar PRD | [Studio PRD](operations/studio-prd.md) |

@@ -1,8 +1,13 @@
 {
   "name": "the-office-v2",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "Sector-based Engineering Harness with lossless V1 capability slices, shared metadata library and preserved tool runtimes.",
   "author": {"name": "Guilherme"},
   "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
+  },
   "interface": {"displayName": "The Office V2", "shortDescription": "Verified sector-based engineering delivery"}
 }

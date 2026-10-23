@@ -3,6 +3,8 @@
 Copie o bloco para o agente com acesso à máquina. Substitua os caminhos ou peça
 a ele para identificar o workspace aberto. O prompt autoriza preparação local
 necessária, sem substituir permissões do host. Não instala todas as stacks.
+Este é o fallback manual, não um script executado pelo botão de instalação. No
+Codex, prefira instalar o plugin e iniciar seu onboarding pela ação **Setup**.
 
 ```text
 Instale e configure o The Office V2 nesta máquina para o workspace atual.
@@ -24,41 +26,15 @@ main atual e registre commit, branch e estado do checkout antes de instalar.
    Ao concluir, informe separadamente PLUGIN_RECOGNIZED, REQUIRED_TOOLS_AVAILABLE,
    MCP_CONFIGURED, AUTHENTICATED e OPERATION_VERIFIED, com evidência ou UNKNOWN.
    Nunca diga “pronto” só porque copiou/registrou o plugin.
-4. Se o host for Codex, localize CODEX_HOME; use o valor configurado ou, na
-   ausência dele, o diretório padrão do Codex do usuário. Inspecione sem expor
-   segredos o AGENTS.md global, config.toml e os perfis existentes em agents/.
-   Faça backup datado do AGENTS.md antes de editar. Mescle o bloco abaixo de
-   forma idempotente, preservando todo o conteúdo alheio e sem duplicar blocos.
-   Não altere config.toml nem crie perfis por inferência: arquivos de contrato
-   `agents/*/AGENT.md` do plugin não são automaticamente perfis registrados.
-   Confirme a configuração de delegação suportada pelo host e a disponibilidade
-   real dos agentes; só ajuste configuração existente após apresentar a mudança
-   concreta e obter a aprovação exigida pelo host. Não declare dispatch ativo sem
-   observar uma chamada e resposta reais nesta sessão.
-
-   ~~~~markdown
-   <!-- the-office-v2:agent-routing:start -->
-   ## Delegação obrigatória aos agentes responsáveis
-
-   Em tarefas de projeto que envolvam setores especializados, consulte o roteador
-   e os agentes responsáveis disponíveis no plugin ativo e delegue a análise ou
-   execução de cada setor pertinente ao agente dono daquele domínio. No The Office
-   V2, use os agentes canônicos em `agents/<setor>/AGENT.md`. Aguarde e integre os
-   resultados antes de concluir.
-
-   Não simule delegação, revisão independente, aprovação ou parecer. Se o agente
-   ou a capacidade de delegação não estiver disponível, informe isso e marque a
-   revisão como pendente. Cada agente só atesta evidência do próprio domínio.
-   Delegar não muda escopo, gates humanos, critérios de aceite ou condições de
-   parada, nem autoriza escrita externa, merge, deploy ou operação privilegiada.
-   <!-- the-office-v2:agent-routing:end -->
-   ~~~~
-
-   Se o arquivo global ou o mecanismo de delegação não estiver acessível, não
-   invente um caminho/configuração alternativo; registre AGENTS_GLOBAL_RULE e
-   AGENT_DISPATCH como USER_ACTION_REQUIRED ou UNKNOWN, com instrução específica.
-   Perfis declarados, `multi_agent = true` ou diretórios presentes não comprovam
-   que um agente foi invocado.
+4. No Codex, depois de instalar o plugin, execute a ação **Setup** do onboarding
+   The Office V2. Ela usa `skills/setup/SKILL.md` para verificar os agentes,
+   propor a regra global, fazer backup antes da edição aprovada e validar o arquivo.
+   A instalação do plugin não executa Setup automaticamente. Se o host não expuser
+   o onboarding, abra essa skill no bundle ativo ou siga o procedimento documentado
+   em `skills/setup/references/agent-routing-block.md`. Não replique o bloco em
+   prompts paralelos. Sem acesso ao arquivo ou ferramenta real de delegação, registre
+   USER_ACTION_REQUIRED/UNKNOWN; não declare agentes registrados ou invocados.
+   Em outros hosts, não escreva em configurações do Codex; siga o adaptador nativo.
 5. Use o Environment existente: doctor e prepare --dry-run com repo-root do
    Harness e workspace do cliente. Confira requirements/lockfile e catálogo
    da stack. Use status compatível depois; não repetir diagnóstico completo
