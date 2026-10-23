@@ -53,6 +53,24 @@ canônica e a do projeto cliente. Isso permite roteamento explícito por `AGENTS
 mas deve ser chamado **uso por checkout**, não registro confirmado do plugin.
 Não copie todas as skills para o prompt nem use V1 e V2 simultaneamente.
 
+### Regra global de delegação no Codex
+
+Quando o host for Codex, a instalação deve verificar o `AGENTS.md` global em
+`$CODEX_HOME/AGENTS.md` ou no diretório padrão do Codex do usuário. Com autorização
+para essa instalação, preserve o texto existente, faça backup datado e mescle o
+bloco `the-office-v2:agent-routing` de forma idempotente. A regra orienta o agente
+a consultar o roteador e delegar setores pertinentes aos agentes canônicos do
+plugin, sem simular pareceres e sem alterar gates humanos ou escopo.
+
+Perfis do host e contratos `agents/<setor>/AGENT.md` são artefatos distintos.
+Inspecione `config.toml` e perfis existentes sem expor segredos. Não crie perfis
+nem altere configuração por inferência. Verifique separadamente se a sessão atual
+tem ferramenta de delegação e se um dispatch real retorna resposta. Registre
+`AGENTS_GLOBAL_RULE`, `AGENT_PROFILES_DISCOVERED` e `AGENT_DISPATCH_VERIFIED` com
+evidência; diretório, perfil, chave de configuração ou regra escrita não provam
+invocação. Se a sessão não permitir o dispatch, informe `UNKNOWN` ou
+`USER_ACTION_REQUIRED`; não diga que agentes foram usados.
+
 ## 4. Diagnosticar e preparar seletivamente
 
 Leia a skill Environment selecionada e suas referências antes de operações.
