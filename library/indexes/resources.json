@@ -234,6 +234,95 @@
       "status": "CATALOGED_NOT_EXECUTED"
     },
     {
+      "id": "library/integrations/api-discovery-brazilian-inventory.md",
+      "path": "library/integrations/api-discovery-brazilian-inventory.md",
+      "title": "Inventário de APIs Gratuitas do Brasil, APIs brasileiras",
+      "category": "references",
+      "keywords": [
+        "Inventário de APIs Gratuitas do Brasil, APIs brasileiras",
+        "APIs brasileiras e APIs do governo brasileiro",
+        "Source record",
+        "Use and limits",
+        "philipecomputacao/inventario-apis-gratuitas",
+        "`7ee21e7d0d1e22448779af24da73351cbb6a8bf5`",
+        "library",
+        "integrations",
+        "api",
+        "discovery",
+        "brazilian",
+        "inventory",
+        "md"
+      ],
+      "sha256": "1b518d87a3ebe04057fdf4a14f7fea6a8aa1559db585b104cd89862435d622ee",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/integrations/api-discovery-brazilian-inventory.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/integrations/api-discovery-public-apis.md",
+      "path": "library/integrations/api-discovery-public-apis.md",
+      "title": "API discovery: `public-apis/public-apis`",
+      "category": "references",
+      "keywords": [
+        "API discovery: `public-apis/public-apis`",
+        "Source record",
+        "Use and limits",
+        "public-apis/public-apis",
+        "`339ab55dc8532107fdeb5ef22777b4e34bd4af6f`",
+        "LICENSE",
+        "library",
+        "integrations",
+        "api",
+        "discovery",
+        "public",
+        "apis",
+        "md"
+      ],
+      "sha256": "011ca8ea7ba49ea0e59c912a99c92ddca6789b5060fe17fd0d74cb4987e1fb4e",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/integrations/api-discovery-public-apis.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
+      "id": "library/integrations/apibrasil-mcp-candidate.md",
+      "path": "library/integrations/apibrasil-mcp-candidate.md",
+      "title": "APIBrasil MCP consumption reference",
+      "category": "tools",
+      "keywords": [
+        "APIBrasil MCP consumption reference",
+        "Source record",
+        "Integration boundary",
+        "APIBrasil/apibrasil-mcp-client",
+        "`f030daeb4c47df65380bb0f07eccfdec3561aa03`",
+        "README",
+        "credential guide",
+        "dynamic discovery guide",
+        "troubleshooting guide",
+        "library",
+        "integrations",
+        "apibrasil",
+        "mcp",
+        "candidate",
+        "md"
+      ],
+      "sha256": "4969f2385500f720e94f50d6735b95eff424ec3c064ff9e48aecee6d4fc0aa19",
+      "provenance": {
+        "type": "canonical-versioned-file",
+        "license": "See source record and repository LICENSE; no external dependency relicensing",
+        "version": "content-sha256",
+        "source": "library/integrations/apibrasil-mcp-candidate.md"
+      },
+      "status": "CATALOGED_NOT_EXECUTED"
+    },
+    {
       "id": "library/integrations/client-portal.md",
       "path": "library/integrations/client-portal.md",
       "title": "Portal do Cliente, inspected integration",

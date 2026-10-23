@@ -81,6 +81,39 @@ TRIGGERS = {
  'sdd-review':['review','qa','pr'],
 }
 
+# Additive V2 behavior; the imported V1 skill bodies remain byte-for-byte intact.
+V2_OVERLAYS = {
+ 'global-core': {
+  'id': 'curated-catalog-before-external-research',
+  'summary': 'Search task and project sources, proactively map needs to The Office catalog capabilities, then verify external gaps with official sources.',
+  'text': '''## Curated catalog before external research
+
+For technical, product, API, repository, library or tool research, consult current task and project sources first, then search The Office shared catalog before using the web, GitHub search or code-search services. In a The Office checkout, use:
+
+```bash
+python scripts/office.py search "<specific need>" --index library/indexes/resources.json --limit 8
+```
+
+Read the relevant matched resource files, not only search metadata and not the entire catalog. In an installed bundle, resolve the command and index from that active bundle; do not guess sibling cache paths. If the catalog is inaccessible, state that and continue with the sources actually available. Never claim a search was performed when it was not.
+
+For MCP discovery, search by the needed capability and the term `MCP` (for example, `MCP public-code-search`), then read the matched `mcp-library.json` record and its handoff/configuration fields. Check runtime/host availability separately; the shared JSON is descriptive metadata, not a live connection registry.
+
+Use catalog entries as curated starting points. For current API behavior, official provider documentation, price, quotas, legal terms and availability, verify the relevant claims with the provider after the internal search. A catalog candidate is enough to keep PRD discovery moving: record it as a candidate and leave unsupported facts UNKNOWN or NOT VALIDATED; do not block the PRD by asserting that a paid API or new provider is required before checking the catalog.
+
+## Proactive capability routing and readiness
+
+At the start of a project or a materially new task, translate the outcome into required capabilities (for example: repository/issues, official SDK docs, browser QA, design context, API discovery, public-code examples, cloud/account operations). Search The Office capability/MCP catalog for each material need, then inspect the current host to distinguish AVAILABLE, CONFIGURED, AUTHENTICATED and OPERATION_VERIFIED. A catalog entry is a recommendation candidate, never evidence that the host has it.
+
+Tell the user when a catalog capability would materially improve the task. Name the capability/MCP, the concrete project problem it addresses, why it is better than the available fallback, its provider/source, prerequisites, required access or token, scope, cost if known, and the exact next setup step. Offer a supported installation/connection path; do not silently skip it and do not silently install/connect it. For MCPs marked CORE, interpret CORE as a reusable high-priority catalog capability, not a universal install requirement: select it only when the current task needs that capability. Basic plugin operation has no universal third-party MCP prerequisite.
+
+If no catalog capability fits, say which need remains uncovered, then do bounded external discovery (official provider docs/registry first; GitHub or grep.app for code examples when useful). Compare vetted options and return the source, compatibility, auth, scope, and limitations. Do not install a CLI/MCP or acquire credentials as part of discovery. Use the host's secure auth flow; never ask for or write a token in chat or versioned files. If setup requires user action, provide the exact official URL, host setting/file and field names supported by current documentation, and report USER_ACTION_REQUIRED until the user completes it.
+
+Never report “ready” based only on plugin installation, a catalog match, or a config entry. Report separate evidence for PLUGIN_RECOGNIZED, REQUIRED_TOOLS_AVAILABLE, MCP_CONFIGURED, AUTHENTICATED, and OPERATION_VERIFIED; mark unobserved states UNKNOWN and say what blocks the task. “Task ready” requires all capabilities actually required by that task to be available and verified to the level the work needs. Optional capabilities can remain not requested without blocking unrelated work.
+
+Use public-code search such as the cataloged Grep MCP only when repository examples would materially help. Confirm the capability is actually available in the current host; if it is not, use the grep.app site through approved browsing when available, or recommend connecting the cataloged MCP if repeated code search is valuable. Treat snippets as examples, not proof of provider support, current API behavior, license compatibility or production suitability.'''
+ },
+}
+
 def digest(text):
  return hashlib.sha256(text.encode('utf-8')).hexdigest()
 
@@ -138,6 +171,8 @@ def build(root=ROOT):
     required.insert(0,'global-core')
    triggers=TRIGGERS.get(sid,[group.replace('-',' '),sector])
    entry={'id':sid,'sector':sector,'path':path,'source':source_id,'role':'core' if group=='core' else 'capability','requires':required,'triggers':triggers,'source_sections':[s['id'] for s in chunks],'reference_base':str(Path(rel).parent),'reference_fallback':f'plugins/{source_id}'}
+   if sid in V2_OVERLAYS:
+    entry['v2_overlays']=[V2_OVERLAYS[sid]['id']]
    reference_map=[]
    for target in dict.fromkeys(re.findall(r'\]\(([^)]+)\)', ''.join(item['text'] for item in chunks))):
     if '://' in target or target.startswith('#'):
@@ -160,6 +195,8 @@ def build(root=ROOT):
    wrapper+=f'Resolve original relative references and backticked resource paths from repository root `{Path(rel).parent}/`;\nfor plugin templates/scripts absent there, use repository root `plugins/{source_id}/`.\n'
    wrapper+='Never resolve inherited relative paths against this generated directory.\n'
    wrapper+='Load only the references whose conditions hold; retain all explicit mandatory gates.\n\n'
+   if sid in V2_OVERLAYS:
+    wrapper+=V2_OVERLAYS[sid]['text']+'\n\n'
    if reference_map:
     wrapper+='Canonical link resolution (repository-relative paths, not skill-directory-relative):\n'
     for ref in reference_map:
@@ -222,7 +259,9 @@ def build(root=ROOT):
  outputs['library/indexes/skill-routes.json']=json.dumps(registry,ensure_ascii=False,indent=2)+'\n'
  rows=['# Lossless V1 to V2 skill migration','',
  'This is a local functional migration, not a replacement execution engine. Original V1 resources remain preserved at canonical paths or explicit byte-identical archives. Studio PRD evolves under approved STUDIO-PRD-002 / ADR 006; its current slices cover the evolved canonical source, while the original remains in docs/migration/v1-frozen/. The vendored REA skill stays with its upstream runtime; it is not split or rewritten.','',
- 'Each V1 body section is assigned once. Registry offsets are 1-based inclusive and SHA-256 hashes cover exact UTF-8 text. Frontmatter remains in the canonical source and is covered by the full source hash. Generated skills contain source text verbatim after an explicit reference-base adapter. Regenerate with `python scripts/build_skill_routes.py`; validate with `python scripts/build_skill_routes.py --check`.','',
+ 'Each V1 body section is assigned once. Registry offsets are 1-based inclusive and SHA-256 hashes cover exact UTF-8 text. Frontmatter remains in the canonical source and is covered by the full source hash. Generated skills contain source text verbatim after an explicit reference-base adapter. Additive V2-only overlays are recorded in `library/indexes/skill-routes.json` and do not modify imported V1 files. Regenerate with `python scripts/build_skill_routes.py`; validate with `python scripts/build_skill_routes.py --check`.','',
+ '## Additive V2 overlays','',
+ *[f'- `{sid}` / `{overlay["id"]}`: {overlay["summary"]} Imported V1 content remains unchanged.' for sid,overlay in V2_OVERLAYS.items()],'',
  'Select global core, relevant sector core, and only capabilities required by the Task. A selected capability depends on its core. Explicit IDs take priority over lexical trigger hints; ambiguous matching must be resolved from Task scope, not treated as authorization. Shared executor aliases do not create duplicate skills.','',
  'Full behavioral parity across arbitrary agent hosts is NOT VALIDATED. Exact text coverage proves no section was dropped; it does not prove all models follow the instructions, nor tokens saved. SDD task-contract generation and implementation workflow remain deliberately cohesive and relatively large to preserve coupled gates. Legacy bundles continue loading their original monolithic SKILL.md, so selective-loading gains require the V2 router.','',
  '| V1 source | Section and original lines | V2 skill |','| --- | --- | --- |']

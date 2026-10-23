@@ -1,8 +1,8 @@
 # The Office V2
 
 **Engineering Harness modular para desenvolver software com escopo, execução e evidências rastreáveis.**
-Versão de aceitação: `2.0.0-alpha.1`. A base V2 foi integrada pelo [PR #2](https://github.com/guilhermedemorais-dev/The-office/pull/2).
-Os manuais desta revisão estão na branch `feat/the-office-v2` para revisão.
+Versão de aceitação: `2.0.0-alpha.2`. A base V2 foi integrada pelo [PR #2](https://github.com/guilhermedemorais-dev/The-office/pull/2).
+Esta revisão está na branch `codex/add-public-apis-discovery` e aguarda integração.
 
 ## Tópicos
 
@@ -66,7 +66,7 @@ contexto. [Metodologia completa](docs/operations/methodology.md).
 ## Instalação e configuração da máquina
 
 ```sh
-git clone --branch feat/the-office-v2 https://github.com/guilhermedemorais-dev/The-office.git
+git clone --branch codex/add-public-apis-discovery https://github.com/guilhermedemorais-dev/The-office.git
 cd The-office
 python scripts/office.py --help
 ```
@@ -76,10 +76,15 @@ A configuração verifica SO, host e ferramentas existentes, prepara somente
 capacidades necessárias e reutiliza estado local. Docker, Redis, bancos, todas
 as stacks e todos os MCPs não são pré-requisitos universais.
 
-**Copie o [prompt de instalação assistida](docs/operations/installation-prompt.md)**
-para seu agente com acesso à máquina. Ele cobre diagnóstico, registro compatível
-com o host, preparo selecionado, autenticação assistida e smoke test.
-[Instalação detalhada](docs/operations/installation.md). Clonar não prova ativação.
+No Codex, a ação **Setup** estará disponível quando você instalar uma versão
+que inclua este branch (`2.0.0-alpha.2` ou posterior). Depois de instalar, execute
+Setup. Ela orienta o registro da regra global, com backup e validação. A instalação
+do plugin não executa essa configuração automaticamente, e a versão atualmente
+publicada ainda não inclui essa mudança.
+Em hosts sem onboarding, use o [prompt de instalação assistida](docs/operations/installation-prompt.md)
+como fallback. Ele cobre diagnóstico, registro compatível, preparo selecionado e
+smoke test. Consulte [instalação detalhada](docs/operations/installation.md).
+Clonar ou instalar não prova ativação nem delegação.
 
 ### Agentes globais no Codex
 

@@ -1,8 +1,11 @@
 # Guia de instalação e configuração do The Office V2
 
-Use este guia para entender e conferir a instalação. Para delegar o trabalho ao
-agente, copie o [prompt de instalação](installation-prompt.md). São complementares:
-o prompt orienta execução assistida; o guia explica requisitos e aceitação.
+Use este guia para entender e conferir a instalação. Na versão `2.0.0-alpha.2`
+deste branch, instale o plugin e execute a ação **Setup** para iniciar o onboarding.
+Essa versão ainda aguarda integração/publicação; o plugin atualmente disponível
+no marketplace não oferece essa ação. Para hosts sem esse fluxo, use o
+[prompt manual de instalação](installation-prompt.md). O guia explica requisitos,
+limites e critérios de aceitação.
 
 ## 1. Identificar a máquina e o host
 
@@ -21,16 +24,14 @@ não homologa Windows 10, Windows 11 ou macOS nesta revisão.
 Em pasta nova, separada do código do cliente:
 
 ```sh
-git clone --branch feat/the-office-v2 https://github.com/guilhermedemorais-dev/The-office.git
+git clone --branch codex/add-public-apis-discovery https://github.com/guilhermedemorais-dev/The-office.git
 cd The-office
 git rev-parse HEAD
 python scripts/office.py --help
 ```
 
 Se houver checkout existente, confira remoto, branch e mudanças; siga
-[atualização](updating.md), sem sobrescrever trabalho. A base V2 já está na main após o PR #2; esta branch contém os manuais mais
-recentes ainda em revisão. Os marketplaces herdados distribuem V1 e não ativam
-a V2 da raiz.
+[atualização](updating.md), sem sobrescrever trabalho. A base V2 já está na main após o PR #2; este branch contém os manuais e o onboarding ainda em revisão. Os marketplaces herdados distribuem V1 e não ativam a V2 da raiz.
 Leia `AGENTS.md` e a política de execução desta versão.
 
 ## 3. Registrar ou usar pelo checkout
@@ -52,6 +53,24 @@ Alternativa de trabalho: abrir este checkout e fornecer ao agente sua localizaç
 canônica e a do projeto cliente. Isso permite roteamento explícito por `AGENTS.md`,
 mas deve ser chamado **uso por checkout**, não registro confirmado do plugin.
 Não copie todas as skills para o prompt nem use V1 e V2 simultaneamente.
+
+### Regra global de delegação no Codex
+
+O manifesto Codex associa a ação **Setup** à skill `skills/setup/SKILL.md`. O
+onboarding só roda quando iniciado pelo usuário depois da instalação; a instalação
+do plugin não executa comandos de escrita. A skill localiza o `AGENTS.md` global em
+`$CODEX_HOME/AGENTS.md` ou no diretório padrão Codex do usuário, mostra o diff,
+obtém aprovação para alterar o escopo global, faz backup datado e valida a mesclagem
+marcada. Se o bloco já estiver idêntico, não escreve nem cria backup; conflito nos
+marcadores ou falha de backup interrompe a alteração.
+
+Perfis nativos do host e contratos `agents/<setor>/AGENT.md` são artefatos
+distintos. A skill inspeciona `config.toml` e perfis existentes sem expor segredos,
+mas não cria perfis nem altera configuração por inferência. Ela verifica em
+separado se a sessão pode delegar e se um dispatch real retorna resposta.
+`AGENTS_GLOBAL_RULE`, `AGENT_PROFILES_DISCOVERED` e `AGENT_DISPATCH_VERIFIED`
+exigem evidência distinta; diretório, perfil, flag ou regra escrita não provam
+invocação. Sessões já abertas podem precisar ser reiniciadas para carregar a regra.
 
 ## 4. Diagnosticar e preparar seletivamente
 
@@ -77,6 +96,29 @@ somente leitura. Nunca commitar credenciais, preferências ou estado de runtime.
 Depois reutilize `status` compatível e faça reparo pontual em falha/drift. Não
 instale todas as stacks/CLIs/MCPs nem execute bootstrap completo antes de cada Task.
 Autenticação é conduzida pelo host/usuário e verificada separadamente da configuração.
+
+### Roteamento proativo de MCPs por projeto
+
+No início de um projeto ou quando uma Task mudar materialmente, traduza o objetivo
+em capacidades necessárias e pesquise cada necessidade no catálogo MCP. Informe
+quais opções relevantes já estão disponíveis e quais exigiriam instalação,
+configuração, autenticação ou validação. Explique em linguagem concreta o problema
+que cada opção resolve, acesso solicitado, escopo, custo conhecido e alternativa
+sem MCP. `CORE` no catálogo significa prioridade para avaliar, não requisito global:
+nenhum MCP de terceiros é obrigatório para o plugin básico funcionar.
+
+Quando não houver opção adequada no catálogo, faça descoberta externa delimitada,
+começando pela documentação oficial/registro do provedor; use GitHub/grep.app para
+exemplos de código quando isso ajudar. Antes de recomendar a instalação, informe
+fonte, compatibilidade e limitações. Não instale ou conecte silenciosamente. Para
+autenticação, indique a URL e o fluxo seguro oferecido pelo host; não solicite token
+no chat nem o grave em arquivo versionado.
+
+Relate a prontidão com evidência separada: plugin reconhecido, ferramentas exigidas
+disponíveis, MCP configurado, autenticação concluída e operação verificada. Estado
+não observado é `UNKNOWN`; entrada no catálogo ou arquivo de configuração não prova
+conexão. Só declare uma Task pronta quando suas capacidades necessárias estiverem
+disponíveis e verificadas no nível exigido.
 
 ## 5. Confirmar operação básica
 
@@ -107,7 +149,8 @@ Não instalar o portal dentro do Harness. Preparação não inicia backend ou de
 
 Confirme revisão do bundle ativo, ferramentas realmente verificadas, preferência
 local reutilizada e uma Task descartável com evidência. Registre o que depende de
-login, ferramenta ausente ou homologação. Consulte o [smoke test](user-guide.md).
+login, ferramenta ausente ou homologação. “Plugin instalado” e “Task pronta” são
+estados diferentes. Consulte o [smoke test](user-guide.md).
 Leia [atualização](updating.md) antes de atualizar fonte/cópia ativa/Portal.
 
 Para deixar de usar, selecione o entrypoint anterior ou feche o checkout. Preserve

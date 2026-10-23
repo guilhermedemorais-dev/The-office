@@ -16,6 +16,32 @@ for plugin templates/scripts absent there, use repository root `plugins/parceiro
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## Curated catalog before external research
+
+For technical, product, API, repository, library or tool research, consult current task and project sources first, then search The Office shared catalog before using the web, GitHub search or code-search services. In a The Office checkout, use:
+
+```bash
+python scripts/office.py search "<specific need>" --index library/indexes/resources.json --limit 8
+```
+
+Read the relevant matched resource files, not only search metadata and not the entire catalog. In an installed bundle, resolve the command and index from that active bundle; do not guess sibling cache paths. If the catalog is inaccessible, state that and continue with the sources actually available. Never claim a search was performed when it was not.
+
+For MCP discovery, search by the needed capability and the term `MCP` (for example, `MCP public-code-search`), then read the matched `mcp-library.json` record and its handoff/configuration fields. Check runtime/host availability separately; the shared JSON is descriptive metadata, not a live connection registry.
+
+Use catalog entries as curated starting points. For current API behavior, official provider documentation, price, quotas, legal terms and availability, verify the relevant claims with the provider after the internal search. A catalog candidate is enough to keep PRD discovery moving: record it as a candidate and leave unsupported facts UNKNOWN or NOT VALIDATED; do not block the PRD by asserting that a paid API or new provider is required before checking the catalog.
+
+## Proactive capability routing and readiness
+
+At the start of a project or a materially new task, translate the outcome into required capabilities (for example: repository/issues, official SDK docs, browser QA, design context, API discovery, public-code examples, cloud/account operations). Search The Office capability/MCP catalog for each material need, then inspect the current host to distinguish AVAILABLE, CONFIGURED, AUTHENTICATED and OPERATION_VERIFIED. A catalog entry is a recommendation candidate, never evidence that the host has it.
+
+Tell the user when a catalog capability would materially improve the task. Name the capability/MCP, the concrete project problem it addresses, why it is better than the available fallback, its provider/source, prerequisites, required access or token, scope, cost if known, and the exact next setup step. Offer a supported installation/connection path; do not silently skip it and do not silently install/connect it. For MCPs marked CORE, interpret CORE as a reusable high-priority catalog capability, not a universal install requirement: select it only when the current task needs that capability. Basic plugin operation has no universal third-party MCP prerequisite.
+
+If no catalog capability fits, say which need remains uncovered, then do bounded external discovery (official provider docs/registry first; GitHub or grep.app for code examples when useful). Compare vetted options and return the source, compatibility, auth, scope, and limitations. Do not install a CLI/MCP or acquire credentials as part of discovery. Use the host's secure auth flow; never ask for or write a token in chat or versioned files. If setup requires user action, provide the exact official URL, host setting/file and field names supported by current documentation, and report USER_ACTION_REQUIRED until the user completes it.
+
+Never report “ready” based only on plugin installation, a catalog match, or a config entry. Report separate evidence for PLUGIN_RECOGNIZED, REQUIRED_TOOLS_AVAILABLE, MCP_CONFIGURED, AUTHENTICATED, and OPERATION_VERIFIED; mark unobserved states UNKNOWN and say what blocks the task. “Task ready” requires all capabilities actually required by that task to be available and verified to the level the work needs. Optional capabilities can remain not requested without blocking unrelated work.
+
+Use public-code search such as the cataloged Grep MCP only when repository examples would materially help. Confirm the capability is actually available in the current host; if it is not, use the grep.app site through approved browsing when available, or recommend connecting the cataloged MCP if repeated code search is valuable. Treat snippets as examples, not proof of provider support, current API behavior, license compatibility or production suitability.
+
 <!-- source-section:parceiro-estrategico-global:000 sha256:bf5db4f6db7f407bc8f4315f2d19808a0e054115dc2f2ce3ad4c95bc1512d834 -->
 
 # Parceiro Estratégico Global
