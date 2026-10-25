@@ -2524,3 +2524,24 @@ progress, proportionally to its risk. See [lifecycle](docs/operations/delivery-l
 payloads; no background hook or remote publication is implied.
 
 </details>
+
+## Cinematic UI specialization
+
+`cinematic-web-standard` is bundled **inside the existing UI/UX plugin**, at
+`plugins/ui-ux-standard/skills/cinematic-web-standard/`. It adds opt-in
+scrollytelling, GSAP/ScrollTrigger, Canvas image sequences and media-budget QA.
+It is not a separate plugin, sector, mandatory dependency or permanent process.
+Use the existing UI/UX installation; updating this source does not update an
+already installed host/cache automatically. Instructions are portable; the
+optional frame-extraction helper requires Bash and FFmpeg, while manifest and
+sequence validation use Python. No dependencies/MCPs are installed by this change.
+
+For V2, select the capability only when required:
+
+```bash
+python scripts/office.py plan ux-design --capability ux-cinematic
+```
+
+This returns a plan, not agent execution or visual validation. The selected
+`skills/ux-cinematic/SKILL.md` preserves the canonical nested source and resolves
+its references from that source directory. Ordinary UI plans do not preload it.
