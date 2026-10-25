@@ -63,7 +63,7 @@ LLM to read it completely, and require a `SKILL_RECEIPT` before work begins.
   when it satisfies the same task contract; never silently downgrade quality or
   skip a mandatory specialist.
 
-<!-- source-section:dev-workflow-standard:017 sha256:fdc4a76840c27190e4d5983dd99a83a744897e3492972cba7884adcc0a05afff -->
+<!-- source-section:dev-workflow-standard:017 sha256:1412cace5ea1eeb07cd8cb468a3b6756b8900eac4b7e0b31768dcdeffbcf12dd -->
 ## When to Trigger Each Specialist
 
 - API discovery during planning/spec: route relevant API, integration or
@@ -109,6 +109,14 @@ LLM to read it completely, and require a `SKILL_RECEIPT` before work begins.
 - `ui-ux-standard`: **mandatory whenever there is UI** — new/changed screens,
   components, visual states, responsiveness, accessibility, or design-system
   adherence.
+- `cinematic-web-standard`: select only for approved cinematic/scrollytelling,
+  scroll-scrubbed image sequences, GSAP/ScrollTrigger or motion-heavy page work.
+  It is a specialization inside the existing `ui-ux-standard` plugin/sector,
+  not a new owner or a replacement for UI/UX. Route its canonical nested skill
+  and `references/dev-workflow-integration.md`; require scene contracts, media
+  budgets, mobile/reduced-motion behavior and `CINEMATIC_RECEIPT` in the same
+  Task. Ordinary UI work does not load it. The executor implements; UI/UX keeps
+  visual acceptance and independent QA keeps functional acceptance.
 - `qa-testing-standard`: mandatory for changed behavior, bugfixes, user flows,
   APIs, business rules, persistent state, payments, tenancy, imports/exports,
   integrations, concurrency and regressions. QA planning may start before
