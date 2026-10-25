@@ -21,6 +21,7 @@ CONFIG = {
   'task-governance':['Mandatory Task Governance','Official Kanban Method','Definition of Entry / Exit','Repository Readiness Bootstrap','GitHub-Ready Task Structure','Recommended Task Template'],
   'delegation':['Delegation Rules','When to Trigger Each Specialist','Reference Routing'],
   'review':['Review Rules']}),
+ 'cinematic-web-standard':('ux',{'cinematic':['Preamble','Ownership','Required Context','Non-Negotiables','Rendering Decision Gate','Workflow','Dev-workflow Handoff','Resources']}),
  'ui-ux-standard':('ux',{
   'core':['Preamble','Ownership','Non-Negotiables','Registry and MCP Policy','Minimal Workflow','Handoff Output'],
   'components':['Component Intelligence'],
@@ -66,6 +67,7 @@ CONFIG = {
   'marketing-sales':['Marketing','Vendas']})
 }
 TRIGGERS = {
+ 'ux-cinematic':['cinematic','scrollytelling','ScrollTrigger','scroll-scrub','image sequence','cinemática'],
  'ux-components':['component','library','template','componente','biblioteca'],
  'ux-design-system':['design system','tokens','catalogue','design guide','sistema de design'],
  'ux-visual-validation':['visual','responsive','responsividade','accessibility','acessibilidade','ui','layout'],
@@ -150,7 +152,8 @@ def build(root=ROOT):
    registry['source_commit']='UNKNOWN'
  outputs={}
  for source_id,(sector,groups) in CONFIG.items():
-  rel=f'plugins/{source_id}/skills/{source_id}/SKILL.md'
+  rel=('plugins/ui-ux-standard/skills/cinematic-web-standard/SKILL.md'
+       if source_id=='cinematic-web-standard' else f'plugins/{source_id}/skills/{source_id}/SKILL.md')
   text=(root/rel).read_text(encoding='utf-8')
   body_start,spans=sections(text,source_id)
   expected=[h for headings in groups.values() for h in headings]
@@ -170,7 +173,7 @@ def build(root=ROOT):
    if sid!='global-core':
     required.insert(0,'global-core')
    triggers=TRIGGERS.get(sid,[group.replace('-',' '),sector])
-   entry={'id':sid,'sector':sector,'path':path,'source':source_id,'role':'core' if group=='core' else 'capability','requires':required,'triggers':triggers,'source_sections':[s['id'] for s in chunks],'reference_base':str(Path(rel).parent),'reference_fallback':f'plugins/{source_id}'}
+   entry={'id':sid,'sector':sector,'path':path,'source':source_id,'role':'core' if group=='core' else 'capability','requires':required,'triggers':triggers,'source_sections':[s['id'] for s in chunks],'reference_base':str(Path(rel).parent),'reference_fallback':str(Path(rel).parents[2])}
    if sid in V2_OVERLAYS:
     entry['v2_overlays']=[V2_OVERLAYS[sid]['id']]
    reference_map=[]
@@ -178,7 +181,7 @@ def build(root=ROOT):
     if '://' in target or target.startswith('#'):
      continue
     local=target.split('#',1)[0]
-    candidates=[root/Path(rel).parent/local,root/f'plugins/{source_id}'/local,root/local]
+    candidates=[root/Path(rel).parent/local,root/Path(rel).parents[2]/local,root/local]
     found=next((candidate.resolve() for candidate in candidates if candidate.is_file()),None)
     reference_map.append({'original':target,'resolved':str(found.relative_to(root.resolve())) if found and found.is_relative_to(root.resolve()) else None,'status':'RESOLVED' if found and found.is_relative_to(root.resolve()) else 'NOT_VALIDATED'})
    entry['reference_map']=reference_map
@@ -192,7 +195,7 @@ def build(root=ROOT):
    for dependency in required:
     wrapper+=f'Before acting, read repository-root `skills/{dependency}/SKILL.md` fully and include it in SKILL_RECEIPT.\n'
    wrapper+='The exact source sections follow unchanged. In those sections, “this SKILL”\nmeans this selected V2 skill plus its required core, not the entire V1 control plane.\n'
-   wrapper+=f'Resolve original relative references and backticked resource paths from repository root `{Path(rel).parent}/`;\nfor plugin templates/scripts absent there, use repository root `plugins/{source_id}/`.\n'
+   wrapper+=f'Resolve original relative references and backticked resource paths from repository root `{Path(rel).parent}/`;\nfor plugin templates/scripts absent there, use repository root `{Path(rel).parents[2]}/`.\n'
    wrapper+='Never resolve inherited relative paths against this generated directory.\n'
    wrapper+='Load only the references whose conditions hold; retain all explicit mandatory gates.\n\n'
    if sid in V2_OVERLAYS:
