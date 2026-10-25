@@ -21,7 +21,8 @@ class SkillRoutesTests(unittest.TestCase):
   sources={s['path'] for s in self.registry['sources']}
   canonical={str(p.relative_to(ROOT)) for p in ROOT.glob('plugins/*/skills/*/SKILL.md')}
   self.assertEqual(sources,canonical)
-  self.assertEqual(len(sources),12)
+  self.assertEqual(len(sources),13)
+  self.assertIn("plugins/ui-ux-standard/skills/cinematic-web-standard/SKILL.md",sources)
 
  def test_exact_source_and_destination_section_equivalence(self):
   for source in self.registry['sources']:
