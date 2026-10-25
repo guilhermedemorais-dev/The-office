@@ -17,6 +17,10 @@ for plugin templates/scripts absent there, use repository root `plugins/ui-ux-st
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+Canonical link resolution (repository-relative paths, not skill-directory-relative):
+- `../cinematic-web-standard/SKILL.md`: `plugins/ui-ux-standard/skills/cinematic-web-standard/SKILL.md`
+- `../cinematic-web-standard/references/dev-workflow-integration.md`: `plugins/ui-ux-standard/skills/cinematic-web-standard/references/dev-workflow-integration.md`
+
 <!-- source-section:ui-ux-standard:000 sha256:5e87b738422aa904bb8df167a99fa9fe00424275c155efc9f225928b38e835bc -->
 
 # UI/UX Standard
@@ -36,7 +40,7 @@ methodology was applied.
 Keep this control plane compact. Create only the design docs and artifacts that
 are needed for the current task.
 
-<!-- source-section:ui-ux-standard:001 sha256:393befb02ecaba483e772d521b57086175ebb43f5a9a0c67afd677f0124d5a67 -->
+<!-- source-section:ui-ux-standard:001 sha256:649b24cf59c843c354f861a884f2b846fa349289a937326a78424d7b05872531 -->
 ## Ownership
 
 Own:
@@ -69,6 +73,14 @@ For v2, verify **normative equivalence** and `contract_revision` for the routed
 UI/UX slice using the current Harness comparison receipt. Load the exact
 Design Guide, tokens, component library, visual references, mockup and sections
 named by the contract; divergence blocks a design or validation claim.
+
+For cinematic/scrollytelling, scroll-scrubbed sequences or motion-heavy pages,
+select the sibling [Cinematic Web Standard](../cinematic-web-standard/SKILL.md)
+and its [integration handoff](../cinematic-web-standard/references/dev-workflow-integration.md).
+Use it only when triggered by approved scope. UI/UX remains the design/visual
+owner; the cinematic specialist defines scenes, media budgets, reduced motion
+and motion/performance evidence. `dev-implementation-standard` implements.
+Do not load the cinematic methodology for ordinary UI changes.
 
 <!-- source-section:ui-ux-standard:002 sha256:7d5aa27943bd70c330bf530991be75bde2a31701422b4b75621249c4f0bbbd1a -->
 ## Non-Negotiables
