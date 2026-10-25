@@ -31,20 +31,28 @@ Full behavioral parity across arbitrary agent hosts is NOT VALIDATED. Exact text
 | `dev-workflow-standard` | GitHub-Ready Task Structure (456–468) | `orchestrator-task-governance` |
 | `dev-workflow-standard` | Recommended Task Template (469–477) | `orchestrator-task-governance` |
 | `dev-workflow-standard` | Delegation Rules (478–518) | `orchestrator-delegation` |
-| `dev-workflow-standard` | When to Trigger Each Specialist (519–576) | `orchestrator-delegation` |
-| `dev-workflow-standard` | Review Rules (577–606) | `orchestrator-review` |
-| `dev-workflow-standard` | Context Budget Rules (607–642) | `orchestrator-core` |
-| `dev-workflow-standard` | Reference Routing (643–678) | `orchestrator-delegation` |
+| `dev-workflow-standard` | When to Trigger Each Specialist (519–584) | `orchestrator-delegation` |
+| `dev-workflow-standard` | Review Rules (585–614) | `orchestrator-review` |
+| `dev-workflow-standard` | Context Budget Rules (615–650) | `orchestrator-core` |
+| `dev-workflow-standard` | Reference Routing (651–686) | `orchestrator-delegation` |
+| `cinematic-web-standard` | Preamble (5–9) | `ux-cinematic` |
+| `cinematic-web-standard` | Ownership (10–30) | `ux-cinematic` |
+| `cinematic-web-standard` | Required Context (31–45) | `ux-cinematic` |
+| `cinematic-web-standard` | Non-Negotiables (46–59) | `ux-cinematic` |
+| `cinematic-web-standard` | Rendering Decision Gate (60–84) | `ux-cinematic` |
+| `cinematic-web-standard` | Workflow (85–191) | `ux-cinematic` |
+| `cinematic-web-standard` | Dev-workflow Handoff (192–204) | `ux-cinematic` |
+| `cinematic-web-standard` | Resources (205–217) | `ux-cinematic` |
 | `ui-ux-standard` | Preamble (5–22) | `ux-core` |
-| `ui-ux-standard` | Ownership (23–55) | `ux-core` |
-| `ui-ux-standard` | Non-Negotiables (56–81) | `ux-core` |
-| `ui-ux-standard` | Component Intelligence (82–159) | `ux-components` |
-| `ui-ux-standard` | Registry and MCP Policy (160–183) | `ux-core` |
-| `ui-ux-standard` | Minimal Workflow (184–202) | `ux-core` |
-| `ui-ux-standard` | Default Design Structure (203–229) | `ux-design-system` |
-| `ui-ux-standard` | Visual Quality Gate (230–246) | `ux-visual-validation` |
-| `ui-ux-standard` | Visual QA Checklist (247–263) | `ux-visual-validation` |
-| `ui-ux-standard` | Handoff Output (264–276) | `ux-core` |
+| `ui-ux-standard` | Ownership (23–63) | `ux-core` |
+| `ui-ux-standard` | Non-Negotiables (64–89) | `ux-core` |
+| `ui-ux-standard` | Component Intelligence (90–167) | `ux-components` |
+| `ui-ux-standard` | Registry and MCP Policy (168–191) | `ux-core` |
+| `ui-ux-standard` | Minimal Workflow (192–210) | `ux-core` |
+| `ui-ux-standard` | Default Design Structure (211–237) | `ux-design-system` |
+| `ui-ux-standard` | Visual Quality Gate (238–254) | `ux-visual-validation` |
+| `ui-ux-standard` | Visual QA Checklist (255–271) | `ux-visual-validation` |
+| `ui-ux-standard` | Handoff Output (272–284) | `ux-core` |
 | `sdd-spec-factory` | Preamble (5–28) | `sdd-core` |
 | `sdd-spec-factory` | Mission (29–53) | `sdd-core` |
 | `sdd-spec-factory` | Vocabulary (non-negotiable) (54–70) | `sdd-core` |
@@ -59,20 +67,20 @@ Full behavioral parity across arbitrary agent hosts is NOT VALIDATED. Exact text
 | `sdd-spec-factory` | Fase 2 - Geração de Specs (220–298) | `sdd-specifications` |
 | `sdd-spec-factory` | Fase 3 - Geração de Task Executável (299–474) | `sdd-task-contracts` |
 | `sdd-spec-factory` | Fase 4 - Checklist de PR/QA (475–487) | `sdd-review` |
-| `sdd-spec-factory` | Integration with the other plugins (488–506) | `sdd-core` |
-| `sdd-spec-factory` | Definition of done for this skill (507–523) | `sdd-core` |
+| `sdd-spec-factory` | Integration with the other plugins (488–514) | `sdd-core` |
+| `sdd-spec-factory` | Definition of done for this skill (515–531) | `sdd-core` |
 | `dev-implementation-standard` | Preamble (5–22) | `implementation-core` |
 | `dev-implementation-standard` | Mission (23–36) | `implementation-core` |
 | `dev-implementation-standard` | Preconditions (do not start without these) (37–55) | `implementation-core` |
 | `dev-implementation-standard` | Hard Limits (non-negotiable) (56–70) | `implementation-core` |
 | `dev-implementation-standard` | Task Status Rules (71–82) | `implementation-delivery` |
 | `dev-implementation-standard` | Workflow (83–163) | `implementation-core` |
-| `dev-implementation-standard` | Frontend design sources (164–177) | `implementation-frontend` |
-| `dev-implementation-standard` | GitHub Projects Readiness (178–195) | `implementation-delivery` |
-| `dev-implementation-standard` | Recommended Task Template (196–204) | `implementation-delivery` |
-| `dev-implementation-standard` | Escalation (205–220) | `implementation-core` |
-| `dev-implementation-standard` | Interfaces with other skills (221–240) | `implementation-core` |
-| `dev-implementation-standard` | Definition of done (241–255) | `implementation-core` |
+| `dev-implementation-standard` | Frontend design sources (164–185) | `implementation-frontend` |
+| `dev-implementation-standard` | GitHub Projects Readiness (186–203) | `implementation-delivery` |
+| `dev-implementation-standard` | Recommended Task Template (204–212) | `implementation-delivery` |
+| `dev-implementation-standard` | Escalation (213–228) | `implementation-core` |
+| `dev-implementation-standard` | Interfaces with other skills (229–248) | `implementation-core` |
+| `dev-implementation-standard` | Definition of done (249–263) | `implementation-core` |
 | `dev-environment-standard` | Preamble (5–20) | `environment-core` |
 | `dev-environment-standard` | Choose the operation (21–38) | `environment-bootstrap` |
 | `dev-environment-standard` | Bootstrap loop (39–81) | `environment-bootstrap` |
