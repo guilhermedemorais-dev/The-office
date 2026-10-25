@@ -4,7 +4,7 @@
     {
       "id": "dev-workflow-standard",
       "path": "plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md",
-      "sha256": "0780763d5b323049addd44d0d256ad4bc64573e8d7378e6663058ffae578cfd1",
+      "sha256": "9f94f039b88870b35960ff3f9d99d6f3c8b04dfc29bfe2e125940d0cf5780bc4",
       "body_start_line": 5,
       "sections": [
         {
@@ -147,40 +147,112 @@
           "id": "dev-workflow-standard:017",
           "heading": "When to Trigger Each Specialist",
           "start_line": 519,
-          "end_line": 576,
-          "sha256": "fdc4a76840c27190e4d5983dd99a83a744897e3492972cba7884adcc0a05afff",
+          "end_line": 584,
+          "sha256": "1412cace5ea1eeb07cd8cb468a3b6756b8900eac4b7e0b31768dcdeffbcf12dd",
           "skill_id": "orchestrator-delegation"
         },
         {
           "id": "dev-workflow-standard:018",
           "heading": "Review Rules",
-          "start_line": 577,
-          "end_line": 606,
+          "start_line": 585,
+          "end_line": 614,
           "sha256": "5f2c80a536d0b115102e902399006e9dd450288f5bd5bba6e9cc144bcb7a7008",
           "skill_id": "orchestrator-review"
         },
         {
           "id": "dev-workflow-standard:019",
           "heading": "Context Budget Rules",
-          "start_line": 607,
-          "end_line": 642,
+          "start_line": 615,
+          "end_line": 650,
           "sha256": "18db48f2b11ac83cd320bba2820bab453e53a01bc0999d1a76e7d39b6223241e",
           "skill_id": "orchestrator-core"
         },
         {
           "id": "dev-workflow-standard:020",
           "heading": "Reference Routing",
-          "start_line": 643,
-          "end_line": 678,
+          "start_line": 651,
+          "end_line": 686,
           "sha256": "3ee91f55e4438520623226dfe4eae324e4682bee9d8c07d3992a74888c3989c3",
           "skill_id": "orchestrator-delegation"
         }
       ]
     },
     {
+      "id": "cinematic-web-standard",
+      "path": "plugins/ui-ux-standard/skills/cinematic-web-standard/SKILL.md",
+      "sha256": "2ab838d5ca64b5de3340e5bc8722dbcc3a78216d48877a3b635f2249041bc2cc",
+      "body_start_line": 5,
+      "sections": [
+        {
+          "id": "cinematic-web-standard:000",
+          "heading": "Preamble",
+          "start_line": 5,
+          "end_line": 9,
+          "sha256": "35323e432dfd360b43c5cb7b3ffd1fb30269063010259f10424f3b87a1fcf9fa",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:001",
+          "heading": "Ownership",
+          "start_line": 10,
+          "end_line": 30,
+          "sha256": "8befffa65166c39849221ecc9174a3dbfdddcf64b173c01525d682a7fa4535e4",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:002",
+          "heading": "Required Context",
+          "start_line": 31,
+          "end_line": 45,
+          "sha256": "ff7be80b5fecc388378081ba3c03dd20bc7f5cbd162cf07490805adcdc5ab7e8",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:003",
+          "heading": "Non-Negotiables",
+          "start_line": 46,
+          "end_line": 59,
+          "sha256": "3221f17a96989584f6741db9dc5f5360d5a201fc6ac6b3e5e8c406fb503418d5",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:004",
+          "heading": "Rendering Decision Gate",
+          "start_line": 60,
+          "end_line": 84,
+          "sha256": "b9a78a31e9068ecaf0607b5ef2296e4296111c8f080a6f786bef42376f9c91df",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:005",
+          "heading": "Workflow",
+          "start_line": 85,
+          "end_line": 191,
+          "sha256": "64707d13693cf488d3cee50df83bca84ba2f846a83def161fb363101ee7fab45",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:006",
+          "heading": "Dev-workflow Handoff",
+          "start_line": 192,
+          "end_line": 204,
+          "sha256": "59b202676d19e79f09d7498f7fe3533d55c12eca52464c81caee2c0213f8a8c1",
+          "skill_id": "ux-cinematic"
+        },
+        {
+          "id": "cinematic-web-standard:007",
+          "heading": "Resources",
+          "start_line": 205,
+          "end_line": 217,
+          "sha256": "ffd1a3b3650fab2e05f0a53febf2985d6de6f5a7b61015572a89bf486e0e56fb",
+          "skill_id": "ux-cinematic"
+        }
+      ]
+    },
+    {
       "id": "ui-ux-standard",
       "path": "plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md",
-      "sha256": "1330d469dbe32d73c8f141bd49e8a3c85c12855c9631e24e292a4ee250631564",
+      "sha256": "8920dc6b3ebbca20eb71e6efc0fb3e99efdf6c9d387dfbe00e6f1faf08e8cbaf",
       "body_start_line": 5,
       "sections": [
         {
@@ -195,71 +267,71 @@
           "id": "ui-ux-standard:001",
           "heading": "Ownership",
           "start_line": 23,
-          "end_line": 55,
-          "sha256": "393befb02ecaba483e772d521b57086175ebb43f5a9a0c67afd677f0124d5a67",
+          "end_line": 63,
+          "sha256": "649b24cf59c843c354f861a884f2b846fa349289a937326a78424d7b05872531",
           "skill_id": "ux-core"
         },
         {
           "id": "ui-ux-standard:002",
           "heading": "Non-Negotiables",
-          "start_line": 56,
-          "end_line": 81,
+          "start_line": 64,
+          "end_line": 89,
           "sha256": "7d5aa27943bd70c330bf530991be75bde2a31701422b4b75621249c4f0bbbd1a",
           "skill_id": "ux-core"
         },
         {
           "id": "ui-ux-standard:003",
           "heading": "Component Intelligence",
-          "start_line": 82,
-          "end_line": 159,
+          "start_line": 90,
+          "end_line": 167,
           "sha256": "a6257a3516f71347b0314144e3260fd7aff8e73fced89df52da4d0f30fccdebb",
           "skill_id": "ux-components"
         },
         {
           "id": "ui-ux-standard:004",
           "heading": "Registry and MCP Policy",
-          "start_line": 160,
-          "end_line": 183,
+          "start_line": 168,
+          "end_line": 191,
           "sha256": "dd571ff2f99b5ecee0168d83124494a778350be2cf50bbde872c1da736b7bd34",
           "skill_id": "ux-core"
         },
         {
           "id": "ui-ux-standard:005",
           "heading": "Minimal Workflow",
-          "start_line": 184,
-          "end_line": 202,
+          "start_line": 192,
+          "end_line": 210,
           "sha256": "efb4497b01e348beefd3874a2f039c524df69b4d27bf11509705051f2f5227b5",
           "skill_id": "ux-core"
         },
         {
           "id": "ui-ux-standard:006",
           "heading": "Default Design Structure",
-          "start_line": 203,
-          "end_line": 229,
+          "start_line": 211,
+          "end_line": 237,
           "sha256": "e241ad018f9fc7bc2a2c15010d4061a45f0946da44ca977637cceb9c358b928c",
           "skill_id": "ux-design-system"
         },
         {
           "id": "ui-ux-standard:007",
           "heading": "Visual Quality Gate",
-          "start_line": 230,
-          "end_line": 246,
+          "start_line": 238,
+          "end_line": 254,
           "sha256": "51d2ecdba921a4571e74d7d719049e5cc7c16b1c283fffa71dec9c160a5fa6ff",
           "skill_id": "ux-visual-validation"
         },
         {
           "id": "ui-ux-standard:008",
           "heading": "Visual QA Checklist",
-          "start_line": 247,
-          "end_line": 263,
+          "start_line": 255,
+          "end_line": 271,
           "sha256": "11da6a06aa6583267b4e95a874e3f362b96903010ff5b730a9617c7433a554d5",
           "skill_id": "ux-visual-validation"
         },
         {
           "id": "ui-ux-standard:009",
           "heading": "Handoff Output",
-          "start_line": 264,
-          "end_line": 276,
+          "start_line": 272,
+          "end_line": 284,
           "sha256": "26122437ba3a4459ad25b671fd4ee94093a498e8511f7825602c4b93e56dcd11",
           "skill_id": "ux-core"
         }
@@ -268,7 +340,7 @@
     {
       "id": "sdd-spec-factory",
       "path": "plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md",
-      "sha256": "2b97a4cbc92474e162a40c487787eea1cf37df3ab2316ecb4e3a81214537231b",
+      "sha256": "331c1a61d101c9670a80ffac0a5e0da6ddd2d9a689fe544ab8d1b1c26f937012",
       "body_start_line": 5,
       "sections": [
         {
@@ -387,15 +459,15 @@
           "id": "sdd-spec-factory:014",
           "heading": "Integration with the other plugins",
           "start_line": 488,
-          "end_line": 506,
-          "sha256": "d75a190dc2d9917bb62421da93a51f41039e23b00e42bac391f424b733612e0f",
+          "end_line": 514,
+          "sha256": "f96b2c18b497556ced82c34495a53daf0a78a8b5be082b8d487b52768f8055cd",
           "skill_id": "sdd-core"
         },
         {
           "id": "sdd-spec-factory:015",
           "heading": "Definition of done for this skill",
-          "start_line": 507,
-          "end_line": 523,
+          "start_line": 515,
+          "end_line": 531,
           "sha256": "37a9ef006d013ffa80995989eab1be52960b2f54dc7aab8b9b549c5f7e275d8a",
           "skill_id": "sdd-core"
         }
@@ -404,7 +476,7 @@
     {
       "id": "dev-implementation-standard",
       "path": "plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md",
-      "sha256": "e7538f20d871c10c5f65bbe193cf072de6aefdc72f6da83040adc272f3666264",
+      "sha256": "320025127a07396c167366c5487a9fd73b642996cec7f71ef0ea2a05a025c796",
       "body_start_line": 5,
       "sections": [
         {
@@ -459,47 +531,47 @@
           "id": "dev-implementation-standard:006",
           "heading": "Frontend design sources",
           "start_line": 164,
-          "end_line": 177,
-          "sha256": "f32ea2a24291a611ba811cce23e0832785f8cbe8e562c3dc50d81e64a269cf37",
+          "end_line": 185,
+          "sha256": "d5573899b68d3859775a182241a5631769700581c9a6484be2331c5c01598537",
           "skill_id": "implementation-frontend"
         },
         {
           "id": "dev-implementation-standard:007",
           "heading": "GitHub Projects Readiness",
-          "start_line": 178,
-          "end_line": 195,
+          "start_line": 186,
+          "end_line": 203,
           "sha256": "e1e2c12a56703f5cfd53bb060e34215865d9f279a53a644c26cf4f329f4c3d34",
           "skill_id": "implementation-delivery"
         },
         {
           "id": "dev-implementation-standard:008",
           "heading": "Recommended Task Template",
-          "start_line": 196,
-          "end_line": 204,
+          "start_line": 204,
+          "end_line": 212,
           "sha256": "f24128583d881834ff57512121a5d5096368f896aef9b5735d388c6db12b194c",
           "skill_id": "implementation-delivery"
         },
         {
           "id": "dev-implementation-standard:009",
           "heading": "Escalation",
-          "start_line": 205,
-          "end_line": 220,
+          "start_line": 213,
+          "end_line": 228,
           "sha256": "cc6f9d2095be9fe494573419b15a05392436e18405830318dc15b8fa9fd14e4d",
           "skill_id": "implementation-core"
         },
         {
           "id": "dev-implementation-standard:010",
           "heading": "Interfaces with other skills",
-          "start_line": 221,
-          "end_line": 240,
+          "start_line": 229,
+          "end_line": 248,
           "sha256": "b1d6a6dda8183dc7d60d58d9d6d86f9376f48aa5fc021f34d345c3edda5c9453",
           "skill_id": "implementation-core"
         },
         {
           "id": "dev-implementation-standard:011",
           "heading": "Definition of done",
-          "start_line": 241,
-          "end_line": 255,
+          "start_line": 249,
+          "end_line": 263,
           "sha256": "f09f149568cf7d214bcff122062b64ebf557a6b9c2bc32cc33a92ad9ef4135b1",
           "skill_id": "implementation-core"
         }
@@ -1242,6 +1314,38 @@
       "reference_map": []
     },
     {
+      "id": "ux-cinematic",
+      "sector": "ux",
+      "path": "skills/ux-cinematic/SKILL.md",
+      "source": "cinematic-web-standard",
+      "role": "capability",
+      "requires": [
+        "global-core",
+        "ux-core"
+      ],
+      "triggers": [
+        "cinematic",
+        "scrollytelling",
+        "ScrollTrigger",
+        "scroll-scrub",
+        "image sequence",
+        "cinemática"
+      ],
+      "source_sections": [
+        "cinematic-web-standard:000",
+        "cinematic-web-standard:001",
+        "cinematic-web-standard:002",
+        "cinematic-web-standard:003",
+        "cinematic-web-standard:004",
+        "cinematic-web-standard:005",
+        "cinematic-web-standard:006",
+        "cinematic-web-standard:007"
+      ],
+      "reference_base": "plugins/ui-ux-standard/skills/cinematic-web-standard",
+      "reference_fallback": "plugins/ui-ux-standard",
+      "reference_map": []
+    },
+    {
       "id": "ux-core",
       "sector": "ux",
       "path": "skills/ux-core/SKILL.md",
@@ -1264,7 +1368,18 @@
       ],
       "reference_base": "plugins/ui-ux-standard/skills/ui-ux-standard",
       "reference_fallback": "plugins/ui-ux-standard",
-      "reference_map": []
+      "reference_map": [
+        {
+          "original": "../cinematic-web-standard/SKILL.md",
+          "resolved": "plugins/ui-ux-standard/skills/cinematic-web-standard/SKILL.md",
+          "status": "RESOLVED"
+        },
+        {
+          "original": "../cinematic-web-standard/references/dev-workflow-integration.md",
+          "resolved": "plugins/ui-ux-standard/skills/cinematic-web-standard/references/dev-workflow-integration.md",
+          "status": "RESOLVED"
+        }
+      ]
     },
     {
       "id": "ux-components",
@@ -2479,6 +2594,7 @@
         "ux-core"
       ],
       "capabilities": [
+        "ux-cinematic",
         "ux-components",
         "ux-design-system",
         "ux-visual-validation",
@@ -2603,6 +2719,7 @@
         "ux-core"
       ],
       "capabilities": [
+        "ux-cinematic",
         "ux-components",
         "ux-design-system",
         "ux-visual-validation",
