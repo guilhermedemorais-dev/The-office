@@ -10,6 +10,13 @@ ADAPTED={'README.md':'docs/migration-v1-readme.md','AGENTS.md':'docs/migration/v
 # Owner-approved Studio evolution; original inventory hashes remain immutable.
 ADAPTED.update({'plugins/studio-prd/skills/studio-prd/SKILL.md': 'docs/migration/v1-frozen/plugins/studio-prd/skills/studio-prd/SKILL.md', 'plugins/studio-prd/skills/studio-prd/references/briefing.md': 'docs/migration/v1-frozen/plugins/studio-prd/skills/studio-prd/references/briefing.md', 'plugins/studio-prd/skills/studio-prd/assets/briefing-template.md': 'docs/migration/v1-frozen/plugins/studio-prd/skills/studio-prd/assets/briefing-template.md', 'plugins/studio-prd/skills/studio-prd/assets/prd-template.md': 'docs/migration/v1-frozen/plugins/studio-prd/skills/studio-prd/assets/prd-template.md', 'plugins/studio-prd/skills/studio-prd/agents/openai.yaml': 'docs/migration/v1-frozen/plugins/studio-prd/skills/studio-prd/agents/openai.yaml', 'docs/specs/studio-prd.md': 'docs/migration/v1-frozen/docs/specs/studio-prd.md'})
 
+# Owner-authorized cinematic integration, 2026-10-25; immutable V1 inventory retained.
+ADAPTED.update({'plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md': 'docs/migration/v1-frozen/plugins/dev-workflow-standard/skills/dev-workflow-standard/SKILL.md', 'plugins/dev-workflow-standard/skills/dev-workflow-standard/references/capability-registry.md': 'docs/migration/v1-frozen/plugins/dev-workflow-standard/skills/dev-workflow-standard/references/capability-registry.md', 'plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md': 'docs/migration/v1-frozen/plugins/dev-implementation-standard/skills/dev-implementation-standard/SKILL.md', 'plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md': 'docs/migration/v1-frozen/plugins/ui-ux-standard/skills/ui-ux-standard/SKILL.md', 'plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md': 'docs/migration/v1-frozen/plugins/sdd-spec-factory/skills/sdd-spec-factory/SKILL.md'})
+
+ADAPTED.update({'plugins/dev-environment-standard/Tools (Linux)/catalog.json': 'docs/migration/v1-frozen/plugins/dev-environment-standard/Tools (Linux)/catalog.json', 'plugins/dev-environment-standard/Tools (Windows)/catalog.json': 'docs/migration/v1-frozen/plugins/dev-environment-standard/Tools (Windows)/catalog.json', 'plugins/dev-environment-standard/Tools (macOS)/catalog.json': 'docs/migration/v1-frozen/plugins/dev-environment-standard/Tools (macOS)/catalog.json'})
+
+ADAPTED['tests/test_platform_tool_routing.py'] = 'docs/migration/v1-frozen/tests/test_platform_tool_routing.py'
+
 def verify(root=ROOT):
     inventory=json.loads((root/'docs/migration/v1-inventory.json').read_text(encoding='utf-8'))
     failures=[]
