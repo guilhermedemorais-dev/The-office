@@ -18,7 +18,7 @@ for plugin templates/scripts absent there, use repository root `plugins/dev-impl
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
-<!-- source-section:dev-implementation-standard:006 sha256:f32ea2a24291a611ba811cce23e0832785f8cbe8e562c3dc50d81e64a269cf37 -->
+<!-- source-section:dev-implementation-standard:006 sha256:d5573899b68d3859775a182241a5631769700581c9a6484be2331c5c01598537 -->
 ## Frontend design sources
 
 For frontend work, resolve the routed project Design Guide Markdown, live HTML
@@ -32,5 +32,13 @@ to store a client's widgets. A catalogue fixture remains a labelled simulation;
 it cannot satisfy backend/integration acceptance. Return changed component
 revisions and actual developer-test evidence to UI/UX and QA for independent
 validation, including final application rendering rather than catalogue alone.
+
+For an approved cinematic/scrollytelling task, read the routed
+`cinematic-web-standard` skill inside the UI/UX plugin and its integration
+reference before implementation. Consume approved scene contracts, media
+budgets, mobile behavior and reduced-motion acceptance; return
+`CINEMATIC_RECEIPT` plus actual motion/performance test evidence to UI/UX and
+QA. Do not treat the developer's receipt as independent visual approval.
+Ordinary frontend tasks do not load this specialization.
 
 <!-- end of selected V2 skill -->
