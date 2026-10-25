@@ -163,7 +163,7 @@ collapse them into one prose blob; if a dimension does not apply, write
   traceability. This skill must not inflate a bounded change into a full
   document tree.
 
-<!-- source-section:sdd-spec-factory:014 sha256:d75a190dc2d9917bb62421da93a51f41039e23b00e42bac391f424b733612e0f -->
+<!-- source-section:sdd-spec-factory:014 sha256:f96b2c18b497556ced82c34495a53daf0a78a8b5be082b8d487b52768f8055cd -->
 ## Integration with the other plugins
 
 - `dev-workflow-standard` is the Engineering Harness. It owns discovery, scope,
@@ -182,6 +182,14 @@ collapse them into one prose blob; if a dimension does not apply, write
 - `security-standard` owns the security review and release gate. The security
   dimension of each spec and the security checklist of each PR are validated by
   it.
+
+For approved cinematic/scrollytelling scope only, route the UI/UX plugin's
+`cinematic-web-standard` and its `references/dev-workflow-integration.md`.
+Keep the same module Task and existing UI/UX sector. Specify scene IDs, renderer
+per scene, scroll/pin behavior, media source/status, critical and total preload
+budgets, desktop/mobile variants, reduced-motion fallback, missing-media behavior
+and required browser/performance evidence. Ordinary UI does not load this skill.
+The executor implements; UI/UX and QA retain their independent acceptance.
 
 <!-- source-section:sdd-spec-factory:015 sha256:37a9ef006d013ffa80995989eab1be52960b2f54dc7aab8b9b549c5f7e275d8a -->
 ## Definition of done for this skill
