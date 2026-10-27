@@ -18,6 +18,13 @@ for plugin templates/scripts absent there, use repository root `plugins/qa-testi
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## Reconstruction and specification coverage
+
+For reconstructed behavior or evidence-to-spec coverage, read the repository-root [reconstruction procedure](library/reconstruction/README.md). Compare the canonical acceptance/test IDs with actual current-revision evidence, including negative cases. Implementation declarations and visual similarity do not prove functional equivalence. Missing mandatory criteria, unapproved skips, stale evidence and incomplete tests block coverage regardless of any average. Use the optional coverage checker only as a structural/integrity check; it cannot run tests, certify independent QA or authorize release. Preserve existing QA, UX, Security and human gates.
+
+Canonical link resolution (repository-relative paths, not skill-directory-relative):
+- `library/reconstruction/README.md`: `library/reconstruction/README.md`
+
 <!-- source-section:qa-testing-standard:002 sha256:c434a93c78010baa269eb2ab4933c94cd733105922af2dc8dffa72113d4d059d -->
 ## Modes and phases
 

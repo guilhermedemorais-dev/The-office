@@ -7,6 +7,10 @@ no marketplace não oferece essa ação. Para hosts sem esse fluxo, use o
 [prompt manual de instalação](installation-prompt.md). O guia explica requisitos,
 limites e critérios de aceitação.
 
+Prompts separados: [instalação inicial](installation-prompt.md) e
+[atualização de instalação existente](update-prompt.md). Para o host OpenCode,
+use o [adaptador específico](opencode.md), que não modifica configurações Codex/Claude.
+
 ## 1. Identificar a máquina e o host
 
 Confirme SO/versão/arquitetura, local do projeto, host de IA e ferramentas já

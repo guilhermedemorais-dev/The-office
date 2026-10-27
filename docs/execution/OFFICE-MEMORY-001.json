@@ -1,0 +1,519 @@
+{
+  "schema_version": 2,
+  "contract_revision": "1",
+  "task_id": "OFFICE-MEMORY-001",
+  "human_task": {
+    "representation": "github_issue",
+    "issue_url": "https://github.com/guilhermedemorais-dev/The-office/issues/12",
+    "local_mirror": "docs/tasks/OFFICE-MEMORY-001.md",
+    "normative_equivalence": "Local Human Task renders every normative field. Remote body must match this rendering; current publication comparison is recorded separately in receipts."
+  },
+  "summary": "Memória temporal de projeto com Graphiti",
+  "goal": "Memória temporal de projeto com Graphiti",
+  "current_state": "Capacidade integrada ausente ou apenas análise; fontes canônicas atuais preservadas.",
+  "expected_result": "Mudanças reais de código/procedimento testadas localmente e entregues em branch isolada.",
+  "scope": [
+    "Implementar adapter local opt-in com projeto explícito, proveniência de fonte/revisão/hash e Graphiti SDK lazy; sem ingestão real automática.",
+    "Journal durável deve distinguir pendência/falha/persistência, suportar replay controlado e prevenir duplicação lógica por fonte/revisão/hash.",
+    "Consulta deve limitar resultados, validar validade temporal e origem e nunca prevalecer sobre required_sources atuais.",
+    "Rejeitar secrets e escapes de caminho; namespace de projeto não é autenticação nem isolamento multiusuário; não expor MCP cru.",
+    "Preservar Potpie/local como recuperação de código e fallback; documentar instalação opcional, pin de dependências, backup, remoção e limites."
+  ],
+  "out_of_scope": [
+    "merge",
+    "deploy",
+    "instalação global",
+    "credenciais",
+    "ingestão de dados reais",
+    "homologação nativa sem execução"
+  ],
+  "allowed_paths": [
+    "integrations/memory/**",
+    "tests/test_memory*.py",
+    "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-retrieval.md",
+    "docs/tasks/OFFICE-MEMORY-001.md",
+    "docs/execution/OFFICE-MEMORY-001.json",
+    "docs/specs/memory/module-spec.md",
+    "docs/receipts/OFFICE-MEMORY-001*"
+  ],
+  "protected_paths": [
+    "main",
+    "docs/migration/v1-frozen/**",
+    "plugins/reverse-engineering-standard/runtime/**",
+    "configuração do host real",
+    "credenciais",
+    "dados de clientes"
+  ],
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "description": "Implementar adapter local opt-in com projeto explícito, proveniência de fonte/revisão/hash e Graphiti SDK lazy; sem ingestão real automática.",
+      "source": "docs/specs/memory/module-spec.md#requisitos",
+      "priority": "MUST"
+    },
+    {
+      "id": "REQ-02",
+      "description": "Journal durável deve distinguir pendência/falha/persistência, suportar replay controlado e prevenir duplicação lógica por fonte/revisão/hash.",
+      "source": "docs/specs/memory/module-spec.md#requisitos",
+      "priority": "MUST"
+    },
+    {
+      "id": "REQ-03",
+      "description": "Consulta deve limitar resultados, validar validade temporal e origem e nunca prevalecer sobre required_sources atuais.",
+      "source": "docs/specs/memory/module-spec.md#requisitos",
+      "priority": "MUST"
+    },
+    {
+      "id": "REQ-04",
+      "description": "Rejeitar secrets e escapes de caminho; namespace de projeto não é autenticação nem isolamento multiusuário; não expor MCP cru.",
+      "source": "docs/specs/memory/module-spec.md#requisitos",
+      "priority": "MUST"
+    },
+    {
+      "id": "REQ-05",
+      "description": "Preservar Potpie/local como recuperação de código e fallback; documentar instalação opcional, pin de dependências, backup, remoção e limites.",
+      "source": "docs/specs/memory/module-spec.md#requisitos",
+      "priority": "MUST"
+    }
+  ],
+  "business_rules": [
+    {
+      "id": "RN-01",
+      "description": "Required owner reviews and runtime evidence remain separate from local tests; no merge/deploy.",
+      "source": "AGENTS.md"
+    }
+  ],
+  "specs": [
+    "docs/specs/memory/module-spec.md"
+  ],
+  "docs": [
+    "AGENTS.md",
+    "docs/operations/v2-execution-policy.md"
+  ],
+  "references": [
+    {
+      "id": "REF-01",
+      "title": "Current local engineering policy",
+      "source_url": "https://github.com/guilhermedemorais-dev/The-office/tree/60e2e35501ee1e3c1ad77f8beb7a015b6c905e62",
+      "project_path": "docs/operations/v2-execution-policy.md",
+      "section": "#material-technical-decisions",
+      "purpose": "Preserve source/ownership and bounded autonomous implementation",
+      "applies_to": [
+        "MT-01"
+      ]
+    }
+  ],
+  "design": {
+    "applicability": "N/A",
+    "guide": "N/A",
+    "tokens": "N/A",
+    "visual_references": [],
+    "component_library": "N/A",
+    "mockup": "N/A",
+    "reason_if_na": "CLI and procedural changes, no rendered product UI."
+  },
+  "microtasks": [
+    {
+      "id": "MT-01",
+      "title": "Memória temporal de projeto com Graphiti",
+      "summary": "Implement scoped module, tests and operating documentation.",
+      "owner_skill": "dev-implementation-standard",
+      "owner_plugin": "dev-implementation-standard",
+      "capability": "implementation",
+      "preferred_tool": "repository-native-tooling",
+      "depends_on": [],
+      "references": [
+        "REF-01"
+      ],
+      "allowed_paths": [
+        "integrations/memory/**",
+        "tests/test_memory*.py",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-retrieval.md",
+        "docs/tasks/OFFICE-MEMORY-001.md",
+        "docs/execution/OFFICE-MEMORY-001.json",
+        "docs/specs/memory/module-spec.md",
+        "docs/receipts/OFFICE-MEMORY-001*"
+      ],
+      "checklist": [
+        "Implementar adapter local opt-in com projeto explícito, proveniência de fonte/revisão/hash e Graphiti SDK lazy; sem ingestão real automática.",
+        "Journal durável deve distinguir pendência/falha/persistência, suportar replay controlado e prevenir duplicação lógica por fonte/revisão/hash.",
+        "Consulta deve limitar resultados, validar validade temporal e origem e nunca prevalecer sobre required_sources atuais.",
+        "Rejeitar secrets e escapes de caminho; namespace de projeto não é autenticação nem isolamento multiusuário; não expor MCP cru.",
+        "Preservar Potpie/local como recuperação de código e fallback; documentar instalação opcional, pin de dependências, backup, remoção e limites."
+      ],
+      "deliverables": [
+        "Module code/procedures",
+        "Focused negative tests",
+        "Current operating documentation"
+      ],
+      "completion_condition": "All acceptance criteria verified by required owners; runtime gaps remain explicit.",
+      "validator": "qa-testing-standard"
+    }
+  ],
+  "execution_lists": [
+    {
+      "list_id": "implementation",
+      "owner_skill": "dev-implementation-standard",
+      "phase": "implementation",
+      "objective": "Memória temporal de projeto com Graphiti",
+      "microtask_ids": [
+        "MT-01"
+      ],
+      "depends_on": [],
+      "references": [
+        "REF-01"
+      ],
+      "allowed_paths": [
+        "integrations/memory/**",
+        "tests/test_memory*.py",
+        "plugins/dev-workflow-standard/skills/dev-workflow-standard/references/context-retrieval.md",
+        "docs/tasks/OFFICE-MEMORY-001.md",
+        "docs/execution/OFFICE-MEMORY-001.json",
+        "docs/specs/memory/module-spec.md",
+        "docs/receipts/OFFICE-MEMORY-001*"
+      ],
+      "protected_paths": [
+        "main",
+        "docs/migration/v1-frozen/**",
+        "plugins/reverse-engineering-standard/runtime/**",
+        "configuração do host real",
+        "credenciais",
+        "dados de clientes"
+      ],
+      "deliverables": [
+        "Module code/procedures",
+        "Focused negative tests",
+        "Current operating documentation"
+      ],
+      "completion_condition": "All acceptance criteria verified by required owners; runtime gaps remain explicit.",
+      "required_tests": [
+        "TEST-01",
+        "TEST-02"
+      ],
+      "acceptance_criteria": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-05"
+      ],
+      "stop_conditions": [
+        "architecture_change_required",
+        "scope_expansion_required",
+        "mandatory_reference_missing",
+        "source_of_truth_conflict",
+        "human_task_json_divergence",
+        "authorization_required"
+      ],
+      "checklist": [
+        {
+          "instruction": "Implementar adapter local opt-in com projeto explícito, proveniência de fonte/revisão/hash e Graphiti SDK lazy; sem ingestão real automática."
+        },
+        {
+          "instruction": "Journal durável deve distinguir pendência/falha/persistência, suportar replay controlado e prevenir duplicação lógica por fonte/revisão/hash."
+        },
+        {
+          "instruction": "Consulta deve limitar resultados, validar validade temporal e origem e nunca prevalecer sobre required_sources atuais."
+        },
+        {
+          "instruction": "Rejeitar secrets e escapes de caminho; namespace de projeto não é autenticação nem isolamento multiusuário; não expor MCP cru."
+        },
+        {
+          "instruction": "Preservar Potpie/local como recuperação de código e fallback; documentar instalação opcional, pin de dependências, backup, remoção e limites."
+        }
+      ]
+    }
+  ],
+  "sectors": {
+    "database": {
+      "owner": "dev-implementation-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "database-review"
+      ]
+    },
+    "backend": {
+      "owner": "dev-implementation-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "backend-review"
+      ]
+    },
+    "frontend": {
+      "owner": "dev-implementation-standard",
+      "applicability": "N/A",
+      "reason": "No affected product UI or live operational deployment for this module.",
+      "depends_on": [],
+      "microtasks": [],
+      "required_sources": [],
+      "required_validations": []
+    },
+    "ui_ux": {
+      "owner": "ui-ux-standard",
+      "applicability": "N/A",
+      "reason": "No affected product UI or live operational deployment for this module.",
+      "depends_on": [],
+      "microtasks": [],
+      "required_sources": [],
+      "required_validations": []
+    },
+    "qa": {
+      "owner": "qa-testing-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [
+        "backend"
+      ],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "qa-review"
+      ]
+    },
+    "security": {
+      "owner": "security-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [
+        "backend"
+      ],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "security-review"
+      ]
+    },
+    "devops": {
+      "owner": "devops-standard",
+      "applicability": "N/A",
+      "reason": "No affected product UI or live operational deployment for this module.",
+      "depends_on": [],
+      "microtasks": [],
+      "required_sources": [],
+      "required_validations": []
+    },
+    "observability": {
+      "owner": "devops-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "observability-review"
+      ]
+    },
+    "documentation": {
+      "owner": "dev-implementation-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [
+        "backend"
+      ],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "documentation-review"
+      ]
+    },
+    "harness": {
+      "owner": "dev-workflow-standard",
+      "applicability": "REQUIRED",
+      "reason": "Affected local module implementation/review/documentation.",
+      "depends_on": [
+        "database",
+        "backend",
+        "qa",
+        "security",
+        "observability",
+        "documentation"
+      ],
+      "microtasks": [
+        "MT-01"
+      ],
+      "required_sources": [
+        {
+          "path": "docs/specs/memory/module-spec.md",
+          "purpose": "Current module requirements and acceptance"
+        }
+      ],
+      "required_validations": [
+        "harness-review"
+      ]
+    }
+  },
+  "pipeline": [
+    "collaborative_discovery_sdd",
+    "publish_discovery_sdd_completed",
+    "human_approval",
+    "environment_capability_readiness",
+    "implementation",
+    "executor_tests",
+    "independent_functional_qa",
+    "independent_security_qa",
+    "independent_ui_ux_qa",
+    "devops_observability_validation",
+    "rework_retest",
+    "pull_request_gate",
+    "harness_final_gate",
+    "human_acceptance_merge",
+    "separately_authorized_deploy"
+  ],
+  "gates": {
+    "discovery": "Published DISCOVERY_SDD_COMPLETED comment and human approval",
+    "implementation": "Approved microtasks, executor tests and current receipts",
+    "independent_validation": "Every REQUIRED sector validated by its owner",
+    "pull_request": "Issue, JSON, specs, revision and evidence reconciled",
+    "harness_final": "All REQUIRED sectors current and no unresolved blocker",
+    "merge": "Explicit human acceptance",
+    "deploy": "Separate explicit human authorization"
+  },
+  "required_tests": [
+    {
+      "id": "TEST-01",
+      "type": "unit",
+      "command": "python -m unittest discover -s tests -p 'test_memory*.py' -v",
+      "expected": "exit 0, meaningful normal and negative cases"
+    },
+    {
+      "id": "TEST-02",
+      "type": "regression",
+      "command": "python -m unittest discover -s tests -v",
+      "expected": "No introduced regression; known failures explicitly diagnosed"
+    }
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "AC-01",
+      "description": "Implementar adapter local opt-in com projeto explícito, proveniência de fonte/revisão/hash e Graphiti SDK lazy; sem ingestão real automática.",
+      "validation": "TEST-01 and relevant owner review"
+    },
+    {
+      "id": "AC-02",
+      "description": "Journal durável deve distinguir pendência/falha/persistência, suportar replay controlado e prevenir duplicação lógica por fonte/revisão/hash.",
+      "validation": "TEST-01 and relevant owner review"
+    },
+    {
+      "id": "AC-03",
+      "description": "Consulta deve limitar resultados, validar validade temporal e origem e nunca prevalecer sobre required_sources atuais.",
+      "validation": "TEST-01 and relevant owner review"
+    },
+    {
+      "id": "AC-04",
+      "description": "Rejeitar secrets e escapes de caminho; namespace de projeto não é autenticação nem isolamento multiusuário; não expor MCP cru.",
+      "validation": "TEST-01 and relevant owner review"
+    },
+    {
+      "id": "AC-05",
+      "description": "Preservar Potpie/local como recuperação de código e fallback; documentar instalação opcional, pin de dependências, backup, remoção e limites.",
+      "validation": "TEST-01 and relevant owner review"
+    }
+  ],
+  "stop_conditions": [
+    "architecture_change_required",
+    "scope_expansion_required",
+    "mandatory_reference_missing",
+    "source_of_truth_conflict",
+    "human_task_json_divergence",
+    "authorization_required"
+  ],
+  "execution_prompt": {
+    "instruction": "Keep all execution_lists in this single JSON file, never embedded in the Human Task or split into per-list JSON files. Harness verifies normative equivalence of the Human Task and this file, then supplies one prompt per list pointing to execution_contract_path and list_id. Specialists read the file, select the identified execution_lists entry and inherit global constraints, required sources, tests and dependencies. Verify task identity, contract revision, owner and current Harness evidence without reading the Human Task. Execute only the selected approved list and its subitems, return evidence and receipts, and never merge or deploy without explicit authorization.",
+    "required_checkpoints": [
+      "DISCOVERY_SDD_COMPLETED",
+      "RUNNING",
+      "VALIDATING",
+      "REWORK",
+      "BLOCKED",
+      "COMPLETED"
+    ]
+  },
+  "reporting": {
+    "issue_comment_required": true,
+    "publication_evidence_requirement": "returned comment URL or identifier",
+    "token_usage_fields": [
+      "input_tokens",
+      "output_tokens",
+      "total_tokens",
+      "measurement_source"
+    ],
+    "changed_surface_fields": [
+      "changed_files",
+      "issue_changes",
+      "json_spec_reference_changes",
+      "remote_mutations",
+      "code_changed",
+      "branch",
+      "commit",
+      "pull_request"
+    ],
+    "unavailable_value": "NOT_AVAILABLE",
+    "storage_rule": "Actual token counts, changed surface and publication evidence live in Issue comments and receipts, not in this normative contract."
+  },
+  "discovery": {
+    "questions_and_answers": [
+      {
+        "question": "Proceed with implementation?",
+        "answer": "User: Filhão faz as alterações; also requires separate installation/update prompts."
+      }
+    ],
+    "research": [],
+    "decisions": [
+      "Selective integration into existing sectors; preserve canonical REA/SDD."
+    ],
+    "open_hypotheses": [
+      "Live host and provider availability are not verified."
+    ],
+    "approval_requirement": "Direct user instruction authorizes reversible implementation and patch preparation; no repeated discovery required."
+  }
+}

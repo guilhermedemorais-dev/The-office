@@ -18,6 +18,10 @@ for plugin templates/scripts absent there, use repository root `plugins/sdd-spec
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## Evidence to technical specifications
+
+When deriving behavior from a reference product, process or reconstruction findings, read the repository-root [reconstruction procedure](library/reconstruction/README.md). Extend existing module/page/component/API/database specs and canonical Task IDs. Record evidence -> approved requirement -> rule/state -> acceptance criterion -> planned test. Keep OBSERVED, INFERRED and UNKNOWN separate from scope approval and implementation status. Specify actors, permissions, preconditions, transitions, persistence, errors and applicable concurrency/idempotency constraints; resolve material unknowns before readiness. A screenshot does not establish backend rules. No duplicate architecture document, automatic MVP, stack default or Task per screen is introduced.
+
 Canonical link resolution (repository-relative paths, not skill-directory-relative):
 - `references/technical-knowledge-router.md`: `plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-knowledge-router.md`
 - `references/technical-architecture.md`: `plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-architecture.md`
@@ -27,6 +31,7 @@ Canonical link resolution (repository-relative paths, not skill-directory-relati
 - `references/technical-quality-operations.md`: `plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-quality-operations.md`
 - `references/technical-fiscal.md`: `plugins/sdd-spec-factory/skills/sdd-spec-factory/references/technical-fiscal.md`
 - `references/devops-planning.md`: `plugins/sdd-spec-factory/skills/sdd-spec-factory/references/devops-planning.md`
+- `library/reconstruction/README.md`: `library/reconstruction/README.md`
 
 <!-- source-section:sdd-spec-factory:006 sha256:671bb8895cfa266c804e8cb430d274dcd36abb8b6e63180fd02b0b5fe1842002 -->
 ## Consultative Technical Knowledge Routing

@@ -18,8 +18,13 @@ for plugin templates/scripts absent there, use repository root `plugins/dev-envi
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## OpenCode host preparation
+
+When the requested host is OpenCode, read the repository-root [OpenCode operation guide](docs/operations/opencode.md). Reuse the existing Environment/provider/tool-state workflow and explicit target paths. Keep generated configuration, host availability and a successful bounded operation as separate evidence. Do not overwrite global settings, install every catalog tool, start persistent services or treat generated profiles as executed agents.
+
 Canonical link resolution (repository-relative paths, not skill-directory-relative):
 - `scripts/environment.py`: `plugins/dev-environment-standard/skills/dev-environment-standard/scripts/environment.py`
+- `docs/operations/opencode.md`: `docs/operations/opencode.md`
 
 <!-- source-section:dev-environment-standard:001 sha256:6e61589cac600bca51369dd40c157078e21e018d53ceba6d0b2d5d4f6e6e9111 -->
 ## Choose the operation

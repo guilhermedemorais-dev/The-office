@@ -18,6 +18,13 @@ for plugin templates/scripts absent there, use repository root `plugins/reverse-
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## Behavioral reconstruction handoff
+
+For authorized feature reconstruction, read the repository-root [reconstruction procedure](library/reconstruction/README.md) and use its linked inventory template only where it adds information. Preserve the REA gateway and existing evidence ledger. Link stable screen/flow IDs to observed states, source revisions, evidence and unknowns; an inferred backend is not an observed implementation. Hand findings to the existing SDD owner. This overlay does not restrict separately authorized REA investigations to screenshots or authorize access to third-party private systems.
+
+Canonical link resolution (repository-relative paths, not skill-directory-relative):
+- `library/reconstruction/README.md`: `library/reconstruction/README.md`
+
 <!-- source-section:reverse-engineering-standard:002 sha256:799f073b43f822b0aea647d8450e6d49e7f13defd3c5d62e6cfcb9359102524b -->
 ## Workflow
 

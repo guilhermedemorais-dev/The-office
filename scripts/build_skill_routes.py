@@ -83,6 +83,48 @@ TRIGGERS = {
 
 # Additive V2 behavior; the imported V1 skill bodies remain byte-for-byte intact.
 V2_OVERLAYS = {
+ 'product-discovery': {
+  'id': 'evidence-led-product-reconstruction',
+  'summary': 'Map reference behavior and real feedback into proposed requirements without replacing approved scope.',
+  'text': '''## Reference products and user feedback
+
+When the request uses a reference app, screenshots, an existing workflow or user reviews, read the repository-root [reconstruction procedure](library/reconstruction/README.md). Reuse approved discoveries; map observed behavior separately from proposed and approved requirements. Review evidence-backed complaints before fixing scope when differentiation matters. Keyword themes are research candidates, never proof of sentiment or a validated market trend. Do not activate a competing eleven-stage pipeline or impose a new stack.'''
+ },
+ 'reverse-engineering-investigation': {
+  'id': 'behavioral-reconstruction-handoff',
+  'summary': 'Add stable screen/flow/evidence links while preserving the existing REA gateway and authorized inspection.',
+  'text': '''## Behavioral reconstruction handoff
+
+For authorized feature reconstruction, read the repository-root [reconstruction procedure](library/reconstruction/README.md) and use its linked inventory template only where it adds information. Preserve the REA gateway and existing evidence ledger. Link stable screen/flow IDs to observed states, source revisions, evidence and unknowns; an inferred backend is not an observed implementation. Hand findings to the existing SDD owner. This overlay does not restrict separately authorized REA investigations to screenshots or authorize access to third-party private systems.'''
+ },
+ 'sdd-specifications': {
+  'id': 'evidence-to-spec-traceability',
+  'summary': 'Link reference behavior to existing specifications, requirements, acceptance and planned tests.',
+  'text': '''## Evidence to technical specifications
+
+When deriving behavior from a reference product, process or reconstruction findings, read the repository-root [reconstruction procedure](library/reconstruction/README.md). Extend existing module/page/component/API/database specs and canonical Task IDs. Record evidence -> approved requirement -> rule/state -> acceptance criterion -> planned test. Keep OBSERVED, INFERRED and UNKNOWN separate from scope approval and implementation status. Specify actors, permissions, preconditions, transitions, persistence, errors and applicable concurrency/idempotency constraints; resolve material unknowns before readiness. A screenshot does not establish backend rules. No duplicate architecture document, automatic MVP, stack default or Task per screen is introduced.'''
+ },
+ 'qa-validation': {
+  'id': 'evidence-bound-reconstruction-coverage',
+  'summary': 'Validate every canonical acceptance criterion with revision-bound evidence; never use weighted parity as release approval.',
+  'text': '''## Reconstruction and specification coverage
+
+For reconstructed behavior or evidence-to-spec coverage, read the repository-root [reconstruction procedure](library/reconstruction/README.md). Compare the canonical acceptance/test IDs with actual current-revision evidence, including negative cases. Implementation declarations and visual similarity do not prove functional equivalence. Missing mandatory criteria, unapproved skips, stale evidence and incomplete tests block coverage regardless of any average. Use the optional coverage checker only as a structural/integrity check; it cannot run tests, certify independent QA or authorize release. Preserve existing QA, UX, Security and human gates.'''
+ },
+ 'orchestrator-delegation': {
+  'id': 'optional-project-memory-routing',
+  'summary': 'Retrieve scoped Graphiti memory only when selected, then verify against canonical project sources.',
+  'text': '''## Optional project memory
+
+When persistent project memory is selected for the task, read the repository-root [memory integration](integrations/memory/README.md). Retrieve only the authorized project/module slice; verify recalled decisions and evidence against current versioned sources before routing them. Memory is supporting context, never an approval, credential store, canonical Task or proof that a sector executed. If unavailable, continue from current project sources and record the limitation. Do not preload all memories or create one memory service per sector.'''
+ },
+ 'environment-bootstrap': {
+  'id': 'opencode-host-preparation',
+  'summary': 'Route explicitly selected OpenCode setup through the existing Environment owner.',
+  'text': '''## OpenCode host preparation
+
+When the requested host is OpenCode, read the repository-root [OpenCode operation guide](docs/operations/opencode.md). Reuse the existing Environment/provider/tool-state workflow and explicit target paths. Keep generated configuration, host availability and a successful bounded operation as separate evidence. Do not overwrite global settings, install every catalog tool, start persistent services or treat generated profiles as executed agents.'''
+ },
  'global-core': {
   'id': 'curated-catalog-before-external-research',
   'summary': 'Search task and project sources, proactively map needs to The Office catalog capabilities, then verify external gaps with official sources.',
@@ -174,7 +216,10 @@ def build(root=ROOT):
    if sid in V2_OVERLAYS:
     entry['v2_overlays']=[V2_OVERLAYS[sid]['id']]
    reference_map=[]
-   for target in dict.fromkeys(re.findall(r'\]\(([^)]+)\)', ''.join(item['text'] for item in chunks))):
+   routed_text=''.join(item['text'] for item in chunks)
+   if sid in V2_OVERLAYS:
+    routed_text+='\n'+V2_OVERLAYS[sid]['text']
+   for target in dict.fromkeys(re.findall(r'\]\(([^)]+)\)', routed_text)):
     if '://' in target or target.startswith('#'):
      continue
     local=target.split('#',1)[0]

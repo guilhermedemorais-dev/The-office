@@ -18,8 +18,13 @@ for plugin templates/scripts absent there, use repository root `plugins/studio-p
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## Reference products and user feedback
+
+When the request uses a reference app, screenshots, an existing workflow or user reviews, read the repository-root [reconstruction procedure](library/reconstruction/README.md). Reuse approved discoveries; map observed behavior separately from proposed and approved requirements. Review evidence-backed complaints before fixing scope when differentiation matters. Keyword themes are research candidates, never proof of sentiment or a validated market trend. Do not activate a competing eleven-stage pipeline or impose a new stack.
+
 Canonical link resolution (repository-relative paths, not skill-directory-relative):
 - `references/briefing.md`: `plugins/studio-prd/skills/studio-prd/references/briefing.md`
+- `library/reconstruction/README.md`: `library/reconstruction/README.md`
 
 <!-- source-section:studio-prd:001 sha256:cf2a00de3cefd070f715a7832b4d5d151121b1f6d13a6d4015764eaec354cfe3 -->
 ## Start from evidence

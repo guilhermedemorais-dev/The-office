@@ -4,6 +4,10 @@ Responsáveis: Ambiente verifica ferramentas/host; Governança controla revisão
 DevOps prepara Portal/infra conforme o destino. Não atualizar caches à força nem
 executar scripts remotos sem inspecionar a origem/revisão.
 
+Use o [prompt de atualização](update-prompt.md) para conduzir este procedimento.
+O [prompt de instalação](installation-prompt.md) é apenas para instalação inicial;
+não reinstale por cima para resolver atualização ou conflito.
+
 ## 1. Identificar o que está ativo
 
 Registre checkout/remoto/branch/commit da fonte e localização da cópia usada pelo
@@ -16,16 +20,16 @@ Preserve trabalho local; não resetar, limpar ou sobrescrever para facilitar upd
 Na fonte correta, com Git já configurado:
 
 ```sh
-git fetch origin feat/the-office-v2
-git log --oneline HEAD..origin/feat/the-office-v2
-git diff --stat HEAD..origin/feat/the-office-v2
+git fetch origin
+git log --oneline HEAD..origin/main
+git diff --stat HEAD..origin/main
 ```
 
-A main já recebeu a base V2 pelo PR #2. `feat/the-office-v2` contém esta rodada
-de manuais; confira o PR/revisão desejados antes de trocar a origem ativa.
+Os comandos usam main como exemplo. Quando a atualização solicitada aponta a
+outra branch/commit revisados, use essa referência confirmada, sem misturar versões.
 Revise mudanças materiais em skills,
 referências, scripts e dependências. Se o checkout estiver limpo e sua branch
-local puder avançar sem divergência, `git merge --ff-only origin/feat/the-office-v2`
+local puder avançar sem divergência, `git merge --ff-only origin/main`
 é uma atualização local da cópia de trabalho; não é merge do PR na main.
 Divergência exige revisar commits e preservar customizações, não force/reset.
 
@@ -43,6 +47,18 @@ Atualize a cópia de plugin ativa pelo mecanismo documentado pelo host, preserva
 configurações/marketplace e extensões locais. Recarregue/reinicie a sessão quando
 necessário e confira o commit/conteúdo ativo; teste uma seleção e operação pequena.
 Registro no host e testes nativos continuam exigindo evidência local.
+
+No OpenCode, siga [registro e atualização](opencode.md): use o helper nativo
+`register_opencode_agents.py` em plan/check antes de apply, contra bundle estável
+e projeto explícitos. Ele preserva opencode.json, providers/modelos e configurações
+de MCP. Hashes anteriores precisam corresponder aos adaptadores gerenciados;
+customizações/JSONC conflitantes não podem ser sobrescritas.
+
+Preserve memória existente: banco, ledger de ingestão, configuração local,
+escopos e backups não pertencem à atualização de arquivos do Harness. Não faça
+reset/reimportação/migração ou troca de embeddings por efeito colateral. Mudança
+de esquema/backend exige plano próprio. [Memória](../../integrations/memory/README.md)
+permanece opcional e seu estado operacional deve ser conferido separadamente.
 
 ## 4. Atualizar o template do cliente separadamente
 

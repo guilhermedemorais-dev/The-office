@@ -1,10 +1,12 @@
-# Prompt de instalação e configuração assistida
+# Prompt de instalação inicial e configuração assistida
 
 Copie o bloco para o agente com acesso à máquina. Substitua os caminhos ou peça
 a ele para identificar o workspace aberto. O prompt autoriza preparação local
 necessária, sem substituir permissões do host. Não instala todas as stacks.
 Este é o fallback manual, não um script executado pelo botão de instalação. No
 Codex, prefira instalar o plugin e iniciar seu onboarding pela ação **Setup**.
+Para uma instalação existente, use exclusivamente o
+[prompt de atualização](update-prompt.md), preservando configuração e memória.
 
 ```text
 Instale e configure o The Office V2 nesta máquina para o workspace atual.
@@ -34,6 +36,14 @@ main atual e registre commit, branch e estado do checkout antes de instalar.
    em `skills/setup/references/agent-routing-block.md`. Não replique o bloco em
    prompts paralelos. Sem acesso ao arquivo ou ferramenta real de delegação, registre
    USER_ACTION_REQUIRED/UNKNOWN; não declare agentes registrados ou invocados.
+   No OpenCode, confira a versão real e siga docs/operations/opencode.md. Use
+   scripts/register_opencode_agents.py plan/check com --bundle-root estável e
+   --project-root absolutos; revise o plano antes de apply e rode check depois.
+   Ele registra agentes e adaptadores de descoberta em .opencode do projeto,
+   sem alterar modelos/providers/MCPs ou configuração global. Preserve colisões;
+   não copie a pasta skills/ supondo descoberta automática e não confunda os
+   comandos /plugin do Claude com instalação no OpenCode. Registro não comprova
+   dispatch; execute uma tarefa sintética limitada no host escolhido.
    Em outros hosts, não escreva em configurações do Codex; siga o adaptador nativo.
 5. Use o Environment existente: doctor e prepare --dry-run com repo-root do
    Harness e workspace do cliente. Confira requirements/lockfile e catálogo
@@ -67,6 +77,13 @@ main atual e registre commit, branch e estado do checkout antes de instalar.
    matriz de prontidão, estados AGENTS_GLOBAL_RULE, AGENT_PROFILES_DISCOVERED e
    AGENT_DISPATCH_VERIFIED, verificações realizadas, backup criado, limitações e
    como atualizar. Marque explicitamente o que ficou sem validação. Não merge/deploy.
+12. Se memória persistente Graphiti foi selecionada, siga integrations/memory/README.md.
+    Registre projeto, origem, versões efetivas e local privado dos dados/ledger.
+    Não exponha o MCP de referência nem instale banco/modelos/credenciais sem o
+    escopo correspondente. Preserve fontes versionadas e fallback Potpie/local.
+    Comece com dados sintéticos; ACK/enfileirado não significa memória persistida.
+    Se não selecionada ou sem dependências, reporte NOT_CONFIGURED/NOT_VALIDATED
+    sem bloquear o uso básico. Não importe chats ou segredos automaticamente.
 ```
 
 O agente precisa de capacidades reais de filesystem/terminal ou ferramentas
@@ -78,5 +95,5 @@ prepare o handoff; a máquina do usuário continua pendente.
 Receba evidência do registro no host, `office.py` respondendo, skills efetivamente
 lidas e uma operação segura executada. `AUTH_REQUIRED`, conexão ausente ou
 operação não verificada impedem afirmar prontidão daquela capacidade. Consulte [instalação](installation.md)
-e [atualização](updating.md). A configuração total é um diagnóstico da máquina;
+e o [prompt separado de atualização](update-prompt.md). A configuração total é um diagnóstico da máquina;
 a preparação de ferramentas permanece seletiva conforme o projeto.
