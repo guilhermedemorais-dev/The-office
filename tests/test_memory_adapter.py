@@ -12,6 +12,7 @@ from unittest.mock import patch
 SPEC = importlib.util.spec_from_file_location("office_memory", Path(__file__).resolve().parents[1] / "integrations/memory/adapter.py")
 MOD = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MOD)
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class FakeProvider:
@@ -226,6 +227,13 @@ class MemoryTests(unittest.TestCase):
                 with self.assertRaises(type(error)):
                     self.run_async(MOD.run(args))
                 args.command = "search"
+
+    def test_external_model_processing_and_costs_are_documented(self):
+        guide = " ".join((ROOT / "integrations/memory/README.md").read_text().split())
+        self.assertIn("may incur its charges", guide)
+        self.assertIn("data-retention policy", guide)
+        self.assertIn("pricing", guide)
+        self.assertIn("does not enforce a spending limit", guide)
 
 
 if __name__ == "__main__":

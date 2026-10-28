@@ -94,6 +94,7 @@ prepare o handoff; a máquina do usuário continua pendente.
 
 Receba evidência do registro no host, `office.py` respondendo, skills efetivamente
 lidas e uma operação segura executada. `AUTH_REQUIRED`, conexão ausente ou
-operação não verificada impedem afirmar prontidão daquela capacidade. Consulte [instalação](installation.md)
-e o [prompt separado de atualização](update-prompt.md). A configuração total é um diagnóstico da máquina;
-a preparação de ferramentas permanece seletiva conforme o projeto.
+operação não verificada impedem afirmar prontidão daquela capacidade. Consulte o
+[guia de instalação](installation.md) para o fluxo inicial e use o
+[prompt separado de atualização](update-prompt.md) somente para atualizar uma
+instalação existente. A preparação de ferramentas permanece seletiva conforme o projeto.

@@ -145,6 +145,15 @@ class OpenCodeRegistration(unittest.TestCase):
         with self.assertRaisesRegex(registration.Blocked, 'noncanonical'):
             self.plan()
 
+    def test_install_and_update_prompts_remain_separate(self):
+        install = (ROOT / 'docs/operations/installation-prompt.md').read_text()
+        update = (ROOT / 'docs/operations/update-prompt.md').read_text()
+        self.assertIn('instalação inicial', install.lower())
+        self.assertIn('prompt de atualização', install.lower())
+        self.assertIn('já estiver instalado ou registrado', update.lower())
+        self.assertIn('prompt de instalação inicial', update.lower())
+        self.assertNotEqual(install, update)
+
 
 if __name__ == '__main__':
     unittest.main()

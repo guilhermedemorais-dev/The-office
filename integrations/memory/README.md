@@ -52,8 +52,12 @@ current retrieval time. An example receipt is not authorization. `enqueue` and
 host environment (`OFFICE_MEMORY_NEO4J_PASSWORD`, optional
 `OFFICE_MEMORY_NEO4J_USER`, `OFFICE_MEMORY_NEO4J_URI`); only loopback bolt/neo4j URIs
 are accepted. Graphiti's default model/embedding clients separately require their
-provider configuration, ordinarily `OPENAI_API_KEY`. Secrets never enter config
-examples or journal diagnostics. This CLI does not acquire or print them.
+provider configuration, ordinarily `OPENAI_API_KEY`. `sync` and `search` can send
+approved source snapshots or queries to that configured inference provider and may
+incur its charges. Review the selected models, data-retention policy and pricing
+before enabling them; this adapter does not enforce a spending limit. `enqueue`
+and `status` stay local. Secrets never enter config examples or journal diagnostics.
+This CLI does not acquire or print them.
 
 Before actual use, Environment prepares an isolated locked runtime and DevOps
 prepares the database under existing authorization. Pin the source SHA, resolved
