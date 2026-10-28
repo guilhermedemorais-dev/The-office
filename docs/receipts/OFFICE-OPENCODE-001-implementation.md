@@ -54,3 +54,7 @@ NOT_VALIDATED. No real project/customer data was used and no configuration was
 changed. Focused OpenCode tests PASS (14); full suite PASS (795 tests, 8 skips).
 The installation and update prompts remain separate, with a regression test.
 Issues #10, #11 and #12 exactly match their local task mirrors at comparison.
+
+The task contract requires an Issue comment for publication evidence. This
+follow-up updated the implementation receipt and PR description only; the Issue
+comment and Task closure remain pending.

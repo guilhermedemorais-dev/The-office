@@ -51,3 +51,7 @@ owner review remains NOT_EXECUTED: the active project does not expose `office_*`
 profiles, and the synthetic OpenCode delegation attempt returned no result.
 Thus QA, Security and Harness owner acceptance remains NOT_VALIDATED; local test
 success does not replace those gates.
+
+The task contract also requires an Issue comment for publication evidence. This
+follow-up updated the implementation receipt and PR description only; the Issue
+comment and Task closure remain pending.
