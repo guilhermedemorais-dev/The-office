@@ -36,3 +36,23 @@ Documentation: technical UPDATED; user procedures UPDATED, including independent
 installation/update prompts. UI screenshots N/A (CLI/protocol scope). No measured
 completion percentage or token savings. Publication evidence is the GitHub branch
 and review PR, to be returned after remote tree verification.
+
+## Follow-up validation 2026-10-27
+
+Validated implementation commit: `6d60d35bea29acca18481e73ddc1600982142615`.
+Focused memory tests PASS (19); full suite PASS (795 tests, 8 skips). The local
+environment has no `graphiti-core==0.31.2`, Neo4j service on loopback ports 7474/
+7687, Neo4j executable, or cached Neo4j container image.
+
+An isolated Git workspace and synthetic source were used for the adapter CLI:
+`enqueue` returned QUEUED; `sync` exited 2 with `PackageNotFoundError` and
+`live_graph: NOT_VALIDATED`; `search` exited 0 with the documented local fallback.
+No source was sent to a graph or inference provider. Real Graphiti/Neo4j/model
+integration remains NOT_VALIDATED. Documentation now states that sync/search can
+send source/query content to the configured inference provider and may incur
+charges; no spending limit is enforced by this adapter. Issues #10, #11 and #12
+exactly match their local task mirrors at comparison.
+
+Registered owner reviews for database, backend, QA, Security, observability,
+documentation and Harness remain NOT_EXECUTED/NOT_VALIDATED. The profile smoke
+test did not return a dispatch result and cannot substitute for those owners.

@@ -36,3 +36,21 @@ Documentation: technical UPDATED; user procedures UPDATED, including independent
 installation/update prompts. UI screenshots N/A (CLI/protocol scope). No measured
 completion percentage or token savings. Publication evidence is the GitHub branch
 and review PR, to be returned after remote tree verification.
+
+## Follow-up validation 2026-10-27
+
+Validated implementation commit: `6d60d35bea29acca18481e73ddc1600982142615`.
+The installed CLI reports OpenCode `1.4.0`; the documented schema baseline is
+`1.19.4`. In an isolated synthetic project, registration `plan`, `apply`, and
+`check` returned exit 0; `opencode agent list` recognized all 15 generated
+profiles, including `office_orchestrator` as primary and specialists as
+subagents. No profile was installed into the active checkout or global config;
+`opencode agent list` in the active checkout showed no `office_*` profiles.
+
+A synthetic read-only `office_orchestrator` → `office_qa` dispatch using the
+officially listed free `opencode/big-pickle` model did not return within 120
+seconds. Dispatch and the formal registered-owner validations therefore remain
+NOT_VALIDATED. No real project/customer data was used and no configuration was
+changed. Focused OpenCode tests PASS (14); full suite PASS (795 tests, 8 skips).
+The installation and update prompts remain separate, with a regression test.
+Issues #10, #11 and #12 exactly match their local task mirrors at comparison.

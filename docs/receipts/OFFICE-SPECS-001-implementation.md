@@ -36,3 +36,18 @@ Documentation: technical UPDATED; user procedures UPDATED, including independent
 installation/update prompts. UI screenshots N/A (CLI/protocol scope). No measured
 completion percentage or token savings. Publication evidence is the GitHub branch
 and review PR, to be returned after remote tree verification.
+
+## Follow-up validation 2026-10-27
+
+Validated implementation commit: `6d60d35bea29acca18481e73ddc1600982142615`.
+`python scripts/build_skill_routes.py --check` PASS (41 generated skills),
+`python scripts/build_library.py` PASS, `python scripts/verify_preservation.py`
+PASS (342 files), focused reconstruction tests PASS (14), full suite PASS (795
+tests, 8 skips), and `git diff --check` PASS. Issues #10, #11 and #12 exactly
+match their local task mirrors at the time of comparison.
+
+This follow-up did not alter the specs task implementation. Required registered
+owner review remains NOT_EXECUTED: the active project does not expose `office_*`
+profiles, and the synthetic OpenCode delegation attempt returned no result.
+Thus QA, Security and Harness owner acceptance remains NOT_VALIDATED; local test
+success does not replace those gates.
