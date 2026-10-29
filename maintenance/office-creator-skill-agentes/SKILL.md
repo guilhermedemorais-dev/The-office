@@ -16,15 +16,23 @@ Somente uma solicitação explícita do mantenedor sobre skills, agentes, refer�
 ## Fonte de metodologia
 Quando disponível, ler a **Skill Creator V2 global verificada**, incluindo seus contratos e avaliações. Antes de confiar nela, registrar caminho, origem, revisão ou hash e compatibilidade. Havendo versões conflitantes, não selecionar silenciosamente a antiga: informar o bloqueio e solicitar a fonte aprovada. Esta skill local define o processo operacional do Office, sem clonar nem substituir a Skill Creator global.
 
-## Fluxo obrigatório de manutenção
+## Modos e limites de autorização
+Classifique o pedido antes de agir:
+- **AUDIT (somente leitura):** "auditar", "analisar", "revisar", "identificar problemas", "propor melhorias" ou equivalentes sem autorização explícita para modificar. Pode ler, comparar, executar verificações não mutantes e recomendar patches. **Não editar arquivos, gerar commits, abrir PRs ou fazer push.**
+- **CHANGE (alteração autorizada):** "corrigir", "implementar", "atualizar", "criar", "remover", "aplicar patch" ou equivalentes que autorizem mudança de código. Limite-se ao escopo solicitado; commit/push somente quando autorizado.
+- **Ambíguo:** continuar em AUDIT; apresentar diagnóstico e solicitar autorização antes de alterar.
+
+A mudança de AUDIT para CHANGE exige autorização explícita do mantenedor. Encontrar um erro não autoriza corrigi-lo automaticamente.
+
+## Fluxo de inspeção e manutenção
 1. Identificar o pedido e evidência de falha; mapear os arquivos, dependências, agentes e impactos.
 2. Registrar estado de base: branch, commit, alterações locais, fonte canônica e testes existentes. Não sobrescrever trabalho não commitado.
 3. Conferir duplicações e a versão atual antes de adicionar ou modificar qualquer skill/agente.
-4. Corrigir a causa raiz na **fonte canônica/gerador** quando os arquivos forem gerados. Preservar V1 e contratos existentes; não editar o catálogo gerado como fonte primária.
+4. Em modo **AUDIT**, apenas documentar causa raiz e proposta de correção. Em modo **CHANGE** autorizado, corrigir a causa raiz na **fonte canônica/gerador** quando os arquivos forem gerados. Preservar V1 e contratos existentes; não editar o catálogo gerado como fonte primária.
 5. Avaliar regressões: validação estática, testes do repositório e casos comportamentais positivos/negativos quando o host suportar. Reportar o que não foi executado.
-6. Trabalhar em branch própria `fix/office-maintenance-<tema>` ou `feat/office-maintenance-<tema>`. Nunca aplicar mudanças diretamente em `main`.
-7. Quando o usuário solicitar a atualização/publicação no GitHub, fazer **commit + push da branch**, verificar o SHA remoto e apresentar arquivos, resumo, testes e link. Se push falhar, declarar falha; não fingir sucesso.
-8. Criar PR apenas quando pedido ou claramente incluído no escopo autorizado. **Não fazer merge nem deploy** sem solicitação específica.
+6. Somente no modo **CHANGE**: trabalhar em branch própria `fix/office-maintenance-<tema>` ou `feat/office-maintenance-<tema>`. Nunca aplicar mudanças diretamente em `main`.
+7. Somente no modo **CHANGE**, quando o usuário solicitar a atualização/publicação no GitHub, fazer **commit + push da branch**, verificar o SHA remoto e apresentar arquivos, resumo, testes e link. Se push falhar, declarar falha; não fingir sucesso.
+8. Somente no modo **CHANGE**: criar PR apenas quando pedido ou claramente incluído no escopo autorizado. **Não fazer merge nem deploy** sem solicitação específica.
 
 ## Regras de segurança
 - Não permitir autoalteração durante uma task comum do The Office.
@@ -35,4 +43,4 @@ Quando disponível, ler a **Skill Creator V2 global verificada**, incluindo seus
 - Respeitar permissões do host e limites de ferramentas; não simular comandos executados.
 
 ## Contrato de saída
-Informar gatilho, origem da implementação/método, branch, base commit, alterações, testes PASS/FAIL/NOT_RUN, riscos, commit SHA, confirmação de push e URL de PR (quando existir). Evidência verificável é obrigatória para alegar execução.
+Informar modo (AUDIT/CHANGE), gatilho, origem da implementação/método, evidências e testes PASS/FAIL/NOT_RUN e riscos. Somente em CHANGE, informar branch, base commit, alterações, commit SHA, confirmação de push e URL de PR (quando existir). Evidência verificável é obrigatória para alegar execução.
