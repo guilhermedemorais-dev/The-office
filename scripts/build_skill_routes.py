@@ -185,7 +185,12 @@ def build(root=ROOT):
    registry['skills'].append(entry)
    bucket=registry['sectors'].setdefault(sector,{'core':[],'capabilities':[]})
    bucket['core' if group=='core' else 'capabilities'].append(sid)
-   description=f"Use for {sector} {group.replace('-', ' ')}: "+'; '.join(headings)+'. Load required core skills first.'
+   curated_descriptions = {
+    "orchestrator-core": "Coordinate software engineering tasks, scope, specialist routing, execution evidence, and final review. Use for development work requiring task orchestration or cross-sector handoffs; not for standalone marketing or general conversation.",
+    "qa-validation": "Validate software behavior, reproduce bugs, verify fixes, and assess regression evidence for a scoped change or repository. Use for QA plans, regression testing, and bug reproduction; not for visual-only design review or security severity classification.",
+    "security-review": "Review application security, threat models, trust boundaries, and code changes for credible vulnerabilities. Use for explicit security audits, authentication/authorization risks, secrets, injections, and security-sensitive integrations; not for ordinary functional QA or DevOps healthchecks.",
+   }
+   description=curated_descriptions.get(sid, f"Use for {sector} {group.replace('-', ' ')}: "+'; '.join(headings)+'. Load required core skills first.')
    wrapper=f'---\nname: {sid}\ndescription: {json.dumps(description,ensure_ascii=False)}\n---\n\n# The Office V2: {sid}\n\n'
    wrapper+=f'Source: `{rel}`. Read this selected skill in full and emit SKILL_RECEIPT.\n'
    wrapper+=f'Required skill IDs: {", ".join(required) or "none (global core)"}.\n'
