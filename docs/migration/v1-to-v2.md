@@ -6,6 +6,12 @@ Each V1 body section is assigned once. Registry offsets are 1-based inclusive an
 
 ## Additive V2 overlays
 
+- `product-discovery` / `evidence-led-product-reconstruction`: Map reference behavior and real feedback into proposed requirements without replacing approved scope. Imported V1 content remains unchanged.
+- `reverse-engineering-investigation` / `behavioral-reconstruction-handoff`: Add stable screen/flow/evidence links while preserving the existing REA gateway and authorized inspection. Imported V1 content remains unchanged.
+- `sdd-specifications` / `evidence-to-spec-traceability`: Link reference behavior to existing specifications, requirements, acceptance and planned tests. Imported V1 content remains unchanged.
+- `qa-validation` / `evidence-bound-reconstruction-coverage`: Validate every canonical acceptance criterion with revision-bound evidence; never use weighted parity as release approval. Imported V1 content remains unchanged.
+- `orchestrator-delegation` / `optional-project-memory-routing`: Retrieve scoped Graphiti memory only when selected, then verify against canonical project sources. Imported V1 content remains unchanged.
+- `environment-bootstrap` / `opencode-host-preparation`: Route explicitly selected OpenCode setup through the existing Environment owner. Imported V1 content remains unchanged.
 - `global-core` / `curated-catalog-before-external-research`: Search task and project sources, proactively map needs to The Office catalog capabilities, then verify external gaps with official sources. Imported V1 content remains unchanged.
 
 Select global core, relevant sector core, and only capabilities required by the Task. A selected capability depends on its core. Explicit IDs take priority over lexical trigger hints; ambiguous matching must be resolved from Task scope, not treated as authorization. Shared executor aliases do not create duplicate skills.

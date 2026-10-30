@@ -1,0 +1,487 @@
+# OFFICE-OPENCODE-001: OpenCode e prompts separados de instalação e atualização
+
+contract_revision: 1. Branch: `feat/replica-opencode-graphiti`.
+
+
+<!-- contract-field: schema_version -->
+## schema_version
+
+2
+
+<!-- /contract-field: schema_version -->
+
+<!-- contract-field: contract_revision -->
+## contract_revision
+
+1
+
+<!-- /contract-field: contract_revision -->
+
+<!-- contract-field: task_id -->
+## task_id
+
+OFFICE-OPENCODE-001
+
+<!-- /contract-field: task_id -->
+
+<!-- contract-field: human_task -->
+## human_task
+
+- **representation**: github_issue
+- **issue_url**: https://github.com/guilhermedemorais-dev/The-office/issues/11
+- **local_mirror**: docs/tasks/OFFICE-OPENCODE-001.md
+- **normative_equivalence**: Local Human Task renders every normative field. Remote body must match this rendering; current publication comparison is recorded separately in receipts.
+
+<!-- /contract-field: human_task -->
+
+<!-- contract-field: summary -->
+## summary
+
+OpenCode e prompts separados de instalação e atualização
+
+<!-- /contract-field: summary -->
+
+<!-- contract-field: goal -->
+## goal
+
+OpenCode e prompts separados de instalação e atualização
+
+<!-- /contract-field: goal -->
+
+<!-- contract-field: current_state -->
+## current_state
+
+Capacidade integrada ausente ou apenas análise; fontes canônicas atuais preservadas.
+
+<!-- /contract-field: current_state -->
+
+<!-- contract-field: expected_result -->
+## expected_result
+
+Mudanças reais de código/procedimento testadas localmente e entregues em branch isolada.
+
+<!-- /contract-field: expected_result -->
+
+<!-- contract-field: scope -->
+## scope
+
+Gerar perfis OpenCode a partir dos contratos canônicos existentes, com orquestrador primário e especialistas como subagents.; Oferecer plan/check/apply com destino explícito, preservação de configuração e bloqueio de conflitos, backup e idempotência.; Resolver descoberta de skills e referências do bundle estável sem impor modelos, providers, MCPs ou credenciais.; Manter prompts de instalação e atualização independentes, ambos atuais; atualização deve preservar customizações e memória.; Validar em fixtures locais; não afirmar execução real de OpenCode sem invocação no host alvo.
+
+<!-- /contract-field: scope -->
+
+<!-- contract-field: out_of_scope -->
+## out_of_scope
+
+merge; deploy; instalação global; credenciais; ingestão de dados reais; homologação nativa sem execução
+
+<!-- /contract-field: out_of_scope -->
+
+<!-- contract-field: allowed_paths -->
+## allowed_paths
+
+scripts/register_opencode_agents.py; tests/test_opencode_agents.py; docs/operations/opencode.md; docs/operations/installation-prompt.md; docs/operations/update-prompt.md; docs/operations/updating.md; docs/operations/installation.md; docs/tasks/OFFICE-OPENCODE-001.md; docs/execution/OFFICE-OPENCODE-001.json; docs/specs/opencode/module-spec.md; docs/receipts/OFFICE-OPENCODE-001*
+
+<!-- /contract-field: allowed_paths -->
+
+<!-- contract-field: protected_paths -->
+## protected_paths
+
+main; docs/migration/v1-frozen/**; plugins/reverse-engineering-standard/runtime/**; configuração do host real; credenciais; dados de clientes
+
+<!-- /contract-field: protected_paths -->
+
+<!-- contract-field: requirements -->
+## requirements
+
+-
+  - **id**: REQ-01
+  - **description**: Gerar perfis OpenCode a partir dos contratos canônicos existentes, com orquestrador primário e especialistas como subagents.
+  - **source**: docs/specs/opencode/module-spec.md#requisitos
+  - **priority**: MUST
+-
+  - **id**: REQ-02
+  - **description**: Oferecer plan/check/apply com destino explícito, preservação de configuração e bloqueio de conflitos, backup e idempotência.
+  - **source**: docs/specs/opencode/module-spec.md#requisitos
+  - **priority**: MUST
+-
+  - **id**: REQ-03
+  - **description**: Resolver descoberta de skills e referências do bundle estável sem impor modelos, providers, MCPs ou credenciais.
+  - **source**: docs/specs/opencode/module-spec.md#requisitos
+  - **priority**: MUST
+-
+  - **id**: REQ-04
+  - **description**: Manter prompts de instalação e atualização independentes, ambos atuais; atualização deve preservar customizações e memória.
+  - **source**: docs/specs/opencode/module-spec.md#requisitos
+  - **priority**: MUST
+-
+  - **id**: REQ-05
+  - **description**: Validar em fixtures locais; não afirmar execução real de OpenCode sem invocação no host alvo.
+  - **source**: docs/specs/opencode/module-spec.md#requisitos
+  - **priority**: MUST
+
+<!-- /contract-field: requirements -->
+
+<!-- contract-field: business_rules -->
+## business_rules
+
+-
+  - **id**: RN-01
+  - **description**: Required owner reviews and runtime evidence remain separate from local tests; no merge/deploy.
+  - **source**: AGENTS.md
+
+<!-- /contract-field: business_rules -->
+
+<!-- contract-field: specs -->
+## specs
+
+docs/specs/opencode/module-spec.md
+
+<!-- /contract-field: specs -->
+
+<!-- contract-field: docs -->
+## docs
+
+AGENTS.md; docs/operations/v2-execution-policy.md
+
+<!-- /contract-field: docs -->
+
+<!-- contract-field: references -->
+## references
+
+-
+  - **id**: REF-01
+  - **title**: Current local engineering policy
+  - **source_url**: https://github.com/guilhermedemorais-dev/The-office/tree/60e2e35501ee1e3c1ad77f8beb7a015b6c905e62
+  - **project_path**: docs/operations/v2-execution-policy.md
+  - **section**: #material-technical-decisions
+  - **purpose**: Preserve source/ownership and bounded autonomous implementation
+  - **applies_to**:
+    MT-01
+
+<!-- /contract-field: references -->
+
+<!-- contract-field: design -->
+## design
+
+- **applicability**: N/A
+- **guide**: N/A
+- **tokens**: N/A
+- **visual_references**:
+  None.
+- **component_library**: N/A
+- **mockup**: N/A
+- **reason_if_na**: CLI and procedural changes, no rendered product UI.
+
+<!-- /contract-field: design -->
+
+<!-- contract-field: microtasks -->
+## microtasks
+
+-
+  - **id**: MT-01
+  - **title**: OpenCode e prompts separados de instalação e atualização
+  - **summary**: Implement scoped module, tests and operating documentation.
+  - **owner_skill**: dev-implementation-standard
+  - **owner_plugin**: dev-implementation-standard
+  - **capability**: implementation
+  - **preferred_tool**: repository-native-tooling
+  - **depends_on**:
+    None.
+  - **references**:
+    REF-01
+  - **allowed_paths**:
+    Same approved allowed_paths as the global allowed_paths section above (all entries inherited).
+  - **checklist**:
+    Gerar perfis OpenCode a partir dos contratos canônicos existentes, com orquestrador primário e especialistas como subagents.; Oferecer plan/check/apply com destino explícito, preservação de configuração e bloqueio de conflitos, backup e idempotência.; Resolver descoberta de skills e referências do bundle estável sem impor modelos, providers, MCPs ou credenciais.; Manter prompts de instalação e atualização independentes, ambos atuais; atualização deve preservar customizações e memória.; Validar em fixtures locais; não afirmar execução real de OpenCode sem invocação no host alvo.
+  - **deliverables**:
+    Module code/procedures; Focused negative tests; Current operating documentation
+  - **completion_condition**: All acceptance criteria verified by required owners; runtime gaps remain explicit.
+  - **validator**: qa-testing-standard
+
+<!-- /contract-field: microtasks -->
+
+<!-- contract-field: execution_lists -->
+## execution_lists
+
+-
+  - **list_id**: implementation
+  - **owner_skill**: dev-implementation-standard
+  - **phase**: implementation
+  - **objective**: OpenCode e prompts separados de instalação e atualização
+  - **microtask_ids**:
+    MT-01
+  - **depends_on**:
+    None.
+  - **references**:
+    REF-01
+  - **allowed_paths**:
+    Same approved allowed_paths as the global allowed_paths section above (all entries inherited).
+  - **protected_paths**:
+    Same protected_paths as the global protected_paths section above (all entries inherited).
+  - **deliverables**:
+    Module code/procedures; Focused negative tests; Current operating documentation
+  - **completion_condition**: All acceptance criteria verified by required owners; runtime gaps remain explicit.
+  - **required_tests**:
+    TEST-01; TEST-02
+  - **acceptance_criteria**:
+    AC-01; AC-02; AC-03; AC-04; AC-05
+  - **stop_conditions**:
+    All global stop_conditions above apply unchanged.
+  - **checklist**:
+    -
+      - **instruction**: Gerar perfis OpenCode a partir dos contratos canônicos existentes, com orquestrador primário e especialistas como subagents.
+    -
+      - **instruction**: Oferecer plan/check/apply com destino explícito, preservação de configuração e bloqueio de conflitos, backup e idempotência.
+    -
+      - **instruction**: Resolver descoberta de skills e referências do bundle estável sem impor modelos, providers, MCPs ou credenciais.
+    -
+      - **instruction**: Manter prompts de instalação e atualização independentes, ambos atuais; atualização deve preservar customizações e memória.
+    -
+      - **instruction**: Validar em fixtures locais; não afirmar execução real de OpenCode sem invocação no host alvo.
+
+<!-- /contract-field: execution_lists -->
+
+<!-- contract-field: sectors -->
+## sectors
+
+- **database**:
+  - **owner**: dev-implementation-standard
+  - **applicability**: N/A
+  - **reason**: No affected product UI or live operational deployment for this module.
+  - **depends_on**:
+    None.
+  - **microtasks**:
+    None.
+  - **required_sources**:
+    None.
+  - **required_validations**:
+    None.
+- **backend**:
+  - **owner**: dev-implementation-standard
+  - **applicability**: REQUIRED
+  - **reason**: Affected local module implementation/review/documentation.
+  - **depends_on**:
+    None.
+  - **microtasks**:
+    MT-01
+  - **required_sources**:
+    -
+      - **path**: docs/specs/opencode/module-spec.md
+      - **purpose**: Current module requirements and acceptance
+  - **required_validations**:
+    backend-review
+- **frontend**:
+  - **owner**: dev-implementation-standard
+  - **applicability**: N/A
+  - **reason**: No affected product UI or live operational deployment for this module.
+  - **depends_on**:
+    None.
+  - **microtasks**:
+    None.
+  - **required_sources**:
+    None.
+  - **required_validations**:
+    None.
+- **ui_ux**:
+  - **owner**: ui-ux-standard
+  - **applicability**: N/A
+  - **reason**: No affected product UI or live operational deployment for this module.
+  - **depends_on**:
+    None.
+  - **microtasks**:
+    None.
+  - **required_sources**:
+    None.
+  - **required_validations**:
+    None.
+- **qa**:
+  - **owner**: qa-testing-standard
+  - **applicability**: REQUIRED
+  - **reason**: Affected local module implementation/review/documentation.
+  - **depends_on**:
+    backend
+  - **microtasks**:
+    MT-01
+  - **required_sources**:
+    -
+      - **path**: docs/specs/opencode/module-spec.md
+      - **purpose**: Current module requirements and acceptance
+  - **required_validations**:
+    qa-review
+- **security**:
+  - **owner**: security-standard
+  - **applicability**: REQUIRED
+  - **reason**: Affected local module implementation/review/documentation.
+  - **depends_on**:
+    backend
+  - **microtasks**:
+    MT-01
+  - **required_sources**:
+    -
+      - **path**: docs/specs/opencode/module-spec.md
+      - **purpose**: Current module requirements and acceptance
+  - **required_validations**:
+    security-review
+- **devops**:
+  - **owner**: devops-standard
+  - **applicability**: N/A
+  - **reason**: No affected product UI or live operational deployment for this module.
+  - **depends_on**:
+    None.
+  - **microtasks**:
+    None.
+  - **required_sources**:
+    None.
+  - **required_validations**:
+    None.
+- **observability**:
+  - **owner**: devops-standard
+  - **applicability**: N/A
+  - **reason**: No affected product UI or live operational deployment for this module.
+  - **depends_on**:
+    None.
+  - **microtasks**:
+    None.
+  - **required_sources**:
+    None.
+  - **required_validations**:
+    None.
+- **documentation**:
+  - **owner**: dev-implementation-standard
+  - **applicability**: REQUIRED
+  - **reason**: Affected local module implementation/review/documentation.
+  - **depends_on**:
+    backend
+  - **microtasks**:
+    MT-01
+  - **required_sources**:
+    -
+      - **path**: docs/specs/opencode/module-spec.md
+      - **purpose**: Current module requirements and acceptance
+  - **required_validations**:
+    documentation-review
+- **harness**:
+  - **owner**: dev-workflow-standard
+  - **applicability**: REQUIRED
+  - **reason**: Affected local module implementation/review/documentation.
+  - **depends_on**:
+    backend; qa; security; documentation
+  - **microtasks**:
+    MT-01
+  - **required_sources**:
+    -
+      - **path**: docs/specs/opencode/module-spec.md
+      - **purpose**: Current module requirements and acceptance
+  - **required_validations**:
+    harness-review
+
+<!-- /contract-field: sectors -->
+
+<!-- contract-field: pipeline -->
+## pipeline
+
+collaborative_discovery_sdd; publish_discovery_sdd_completed; human_approval; environment_capability_readiness; implementation; executor_tests; independent_functional_qa; independent_security_qa; independent_ui_ux_qa; devops_observability_validation; rework_retest; pull_request_gate; harness_final_gate; human_acceptance_merge; separately_authorized_deploy
+
+<!-- /contract-field: pipeline -->
+
+<!-- contract-field: gates -->
+## gates
+
+- **discovery**: Published DISCOVERY_SDD_COMPLETED comment and human approval
+- **implementation**: Approved microtasks, executor tests and current receipts
+- **independent_validation**: Every REQUIRED sector validated by its owner
+- **pull_request**: Issue, JSON, specs, revision and evidence reconciled
+- **harness_final**: All REQUIRED sectors current and no unresolved blocker
+- **merge**: Explicit human acceptance
+- **deploy**: Separate explicit human authorization
+
+<!-- /contract-field: gates -->
+
+<!-- contract-field: required_tests -->
+## required_tests
+
+-
+  - **id**: TEST-01
+  - **type**: unit
+  - **command**: python -m unittest discover -s tests -p 'test_opencode_agents.py' -v
+  - **expected**: exit 0, meaningful normal and negative cases
+-
+  - **id**: TEST-02
+  - **type**: regression
+  - **command**: python -m unittest discover -s tests -v
+  - **expected**: No introduced regression; known failures explicitly diagnosed
+
+<!-- /contract-field: required_tests -->
+
+<!-- contract-field: acceptance_criteria -->
+## acceptance_criteria
+
+-
+  - **id**: AC-01
+  - **description**: Gerar perfis OpenCode a partir dos contratos canônicos existentes, com orquestrador primário e especialistas como subagents.
+  - **validation**: TEST-01 and relevant owner review
+-
+  - **id**: AC-02
+  - **description**: Oferecer plan/check/apply com destino explícito, preservação de configuração e bloqueio de conflitos, backup e idempotência.
+  - **validation**: TEST-01 and relevant owner review
+-
+  - **id**: AC-03
+  - **description**: Resolver descoberta de skills e referências do bundle estável sem impor modelos, providers, MCPs ou credenciais.
+  - **validation**: TEST-01 and relevant owner review
+-
+  - **id**: AC-04
+  - **description**: Manter prompts de instalação e atualização independentes, ambos atuais; atualização deve preservar customizações e memória.
+  - **validation**: TEST-01 and relevant owner review
+-
+  - **id**: AC-05
+  - **description**: Validar em fixtures locais; não afirmar execução real de OpenCode sem invocação no host alvo.
+  - **validation**: TEST-01 and relevant owner review
+
+<!-- /contract-field: acceptance_criteria -->
+
+<!-- contract-field: stop_conditions -->
+## stop_conditions
+
+architecture_change_required; scope_expansion_required; mandatory_reference_missing; source_of_truth_conflict; human_task_json_divergence; authorization_required
+
+<!-- /contract-field: stop_conditions -->
+
+<!-- contract-field: execution_prompt -->
+## execution_prompt
+
+- **instruction**: Keep all execution_lists in this single JSON file, never embedded in the Human Task or split into per-list JSON files. Harness verifies normative equivalence of the Human Task and this file, then supplies one prompt per list pointing to execution_contract_path and list_id. Specialists read the file, select the identified execution_lists entry and inherit global constraints, required sources, tests and dependencies. Verify task identity, contract revision, owner and current Harness evidence without reading the Human Task. Execute only the selected approved list and its subitems, return evidence and receipts, and never merge or deploy without explicit authorization.
+- **required_checkpoints**:
+  DISCOVERY_SDD_COMPLETED; RUNNING; VALIDATING; REWORK; BLOCKED; COMPLETED
+
+<!-- /contract-field: execution_prompt -->
+
+<!-- contract-field: reporting -->
+## reporting
+
+- **issue_comment_required**: True
+- **publication_evidence_requirement**: returned comment URL or identifier
+- **token_usage_fields**:
+  input_tokens; output_tokens; total_tokens; measurement_source
+- **changed_surface_fields**:
+  changed_files; issue_changes; json_spec_reference_changes; remote_mutations; code_changed; branch; commit; pull_request
+- **unavailable_value**: NOT_AVAILABLE
+- **storage_rule**: Actual token counts, changed surface and publication evidence live in Issue comments and receipts, not in this normative contract.
+
+<!-- /contract-field: reporting -->
+
+<!-- contract-field: discovery -->
+## discovery
+
+- **questions_and_answers**:
+  -
+    - **question**: Proceed with implementation?
+    - **answer**: User: Filhão faz as alterações; also requires separate installation/update prompts.
+- **research**:
+  None.
+- **decisions**:
+  Selective integration into existing sectors; preserve canonical REA/SDD.
+- **open_hypotheses**:
+  Live host and provider availability are not verified.
+- **approval_requirement**: Direct user instruction authorizes reversible implementation and patch preparation; no repeated discovery required.
+
+<!-- /contract-field: discovery -->

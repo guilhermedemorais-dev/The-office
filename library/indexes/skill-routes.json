@@ -1211,10 +1211,18 @@
       ],
       "reference_base": "plugins/dev-workflow-standard/skills/dev-workflow-standard",
       "reference_fallback": "plugins/dev-workflow-standard",
+      "v2_overlays": [
+        "optional-project-memory-routing"
+      ],
       "reference_map": [
         {
           "original": "../../../sdd-spec-factory/skills/sdd-spec-factory/references/api-research-library.md",
           "resolved": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/api-research-library.md",
+          "status": "RESOLVED"
+        },
+        {
+          "original": "integrations/memory/README.md",
+          "resolved": "integrations/memory/README.md",
           "status": "RESOLVED"
         }
       ]
@@ -1446,6 +1454,9 @@
       ],
       "reference_base": "plugins/sdd-spec-factory/skills/sdd-spec-factory",
       "reference_fallback": "plugins/sdd-spec-factory",
+      "v2_overlays": [
+        "evidence-to-spec-traceability"
+      ],
       "reference_map": [
         {
           "original": "references/technical-knowledge-router.md",
@@ -1485,6 +1496,11 @@
         {
           "original": "references/devops-planning.md",
           "resolved": "plugins/sdd-spec-factory/skills/sdd-spec-factory/references/devops-planning.md",
+          "status": "RESOLVED"
+        },
+        {
+          "original": "library/reconstruction/README.md",
+          "resolved": "library/reconstruction/README.md",
           "status": "RESOLVED"
         }
       ]
@@ -1675,10 +1691,18 @@
       ],
       "reference_base": "plugins/dev-environment-standard/skills/dev-environment-standard",
       "reference_fallback": "plugins/dev-environment-standard",
+      "v2_overlays": [
+        "opencode-host-preparation"
+      ],
       "reference_map": [
         {
           "original": "scripts/environment.py",
           "resolved": "plugins/dev-environment-standard/skills/dev-environment-standard/scripts/environment.py",
+          "status": "RESOLVED"
+        },
+        {
+          "original": "docs/operations/opencode.md",
+          "resolved": "docs/operations/opencode.md",
           "status": "RESOLVED"
         }
       ]
@@ -1913,7 +1937,16 @@
       ],
       "reference_base": "plugins/qa-testing-standard/skills/qa-testing-standard",
       "reference_fallback": "plugins/qa-testing-standard",
-      "reference_map": []
+      "v2_overlays": [
+        "evidence-bound-reconstruction-coverage"
+      ],
+      "reference_map": [
+        {
+          "original": "library/reconstruction/README.md",
+          "resolved": "library/reconstruction/README.md",
+          "status": "RESOLVED"
+        }
+      ]
     },
     {
       "id": "security-core",
@@ -2025,10 +2058,18 @@
       ],
       "reference_base": "plugins/studio-prd/skills/studio-prd",
       "reference_fallback": "plugins/studio-prd",
+      "v2_overlays": [
+        "evidence-led-product-reconstruction"
+      ],
       "reference_map": [
         {
           "original": "references/briefing.md",
           "resolved": "plugins/studio-prd/skills/studio-prd/references/briefing.md",
+          "status": "RESOLVED"
+        },
+        {
+          "original": "library/reconstruction/README.md",
+          "resolved": "library/reconstruction/README.md",
           "status": "RESOLVED"
         }
       ]
@@ -2134,7 +2175,16 @@
       ],
       "reference_base": "plugins/reverse-engineering-standard/skills/reverse-engineering-standard",
       "reference_fallback": "plugins/reverse-engineering-standard",
-      "reference_map": []
+      "v2_overlays": [
+        "behavioral-reconstruction-handoff"
+      ],
+      "reference_map": [
+        {
+          "original": "library/reconstruction/README.md",
+          "resolved": "library/reconstruction/README.md",
+          "status": "RESOLVED"
+        }
+      ]
     },
     {
       "id": "seo-core",

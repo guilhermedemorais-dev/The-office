@@ -18,8 +18,13 @@ for plugin templates/scripts absent there, use repository root `plugins/dev-work
 Never resolve inherited relative paths against this generated directory.
 Load only the references whose conditions hold; retain all explicit mandatory gates.
 
+## Optional project memory
+
+When persistent project memory is selected for the task, read the repository-root [memory integration](integrations/memory/README.md). Retrieve only the authorized project/module slice; verify recalled decisions and evidence against current versioned sources before routing them. Memory is supporting context, never an approval, credential store, canonical Task or proof that a sector executed. If unavailable, continue from current project sources and record the limitation. Do not preload all memories or create one memory service per sector.
+
 Canonical link resolution (repository-relative paths, not skill-directory-relative):
 - `../../../sdd-spec-factory/skills/sdd-spec-factory/references/api-research-library.md`: `plugins/sdd-spec-factory/skills/sdd-spec-factory/references/api-research-library.md`
+- `integrations/memory/README.md`: `integrations/memory/README.md`
 
 <!-- source-section:dev-workflow-standard:016 sha256:f6c95fd2b227bfe232b93e75de7a8e5edb0a93497373bc0fab4fda8f09c8f01b -->
 ## Delegation Rules
