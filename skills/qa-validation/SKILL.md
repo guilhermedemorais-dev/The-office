@@ -1,6 +1,6 @@
 ---
 name: qa-validation
-description: "Use for qa validation: Modes and phases; Shared tools, not duplicated ownership; Evidence gate. Load required core skills first."
+description: "Validate software behavior, reproduce bugs, verify fixes, and assess regression evidence for a scoped change or repository. Use for QA plans, regression testing, and bug reproduction; not for visual-only design review or security severity classification."
 ---
 
 V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
