@@ -1,6 +1,6 @@
 ---
 name: security-review
-description: "Use for security review: Review Modes; Risk-Adaptive Depth; Security Workflow. Load required core skills first."
+description: "Review application security, threat models, trust boundaries, and code changes for credible vulnerabilities. Use for explicit security audits, authentication/authorization risks, secrets, injections, and security-sensitive integrations; not for ordinary functional QA or DevOps healthchecks."
 ---
 
 V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
