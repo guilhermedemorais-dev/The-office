@@ -1,6 +1,6 @@
 ---
 name: orchestrator-core
-description: "Use for orchestrator core: Preamble; Mission; Harness Contract; Mandatory Entry Gate; Hard Limits (non-negotiable); Skill Roles (who does what); Practice Provenance; Task And Execution Context; Change Complexity Gate; Context Budget Rules. Load required core skills first."
+description: "Coordinate software engineering tasks, scope, specialist routing, execution evidence, and final review. Use for development work requiring task orchestration or cross-sector handoffs; not for standalone marketing or general conversation."
 ---
 
 V2 execution precedence: read repository-root `docs/operations/v2-execution-policy.md` before applying inherited governance; its bounded TRIVIAL exception is explicit.
